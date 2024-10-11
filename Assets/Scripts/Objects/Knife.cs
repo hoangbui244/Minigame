@@ -20,7 +20,7 @@ public class Knife : MonoBehaviour
         _endPosition = new Vector3(_startPosition.x + 3.6f, _startPosition.y - 1f, _startPosition.z);
         _slicePositionsArray = new float[300]; 
         sliceMaterial.SetFloatArray(SlicePositionsX, _slicePositionsArray);
-        
+        sliceMaterial.SetInt(SliceCount, 0);
         Move();
     }
 
