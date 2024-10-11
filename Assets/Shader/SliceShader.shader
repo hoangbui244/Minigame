@@ -30,7 +30,7 @@ Shader "Custom/MultiSliceShader"
             float _CutTransparency; // Tham số độ trong suốt cho vết cắt
 
             // Mảng chứa vị trí các vết cắt
-            float _SlicePositionsX[200];  // Giới hạn tối đa 200 vết cắt
+            float _SlicePositionsX[300];  // Giới hạn tối đa 200 vết cắt
             int _SliceCount; // Số lượng vết cắt
 
             struct appdata_t

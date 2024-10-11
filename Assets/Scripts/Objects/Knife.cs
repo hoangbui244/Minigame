@@ -18,7 +18,7 @@ public class Knife : MonoBehaviour
     {
         _startPosition = transform.position;
         _endPosition = new Vector3(_startPosition.x + 3.6f, _startPosition.y - 1f, _startPosition.z);
-        _slicePositionsArray = new float[200]; 
+        _slicePositionsArray = new float[300]; 
         sliceMaterial.SetFloatArray(SlicePositionsX, _slicePositionsArray);
         
         Move();
