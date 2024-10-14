@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class Knife : MonoBehaviour
 {
-    private Vector3 _startPosition;
-    private Vector3 _endPosition;
+    [SerializeField] private Vector3 _startPosition;
+    [SerializeField] private Vector3 _endPosition;
 
     [SerializeField] private Material sliceMaterial;
     private List<float> _slicePositionsX = new ();
@@ -16,8 +16,6 @@ public class Knife : MonoBehaviour
 
     private void Start()
     {
-        _startPosition = transform.position;
-        _endPosition = new Vector3(_startPosition.x + 3.6f, _startPosition.y - 1f, _startPosition.z);
         _slicePositionsArray = new float[300]; 
         sliceMaterial.SetFloatArray(SlicePositionsX, _slicePositionsArray);
         sliceMaterial.SetInt(SliceCount, 0);
