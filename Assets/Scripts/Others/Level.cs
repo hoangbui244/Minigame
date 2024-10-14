@@ -6,8 +6,8 @@ public class Level : MonoBehaviour
 {
     public enum LevelType
     {
-        BallBreaker = 1,
-        FlipCard = 2,
+        FlipCard = 1,
+        BallBreaker = 2,
         TapAway = 3,
         PieceTogether = 4,
         BreakCandy = 5,

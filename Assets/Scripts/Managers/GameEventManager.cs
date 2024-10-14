@@ -9,4 +9,5 @@ public static class GameEventManager
     public static Action PurchaseAds;
     public static Action<int> FlipCard;
     public static Action<bool> Check;
+    public static Action<int> LoadLevel;
 }

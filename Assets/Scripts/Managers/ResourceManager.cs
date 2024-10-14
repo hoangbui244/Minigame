@@ -15,17 +15,71 @@ public class ResourceManager : Singleton<ResourceManager>
         get => PlayerPrefs.GetInt("FirstOpen", 1) == 1;
         set => PlayerPrefs.SetInt("FirstOpen", value ? 1 : 0);
     }
-    
+
     public static bool RemoveAds
     {
         get => PlayerPrefs.GetInt("RemoveAds", 0) == 1;
         set => PlayerPrefs.SetInt("RemoveAds", value ? 1 : 0);
     }
-    
+
     public static int FlipCard
     {
         get => PlayerPrefs.GetInt("FlipCard", 1);
         set => PlayerPrefs.SetInt("FlipCard", value);
+    }
+
+    public static int BallBreaker
+    {
+        get => PlayerPrefs.GetInt("BallBreaker", 1);
+        set => PlayerPrefs.SetInt("BallBreaker", value);
+    }
+
+    public static int TapAway
+    {
+        get => PlayerPrefs.GetInt("TapAway", 1);
+        set => PlayerPrefs.SetInt("TapAway", value);
+    }
+    
+    public static int PieceTogether
+    {
+        get => PlayerPrefs.GetInt("PieceTogether", 1);
+        set => PlayerPrefs.SetInt("PieceTogether", value);
+    }
+    
+    public static int BreakCandy
+    {
+        get => PlayerPrefs.GetInt("BreakCandy", 1);
+        set => PlayerPrefs.SetInt("BreakCandy", value);
+    }
+    
+    public static int FindDifference
+    {
+        get => PlayerPrefs.GetInt("FindDifference", 1);
+        set => PlayerPrefs.SetInt("FindDifference", value);
+    }
+    
+    public static int CrocodileDentist
+    {
+        get => PlayerPrefs.GetInt("CrocodileDentist", 1);
+        set => PlayerPrefs.SetInt("CrocodileDentist", value);
+    }
+    
+    public static int CutInHalf
+    {
+        get => PlayerPrefs.GetInt("CutInHalf", 1);
+        set => PlayerPrefs.SetInt("CutInHalf", value);
+    }
+    
+    public static int DefuseBomb
+    {
+        get => PlayerPrefs.GetInt("DefuseBomb", 1);
+        set => PlayerPrefs.SetInt("DefuseBomb", value);
+    }
+    
+    public static int FruitCutting
+    {
+        get => PlayerPrefs.GetInt("FruitCutting", 1);
+        set => PlayerPrefs.SetInt("FruitCutting", value);
     }
     
     public static bool IsLoaded { get; set; }
@@ -65,8 +119,10 @@ public class ResourceManager : Singleton<ResourceManager>
                         _levels[level.Type] = new Dictionary<int, Level> { { level.LevelNo, level } };
                     }
                 }
+
                 Debug.LogError("Level Loaded" + _levels.Count + " " + "Type: " + level.Type);
             }
+
             IsLoaded = true;
         });
     }
@@ -78,7 +134,7 @@ public class ResourceManager : Singleton<ResourceManager>
             levelsByType.TryGetValue(levelNo, out var level);
             return level;
         }
-    
+
         return null;
     }
 
