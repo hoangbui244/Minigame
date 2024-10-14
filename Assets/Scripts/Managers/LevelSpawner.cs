@@ -83,7 +83,6 @@ public class LevelSpawner : Singleton<LevelSpawner>
                 _level = Instantiate(level10, transform);
                 break;
         }
-        
     }
     
     #endregion
