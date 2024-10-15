@@ -5,13 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cc1e008d-39a7-4d81-b082-3c7e1c260ee0" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Minigame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Minigame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/FlipCard/Level 3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/FlipCard/Level 3.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/FlipCard/Level 4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/FlipCard/Level 4.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/FlipCard/Level 5.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/FlipCard/Level 5.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/FruitCutting/Level 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/FruitCutting/Level 1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/HomeScreen.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/HomeScreen.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Objects/Knife.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Objects/Knife.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Firebase/Plugins/x86_64/FirebaseCppApp-12_3_0.bundle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Firebase/Plugins/x86_64/FirebaseCppApp-12_3_0.so" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +95,7 @@
       <option name="presentableId" value="Default" />
       <updated>1728640422130</updated>
       <workItem from="1728640423488" duration="2535000" />
-      <workItem from="1728874363185" duration="15795000" />
+      <workItem from="1728874363185" duration="17020000" />
     </task>
     <servers />
   </component>
