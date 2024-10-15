@@ -9,6 +9,8 @@ public class LevelSpawner : Singleton<LevelSpawner>
     
     private bool _startLoad;
     private Level _level;
+    public bool CanTap = true;
+    private WaitForSeconds _wait = new (0.15f);
 
     #endregion
 
@@ -83,6 +85,18 @@ public class LevelSpawner : Singleton<LevelSpawner>
                 _level = Instantiate(level10, transform);
                 break;
         }
+    }
+    
+    public void ResetTap()
+    {
+        StartCoroutine(ResetTapCoroutine());
+    }
+    
+    private IEnumerator ResetTapCoroutine()
+    {
+        CanTap = false;
+        yield return _wait;
+        CanTap = true;
     }
     
     #endregion
