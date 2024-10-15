@@ -5,10 +5,15 @@ using UnityEngine;
 public class Stick : MonoBehaviour
 {
     private Camera _camera;
+    private Vector2 _diff = Vector2.zero;
+    private Vector2 _lastPointPrefabPos;
+    [SerializeField] private Transform _startPos;
+    [SerializeField] private float _pointOffset = 0.5f;
     
     private void Start()
     {
         _camera = Camera.main;
+        _lastPointPrefabPos = _startPos.position;
     }
     
     private void OnMouseDown()
@@ -17,10 +22,7 @@ public class Stick : MonoBehaviour
         {
             //AudioManager.PlaySound("PickUp");
             //AudioManager.PlayVibration(true);
-            Vector3 mousePos;
-            mousePos = Input.mousePosition;
-            mousePos = _camera.ScreenToWorldPoint(mousePos);
-            gameObject.transform.localPosition = new Vector3(mousePos.x, mousePos.y, gameObject.transform.localPosition.z);
+            _diff = (Vector2)_camera.ScreenToWorldPoint(Input.mousePosition) - (Vector2)transform.position;
         }
     }
 
@@ -28,11 +30,14 @@ public class Stick : MonoBehaviour
     {
         if (!MainUIMananger.Instance.PopupOpened)
         {
-            Vector3 mousePos = _camera.ScreenToWorldPoint(Input.mousePosition);
-            float cameraHalfHeight = _camera.orthographicSize;
-            float targetY = Mathf.Clamp(mousePos.y , -cameraHalfHeight , cameraHalfHeight );
-            Vector3 targetPosition = new Vector3(mousePos.x, targetY, this.gameObject.transform.localPosition.z);
-            this.gameObject.transform.position = Vector3.Lerp(this.transform.localPosition, targetPosition, 0.95f);
+            Vector2 newPosition = (Vector2)_camera.ScreenToWorldPoint(Input.mousePosition) - _diff;
+            transform.position = newPosition;
+
+            if (Vector2.Distance(_lastPointPrefabPos, _startPos.position) >= _pointOffset)
+            {
+                ObjectPooler.Instance.SpawnFromPool("Point", _startPos.position);
+                _lastPointPrefabPos = _startPos.position;
+            }
         }
     }
 

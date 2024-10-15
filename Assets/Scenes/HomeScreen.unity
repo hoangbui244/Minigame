@@ -455,6 +455,9 @@ MonoBehaviour:
   - Tag: Ball
     Prefab: {fileID: 3766476722021133867, guid: 88fba260b1b14ab43a9ba13e13ba3b81, type: 3}
     Size: 2
+  - Tag: Point
+    Prefab: {fileID: 3966467644745722494, guid: e78dd89102e333c45bea6235745e4d95, type: 3}
+    Size: 120
 --- !u!4 &1034490995
 Transform:
   m_ObjectHideFlags: 0
@@ -674,7 +677,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
+          m_IntArgument: 9
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
