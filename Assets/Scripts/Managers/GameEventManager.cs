@@ -1,4 +1,5 @@
 using System;
+using UnityEngine;
 
 public static class GameEventManager
 {
@@ -10,4 +11,6 @@ public static class GameEventManager
     public static Action<int> FlipCard;
     public static Action<bool> Check;
     public static Action<int> LoadLevel;
+    public static Action ResetLevel;
+    public static Action<Vector3> ThrowBall;
 }

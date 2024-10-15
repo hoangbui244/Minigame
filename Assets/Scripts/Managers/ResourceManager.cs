@@ -119,10 +119,7 @@ public class ResourceManager : Singleton<ResourceManager>
                         _levels[level.Type] = new Dictionary<int, Level> { { level.LevelNo, level } };
                     }
                 }
-
-                Debug.LogError("Level Loaded" + _levels.Count + " " + "Type: " + level.Type);
             }
-
             IsLoaded = true;
         });
     }
