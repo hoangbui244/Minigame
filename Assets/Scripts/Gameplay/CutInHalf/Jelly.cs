@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
+using TMPro;
 using UnityEngine;
 
 namespace SpriteSlicer
@@ -10,14 +12,51 @@ namespace SpriteSlicer
     {
         public bool maxSlicesReached = false;
 
-        public List<(float, float)> parameters = new ();
+        public List<(float, float)> parameters = new();
         [Range(2, 8)] [SerializeField] int maxSliceAllowed = 8;
-
+        [SerializeField] private Vector3 _obj1;
+        [SerializeField] private Vector3 _obj2;
+        [SerializeField] private float _time;
+        [SerializeField] private RectTransform _canvas;
+        [SerializeField] private TextMeshProUGUI _text;
+        private float originalArea;
         SpriteRenderer sr;
+        private static float _num;
 
         void Start()
         {
             NullCheck();
+            originalArea = CalculateColliderArea(GetComponent<Collider2D>());
+            _num = 0;
+        }
+        
+        private float CalculateSlicePercentages()
+        {
+            float areaPart1 = CalculateColliderArea(GetComponent<Collider2D>());
+
+            float percentagePart1 = (areaPart1 / originalArea) * 100f;
+            _num = Mathf.Round(percentagePart1);
+            return _num;
+        }
+        
+        private float CalculateColliderArea(Collider2D collider)
+        {
+            if (collider is PolygonCollider2D polyCollider)
+            {
+                float area = 0f;
+                Vector2[] points = polyCollider.points;
+
+                for (int i = 0; i < points.Length; i++)
+                {
+                    Vector2 point1 = points[i];
+                    Vector2 point2 = points[(i + 1) % points.Length];
+                    area += point1.x * point2.y - point2.x * point1.y;
+                }
+
+                return Mathf.Abs(area) / 2f;
+            }
+
+            return 0f;
         }
 
         void NullCheck()
@@ -49,7 +88,6 @@ namespace SpriteSlicer
 
                 sliceIndex++;
             }
-
         }
 
         public void InvokeEnableCollider()
@@ -66,6 +104,48 @@ namespace SpriteSlicer
         {
             GetComponent<Rigidbody2D>().AddForce(dir * SliceManager.Instance.force);
         }
+
+        public void MoveObj1()
+        {
+            transform.DOMove(_obj1, _time).OnComplete(() =>
+            {
+                transform.DORotate(new Vector3(0, 0, 90), _time).OnComplete(() =>
+                {
+                    _canvas.anchoredPosition = new Vector2(7, 0);
+                    _canvas.rotation = Quaternion.Euler(0, 0, 0);
+                    _canvas.gameObject.SetActive(true);
+                    float finalPercentage = CalculateSlicePercentages();
+                    TweenPercentageText(_text, 0, finalPercentage, 1f);
+                });
+            });
+        }
+
+        public void MoveObj2()
+        {
+            transform.DOMove(_obj2, _time).OnComplete(() =>
+            {
+                transform.DORotate(new Vector3(0, 0, -90), _time).OnComplete(() =>
+                {
+                    _canvas.anchoredPosition = new Vector2(-7, 0); 
+                    _canvas.rotation = Quaternion.Euler(0, 0, 0);
+                    _canvas.gameObject.SetActive(true);
+                    float finalPercentage = 100 - _num;
+                    TweenPercentageText(_text, 0, finalPercentage, 1f);
+                });
+            });
+        }
+        
+        private void TweenPercentageText(TextMeshProUGUI text, float startValue, float endValue, float duration)
+        {
+            DOTween.To(() => startValue, x => startValue = x, endValue, duration)
+                .OnUpdate(() => 
+                {
+                    text.text = $"{Mathf.Round(startValue)} %";
+                })
+                .OnComplete(() => 
+                {
+                    text.text = $"{Mathf.Round(endValue)} %";
+                });
+        }
     }
 }
-

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 
 namespace SpriteSlicer
@@ -19,12 +20,19 @@ namespace SpriteSlicer
 
         Rigidbody2D r1;
         Rigidbody2D r2;
+        PolygonCollider2D targetCollider;
+        Jelly targetJelly;
 
         public SliceEngine(Transform _target, Vector2 _startPos, Vector2 _endPos)
         {
             target = _target;
             startPos = _startPos;
             endPos = _endPos;
+
+            // Lấy component một lần và lưu lại để tái sử dụng
+            r1 = target.GetComponent<Rigidbody2D>();
+            targetCollider = target.GetComponent<PolygonCollider2D>();
+            targetJelly = target.GetComponent<Jelly>();
         }
 
         public void Slice()
@@ -40,8 +48,7 @@ namespace SpriteSlicer
 
         void StopMovement()
         {
-            r1 = target.GetComponent<Rigidbody2D>();
-
+            // Sử dụng biến đã lưu thay vì gọi GetComponent nhiều lần
             velocity = r1.velocity;
             r1.velocity = Vector2.zero;
 
@@ -78,26 +85,29 @@ namespace SpriteSlicer
 
         void UpdateShader()
         {
-            target.GetComponent<PolygonCollider2D>().enabled = false;
+            // Tắt collider của target (đã lưu sẵn biến targetCollider)
+            targetCollider.enabled = false;
 
             var _degree = CalcAngle() + 90f - target.eulerAngles.z;
             var _edge = CalcDistance(startPos, (endPos - startPos), target.position);
 
-            var _params = target.GetComponent<Jelly>().parameters;
+            // Sử dụng biến targetJelly thay vì gọi GetComponent<Jelly> nhiều lần
+            var _params = targetJelly.parameters;
             if (_params != null && _params.Count > 0)
             {
                 second.GetComponent<Jelly>().parameters.AddRange(_params);
             }
 
-            target.GetComponent<Jelly>().SetNewShaderParameters(_degree, _edge);
+            targetJelly.SetNewShaderParameters(_degree, _edge);
             second.GetComponent<Jelly>().SetNewShaderParameters(_degree + 180, _edge * -1);
         }
 
         void UpdateCollider()
         {
-            target.GetComponent<PolygonCollider2D>().enabled = false;
+            // Tắt collider của target
+            targetCollider.enabled = false;
 
-            var colliderPoints = target.GetComponent<PolygonCollider2D>().points;
+            var colliderPoints = targetCollider.points;
 
             var _points1 = new List<Vector2>();
             var _points2 = new List<Vector2>();
@@ -153,7 +163,7 @@ namespace SpriteSlicer
 
             if (_points1.Count > 2 && _points2.Count > 2)
             {
-                target.GetComponent<PolygonCollider2D>().points = _points1.ToArray();
+                targetCollider.points = _points1.ToArray();
 
                 second = GameObject.Instantiate(target, target.position, target.rotation);
                 second.name = target.name + "_" + Random.Range(100, 999);
@@ -163,10 +173,12 @@ namespace SpriteSlicer
             else
             {
                 suspend = true;
-                target.GetComponent<Rigidbody2D>().velocity = velocity;
+                r1.velocity = velocity;
             }
 
-            target.GetComponent<Jelly>().InvokeEnableCollider();
+            targetJelly.InvokeEnableCollider();
+            targetJelly.MoveObj1();
+            second.GetComponent<Jelly>().MoveObj2();
         }
 
         void UpdateRigidBody()
@@ -181,7 +193,7 @@ namespace SpriteSlicer
 
             var forceDir = Vector2.Perpendicular((endPos - startPos).normalized);
 
-            target.GetComponent<Jelly>().ExertForce(forceDir * -1f);
+            targetJelly.ExertForce(forceDir * -1f);
             second.GetComponent<Jelly>().ExertForce(forceDir);
         }
 
@@ -198,4 +210,3 @@ namespace SpriteSlicer
         }
     }
 }
-
