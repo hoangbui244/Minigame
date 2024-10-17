@@ -1,45 +1,59 @@
 using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
+using SpriteSlicer;
 using UnityEngine;
 
 public class Cut : MonoBehaviour
 {
-    private Camera _camera;
-    private Vector2 _diff = Vector2.zero;
-    [SerializeField] private float _time;
+    Dictionary<Transform, (Vector2, Vector2)> records = new();
 
-    private void Start()
+    void OnTriggerEnter2D(Collider2D collision)
     {
-        _camera = Camera.main;
-    }
-
-    private void OnMouseDown()
-    {
-        if (Input.GetMouseButtonDown(0) && !MainUIMananger.Instance.PopupOpened)
+        if (collision.CompareTag("SlicedObj"))
         {
-            _diff = (Vector2)_camera.ScreenToWorldPoint(Input.mousePosition) - (Vector2)transform.position;
+            Vector2 contactPoint = collision.ClosestPoint(transform.position);
+            RecordTargetStart(collision.transform, contactPoint);
         }
     }
 
-    private void OnMouseDrag()
+    void OnTriggerExit2D(Collider2D collision)
     {
-        if (!MainUIMananger.Instance.PopupOpened)
+        if (collision.CompareTag("SlicedObj"))
         {
-            Vector2 mousePos = _camera.ScreenToWorldPoint(Input.mousePosition);
-            transform.position = new Vector2(mousePos.x - _diff.x, transform.position.y);
-        }
-    }
-
-    private void OnMouseUp()
-    {
-        if (!MainUIMananger.Instance.PopupOpened)
-        {
-            float targetY = transform.position.y - 100f;
-            transform.DOMoveY(targetY, _time).SetEase(Ease.InQuad).OnComplete(() =>
+            if (collision.GetComponent<Jelly>().maxSlicesReached)
             {
-                gameObject.SetActive(false);
-            });
+                return;
+            }
+
+            Vector2 contactPoint = collision.ClosestPoint(transform.position);
+            RecordTargetEnd(collision.transform, contactPoint);
+            InformSliceManager(collision.transform);
         }
+    }
+
+    void RecordTargetStart(Transform _transform, Vector2 _start)
+    {
+        if (!records.ContainsKey(_transform))
+        {
+            records.Add(_transform, (_start, Vector2.zero));
+        }
+    }
+
+    void RecordTargetEnd(Transform _transform, Vector2 _end)
+    {
+        if (records.ContainsKey(_transform))
+        {
+            var _start = records[_transform].Item1;
+            records[_transform] = (_start, _end);
+        }
+    }
+
+    void InformSliceManager(Transform _transform)
+    {
+        var pos = records[_transform];
+        records.Remove(_transform);
+
+        SliceManager.Instance.Slice(_transform, pos.Item1, pos.Item2);
     }
 }
