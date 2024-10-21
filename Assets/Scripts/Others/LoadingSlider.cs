@@ -12,7 +12,7 @@ public class LoadingSlider : MonoBehaviour
     [SerializeField] private float _time;
     [SerializeField] private Ease _ease;
     [SerializeField] private bool _hasConsent;
-    private int count = 0;
+    private int _count = 0;
     
     private void Awake()
     {
@@ -57,7 +57,7 @@ public class LoadingSlider : MonoBehaviour
             {
                 AdsManager.Instance.ShowOpen((completed) =>
                 {
-                    if (!completed && count < 1)
+                    if (!completed && _count < 1)
                     {
                         StartCoroutine(CallOpen());
                     }
@@ -77,7 +77,7 @@ public class LoadingSlider : MonoBehaviour
     private IEnumerator CallOpen()
     {
         yield return new WaitForSeconds(2.5f);
-        count++;
+        _count++;
         AdsManager.Instance.ShowOpen((completed) =>
         {
             MainUIMananger.LoadScene("HomeScreen");

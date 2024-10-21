@@ -1,12 +1,24 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameUIManager : MonoBehaviour
+public class GameUIManager : Singleton<GameUIManager>
 {
     public void Reload()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.sceneLoaded += OnSceneLoaded;
+        MainUIMananger.LoadScene("Gameplay");
+    }
+
+    public void Back()
+    {
+        ObjectPooler.Instance.MoveToPool();
+        MainUIMananger.LoadScene("HomeScreen");
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        ObjectPooler.Instance.MoveToPool();
+        int currentLevelType = MainUIMananger.Instance.LevelTypeToLoad;
+        GameEventManager.LoadLevel?.Invoke(currentLevelType);
+        SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 }

@@ -13,10 +13,12 @@ public class HomeUIManager : Singleton<HomeUIManager>
         
         SceneManager.sceneLoaded += OnSceneLoaded;
         MainUIMananger.LoadScene("Gameplay");
+        MainUIMananger.Instance.LevelTypeToLoad = type;
     }
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        ObjectPooler.Instance.MoveToPool();
         GameEventManager.LoadLevel?.Invoke(_levelTypeToLoad);
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }

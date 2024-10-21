@@ -29,7 +29,6 @@ namespace SpriteSlicer
             startPos = _startPos;
             endPos = _endPos;
 
-            // Lấy component một lần và lưu lại để tái sử dụng
             r1 = target.GetComponent<Rigidbody2D>();
             targetCollider = target.GetComponent<PolygonCollider2D>();
             targetJelly = target.GetComponent<Jelly>();
@@ -48,7 +47,6 @@ namespace SpriteSlicer
 
         void StopMovement()
         {
-            // Sử dụng biến đã lưu thay vì gọi GetComponent nhiều lần
             velocity = r1.velocity;
             r1.velocity = Vector2.zero;
 
@@ -85,13 +83,11 @@ namespace SpriteSlicer
 
         void UpdateShader()
         {
-            // Tắt collider của target (đã lưu sẵn biến targetCollider)
             targetCollider.enabled = false;
 
             var _degree = CalcAngle() + 90f - target.eulerAngles.z;
             var _edge = CalcDistance(startPos, (endPos - startPos), target.position);
 
-            // Sử dụng biến targetJelly thay vì gọi GetComponent<Jelly> nhiều lần
             var _params = targetJelly.parameters;
             if (_params != null && _params.Count > 0)
             {
@@ -104,7 +100,6 @@ namespace SpriteSlicer
 
         void UpdateCollider()
         {
-            // Tắt collider của target
             targetCollider.enabled = false;
 
             var colliderPoints = targetCollider.points;
@@ -166,7 +161,6 @@ namespace SpriteSlicer
                 targetCollider.points = _points1.ToArray();
 
                 second = GameObject.Instantiate(target, target.position, target.rotation);
-                second.name = target.name + "_" + Random.Range(100, 999);
                 second.GetComponent<PolygonCollider2D>().points = _points2.ToArray();
                 second.GetComponent<Jelly>().InvokeEnableCollider();
             }

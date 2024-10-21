@@ -6,8 +6,9 @@ public class MainUIMananger : Singleton<MainUIMananger>
 {
     #region =========================== PROPERTIES ===========================
 
-    public static SceneTransition Scene => Instance?.GetComponent<SceneTransition>();
+    private static SceneTransition Scene => Instance?.GetComponent<SceneTransition>();
     public bool PopupOpened;
+    public int LevelTypeToLoad;
 
     #endregion
 

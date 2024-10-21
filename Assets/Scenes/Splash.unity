@@ -452,7 +452,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: cb0b0fd900e29ae4394bbc07d4d4abb5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e86a3e154b686f649805e6aff5ee1ee9, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -758,7 +758,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 14affb643a6df6c46bc0a0eef37da86f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b4df69db8b866ba48aead19ee4c36ab1, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -959,7 +959,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1190092657
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1116,6 +1116,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PopupOpened: 0
+  LevelTypeToLoad: 0
 --- !u!114 &1241935448
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1588,7 +1589,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 299c64e9dcd104e478e8773bbb013fda, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d3f4a87dee8d4a6409a3a8a4d527dd8b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1752,7 +1753,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2031419260
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1837,12 +1838,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b13150b18bfe99441a5e0232b611c01e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _slider: {fileID: 0}
-  _consentController: {fileID: 0}
+  _slider: {fileID: 761802458}
+  _consentController: {fileID: 2031419263}
   _value: {x: 0, y: 0}
-  _time: 0
-  _ease: 0
-  _hasConsent: 0
+  _time: 3.5
+  _ease: 12
+  _hasConsent: 1
 --- !u!114 &2031419263
 MonoBehaviour:
   m_ObjectHideFlags: 0

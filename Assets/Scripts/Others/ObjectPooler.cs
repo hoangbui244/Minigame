@@ -12,7 +12,7 @@ public class ObjectPooler : MonoBehaviour
         public GameObject Prefab;
         public int Size;
     }
-    
+
     public static ObjectPooler Instance;
     public List<Pool> Pools;
     private Dictionary<string, Queue<GameObject>> _poolDictionary;
@@ -34,16 +34,28 @@ public class ObjectPooler : MonoBehaviour
                 obj.SetActive(false);
                 objectPool.Enqueue(obj);
             }
+
             _poolDictionary.Add(item.Tag, objectPool);
         }
     }
-    
-    public GameObject SpawnFromPool (string tag, Vector3 position)
+
+    public GameObject SpawnFromPool(string tag, Vector3 position)
     {
         GameObject objectToSpawn = _poolDictionary[tag].Dequeue();
         objectToSpawn.SetActive(true);
         objectToSpawn.transform.position = position;
         _poolDictionary[tag].Enqueue(objectToSpawn);
         return objectToSpawn;
+    }
+
+    public void MoveToPool()
+    {
+        foreach (var pool in _poolDictionary)
+        {
+            foreach (GameObject obj in pool.Value)
+            {
+                obj.SetActive(false);
+            }
+        }
     }
 }
