@@ -82,6 +82,12 @@ public class ResourceManager : Singleton<ResourceManager>
         set => PlayerPrefs.SetInt("FruitCutting", value);
     }
     
+    public static int HighScore
+    {
+        get => PlayerPrefs.GetInt("HighScore", 0);
+        set => PlayerPrefs.SetInt("HighScore", value);
+    }
+    
     public static bool IsLoaded { get; set; }
 
     [SerializeField] private AssetLabelReference _labelName;

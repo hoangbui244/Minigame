@@ -13,4 +13,6 @@ public static class GameEventManager
     public static Action<int> LoadLevel;
     public static Action ResetLevel;
     public static Action<Vector3> ThrowBall;
+    public static Action FruitCutting;
+    public static Action<bool> BreakCandy;
 }

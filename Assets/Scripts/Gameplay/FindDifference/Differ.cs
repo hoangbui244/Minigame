@@ -16,7 +16,7 @@ public class Differ : MonoBehaviour
             // AudioManager.PlayVibration(true);
             if (IsTrapped)
             {
-                GameUIManager.Instance.CompletedLevel();
+                GameUIManager.Instance.CompletedLevel(true);
             }
         }
     }

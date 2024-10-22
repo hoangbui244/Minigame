@@ -7,7 +7,7 @@ public class Knife : MonoBehaviour
 {
     [SerializeField] private Vector3 _startPosition;
     [SerializeField] private Vector3 _endPosition;
-
+    [SerializeField] private float _time;
     [SerializeField] private Material sliceMaterial;
     private List<float> _slicePositionsX = new ();
     private float[] _slicePositionsArray;
@@ -24,7 +24,10 @@ public class Knife : MonoBehaviour
 
     private void Move()
     {
-        transform.DOMoveX(_endPosition.x, 20f);
+        transform.DOMoveX(_endPosition.x, _time).SetEase(Ease.Linear).OnComplete(() =>
+        {
+            GameEventManager.FruitCutting?.Invoke();
+        });
     }
 
     public void Chop()

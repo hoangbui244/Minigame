@@ -1,10 +1,18 @@
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameUIManager : Singleton<GameUIManager>
 {
     [SerializeField] private GameObject _completedPanel;
-    
+    [SerializeField] private GameObject _replayPanel;
+
+    private void OnEnable()
+    {
+        _replayPanel.SetActive(false);
+        _completedPanel.SetActive(false);
+    }
+
     public void Reload()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
@@ -25,8 +33,13 @@ public class GameUIManager : Singleton<GameUIManager>
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }
     
-    public void CompletedLevel()
+    public void CompletedLevel(bool active)
     {
-        _completedPanel.SetActive(true);
+        _completedPanel.SetActive(active);
+    }
+
+    public void Retry(bool active)
+    {
+        _replayPanel.SetActive(active);
     }
 }

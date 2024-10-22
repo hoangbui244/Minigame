@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Candy
   - SlicedObj
+  - Point
   layers:
   - Default
   - TransparentFX
