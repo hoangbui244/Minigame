@@ -21,13 +21,14 @@ public class CandyPiece : MonoBehaviour
         if (other.CompareTag("Point")) 
         {
             _collider.enabled = false;
+            GameEventManager.BreakCandy?.Invoke(true);
 
             Sequence sequence = DOTween.Sequence();
             sequence.Join(_parent.transform.DOMove(_endPos, _time))
                 .Join(_parent.GetComponent<SpriteRenderer>().DOFade(0, _time))
                 .OnComplete(() => 
                 {
-                    gameObject.SetActive(false);
+                    _parent.SetActive(false);
                 });
         }
     }

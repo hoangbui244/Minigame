@@ -40,12 +40,4 @@ public class Stick : MonoBehaviour
             }
         }
     }
-
-    private void OnMouseUp()
-    {
-        if (!MainUIMananger.Instance.PopupOpened)
-        {
-           
-        }
-    }
 }

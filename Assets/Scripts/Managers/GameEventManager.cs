@@ -15,4 +15,5 @@ public static class GameEventManager
     public static Action<Vector3> ThrowBall;
     public static Action FruitCutting;
     public static Action<bool> BreakCandy;
+    public static Action<bool> DefuseBomb;
 }

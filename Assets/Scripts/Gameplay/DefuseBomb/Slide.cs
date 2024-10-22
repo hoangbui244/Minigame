@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class Slide : MonoBehaviour
 {
@@ -11,7 +12,8 @@ public class Slide : MonoBehaviour
     [SerializeField] private Vector3 _startPos;        
     [SerializeField] private Vector3 _endPos;         
     [SerializeField] private float _time;              
-    [SerializeField] private bool _isFinished;        
+    [SerializeField] private GameObject _mask;
+    public bool IsFinished;
     private Tween _moveTween;                          
 
     private void Start()
@@ -31,8 +33,14 @@ public class Slide : MonoBehaviour
             _moveTween.Kill();
             if (IsInGreenZone())
             {
-                Debug.LogError("Success");
-                _isFinished = true;
+                IsFinished = true;
+                _mask.SetActive(false);
+                gameObject.SetActive(false);
+                GameEventManager.DefuseBomb?.Invoke(true);
+            }
+            else
+            {
+                GameEventManager.DefuseBomb?.Invoke(false);
             }
         }
     }
@@ -45,7 +53,7 @@ public class Slide : MonoBehaviour
 
     private void Update()
     {
-        if (!_isFinished && !MainUIMananger.Instance.PopupOpened)
+        if (!IsFinished && !MainUIMananger.Instance.PopupOpened)
         {
             if (Input.GetMouseButtonDown(0))
             {
