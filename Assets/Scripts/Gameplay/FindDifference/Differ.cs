@@ -2,25 +2,22 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class Differ : MonoBehaviour
 {
-    [SerializeField] private bool _isTrapped;
-    [SerializeField] private List<Sprite> _sprites;
-    private SpriteRenderer _spriteRenderer;
-
-    private void Start()
-    {
-        _spriteRenderer = GetComponent<SpriteRenderer>();
-    }
+    public bool IsTrapped;
 
     private void OnMouseDown()
     {
-        if (!_isTrapped && !MainUIMananger.Instance.PopupOpened)
+        if (!MainUIMananger.Instance.PopupOpened)
         {
             // AudioManager.PlaySound("Tooth");
             // AudioManager.PlayVibration(true);
-            // GameEventManager.CheckDiff?.Invoke(true);
+            if (IsTrapped)
+            {
+                GameUIManager.Instance.CompletedLevel();
+            }
         }
     }
 }

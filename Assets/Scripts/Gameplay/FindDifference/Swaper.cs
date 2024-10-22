@@ -4,12 +4,23 @@ using UnityEngine;
 
 public class Swaper : MonoBehaviour
 {
-    [SerializeField] private List<Transform> _list;
+    [SerializeField] private List<Differ> _list;
+    [SerializeField] private Sprite _trappedSprite;
     void Start()
     {
-        for (int i = 0; i < _list.Count; i++)
+        SetRandom();
+    }
+    
+    private void SetRandom()
+    {
+        int num = Random.Range(0, _list.Count);
+        _list[num].IsTrapped = true;
+        foreach (var item in _list)
         {
-            ObjectPooler.Instance.SpawnFromPool("Differ", _list[i].position);
+            if (item.IsTrapped)
+            {
+                item.GetComponent<SpriteRenderer>().sprite = _trappedSprite;
+            }
         }
     }
 }

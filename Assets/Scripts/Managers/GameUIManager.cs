@@ -1,7 +1,10 @@
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameUIManager : Singleton<GameUIManager>
 {
+    [SerializeField] private GameObject _completedPanel;
+    
     public void Reload()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
@@ -20,5 +23,10 @@ public class GameUIManager : Singleton<GameUIManager>
         int currentLevelType = MainUIMananger.Instance.LevelTypeToLoad;
         GameEventManager.LoadLevel?.Invoke(currentLevelType);
         SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+    
+    public void CompletedLevel()
+    {
+        _completedPanel.SetActive(true);
     }
 }
