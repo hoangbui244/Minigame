@@ -508,7 +508,7 @@
     "m_Hidden": false,
     "m_ShaderOutputName": "Height",
     "m_StageCapability": 3,
-    "m_Value": 0.20000000298023225,
+    "m_Value": 0.30000001192092898,
     "m_DefaultValue": 0.5,
     "m_Labels": []
 }
@@ -787,9 +787,9 @@
     "m_ShaderOutputName": "BaseColor",
     "m_StageCapability": 2,
     "m_Value": {
-        "x": 0.2549019753932953,
-        "y": 0.2549019753932953,
-        "z": 0.2549019753932953
+        "x": 0.9960784912109375,
+        "y": 0.46666669845581057,
+        "z": 0.2392157018184662
     },
     "m_DefaultValue": {
         "x": 0.0,
@@ -1186,7 +1186,7 @@
     "m_Hidden": false,
     "m_ShaderOutputName": "Width",
     "m_StageCapability": 3,
-    "m_Value": 0.20000000298023225,
+    "m_Value": 0.30000001192092898,
     "m_DefaultValue": 0.5,
     "m_Labels": []
 }
@@ -1447,7 +1447,7 @@
     "m_ShaderOutputName": "B",
     "m_StageCapability": 3,
     "m_Value": {
-        "e00": 0.6000000238418579,
+        "e00": 1.0,
         "e01": 2.0,
         "e02": 2.0,
         "e03": 2.0,

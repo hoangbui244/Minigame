@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using TMPro;
 using UnityEngine;
 
@@ -10,6 +11,10 @@ public class BombCheck : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _timeTxt;
     [SerializeField] private int _startTime = 30;
     private WaitForSeconds _wait = new WaitForSeconds(1f);
+
+    [SerializeField] private GameObject _bomb;
+    [SerializeField] private GameObject _explosion;
+    [SerializeField] private Vector3 _scale = new Vector3(0.12f, 0.072f, 1f);
 
     private void OnEnable()
     {
@@ -43,8 +48,19 @@ public class BombCheck : MonoBehaviour
         }
         else
         {
-            GameUIManager.Instance.Retry(true);
+            _bomb.SetActive(true);
+            _explosion.SetActive(true);
+            _explosion.transform.DOScale(_scale, 0.6f).OnComplete(() =>
+            {
+                StartCoroutine(Retry());
+            });
         }
+    }
+
+    private IEnumerator Retry()
+    {
+        yield return new WaitForSeconds(0.3f);
+        GameUIManager.Instance.Retry(true);
     }
     
     private void ResetGame()
