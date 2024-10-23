@@ -16,4 +16,5 @@ public static class GameEventManager
     public static Action<bool> BreakCandy;
     public static Action<bool> DefuseBomb;
     public static Action<bool> BallBreaker;
+    public static Action<bool> CheckTeeth;
 }

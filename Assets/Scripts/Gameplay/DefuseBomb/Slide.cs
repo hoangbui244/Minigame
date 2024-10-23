@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.Serialization;
 
 public class Slide : MonoBehaviour
@@ -55,9 +56,17 @@ public class Slide : MonoBehaviour
     {
         if (!IsFinished && !MainUIMananger.Instance.PopupOpened)
         {
-            if (Input.GetMouseButtonDown(0))
+            bool isPointerOverUI = EventSystem.current.IsPointerOverGameObject();
+            if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
             {
-                Stop();
+                isPointerOverUI = EventSystem.current.IsPointerOverGameObject(Input.GetTouch(0).fingerId);
+            }
+            if (!isPointerOverUI)
+            {
+                if (Input.GetMouseButtonDown(0))
+                {
+                    Stop();
+                }
             }
         }
     }

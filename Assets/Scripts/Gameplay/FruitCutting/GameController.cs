@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class GameController : MonoBehaviour
 {
@@ -15,12 +16,12 @@ public class GameController : MonoBehaviour
     {
         GameEventManager.FruitCutting += Check;
     }
-    
+
     private void OnDisable()
     {
         GameEventManager.FruitCutting -= Check;
     }
-    
+
     private void Start()
     {
         int score = ResourceManager.HighScore;
@@ -32,13 +33,21 @@ public class GameController : MonoBehaviour
     {
         if (!MainUIMananger.Instance.PopupOpened)
         {
+            bool isPointerOverUI = EventSystem.current.IsPointerOverGameObject();
+
             if (Input.touchCount > 0)
             {
                 for (int i = 0; i < Input.touchCount; i++)
                 {
                     Touch touch = Input.GetTouch(i);
+                    
+                    if (EventSystem.current.IsPointerOverGameObject(touch.fingerId))
+                    {
+                        isPointerOverUI = true;
+                        break;
+                    }
 
-                    if (touch.phase == TouchPhase.Began)
+                    if (!isPointerOverUI && touch.phase == TouchPhase.Began)
                     {
                         _knife.Chop();
                         _currentScore++;
@@ -53,7 +62,7 @@ public class GameController : MonoBehaviour
             }
         }
     }
-    
+
     private void Check()
     {
         if (_currentScore > 99)

@@ -2,35 +2,20 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class Tooth : MonoBehaviour
 {
-    public bool IsFinished;
-    [SerializeField] private bool _isTrapped;
-    [SerializeField] private Collider2D _collider;
-
-    private void Start()
-    {
-        _collider = GetComponent<Collider2D>();
-    }
+    public bool IsTrapped;
 
     private void OnMouseDown()
     {
-        if (!_isTrapped && !MainUIMananger.Instance.PopupOpened)
+        if (!MainUIMananger.Instance.PopupOpened)
         {
             // AudioManager.PlaySound("Tooth");
             // AudioManager.PlayVibration(true);
-            _collider.enabled = false;
-            IsFinished = true;
-        }
-    }
-    
-    private void OnMouseUp()
-    {
-        if (!_isTrapped && !MainUIMananger.Instance.PopupOpened)
-        {
-            // AudioManager.PlaySound("Tooth");
-            // GameEventManager.CheckTeeth?.Invoke(true);
+            GameEventManager.CheckTeeth?.Invoke(!IsTrapped);
+            gameObject.SetActive(false);
         }
     }
 }
