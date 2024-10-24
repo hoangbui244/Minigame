@@ -9,10 +9,8 @@ public class HomeUIManager : Singleton<HomeUIManager>
 {
     [SerializeField] private RemoveAdsPanel _removeAdsPanel;
     [SerializeField] private SettingPanel _settingPanel;
-    [SerializeField] private Animator _anim;
-    [SerializeField] private GameObject _sceneTrans;
     private int _levelTypeToLoad;
-    private WaitForSeconds _wait = new WaitForSeconds(1f);
+    private WaitForSeconds _wait = new WaitForSeconds(1.2f);
 
     private void OnEnable()
     {
@@ -42,8 +40,7 @@ public class HomeUIManager : Singleton<HomeUIManager>
         MainUIMananger.Instance.LevelTypeToLoad = type;
         
         SceneManager.sceneLoaded += OnSceneLoaded;
-        _sceneTrans.SetActive(true);
-        _anim.Play("SceneStart");
+        MainUIMananger.Instance.SceneEnd();
         StartCoroutine(LoadScene());
     }
 
@@ -51,6 +48,7 @@ public class HomeUIManager : Singleton<HomeUIManager>
     {
         ObjectPooler.Instance.MoveToPool();
         GameEventManager.LoadLevel?.Invoke(_levelTypeToLoad);
+        MainUIMananger.Instance.SceneStart();
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }
     
