@@ -40,22 +40,12 @@ public class Banner : MonoBehaviour
 
     public void LoadAd()
     {
-        // Debug.LogError("Loading banner ad.");
         if (_bannerView != null)
         {
             _bannerView.Show();
             // if (SceneManager.GetActiveScene().name == "GamePlay")
             // {
             //     GameUIManager.Instance.UpdateBannerUI(true);
-            // }
-            //
-            // if (SceneManager.GetActiveScene().name == "Special")
-            // {
-            //     DestroyBannerView();
-            // }
-            // else
-            // {
-            //     return;
             // }
         }
 

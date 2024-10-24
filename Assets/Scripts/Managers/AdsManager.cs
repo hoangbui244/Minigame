@@ -106,10 +106,6 @@ public class AdsManager : Singleton<AdsManager>
         // {
         //     GameUIManager.Instance.EnableNative(false);
         // }
-        // else if (SceneManager.GetActiveScene().name == "Special")
-        // {
-        //     SpecialUI.Instance.EnableNative(false);
-        // }
     }
 
     private void HandleNativeAdLoaded(object sender, NativeAdEventArgs args)
