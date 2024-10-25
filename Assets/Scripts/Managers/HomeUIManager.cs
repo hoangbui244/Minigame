@@ -10,7 +10,7 @@ public class HomeUIManager : Singleton<HomeUIManager>
     [SerializeField] private RemoveAdsPanel _removeAdsPanel;
     [SerializeField] private SettingPanel _settingPanel;
     private int _levelTypeToLoad;
-    private WaitForSeconds _wait = new WaitForSeconds(1.2f);
+    private WaitForSeconds _wait = new WaitForSeconds(2f);
 
     private void Start()
     {

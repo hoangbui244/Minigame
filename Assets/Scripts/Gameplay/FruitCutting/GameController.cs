@@ -101,14 +101,21 @@ public class GameController : MonoBehaviour
 
     private void Check()
     {
-        if (_currentScore > 99)
+        if (_currentScore > 10)
         {
             ResourceManager.FruitCutting++;
-            GameUIManager.Instance.CompletedLevel(true);
+            GameUIManager.Instance.ScreenShot();
+            StartCoroutine(NewLevel());
         }
         else
         {
             GameUIManager.Instance.Retry(true);
         }
+    }
+    
+    private IEnumerator NewLevel()
+    {
+        yield return new WaitForSeconds(0.3f);
+        GameUIManager.Instance.CompletedLevel(true);
     }
 }

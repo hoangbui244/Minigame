@@ -3,26 +3,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class CompletedPanel : MonoBehaviour
 {
+    [SerializeField] private GameObject _notiText;
+    
     private void OnEnable()
     {
         MainUIMananger.Instance.PopupOpened = true;
+        _notiText.SetActive(false);
     }
     
     private void OnDisable()
     {
         MainUIMananger.Instance.PopupOpened = false;
     }
-
-    public void Setting()
-    {
-        // Logic cho setting
-    }
-
+    
     public void SaveImage()
     {
-        // Logic cho việc lưu ảnh
+        GameUIManager.Instance.SaveImage();
+        _notiText.SetActive(true);
     }
 }
