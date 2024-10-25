@@ -21,6 +21,7 @@ public class MainUIMananger : Singleton<MainUIMananger>
     private Vector3 _cirScale = new Vector3(30f, 30f, 1);
     private Vector3 _dogScale = new Vector3(0.8f, 0.8f, 1);
     private Vector3 _cirEndScale = new Vector3(0.01f, 0.01f, 1);
+    private Vector3 _cirEndChildScale = new Vector3(100f, 100f, 1);
     
     #endregion
 
@@ -50,22 +51,21 @@ public class MainUIMananger : Singleton<MainUIMananger>
     {
         _sceneTrans.SetActive(true);
 
-        _circle.DOScale(_cirEndScale, 0.4f).OnUpdate(() =>
-        {
-            Vector3 parentScale = _circle.localScale;
-            _inverseScale.x = _circleChildInitialScale.x / parentScale.x;
-            _inverseScale.y = _circleChildInitialScale.y / parentScale.y;
-            _inverseScale.z = _circleChildInitialScale.z / parentScale.z;
-
-            _circleChild.localScale = _inverseScale;
-        });
-
-        _dog.DOScale(_dogScale, 0.7f);
+        _circle.DOScale(_cirEndScale, 0.6f);
+        _circleChild.DOScale(_cirEndChildScale, 0.6f);
+        _dog.DOScale(_dogScale, 0.8f);
     }
 
     public void SceneStart()
     {
-        _circle.DOScale(_cirScale, 0.4f).OnUpdate(() =>
+        StartCoroutine(Wait());
+    }
+
+    private IEnumerator Wait()
+    {
+        yield return new WaitForSeconds(1f);
+        _circleChild.localScale = _cirEndScale;
+        _circle.DOScale(_cirScale, 0.8f).OnUpdate(() =>
         {
             Vector3 parentScale = _circle.localScale;
             _inverseScale.x = _circleChildInitialScale.x / parentScale.x;
@@ -75,7 +75,7 @@ public class MainUIMananger : Singleton<MainUIMananger>
             _circleChild.localScale = _inverseScale;
         });
 
-        _dog.DOScale(Vector3.zero, 0.7f).OnComplete(() =>
+        _dog.DOScale(Vector3.zero, 0.6f).OnComplete(() =>
         {
             _sceneTrans.SetActive(false);
         });
