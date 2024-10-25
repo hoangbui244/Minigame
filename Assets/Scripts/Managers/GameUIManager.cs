@@ -7,14 +7,26 @@ public class GameUIManager : Singleton<GameUIManager>
 {
     [SerializeField] private GameObject _completedPanel;
     [SerializeField] private GameObject _replayPanel;
+    [SerializeField] private GameObject _settingPanel;
     private WaitForSeconds _wait = new WaitForSeconds(1.2f);
 
     private void OnEnable()
     {
-        _replayPanel.SetActive(false);
+        Init();
+    }
+    
+    private void Init()
+    {
         _completedPanel.SetActive(false);
+        _replayPanel.SetActive(false);
+        _settingPanel.SetActive(false);
     }
 
+    public void Setting()
+    {
+        _settingPanel.SetActive(true);
+    }
+    
     public void Reload()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;

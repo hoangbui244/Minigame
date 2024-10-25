@@ -63,7 +63,7 @@ public class MainUIMananger : Singleton<MainUIMananger>
 
     private IEnumerator Wait()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.8f);
         _circleChild.localScale = _cirEndScale;
         _circle.DOScale(_cirScale, 0.8f).OnUpdate(() =>
         {

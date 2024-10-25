@@ -60,8 +60,7 @@ public class LevelSpawner : Singleton<LevelSpawner>
                 _level = Instantiate(level5, transform);
                 break;
             case 6:
-                var num6 = ResourceManager.FindDifference;
-                var level6 = ResourceManager.GetLevel(Level.LevelType.FindDifference ,num6);
+                var level6 = ResourceManager.GetLevel(Level.LevelType.FindDifference ,1);
                 _level = Instantiate(level6, transform);
                 break;
             case 7:

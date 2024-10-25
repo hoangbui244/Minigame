@@ -54,7 +54,7 @@ public class ResourceManager : Singleton<ResourceManager>
     
     public static int FindDifference
     {
-        get => PlayerPrefs.GetInt("FindDifference", 1);
+        get => PlayerPrefs.GetInt("FindDifference", 0);
         set => PlayerPrefs.SetInt("FindDifference", value);
     }
     
