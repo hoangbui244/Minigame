@@ -20,7 +20,7 @@ public class CompletedPanel : MonoBehaviour
         MainUIMananger.Instance.PopupOpened = false;
     }
     
-    public void SaveImage()
+    public void ShareImage()
     {
         GameUIManager.Instance.SaveImage();
         _notiText.SetActive(true);

@@ -3363,7 +3363,7 @@ GameObject:
   - component: {fileID: 2029804179}
   - component: {fileID: 2029804178}
   m_Layer: 5
-  m_Name: SavePhotoBtn
+  m_Name: SharePhotoBtn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3464,7 +3464,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 25013b58743841e40b3d9982e7cf6d6e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4c82a9f2a9794d840b828e73636c8fc9, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
