@@ -12,9 +12,13 @@ public class HomeUIManager : Singleton<HomeUIManager>
     private int _levelTypeToLoad;
     private WaitForSeconds _wait = new WaitForSeconds(1.2f);
 
-    private void OnEnable()
+    private void Start()
     {
         AdsManager.Instance.ShowBanner();
+    }
+
+    private void OnEnable()
+    {
         Init();
     }
     

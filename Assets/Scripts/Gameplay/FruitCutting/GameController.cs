@@ -10,11 +10,14 @@ public class GameController : MonoBehaviour
     [SerializeField] private Knife _knife;
     [SerializeField] private TextMeshProUGUI _scoreText;
     [SerializeField] private TextMeshProUGUI _highScoreText;
+    [SerializeField] private List<GameObject> _borders;
     private int _currentScore;
+    private bool _locked;
 
     private void OnEnable()
     {
         GameEventManager.FruitCutting += Check;
+        SetupLevel();
     }
 
     private void OnDisable()
@@ -27,6 +30,39 @@ public class GameController : MonoBehaviour
         int score = ResourceManager.HighScore;
         _highScoreText.text = "High Score: " + score.ToString();
         _scoreText.text = "0";
+    }
+    
+    public void NextLevel(int index)
+    {
+        if (index == 3 || index == 6)
+        {
+            _locked = true;
+        }
+        else
+        {
+            _locked = false;
+        }
+        if (!_locked)
+        {
+            ResourceManager.FruitCutting = index;
+            GameUIManager.Instance.Reload();
+        }
+        else
+        {
+            Debug.LogError("Watch Ads");
+            //GameUIManager.Instance.WatchAds();
+        }
+    }
+    
+    private void SetupLevel()
+    {
+        int num = ResourceManager.FruitCutting - 1;
+        foreach (var border in _borders)
+        {
+            border.SetActive(false);
+        }
+
+        _borders[num].SetActive(true);
     }
 
     private void Update()
