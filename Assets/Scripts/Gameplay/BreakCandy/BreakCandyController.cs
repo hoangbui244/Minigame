@@ -14,7 +14,7 @@ public class BreakCandyController : MonoBehaviour
     
     public void NextLevel(int index)
     {
-        if (index == 3 || index == 5 || index == 10)
+        if (index == 3 || index == 6 || index == 10)
         {
             _locked = true;
         }

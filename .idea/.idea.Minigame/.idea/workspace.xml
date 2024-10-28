@@ -6,33 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="cc1e008d-39a7-4d81-b082-3c7e1c260ee0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Minigame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Minigame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/BreakCandy/Level 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/BreakCandy/Level 1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/BreakCandy/Level 1.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/BreakCandy/Level 1.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/BreakCandy/Level 2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/BreakCandy/Level 2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/BreakCandy/Level 2.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/BreakCandy/Level 2.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GamePlay.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GamePlay.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/BreakCandy/BreakCandyCheck.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/BreakCandy/BreakCandyCheck.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/BreakCandy/CandyCheck.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/BreakCandy/CandyCheck.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/BreakCandy/CandyPiece.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/BreakCandy/CandyPiece.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/BreakCandy/Stick.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/BreakCandy/Stick.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/GameUIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/GameUIManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/BreakCandy/Level 6.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/BreakCandy/Level 6.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/BreakCandy/BreakCandyController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/BreakCandy/BreakCandyController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Frame 1023.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Frame 1023.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Frame 1024.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Frame 1024.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Frame 1025.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Frame 1025.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Frame 1026.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Frame 1026.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Frame 1027.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Frame 1027.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Frame 1096.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Frame 1096.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Frame 1097.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Frame 1097.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Mask group (4).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Mask group (4).png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ScriptableBuildPipeline.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ScriptableBuildPipeline.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,7 +130,7 @@
       <workItem from="1729820105500" duration="8459000" />
       <workItem from="1729839144298" duration="12808000" />
       <workItem from="1730084042347" duration="4401000" />
-      <workItem from="1730097382376" duration="3216000" />
+      <workItem from="1730097382376" duration="5276000" />
     </task>
     <servers />
   </component>
