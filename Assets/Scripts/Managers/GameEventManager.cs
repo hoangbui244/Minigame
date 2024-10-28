@@ -18,4 +18,5 @@ public static class GameEventManager
     public static Action<bool> BallBreaker;
     public static Action<bool> CheckTeeth;
     public static Action FindDifference;
+    public static Action<int> CutInHalf;
 }

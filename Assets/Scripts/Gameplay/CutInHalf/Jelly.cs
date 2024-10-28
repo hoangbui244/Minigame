@@ -111,7 +111,7 @@ namespace SpriteSlicer
             {
                 transform.DORotate(new Vector3(0, 0, 90), _time).OnComplete(() =>
                 {
-                    _canvas.anchoredPosition = new Vector2(7, 0);
+                    _canvas.anchoredPosition = new Vector2(3, 0);
                     _canvas.rotation = Quaternion.Euler(0, 0, 0);
                     _canvas.gameObject.SetActive(true);
                     float finalPercentage = CalculateSlicePercentages();
@@ -126,7 +126,7 @@ namespace SpriteSlicer
             {
                 transform.DORotate(new Vector3(0, 0, -90), _time).OnComplete(() =>
                 {
-                    _canvas.anchoredPosition = new Vector2(-7, 0); 
+                    _canvas.anchoredPosition = new Vector2(-3, 0); 
                     _canvas.rotation = Quaternion.Euler(0, 0, 0);
                     _canvas.gameObject.SetActive(true);
                     float finalPercentage = 100 - _num;
@@ -144,7 +144,9 @@ namespace SpriteSlicer
                 })
                 .OnComplete(() => 
                 {
-                    text.text = $"{Mathf.Round(endValue)} %";
+                    int finalValue = Mathf.RoundToInt(endValue);
+                    text.text = $"{finalValue} %";
+                    GameEventManager.CutInHalf?.Invoke(finalValue);
                 });
         }
     }
