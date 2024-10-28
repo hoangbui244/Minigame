@@ -18,7 +18,7 @@ public class Stick : MonoBehaviour
     
     private void OnMouseDown()
     {
-        if (Input.GetMouseButtonDown(0) && !MainUIMananger.Instance.PopupOpened)
+        if (Input.GetMouseButtonDown(0) && !MainUIMananger.Instance.PopupOpened && GameManager.Instance.GameState == GameManager.EnumGameState.Play)
         {
             //AudioManager.PlaySound("PickUp");
             //AudioManager.PlayVibration(true);
@@ -28,7 +28,7 @@ public class Stick : MonoBehaviour
 
     private void OnMouseDrag()
     {
-        if (!MainUIMananger.Instance.PopupOpened)
+        if (!MainUIMananger.Instance.PopupOpened && GameManager.Instance.GameState == GameManager.EnumGameState.Play)
         {
             Vector2 newPosition = (Vector2)_camera.ScreenToWorldPoint(Input.mousePosition) - _diff;
             transform.position = newPosition;

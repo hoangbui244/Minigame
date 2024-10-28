@@ -6,6 +6,8 @@ using UnityEngine;
 public class BreakCandyCheck : MonoBehaviour
 {
     [SerializeField] private int _winCount;
+    [SerializeField] private GameObject _pen;
+    [SerializeField] private GameObject _text;
     private int _currentCount = 0;
     private WaitForSeconds _wait = new WaitForSeconds(0.8f);
     
@@ -31,20 +33,30 @@ public class BreakCandyCheck : MonoBehaviour
             if (_currentCount >= _winCount)
             {
                 ResourceManager.BreakCandy++;
+                GameManager.Instance.GamePause(true);
+                OffPen();
+                _text.SetActive(false);
+                ObjectPooler.Instance.MoveToPool();
                 StartCoroutine(NextLevel());
             }
         }
+    }
+    
+    private IEnumerator NextLevel()
+    {
+        GameUIManager.Instance.CompletedLevel1(true);
+        yield return _wait;
+        GameUIManager.Instance.Reload();
+    }
+    
+    private void OffPen()
+    {
+        _pen.SetActive(false);
     }
     
     private IEnumerator Retry()
     {
         yield return _wait;
         GameUIManager.Instance.Retry(true);
-    }
-    
-    private IEnumerator NextLevel()
-    {
-        yield return _wait;
-        GameUIManager.Instance.CompletedLevel(true);
     }
 }

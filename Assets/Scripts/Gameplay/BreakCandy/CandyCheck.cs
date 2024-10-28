@@ -12,6 +12,14 @@ public class CandyCheck : MonoBehaviour
         _spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
+    private void OnDisable()
+    {
+        if (_spriteRenderer != null)
+        {
+            ChangeColor(Color.green);
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Candy")) 

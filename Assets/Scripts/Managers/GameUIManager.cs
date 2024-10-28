@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class GameUIManager : Singleton<GameUIManager>
 {
     [SerializeField] private GameObject _completedPanel;
+    [SerializeField] private GameObject _completedPanel1;
     [SerializeField] private GameObject _replayPanel;
     [SerializeField] private GameObject _settingPanel;
     [SerializeField] private RawImage _screenShot;
@@ -23,6 +24,7 @@ public class GameUIManager : Singleton<GameUIManager>
     private void Init()
     {
         _completedPanel.SetActive(false);
+        _completedPanel1.SetActive(false);
         _replayPanel.SetActive(false);
         _settingPanel.SetActive(false);
     }
@@ -90,6 +92,11 @@ public class GameUIManager : Singleton<GameUIManager>
         _completedPanel.SetActive(active);
     }
 
+    public void CompletedLevel1(bool active)
+    {
+        _completedPanel1.SetActive(active);
+    }
+    
     public void Retry(bool active)
     {
         _replayPanel.SetActive(active);

@@ -3161,7 +3161,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _startPosition: {x: -12, y: 8, z: 0}
   _endPosition: {x: 12, y: -2, z: 0}
-  _time: 5
+  _time: 20
   sliceMaterial: {fileID: 2100000, guid: 054b60d2f6e700640adf1ebb38b3cdb7, type: 2}
 --- !u!1 &9193427113441880479
 GameObject:

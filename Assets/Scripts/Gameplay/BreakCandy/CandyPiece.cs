@@ -10,9 +10,11 @@ public class CandyPiece : MonoBehaviour
     [SerializeField] private float _time;
     [SerializeField] private GameObject _parent;
     private Collider2D _collider;
+    private Collider2D _parentCollider;
 
     private void Start()
     {
+        _parentCollider = _parent.GetComponent<Collider2D>();
         _collider = GetComponent<Collider2D>();
     }
 
@@ -21,6 +23,7 @@ public class CandyPiece : MonoBehaviour
         if (other.CompareTag("Point")) 
         {
             _collider.enabled = false;
+            _parentCollider.enabled = false;
             GameEventManager.BreakCandy?.Invoke(true);
 
             Sequence sequence = DOTween.Sequence();

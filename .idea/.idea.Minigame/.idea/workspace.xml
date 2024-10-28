@@ -5,13 +5,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cc1e008d-39a7-4d81-b082-3c7e1c260ee0" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/FruitCutting/Level 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/FruitCutting/Level 1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScreenShot.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScreenShot/Screenshot.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScreenShot/Screenshot.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/FruitCutting/GameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/FruitCutting/GameController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Minigame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Minigame/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/BreakCandy/Level 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/BreakCandy/Level 1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/BreakCandy/Level 1.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/BreakCandy/Level 1.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/BreakCandy/Level 2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/BreakCandy/Level 2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/BreakCandy/Level 2.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/BreakCandy/Level 2.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GamePlay.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GamePlay.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/BreakCandy/BreakCandyCheck.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/BreakCandy/BreakCandyCheck.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/BreakCandy/CandyCheck.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/BreakCandy/CandyCheck.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/BreakCandy/CandyPiece.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/BreakCandy/CandyPiece.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/BreakCandy/Stick.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/BreakCandy/Stick.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/GameUIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/GameUIManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Frame 1023.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Frame 1023.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Frame 1024.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Frame 1024.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Frame 1025.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Frame 1025.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Frame 1026.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Frame 1026.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Frame 1027.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Frame 1027.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Frame 1096.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Frame 1096.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Frame 1097.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Frame 1097.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Mask group (4).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Mask group (4).png.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,10 +113,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="12016">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="12016" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -132,6 +153,7 @@
       <workItem from="1729820105500" duration="8459000" />
       <workItem from="1729839144298" duration="12808000" />
       <workItem from="1730084042347" duration="4401000" />
+      <workItem from="1730097382376" duration="3216000" />
     </task>
     <servers />
   </component>
@@ -147,63 +169,5 @@
   <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Managers/GameUIManager.cs</url>
-          <line>73</line>
-          <properties documentPath="C:\Users\admin\Documents\Minigame\Assets\Scripts\Managers\GameUIManager.cs" containingFunctionPresentation="Method 'Back'">
-            <startOffsets>
-              <option value="1968" />
-            </startOffsets>
-            <endOffsets>
-              <option value="2003" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Managers/MainUIMananger.cs</url>
-          <line>39</line>
-          <properties documentPath="C:\Users\admin\Documents\Minigame\Assets\Scripts\Managers\MainUIMananger.cs" containingFunctionPresentation="Method 'SceneEnd'">
-            <startOffsets>
-              <option value="1085" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1140" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Managers/MainUIMananger.cs</url>
-          <line>40</line>
-          <properties documentPath="C:\Users\admin\Documents\Minigame\Assets\Scripts\Managers\MainUIMananger.cs" containingFunctionPresentation="Method 'SceneEnd'">
-            <startOffsets>
-              <option value="1149" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1221" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Managers/GameUIManager.cs</url>
-          <line>74</line>
-          <properties documentPath="C:\Users\admin\Documents\Minigame\Assets\Scripts\Managers\GameUIManager.cs" containingFunctionPresentation="Method 'Back'">
-            <startOffsets>
-              <option value="2012" />
-            </startOffsets>
-            <endOffsets>
-              <option value="2047" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

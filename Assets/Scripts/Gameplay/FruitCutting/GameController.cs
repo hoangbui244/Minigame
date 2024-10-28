@@ -101,7 +101,7 @@ public class GameController : MonoBehaviour
 
     private void Check()
     {
-        if (_currentScore > 2)
+        if (_currentScore > 99)
         {
             ResourceManager.FruitCutting++;
             GameUIManager.Instance.ScreenShot();
