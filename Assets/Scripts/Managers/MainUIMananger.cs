@@ -47,7 +47,6 @@ public class MainUIMananger : Singleton<MainUIMananger>
         _mask.transform.DOScale(_maskScaleEnd, _time).SetEase(Ease.Linear).OnComplete(() =>
         {
             GameManager.Instance.GamePause(false);
-            Debug.LogError(GameManager.Instance.GameState);
         });
     }
 

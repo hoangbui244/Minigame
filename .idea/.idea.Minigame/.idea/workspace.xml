@@ -6,14 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="cc1e008d-39a7-4d81-b082-3c7e1c260ee0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Minigame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Minigame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/MainUIManager.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/MainUIManager.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/SceneEnd.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/SceneEnd.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/SceneStart.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/SceneStart.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Splash.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Splash.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/HomeUIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/HomeUIManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GamePlay.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GamePlay.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/MainUIMananger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/MainUIMananger.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -134,7 +127,7 @@
       <workItem from="1729764485774" duration="1609000" />
       <workItem from="1729820105500" duration="8459000" />
       <workItem from="1729839144298" duration="12808000" />
-      <workItem from="1730084042347" duration="1219000" />
+      <workItem from="1730084042347" duration="2195000" />
     </task>
     <servers />
   </component>

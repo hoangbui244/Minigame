@@ -12,8 +12,6 @@ public class GameUIManager : Singleton<GameUIManager>
     [SerializeField] private GameObject _settingPanel;
     [SerializeField] private RawImage _screenShot;
     
-    // [SerializeField] private Camera _screenshotCam;
-    // private Texture2D _texture;
     private Texture2D _screenshot;
     private WaitForSeconds _wait = new WaitForSeconds(2f);
 
@@ -27,26 +25,7 @@ public class GameUIManager : Singleton<GameUIManager>
         _completedPanel.SetActive(false);
         _replayPanel.SetActive(false);
         _settingPanel.SetActive(false);
-        // _screenshotCam.gameObject.SetActive(false);
     }
-
-    // public Texture2D TakeScreenShot(int size = 512)
-    // {
-    //     RenderTexture renderTexture = new RenderTexture(size, size, 24);
-    //     _screenshotCam.targetTexture = renderTexture;
-    //     _screenshotCam.Render();
-    //
-    //     RenderTexture.active = renderTexture;
-    //     Texture2D texture = new Texture2D(size, size, TextureFormat.RGB24, false);
-    //     texture.ReadPixels(new Rect(0, 0, size, size), 0, 0);
-    //     texture.Apply();
-    //
-    //     _screenshotCam.targetTexture = null;
-    //     RenderTexture.active = null;
-    //     Destroy(renderTexture);
-    //
-    //     return texture;
-    // }
 
     private IEnumerator TakeScreenShot()
     {
@@ -67,21 +46,9 @@ public class GameUIManager : Singleton<GameUIManager>
         _screenShot.texture = _screenshot;
     }
     
-    public void SaveImage()
+    public Texture2D GetScreenshot()
     {
-        if (_screenshot != null)
-        {
-            byte[] bytes = _screenshot.EncodeToPNG();
-            string directoryPath = Application.persistentDataPath + "/ScreenShots";
-            System.IO.Directory.CreateDirectory(directoryPath);
-            string filePath = directoryPath + "/Screenshot.png";
-            System.IO.File.WriteAllBytes(filePath, bytes);
-        }
-    }
-    
-    public void DestroyTexture()
-    {
-        _screenshot = null;
+        return _screenshot;
     }
 
     public void ScreenShot()
