@@ -20,9 +20,16 @@ public class CutInHalfController : MonoBehaviour
     
     private void Check(int value)
     {
-        if (value >= 48 || value <= 52)
+        if (value >= 48 && value <= 52)
         {
-            ResourceManager.CutInHalf++;
+            if (ResourceManager.CutInHalf < 10)
+            {
+                ResourceManager.CutInHalf++;
+            }
+            else
+            {
+                ResourceManager.CutInHalf = 1;
+            }
             GameUIManager.Instance.CompletedLevel1(true);
         }
         else

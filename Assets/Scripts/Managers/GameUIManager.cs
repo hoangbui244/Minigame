@@ -95,6 +95,7 @@ public class GameUIManager : Singleton<GameUIManager>
     public void CompletedLevel1(bool active)
     {
         _completedPanel1.SetActive(active);
+        Invoke(nameof(Reload), 2f);
     }
     
     public void Retry(bool active)

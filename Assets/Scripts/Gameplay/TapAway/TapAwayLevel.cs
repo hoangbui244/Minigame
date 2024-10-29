@@ -25,8 +25,14 @@ public class TapAwayLevel : MonoBehaviour
         }
         else
         {
-            ResourceManager.TapAway++;
-            //GameUIManager.Instance.EndGame();
+            if (ResourceManager.TapAway < 5)
+            {
+                ResourceManager.TapAway++;
+            }
+            else
+            {
+                ResourceManager.TapAway = 1;
+            }
         }
     }
 }

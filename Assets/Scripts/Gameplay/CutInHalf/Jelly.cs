@@ -6,7 +6,6 @@ using UnityEngine;
 
 namespace SpriteSlicer
 {
-    [RequireComponent(typeof(PolygonCollider2D))]
     [RequireComponent(typeof(Rigidbody2D))]
     public class Jelly : MonoBehaviour
     {

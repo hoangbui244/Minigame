@@ -8,13 +8,10 @@ using UnityEngine;
 public class BombCheck : MonoBehaviour
 {
     [SerializeField] private List<Slide> _slides;
-    [SerializeField] private TextMeshProUGUI _timeTxt;
-    [SerializeField] private int _startTime = 30;
-    private WaitForSeconds _wait = new WaitForSeconds(1f);
-
     [SerializeField] private GameObject _bomb;
     [SerializeField] private GameObject _explosion;
     [SerializeField] private Vector3 _scale = new Vector3(0.12f, 0.072f, 1f);
+    private WaitForSeconds _wait = new WaitForSeconds(0.3f);
 
     private void OnEnable()
     {
@@ -29,7 +26,6 @@ public class BombCheck : MonoBehaviour
     private void Start()
     {
         ResetGame();
-        StartCoroutine(TimeCount());
     }
     
     private void UpdateResult(bool action)
@@ -44,7 +40,16 @@ public class BombCheck : MonoBehaviour
                     return;
                 }
             }
-            GameUIManager.Instance.CompletedLevel(true);
+            if (ResourceManager.DefuseBomb < 10)
+            {
+                ResourceManager.DefuseBomb++;
+            }
+            else
+            {
+                ResourceManager.DefuseBomb = 1;
+            }
+            GameUIManager.Instance.ScreenShot();
+            StartCoroutine(NewLevel());
         }
         else
         {
@@ -56,10 +61,16 @@ public class BombCheck : MonoBehaviour
             });
         }
     }
+    
+    private IEnumerator NewLevel()
+    {
+        yield return _wait;
+        GameUIManager.Instance.CompletedLevel(true);
+    }
 
     private IEnumerator Retry()
     {
-        yield return new WaitForSeconds(0.3f);
+        yield return _wait;
         GameUIManager.Instance.Retry(true);
     }
     
@@ -69,20 +80,5 @@ public class BombCheck : MonoBehaviour
         {
             slide.IsFinished = false;
         }
-    }
-    
-    private IEnumerator TimeCount()
-    {
-        int currentTime = _startTime;
-
-        while (currentTime > 0)
-        {
-            _timeTxt.text = TimeSpan.FromSeconds(currentTime).ToString(@"mm\:ss");
-            yield return _wait;
-            currentTime--;
-        }
-
-        _timeTxt.text = "00:00"; 
-        GameUIManager.Instance.Retry(true);
     }
 }

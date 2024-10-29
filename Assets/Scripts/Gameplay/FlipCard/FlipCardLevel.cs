@@ -25,7 +25,14 @@ public class FlipCardLevel : MonoBehaviour
         }
         else
         {
-            ResourceManager.FlipCard++;
+            if (ResourceManager.FlipCard < 5)
+            {
+                ResourceManager.FlipCard++;
+            }
+            else
+            {
+                ResourceManager.FlipCard = 1;
+            }
             //GameUIManager.Instance.EndGame();
         }
     }

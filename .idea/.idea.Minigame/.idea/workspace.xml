@@ -6,14 +6,55 @@
   <component name="ChangeListManager">
     <list default="true" id="cc1e008d-39a7-4d81-b082-3c7e1c260ee0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Minigame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Minigame/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/BallBreaker/Level 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/BallBreaker/Level 1.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/CutInHalf/Level 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/CutInHalf/Level 1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/CutInHalf/Level 10.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/CutInHalf/Level 10.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/CutInHalf/Level 2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/CutInHalf/Level 2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/CutInHalf/Level 3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/CutInHalf/Level 3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/CutInHalf/Level 4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/CutInHalf/Level 4.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/CutInHalf/Level 5.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/CutInHalf/Level 5.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/CutInHalf/Level 6.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/CutInHalf/Level 6.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/CutInHalf/Level 7.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/CutInHalf/Level 7.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/CutInHalf/Level 8.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/CutInHalf/Level 8.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/CutInHalf/Level 9.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/CutInHalf/Level 9.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/DefuseBomb/Level 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/DefuseBomb/Level 1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Objects/Ball.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Objects/Ball.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/HomeScreen.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/HomeScreen.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Splash.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Splash.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/BallBreaker/BallBreakerCheck.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/BallBreaker/BallBreakerCheck.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/BallBreaker/BallController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/BallBreaker/BallController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/BallBreaker/Brick.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/BallBreaker/Brick.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/BreakCandy/BreakCandyCheck.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/BreakCandy/BreakCandyCheck.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/CutInHalf/CutInHalfController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/CutInHalf/CutInHalfController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/CutInHalf/Jelly.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/CutInHalf/Jelly.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/CutInHalf/SliceEngine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/CutInHalf/SliceEngine.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/DefuseBomb/BombCheck.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/DefuseBomb/BombCheck.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/FindDifference/Differ.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/FindDifference/Differ.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/FlipCard/FlipCardLevel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/FlipCard/FlipCardLevel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/FruitCutting/GameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/FruitCutting/GameController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/PieceTogether/PieceTogetherLevel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/PieceTogether/PieceTogetherLevel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/TapAway/TapAwayLevel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/TapAway/TapAwayLevel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/GameEventManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/GameEventManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/GameUIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/GameUIManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/HomeUIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/HomeUIManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/CutInHalf/Frame (13).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/CutInHalf/Frame (13).png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/CutInHalf/apple.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/CutInHalf/apple.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/BallBreaker/Frame 1084.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/BallBreaker/Frame 1084.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/BallBreaker/Frame 1086.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/BallBreaker/Frame 1086.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/CutInHalf/Frame.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/CutInHalf/Frame.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/CutInHalf/Group 1000010629.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/CutInHalf/Group 1000010629.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/CutInHalf/OBJECTS.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/CutInHalf/OBJECTS.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/DefuseBomb/Frame (14).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/DefuseBomb/Frame (14).png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/DefuseBomb/Frame 1087.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/DefuseBomb/Frame 1087.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/DefuseBomb/Frame 1098.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/DefuseBomb/Frame 1098.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/DefuseBomb/Frame 1100.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/DefuseBomb/Frame 1100.png.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,7 +66,8 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6f7018b8b8c149e68c4a65a05ac289be175400/c0/38dcc4e0/GameObject.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gameplay/BallBreaker/BallController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/dc753a1061284f8e971ee88ee4826eee46ac00/af/3b47d2f5/List`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gameplay/BallBreaker/Obstacle.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gameplay/BreakCandy/Stick.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gameplay/FindDifference/Differ.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gameplay/FindDifference/Swaper.cs" root0="FORCE_HIGHLIGHTING" />
@@ -94,10 +136,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="13864">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="13864" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -135,6 +177,9 @@
       <workItem from="1729839144298" duration="12808000" />
       <workItem from="1730084042347" duration="4401000" />
       <workItem from="1730097382376" duration="6872000" />
+      <workItem from="1730111381071" duration="277000" />
+      <workItem from="1730166360497" duration="8532000" />
+      <workItem from="1730183474841" duration="7617000" />
     </task>
     <servers />
   </component>
@@ -150,5 +195,206 @@
   <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Gameplay/CutInHalf/SliceEngine.cs</url>
+          <line>121</line>
+          <properties documentPath="C:\Users\admin\Documents\Minigame\Assets\Scripts\Gameplay\CutInHalf\SliceEngine.cs" containingFunctionPresentation="Method 'UpdateCollider'">
+            <startOffsets>
+              <option value="3437" />
+            </startOffsets>
+            <endOffsets>
+              <option value="3474" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Gameplay/CutInHalf/SliceEngine.cs</url>
+          <line>123</line>
+          <properties documentPath="C:\Users\admin\Documents\Minigame\Assets\Scripts\Gameplay\CutInHalf\SliceEngine.cs" containingFunctionPresentation="Method 'UpdateCollider'">
+            <startOffsets>
+              <option value="3505" />
+            </startOffsets>
+            <endOffsets>
+              <option value="3567" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Gameplay/CutInHalf/SliceEngine.cs</url>
+          <line>125</line>
+          <properties documentPath="C:\Users\admin\Documents\Minigame\Assets\Scripts\Gameplay\CutInHalf\SliceEngine.cs" containingFunctionPresentation="Method 'UpdateCollider'">
+            <startOffsets>
+              <option value="3606" />
+            </startOffsets>
+            <endOffsets>
+              <option value="3620" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Gameplay/CutInHalf/SliceEngine.cs</url>
+          <line>131</line>
+          <properties documentPath="C:\Users\admin\Documents\Minigame\Assets\Scripts\Gameplay\CutInHalf\SliceEngine.cs" containingFunctionPresentation="Method 'UpdateCollider'">
+            <startOffsets>
+              <option value="3829" />
+            </startOffsets>
+            <endOffsets>
+              <option value="3848" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Gameplay/CutInHalf/SliceEngine.cs</url>
+          <line>136</line>
+          <properties documentPath="C:\Users\admin\Documents\Minigame\Assets\Scripts\Gameplay\CutInHalf\SliceEngine.cs" containingFunctionPresentation="Method 'UpdateCollider'">
+            <startOffsets>
+              <option value="3955" />
+            </startOffsets>
+            <endOffsets>
+              <option value="3968" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Gameplay/CutInHalf/SliceEngine.cs</url>
+          <line>142</line>
+          <properties documentPath="C:\Users\admin\Documents\Minigame\Assets\Scripts\Gameplay\CutInHalf\SliceEngine.cs" containingFunctionPresentation="Method 'UpdateCollider'">
+            <startOffsets>
+              <option value="4177" />
+            </startOffsets>
+            <endOffsets>
+              <option value="4196" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Gameplay/CutInHalf/SliceEngine.cs</url>
+          <line>158</line>
+          <properties documentPath="C:\Users\admin\Documents\Minigame\Assets\Scripts\Gameplay\CutInHalf\SliceEngine.cs" containingFunctionPresentation="Method 'UpdateCollider'">
+            <startOffsets>
+              <option value="4556" />
+            </startOffsets>
+            <endOffsets>
+              <option value="4599" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Gameplay/CutInHalf/SliceEngine.cs</url>
+          <line>163</line>
+          <properties documentPath="C:\Users\admin\Documents\Minigame\Assets\Scripts\Gameplay\CutInHalf\SliceEngine.cs" containingFunctionPresentation="Method 'UpdateCollider'">
+            <startOffsets>
+              <option value="4781" />
+            </startOffsets>
+            <endOffsets>
+              <option value="4849" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Gameplay/CutInHalf/SliceEngine.cs</url>
+          <line>162</line>
+          <properties documentPath="C:\Users\admin\Documents\Minigame\Assets\Scripts\Gameplay\CutInHalf\SliceEngine.cs" containingFunctionPresentation="Method 'UpdateCollider'">
+            <startOffsets>
+              <option value="4690" />
+            </startOffsets>
+            <endOffsets>
+              <option value="4764" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Gameplay/BallBreaker/Obstacle.cs</url>
+          <line>135</line>
+          <properties documentPath="C:\Users\admin\Documents\Minigame\Assets\Scripts\Gameplay\BallBreaker\Obstacle.cs" containingFunctionPresentation="Method 'PlayAnimOnce'">
+            <startOffsets>
+              <option value="3708" />
+            </startOffsets>
+            <endOffsets>
+              <option value="3747" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Gameplay/BallBreaker/BallCheck.cs</url>
+          <line>12</line>
+          <properties documentPath="C:\Users\admin\Documents\Minigame\Assets\Scripts\Gameplay\BallBreaker\BallCheck.cs" containingFunctionPresentation="Method 'OnEnable'">
+            <startOffsets>
+              <option value="319" />
+            </startOffsets>
+            <endOffsets>
+              <option value="357" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Gameplay/BallBreaker/BallCheck.cs</url>
+          <line>41</line>
+          <properties documentPath="C:\Users\admin\Documents\Minigame\Assets\Scripts\Gameplay\BallBreaker\BallCheck.cs" containingFunctionPresentation="Method 'Delay'">
+            <startOffsets>
+              <option value="866" />
+            </startOffsets>
+            <endOffsets>
+              <option value="921" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Gameplay/BallBreaker/BallCheck.cs</url>
+          <line>43</line>
+          <properties documentPath="C:\Users\admin\Documents\Minigame\Assets\Scripts\Gameplay\BallBreaker\BallCheck.cs" containingFunctionPresentation="Method 'Delay'">
+            <startOffsets>
+              <option value="944" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1010" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Gameplay/BallBreaker/BallCheck.cs</url>
+          <line>45</line>
+          <properties documentPath="C:\Users\admin\Documents\Minigame\Assets\Scripts\Gameplay\BallBreaker\BallCheck.cs" containingFunctionPresentation="Method 'Delay'">
+            <startOffsets>
+              <option value="1083" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1120" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Gameplay/BallBreaker/BallCheck.cs</url>
+          <line>47</line>
+          <properties documentPath="C:\Users\admin\Documents\Minigame\Assets\Scripts\Gameplay\BallBreaker\BallCheck.cs" containingFunctionPresentation="Method 'Delay'">
+            <startOffsets>
+              <option value="1151" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1181" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

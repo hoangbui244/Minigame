@@ -2249,8 +2249,8 @@ MonoBehaviour:
   _slider: {fileID: 761802458}
   _consentController: {fileID: 2031419263}
   _value: {x: 0, y: 0}
-  _time: 1
-  _ease: 12
+  _time: 3
+  _ease: 1
   _hasConsent: 1
 --- !u!114 &2031419263
 MonoBehaviour:

@@ -38,7 +38,14 @@ public class Differ : MonoBehaviour
             }
             else
             {
-                ResourceManager.FindDifference++;
+                if (ResourceManager.FindDifference < 11)
+                {
+                    ResourceManager.FindDifference++;
+                }
+                else
+                {
+                    ResourceManager.FindDifference = 0;
+                }
                 GameEventManager.FindDifference?.Invoke();
             }
         }

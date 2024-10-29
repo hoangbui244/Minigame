@@ -85,8 +85,8 @@ namespace SpriteSlicer
         {
             targetCollider.enabled = false;
 
-            var _degree = CalcAngle() + 90f - target.eulerAngles.z;
-            var _edge = CalcDistance(startPos, (endPos - startPos), target.position);
+            var degree = CalcAngle() + 90f - target.eulerAngles.z;
+            var edge = CalcDistance(startPos, (endPos - startPos), target.position);
 
             var _params = targetJelly.parameters;
             if (_params != null && _params.Count > 0)
@@ -94,8 +94,8 @@ namespace SpriteSlicer
                 second.GetComponent<Jelly>().parameters.AddRange(_params);
             }
 
-            targetJelly.SetNewShaderParameters(_degree, _edge);
-            second.GetComponent<Jelly>().SetNewShaderParameters(_degree + 180, _edge * -1);
+            targetJelly.SetNewShaderParameters(degree, edge);
+            second.GetComponent<Jelly>().SetNewShaderParameters(degree + 180, edge * -1);
         }
 
         void UpdateCollider()
@@ -104,14 +104,14 @@ namespace SpriteSlicer
 
             var colliderPoints = targetCollider.points;
 
-            var _points1 = new List<Vector2>();
-            var _points2 = new List<Vector2>();
+            var points1 = new List<Vector2>();
+            var points2 = new List<Vector2>();
             var dir = 0;
 
             var rotFactor = Quaternion.AngleAxis(target.eulerAngles.z, Vector3.back);
 
             var _startPos = startPos - (Vector2)target.position;
-            var _endPos = endPos - (Vector2)target.position;
+            var _endPos = endPos + (Vector2)target.position;
 
             _startPos = rotFactor * _startPos;
             _endPos = rotFactor * _endPos;
@@ -125,43 +125,43 @@ namespace SpriteSlicer
                 {
                     if (dir == -1)
                     {
-                        _points1.Add(_endPos);
-                        _points1.Add(_startPos);
+                        points1.Add(_endPos);
+                        points1.Add(_startPos);
                         splitPointsAdded1 = true;
                     }
-                    _points1.Add(point);
+                    points1.Add(point);
                     dir = 1;
                 }
                 else
                 {
                     if (dir == 1)
                     {
-                        _points2.Add(_startPos);
-                        _points2.Add(_endPos);
+                        points2.Add(_startPos);
+                        points2.Add(_endPos);
                         splitPointsAdded2 = true;
                     }
-                    _points2.Add(point);
+                    points2.Add(point);
                     dir = -1;
                 }
             }
 
             if(!splitPointsAdded1)
             {
-                _points1.Add(_endPos);
-                _points1.Add(_startPos);
+                points1.Add(_endPos);
+                points1.Add(_startPos);
             }
             if (!splitPointsAdded2)
             {
-                _points2.Add(_startPos);
-                _points2.Add(_endPos);
+                points2.Add(_startPos);
+                points2.Add(_endPos);
             }
 
-            if (_points1.Count > 2 && _points2.Count > 2)
+            if (points1.Count > 2 && points2.Count > 2)
             {
-                targetCollider.points = _points1.ToArray();
+                targetCollider.points = points1.ToArray();
 
                 second = GameObject.Instantiate(target, target.position, target.rotation);
-                second.GetComponent<PolygonCollider2D>().points = _points2.ToArray();
+                second.GetComponent<PolygonCollider2D>().points = points2.ToArray();
                 second.GetComponent<Jelly>().InvokeEnableCollider();
             }
             else

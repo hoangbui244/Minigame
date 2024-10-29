@@ -32,7 +32,14 @@ public class BreakCandyCheck : MonoBehaviour
             _currentCount++;
             if (_currentCount >= _winCount)
             {
-                ResourceManager.BreakCandy++;
+                if (ResourceManager.BreakCandy < 10)
+                {
+                    ResourceManager.BreakCandy++;
+                }
+                else
+                {
+                    ResourceManager.BreakCandy = 1;
+                }
                 GameManager.Instance.GamePause(true);
                 OffPen();
                 _text.SetActive(false);

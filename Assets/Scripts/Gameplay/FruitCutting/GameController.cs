@@ -103,7 +103,14 @@ public class GameController : MonoBehaviour
     {
         if (_currentScore > 99)
         {
-            ResourceManager.FruitCutting++;
+            if (ResourceManager.FruitCutting < 7)
+            {
+                ResourceManager.FruitCutting++;
+            }
+            else
+            {
+                ResourceManager.FruitCutting = 1;
+            }
             GameUIManager.Instance.ScreenShot();
             StartCoroutine(NewLevel());
         }

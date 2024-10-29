@@ -15,8 +15,9 @@ public static class GameEventManager
     public static Action FruitCutting;
     public static Action<bool> BreakCandy;
     public static Action<bool> DefuseBomb;
-    public static Action<bool> BallBreaker;
+    public static Action BallBreaker;
     public static Action<bool> CheckTeeth;
     public static Action FindDifference;
     public static Action<int> CutInHalf;
+    public static Action<Vector3> ThrowBall;
 }

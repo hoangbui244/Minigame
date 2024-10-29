@@ -25,7 +25,14 @@ public class PieceTogetherLevel : MonoBehaviour
         }
         else
         {
-            ResourceManager.PieceTogether++;
+            if (ResourceManager.PieceTogether < 5)
+            {
+                ResourceManager.PieceTogether++;
+            }
+            else
+            {
+                ResourceManager.PieceTogether = 1;
+            }
             //GameUIManager.Instance.EndGame();
         }
     }
