@@ -31,7 +31,7 @@ public class GameController : MonoBehaviour
         _highScoreText.text = "High Score: " + score.ToString();
         _scoreText.text = "0";
     }
-    
+
     public void NextLevel(int index)
     {
         if (index == 3 || index == 6)
@@ -42,6 +42,7 @@ public class GameController : MonoBehaviour
         {
             _locked = false;
         }
+
         if (!_locked)
         {
             ResourceManager.FruitCutting = index;
@@ -53,7 +54,7 @@ public class GameController : MonoBehaviour
             //GameUIManager.Instance.WatchAds();
         }
     }
-    
+
     private void SetupLevel()
     {
         int num = ResourceManager.FruitCutting - 1;
@@ -76,7 +77,7 @@ public class GameController : MonoBehaviour
                 for (int i = 0; i < Input.touchCount; i++)
                 {
                     Touch touch = Input.GetTouch(i);
-                    
+
                     if (EventSystem.current.IsPointerOverGameObject(touch.fingerId))
                     {
                         isPointerOverUI = true;
@@ -101,25 +102,18 @@ public class GameController : MonoBehaviour
 
     private void Check()
     {
-        if (_currentScore > 99)
+        if (ResourceManager.FruitCutting < 7)
         {
-            if (ResourceManager.FruitCutting < 7)
-            {
-                ResourceManager.FruitCutting++;
-            }
-            else
-            {
-                ResourceManager.FruitCutting = 1;
-            }
-            GameUIManager.Instance.ScreenShot();
-            StartCoroutine(NewLevel());
+            ResourceManager.FruitCutting++;
         }
         else
         {
-            GameUIManager.Instance.Retry(true);
+            ResourceManager.FruitCutting = 1;
         }
+        GameUIManager.Instance.ScreenShot();
+        StartCoroutine(NewLevel());
     }
-    
+
     private IEnumerator NewLevel()
     {
         yield return new WaitForSeconds(0.3f);

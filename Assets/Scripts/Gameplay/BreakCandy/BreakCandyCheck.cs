@@ -44,16 +44,9 @@ public class BreakCandyCheck : MonoBehaviour
                 OffPen();
                 _text.SetActive(false);
                 ObjectPooler.Instance.MoveToPool();
-                StartCoroutine(NextLevel());
+                GameUIManager.Instance.CompletedLevel1(true);
             }
         }
-    }
-    
-    private IEnumerator NextLevel()
-    {
-        GameUIManager.Instance.CompletedLevel1(true);
-        yield return _wait;
-        GameUIManager.Instance.Reload();
     }
     
     private void OffPen()

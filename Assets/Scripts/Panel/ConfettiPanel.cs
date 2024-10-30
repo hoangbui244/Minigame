@@ -15,10 +15,4 @@ public class ConfettiPanel : MonoBehaviour
         _obj1.SetActive(true);
         _obj2.SetActive(true);
     }
-    
-    private void OnDisable()
-    {
-        _obj1.SetActive(false);
-        _obj2.SetActive(false);
-    }
 }
