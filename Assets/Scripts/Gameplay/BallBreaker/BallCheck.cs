@@ -7,7 +7,6 @@ public class BallCheck : MonoBehaviour
     [SerializeField] private List<GameObject> _objects;
     [SerializeField] private List<Obstacle> _obstacles;
     private WaitForSeconds _wait = new WaitForSeconds(1.5f);
-    private int _activeObstacles;
     
     private void OnEnable()
     {
@@ -24,7 +23,6 @@ public class BallCheck : MonoBehaviour
     
     private void Reset()
     {
-        _activeObstacles = _objects.Count;
         foreach (var obj in _obstacles)
         {
             obj.Reset();
@@ -33,12 +31,11 @@ public class BallCheck : MonoBehaviour
     
     private void Check()
     {
-        _activeObstacles--;
-
-        if (_activeObstacles <= 0)
+        foreach (var obj in _obstacles)
         {
-            StartCoroutine(Delay());
+            if (!obj.IsFinish) return;
         }
+        StartCoroutine(Delay());
     }
     
     private IEnumerator Delay()

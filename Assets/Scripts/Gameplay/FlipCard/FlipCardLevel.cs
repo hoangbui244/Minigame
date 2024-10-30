@@ -6,6 +6,7 @@ public class FlipCardLevel : MonoBehaviour
 {
     [SerializeField] private List<bool> _winCondition;
     [SerializeField] private int _num;
+    [SerializeField] private GameObject _text;
     
     private void OnEnable()
     {
@@ -25,7 +26,8 @@ public class FlipCardLevel : MonoBehaviour
         }
         else
         {
-            if (ResourceManager.FlipCard < 5)
+            _text.SetActive(false);
+            if (ResourceManager.FlipCard < 10)
             {
                 ResourceManager.FlipCard++;
             }
@@ -33,7 +35,7 @@ public class FlipCardLevel : MonoBehaviour
             {
                 ResourceManager.FlipCard = 1;
             }
-            //GameUIManager.Instance.EndGame();
+            GameUIManager.Instance.CompletedLevel1(true);
         }
     }
 }

@@ -56,7 +56,6 @@ public class Obstacle : MonoBehaviour
 
     public void Reset()
     {
-
         if (!_isBlur)
         {
             if (!_isFinish) return;

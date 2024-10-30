@@ -16,6 +16,7 @@ public class Card : MonoBehaviour
     public bool Finished;
     public int Id;
     public static int PairCount;
+    private readonly WaitForSeconds _delayTime = new(0.5f);
 
     private void Start()
     {
@@ -48,18 +49,25 @@ public class Card : MonoBehaviour
     {
         if (Flipped)
         {
-            Flipped = false;
-            transform.DORotate(_halfFlip, 0.2f).OnComplete(() =>
-            {
-                _spriteRenderer.sprite = _back;
-                transform.DORotate(Vector3.zero, 0.2f).OnComplete(() =>
-                {
-                    Invoke(nameof(ResetPairCount), 0.1f);
-                });
-            });
+            StartCoroutine(FlipDownCoroutine());
         }
     }
 
+    private IEnumerator FlipDownCoroutine()
+    {
+        yield return _delayTime;
+
+        Flipped = false;
+        transform.DORotate(_halfFlip, 0.2f).OnComplete(() =>
+        {
+            _spriteRenderer.sprite = _back;
+            transform.DORotate(Vector3.zero, 0.2f).OnComplete(() =>
+            {
+                Invoke(nameof(ResetPairCount), 0.1f);
+            });
+        });
+    }
+    
     public void End()
     {
         transform.DOScale(0, 0.35f).OnComplete(() => { gameObject.SetActive(false); });
