@@ -7,6 +7,14 @@ TagManager:
   - Candy
   - SlicedObj
   - Point
+  - ground
+  - Obstacle
+  - BombPickup
+  - Enemy
+  - ExplosionFX
+  - Bullet
+  - HealthBar
+  - Pen
   layers:
   - Default
   - TransparentFX

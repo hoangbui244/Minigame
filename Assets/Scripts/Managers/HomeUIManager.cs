@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
+using Random = UnityEngine.Random;
 
 public class HomeUIManager : Singleton<HomeUIManager>
 {
@@ -56,5 +57,11 @@ public class HomeUIManager : Singleton<HomeUIManager>
     {
         yield return _wait;
         SceneManager.LoadScene(2);
+    }
+
+    public void OnClickRandom()
+    {
+        int random = Random.Range(1, 11);
+        LoadLevel(random);
     }
 }

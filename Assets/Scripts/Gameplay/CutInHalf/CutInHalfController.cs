@@ -40,7 +40,7 @@ public class CutInHalfController : MonoBehaviour
     
     public void NextLevel(int index)
     {
-        if (index == 3 || index == 6 || index == 10)
+        if (index == 11)
         {
             _locked = true;
         }

@@ -12,19 +12,24 @@ public class Stick : MonoBehaviour
     [SerializeField] private float _pointOffset = 0.5f;
     [SerializeField] private float dragResistance = 0.1f;
     private Vector2 targetPosition;
-    
+
     private void Start()
     {
         _camera = Camera.main;
         _lastPointPrefabPos = _startPos.position;
     }
-    
+
     private void OnMouseDown()
     {
-        if (Input.GetMouseButtonDown(0) && !MainUIMananger.Instance.PopupOpened && GameManager.Instance.GameState == GameManager.EnumGameState.Play)
+        if (Input.GetMouseButtonDown(0) && !MainUIMananger.Instance.PopupOpened)
         {
-            //AudioManager.PlaySound("PickUp");
-            _diff = (Vector2)_camera.ScreenToWorldPoint(Input.mousePosition) - (Vector2)transform.position;
+            Vector2 mousePosition = _camera.ScreenToWorldPoint(Input.mousePosition);
+            RaycastHit2D hit = Physics2D.Raycast(mousePosition, Vector2.zero);
+
+            if (hit.collider != null && hit.collider.gameObject == gameObject && CompareTag("Pen"))
+            {
+                _diff = (Vector2)_camera.ScreenToWorldPoint(Input.mousePosition) - (Vector2)transform.position;
+            }
         }
     }
 
@@ -34,6 +39,7 @@ public class Stick : MonoBehaviour
         {
             targetPosition = (Vector2)_camera.ScreenToWorldPoint(Input.mousePosition) - _diff;
             transform.position = Vector2.Lerp(transform.position, targetPosition, 1 - dragResistance);
+
             if (Vector2.Distance(_lastPointPrefabPos, _startPos.position) >= _pointOffset)
             {
                 ObjectPooler.Instance.SpawnFromPool("Point", _startPos.position);

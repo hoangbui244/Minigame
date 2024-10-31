@@ -15,6 +15,7 @@ public class CrocodileDentistCheck : MonoBehaviour
     private int _currentWinCount = 0;
     private WaitForSeconds _wait = new WaitForSeconds(1.2f);
     private WaitForSeconds _vfxTime = new WaitForSeconds(0.4f);
+    private bool _locked;
     
     private void OnEnable()
     {
@@ -67,5 +68,27 @@ public class CrocodileDentistCheck : MonoBehaviour
         _vfx.SetActive(false);
         yield return _wait;
         GameUIManager.Instance.Retry(true);
+    }
+    
+    public void NextLevel(int index)
+    {
+        if (index == 8)
+        {
+            _locked = true;
+        }
+        else
+        {
+            _locked = false;
+        }
+        if (!_locked)
+        {
+            ResourceManager.CrocodileDentist = index;
+            GameUIManager.Instance.Reload();
+        }
+        else
+        {
+            Debug.LogError("Watch Ads");
+            //GameUIManager.Instance.WatchAds();
+        }
     }
 }

@@ -34,7 +34,7 @@ public class GameController : MonoBehaviour
 
     public void NextLevel(int index)
     {
-        if (index == 3 || index == 6)
+        if (index == 8)
         {
             _locked = true;
         }
