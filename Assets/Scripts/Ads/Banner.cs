@@ -74,9 +74,9 @@ public class Banner : MonoBehaviour
         // Raised when an ad is loaded into the banner view.
         _bannerView.OnBannerAdLoaded += () =>
         {
-            Debug.LogError("Banner view loaded an ad with response : "
+            Debug.Log("Banner view loaded an ad with response : "
                            + _bannerView.GetResponseInfo());
-            Debug.LogError(_bannerView.IsCollapsible()
+            Debug.Log(_bannerView.IsCollapsible()
                 ? "Banner is collapsible."
                 : "Banner is not collapsible.");
             // if (SceneManager.GetActiveScene().name == "HomeScreen")

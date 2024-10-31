@@ -68,7 +68,7 @@ public class AdsManager : Singleton<AdsManager>
         if (_initialized) return;
         
         InitAdsID();
-        MaxSdk.SetSdkKey("aho5T_K2adzQ0dT7Db277CGTdJkvhGI4StS8uxNteWnEcn3HBKtBEt9Sti1w0s0_Z4kJnho3Z6Iwm125qc2KNJ");
+        MaxSdk.SetSdkKey("dQ15CD6nC7CfuD2IKhScGfRyQOoJpENkqUqftd_Xg0z83xvbcqZKQG3JTTbzUAaR8bGxPGTBufsv3sqxsXzrcV");
         MaxSdk.InitializeSdk();
         // MaxSdkCallbacks.OnSdkInitializedEvent += sdkConfiguration =>
         // {

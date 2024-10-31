@@ -18,14 +18,15 @@ namespace SpriteSlicer
         [SerializeField] private float _time;
         [SerializeField] private RectTransform _canvas;
         [SerializeField] private TextMeshProUGUI _text;
-        private float originalArea;
-        SpriteRenderer sr;
+        private float _originalArea;
+        private int _finalValue;
+        private SpriteRenderer _sr;
         private static float _num;
 
         void Start()
         {
             NullCheck();
-            originalArea = CalculateColliderArea(GetComponent<Collider2D>());
+            _originalArea = CalculateColliderArea(GetComponent<Collider2D>());
             _num = 0;
         }
         
@@ -33,7 +34,7 @@ namespace SpriteSlicer
         {
             float areaPart1 = CalculateColliderArea(GetComponent<Collider2D>());
 
-            float percentagePart1 = (areaPart1 / originalArea) * 100f;
+            float percentagePart1 = (areaPart1 / _originalArea) * 100f;
             _num = Mathf.Round(percentagePart1);
             return _num;
         }
@@ -60,10 +61,10 @@ namespace SpriteSlicer
 
         void NullCheck()
         {
-            if (sr == null)
+            if (_sr == null)
             {
-                sr = GetComponent<SpriteRenderer>();
-                sr.material = SliceManager.Instance.sliceMaterial;
+                _sr = GetComponent<SpriteRenderer>();
+                _sr.material = SliceManager.Instance.sliceMaterial;
             }
         }
 
@@ -82,8 +83,8 @@ namespace SpriteSlicer
             var sliceIndex = 1;
             foreach (var param in parameters)
             {
-                sr.material.SetFloat("_Degree_" + sliceIndex, param.Item1);
-                sr.material.SetFloat("_Edge_" + sliceIndex, param.Item2);
+                _sr.material.SetFloat("_Degree_" + sliceIndex, param.Item1);
+                _sr.material.SetFloat("_Edge_" + sliceIndex, param.Item2);
 
                 sliceIndex++;
             }
@@ -115,6 +116,7 @@ namespace SpriteSlicer
                     _canvas.gameObject.SetActive(true);
                     float finalPercentage = CalculateSlicePercentages();
                     TweenPercentageText(_text, 0, finalPercentage, 1f);
+                    Invoke(nameof(Check), 1.2f);
                 });
             });
         }
@@ -143,10 +145,14 @@ namespace SpriteSlicer
                 })
                 .OnComplete(() => 
                 {
-                    int finalValue = Mathf.RoundToInt(endValue);
-                    text.text = $"{finalValue} %";
-                    GameEventManager.CutInHalf?.Invoke(finalValue);
+                    _finalValue = Mathf.RoundToInt(endValue);
+                    text.text = $"{_finalValue} %";
                 });
+        }
+
+        private void Check()
+        {
+            GameEventManager.CutInHalf?.Invoke(_finalValue);
         }
     }
 }
