@@ -13,6 +13,7 @@ public class MainUIMananger : Singleton<MainUIMananger>
     public int LevelTypeToLoad;
     [SerializeField] private GameObject _mask;
     [SerializeField] private GameObject _dog;
+    [SerializeField] private GameObject _breakCandy;
     [SerializeField] private float _time;
     private Vector3 _maskScaleEnd = new Vector3(25, 25, 1);
     private Vector3 _dogScaleEnd = new Vector3(0.8f, 0.8f, 1);
@@ -48,6 +49,11 @@ public class MainUIMananger : Singleton<MainUIMananger>
         {
             GameManager.Instance.GamePause(false);
         });
+    }
+    
+    public void BreakCandy()
+    {
+        _breakCandy.SetActive(true);
     }
 
     #endregion

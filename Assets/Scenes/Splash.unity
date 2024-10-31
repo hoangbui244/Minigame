@@ -1446,6 +1446,7 @@ MonoBehaviour:
   LevelTypeToLoad: 0
   _mask: {fileID: 337846936}
   _dog: {fileID: 725401961}
+  _breakCandy: {fileID: 0}
   _time: 0.4
 --- !u!114 &1241935448
 MonoBehaviour:
