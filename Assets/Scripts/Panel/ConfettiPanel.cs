@@ -11,8 +11,14 @@ public class ConfettiPanel : MonoBehaviour
     
     private void OnEnable()
     {
+        MainUIMananger.Instance.PopupOpened = true;
         _anim.Play("Confetti");
         _obj1.SetActive(true);
         _obj2.SetActive(true);
+    }
+    
+    private void OnDisable()
+    {
+        MainUIMananger.Instance.PopupOpened = false;
     }
 }

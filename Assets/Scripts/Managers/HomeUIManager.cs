@@ -16,7 +16,7 @@ public class HomeUIManager : Singleton<HomeUIManager>
     private void OnEnable()
     {
         Init();
-        AdsManager.Instance.ShowBanner();
+        // AdsManager.Instance.ShowBanner();
     }
     
     private void Init()

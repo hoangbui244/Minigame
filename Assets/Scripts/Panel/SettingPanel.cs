@@ -1,3 +1,4 @@
+using System;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -19,6 +20,11 @@ public class SettingPanel : MonoBehaviour
     
     [SerializeField] private float _time = 0.2f;
     private Vector2 _endPos = new Vector2(205, 0);
+
+    private void OnEnable()
+    {
+        MainUIMananger.Instance.PopupOpened = true;
+    }
 
     private void Start()
     {
@@ -71,6 +77,7 @@ public class SettingPanel : MonoBehaviour
     public void Close()
     {
         gameObject.SetActive(false);
+        MainUIMananger.Instance.PopupOpened = true;
     }
 
     public void Rate()
