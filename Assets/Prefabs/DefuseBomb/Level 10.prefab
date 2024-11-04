@@ -388,7 +388,7 @@ MonoBehaviour:
   _greenZone: {fileID: 8359998754796574604}
   _startPos: {x: -13, y: -11, z: 0}
   _endPos: {x: 13, y: -11, z: 0}
-  _time: 0.5
+  _time: 0.8
   _mask: {fileID: 8096996808878381051}
   IsFinished: 0
 --- !u!1 &2394039467504525052
@@ -2115,7 +2115,7 @@ MonoBehaviour:
   _greenZone: {fileID: 8069369994811886422}
   _startPos: {x: -13, y: -1, z: 0}
   _endPos: {x: 13, y: -1, z: 0}
-  _time: 0.7
+  _time: 1
   _mask: {fileID: 4743401344965445111}
   IsFinished: 0
 --- !u!1 &8096996808878381051
@@ -2338,7 +2338,7 @@ MonoBehaviour:
   _greenZone: {fileID: 5239488603242690678}
   _startPos: {x: -13, y: -6, z: 0}
   _endPos: {x: 13, y: -6, z: 0}
-  _time: 0.6
+  _time: 0.9
   _mask: {fileID: 3727437372397370894}
   IsFinished: 0
 --- !u!1 &8741438296191646663
