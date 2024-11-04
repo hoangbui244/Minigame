@@ -22,9 +22,12 @@ public class CutInHalfController : MonoBehaviour
     {
         if (value >= 48 && value <= 52)
         {
+            Debug.Log("Completed");
             if (ResourceManager.CutInHalf < 10)
             {
+                Debug.Log("Next Level");
                 ResourceManager.CutInHalf++;
+                Debug.Log(ResourceManager.CutInHalf);
             }
             else
             {

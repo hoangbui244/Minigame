@@ -4,7 +4,48 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cc1e008d-39a7-4d81-b082-3c7e1c260ee0" name="Changes" comment="" />
+    <list default="true" id="cc1e008d-39a7-4d81-b082-3c7e1c260ee0" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Minigame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Minigame/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/SliceHalf.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/SliceHalf.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/CutInHalf/Level 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/CutInHalf/Level 1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/CutInHalf/Level 10.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/CutInHalf/Level 10.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/CutInHalf/Level 10.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/CutInHalf/Level 10.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/CutInHalf/Level 2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/CutInHalf/Level 2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/CutInHalf/Level 2.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/CutInHalf/Level 2.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/CutInHalf/Level 3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/CutInHalf/Level 3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/CutInHalf/Level 3.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/CutInHalf/Level 3.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/CutInHalf/Level 4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/CutInHalf/Level 4.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/CutInHalf/Level 4.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/CutInHalf/Level 4.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/CutInHalf/Level 5.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/CutInHalf/Level 5.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/CutInHalf/Level 5.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/CutInHalf/Level 5.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/CutInHalf/Level 6.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/CutInHalf/Level 6.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/CutInHalf/Level 6.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/CutInHalf/Level 6.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/CutInHalf/Level 7.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/CutInHalf/Level 7.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/CutInHalf/Level 7.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/CutInHalf/Level 7.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/CutInHalf/Level 8.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/CutInHalf/Level 8.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/CutInHalf/Level 8.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/CutInHalf/Level 8.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/CutInHalf/Level 9.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/CutInHalf/Level 9.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/CutInHalf/Level 9.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/CutInHalf/Level 9.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GamePlay.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GamePlay.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/CutInHalf/Cut.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/CutInHalf/Cut.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/CutInHalf/CutInHalfController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/CutInHalf/CutInHalfController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/CutInHalf/Jelly.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/CutInHalf/Jelly.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/CutInHalf/MovedObj.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/CutInHalf/MovedObj.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/CutInHalf/SliceEngine.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/CutInHalf/SliceEngine.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/CutInHalf/SliceManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/CutInHalf/SliceManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/GameEventManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/GameEventManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shader/SliceShader.shadergraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shader/SliceShader.shadergraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shader/Sub Graph.shadersubgraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shader/Sub Graph.shadersubgraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -132,6 +173,8 @@
       <workItem from="1730252695787" duration="4998000" />
       <workItem from="1730338602522" duration="7757000" />
       <workItem from="1730425016117" duration="3057000" />
+      <workItem from="1730686542263" duration="7066000" />
+      <workItem from="1730702155676" duration="5975000" />
     </task>
     <servers />
   </component>
@@ -147,128 +190,5 @@
   <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Gameplay/CutInHalf/SliceEngine.cs</url>
-          <line>121</line>
-          <properties documentPath="C:\Users\admin\Documents\Minigame\Assets\Scripts\Gameplay\CutInHalf\SliceEngine.cs" containingFunctionPresentation="Method 'UpdateCollider'">
-            <startOffsets>
-              <option value="3437" />
-            </startOffsets>
-            <endOffsets>
-              <option value="3474" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Gameplay/CutInHalf/SliceEngine.cs</url>
-          <line>123</line>
-          <properties documentPath="C:\Users\admin\Documents\Minigame\Assets\Scripts\Gameplay\CutInHalf\SliceEngine.cs" containingFunctionPresentation="Method 'UpdateCollider'">
-            <startOffsets>
-              <option value="3505" />
-            </startOffsets>
-            <endOffsets>
-              <option value="3567" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Gameplay/CutInHalf/SliceEngine.cs</url>
-          <line>125</line>
-          <properties documentPath="C:\Users\admin\Documents\Minigame\Assets\Scripts\Gameplay\CutInHalf\SliceEngine.cs" containingFunctionPresentation="Method 'UpdateCollider'">
-            <startOffsets>
-              <option value="3606" />
-            </startOffsets>
-            <endOffsets>
-              <option value="3620" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Gameplay/CutInHalf/SliceEngine.cs</url>
-          <line>131</line>
-          <properties documentPath="C:\Users\admin\Documents\Minigame\Assets\Scripts\Gameplay\CutInHalf\SliceEngine.cs" containingFunctionPresentation="Method 'UpdateCollider'">
-            <startOffsets>
-              <option value="3829" />
-            </startOffsets>
-            <endOffsets>
-              <option value="3848" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Gameplay/CutInHalf/SliceEngine.cs</url>
-          <line>136</line>
-          <properties documentPath="C:\Users\admin\Documents\Minigame\Assets\Scripts\Gameplay\CutInHalf\SliceEngine.cs" containingFunctionPresentation="Method 'UpdateCollider'">
-            <startOffsets>
-              <option value="3955" />
-            </startOffsets>
-            <endOffsets>
-              <option value="3968" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="16" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Gameplay/CutInHalf/SliceEngine.cs</url>
-          <line>142</line>
-          <properties documentPath="C:\Users\admin\Documents\Minigame\Assets\Scripts\Gameplay\CutInHalf\SliceEngine.cs" containingFunctionPresentation="Method 'UpdateCollider'">
-            <startOffsets>
-              <option value="4177" />
-            </startOffsets>
-            <endOffsets>
-              <option value="4196" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="21" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Gameplay/CutInHalf/SliceEngine.cs</url>
-          <line>158</line>
-          <properties documentPath="C:\Users\admin\Documents\Minigame\Assets\Scripts\Gameplay\CutInHalf\SliceEngine.cs" containingFunctionPresentation="Method 'UpdateCollider'">
-            <startOffsets>
-              <option value="4556" />
-            </startOffsets>
-            <endOffsets>
-              <option value="4599" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="25" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Gameplay/CutInHalf/SliceEngine.cs</url>
-          <line>163</line>
-          <properties documentPath="C:\Users\admin\Documents\Minigame\Assets\Scripts\Gameplay\CutInHalf\SliceEngine.cs" containingFunctionPresentation="Method 'UpdateCollider'">
-            <startOffsets>
-              <option value="4781" />
-            </startOffsets>
-            <endOffsets>
-              <option value="4849" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="29" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Gameplay/CutInHalf/SliceEngine.cs</url>
-          <line>162</line>
-          <properties documentPath="C:\Users\admin\Documents\Minigame\Assets\Scripts\Gameplay\CutInHalf\SliceEngine.cs" containingFunctionPresentation="Method 'UpdateCollider'">
-            <startOffsets>
-              <option value="4690" />
-            </startOffsets>
-            <endOffsets>
-              <option value="4764" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="30" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

@@ -24,7 +24,7 @@ public class Slide : MonoBehaviour
 
     private void Move()
     {
-        _moveTween = _whiteSlider.DOMove(_endPos, _time).SetLoops(-1, LoopType.Yoyo).SetEase(Ease.Linear);
+        _moveTween = _whiteSlider.DOMove(_endPos, _time).SetLoops(-1, LoopType.Yoyo).SetEase(Ease.InOutSine);
     }
 
     private void Stop()

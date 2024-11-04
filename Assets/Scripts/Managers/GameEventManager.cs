@@ -21,4 +21,5 @@ public static class GameEventManager
     public static Action<int> CutInHalf;
     public static Action<Vector3> ThrowBall;
     public static Action BreakCandyPiece;
+    public static Action<float> Test;
 }
