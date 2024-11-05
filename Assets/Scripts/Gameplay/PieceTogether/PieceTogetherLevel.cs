@@ -25,7 +25,7 @@ public class PieceTogetherLevel : MonoBehaviour
         }
         else
         {
-            if (ResourceManager.PieceTogether < 5)
+            if (ResourceManager.PieceTogether < 9)
             {
                 ResourceManager.PieceTogether++;
             }
