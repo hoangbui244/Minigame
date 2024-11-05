@@ -16,6 +16,7 @@ public class Level : MonoBehaviour
         CutInHalf = 8,
         DefuseBomb = 9,
         FruitCutting = 10,
+        PerfectSlices = 11,
     }
     
     public LevelType Type;

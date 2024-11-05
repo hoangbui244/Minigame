@@ -82,6 +82,12 @@ public class ResourceManager : Singleton<ResourceManager>
         set => PlayerPrefs.SetInt("FruitCutting", value);
     }
     
+    public static int PerfectSlices
+    {
+        get => PlayerPrefs.GetInt("PerfectSlices", 1);
+        set => PlayerPrefs.SetInt("PerfectSlices", value);
+    }
+    
     public static int HighScore
     {
         get => PlayerPrefs.GetInt("HighScore", 0);

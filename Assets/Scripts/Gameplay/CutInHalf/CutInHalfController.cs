@@ -6,6 +6,7 @@ public class CutInHalfController : MonoBehaviour
 {
     [SerializeField] private List<GameObject> _borders;
     private bool _locked;
+    private WaitForSeconds _wait = new WaitForSeconds(2f);
     
     private void OnEnable()
     {
@@ -20,14 +21,17 @@ public class CutInHalfController : MonoBehaviour
     
     private void Check(int value)
     {
+        StartCoroutine(Wait(value));
+    }
+
+    private IEnumerator Wait(int value)
+    {
+        yield return _wait;
         if (value >= 48 && value <= 52)
         {
-            Debug.Log("Completed");
             if (ResourceManager.CutInHalf < 10)
             {
-                Debug.Log("Next Level");
                 ResourceManager.CutInHalf++;
-                Debug.Log(ResourceManager.CutInHalf);
             }
             else
             {

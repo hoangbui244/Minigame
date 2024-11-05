@@ -83,6 +83,11 @@ public class LevelSpawner : Singleton<LevelSpawner>
                 var level10 = ResourceManager.GetLevel(Level.LevelType.FruitCutting ,num10);
                 _level = Instantiate(level10, transform);
                 break;
+            case 11:
+                var num11 = ResourceManager.PerfectSlices;
+                var level11 = ResourceManager.GetLevel(Level.LevelType.PerfectSlices ,num11);
+                _level = Instantiate(level11, transform);
+                break;
         }
     }
     
