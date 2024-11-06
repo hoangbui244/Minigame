@@ -5,7 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cc1e008d-39a7-4d81-b082-3c7e1c260ee0" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Minigame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Minigame/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PerfectSlices/Level 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PerfectSlices/Level 1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/CutInHalf/CutInHalfController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/CutInHalf/CutInHalfController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/PerfectSlices/SliceKnife.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/PerfectSlices/SliceKnife.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/GameEventManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/GameEventManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/GameUIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/GameUIManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/HomeUIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/HomeUIManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/MainUIMananger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/MainUIMananger.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Others/Level.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Others/Level.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +25,9 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6f7018b8b8c149e68c4a65a05ac289be175400/c0/38dcc4e0/GameObject.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/826013c41c3b46be9045216368f8bbb59200/96/dc5dad8d/AppOpenAd.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/82a2fd073ee449928e161903460426d72ae00/4d/4d3d45d2/Tween.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/dc753a1061284f8e971ee88ee4826eee46ac00/12/bc0ec305/ThrowHelper.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/dc753a1061284f8e971ee88ee4826eee46ac00/af/3b47d2f5/List`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gameplay/BallBreaker/Obstacle.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gameplay/BreakCandy/Stick.cs" root0="FORCE_HIGHLIGHTING" />
@@ -87,10 +98,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="2192">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="2192" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -139,7 +150,8 @@
       <workItem from="1730710237518" duration="4237000" />
       <workItem from="1730771458863" duration="1217000" />
       <workItem from="1730796603680" duration="1074000" />
-      <workItem from="1730802323054" duration="347000" />
+      <workItem from="1730802323054" duration="675000" />
+      <workItem from="1730858262489" duration="7889000" />
     </task>
     <servers />
   </component>

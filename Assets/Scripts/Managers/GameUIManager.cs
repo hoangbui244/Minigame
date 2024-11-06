@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class GameUIManager : Singleton<GameUIManager>
@@ -19,9 +18,9 @@ public class GameUIManager : Singleton<GameUIManager>
     [SerializeField] private Image _nextLvImage;
     
     private Texture2D _screenshot;
-    private Vector2 _scaleEnd = new Vector2(0.25f, 0.25f);
-    private WaitForSeconds _wait = new WaitForSeconds(2f);
-    private WaitForSeconds _wait1 = new WaitForSeconds(3f);
+    private readonly Vector2 _scaleEnd = new Vector2(0.25f, 0.25f);
+    private readonly WaitForSeconds _wait = new WaitForSeconds(2f);
+    private readonly WaitForSeconds _wait1 = new WaitForSeconds(3f);
     
     private void OnEnable()
     {

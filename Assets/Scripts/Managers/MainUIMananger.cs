@@ -14,8 +14,8 @@ public class MainUIMananger : Singleton<MainUIMananger>
     [SerializeField] private GameObject _mask;
     [SerializeField] private GameObject _dog;
     [SerializeField] private float _time;
-    private Vector3 _maskScaleEnd = new Vector3(25, 25, 1);
-    private Vector3 _dogScaleEnd = new Vector3(0.8f, 0.8f, 1);
+    private readonly Vector3 _maskScaleEnd = new Vector3(25, 25, 1);
+    private readonly Vector3 _dogScaleEnd = new Vector3(0.8f, 0.8f, 1);
 
     #endregion
 

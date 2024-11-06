@@ -6,7 +6,7 @@ public class CutInHalfController : MonoBehaviour
 {
     [SerializeField] private List<GameObject> _borders;
     private bool _locked;
-    private WaitForSeconds _wait = new WaitForSeconds(2f);
+    private readonly WaitForSeconds _wait = new WaitForSeconds(2f);
     
     private void OnEnable()
     {

@@ -17,6 +17,7 @@ public class Level : MonoBehaviour
         DefuseBomb = 9,
         FruitCutting = 10,
         PerfectSlices = 11,
+        BalanceEgg = 12,
     }
     
     public LevelType Type;
