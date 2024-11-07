@@ -15,6 +15,7 @@ public class PetControler : MonoBehaviour
     [SerializeField] private Sprite _headExplode;
     [SerializeField] private Sprite _headNor;
     [SerializeField] private Sprite _headFear;
+    [SerializeField] private float _customTime = 5f;
     private SpriteRenderer _headSpriteRenderer;
     private SpriteRenderer _handSpriteRenderer;
     private Sequence _shakeSequence;
@@ -27,8 +28,19 @@ public class PetControler : MonoBehaviour
 
     private void Awake()
     {
-        _headSpriteRenderer = _head.GetComponentInChildren<SpriteRenderer>();
-        _handSpriteRenderer = _hand.GetComponentInChildren<SpriteRenderer>();
+        if (_head == null)
+        {
+            Debug.LogError("_head is not assigned in the Inspector.");
+        }
+        else
+        {
+            _headSpriteRenderer = _head.GetComponent<SpriteRenderer>();
+            if (_headSpriteRenderer == null)
+            {
+                Debug.LogError("No SpriteRenderer component found on _head GameObject.");
+            }
+        }
+        _handSpriteRenderer = _hand.GetComponent<SpriteRenderer>();
         _headSpriteRenderer.sprite = _headNor;
     }
 
@@ -56,9 +68,9 @@ public class PetControler : MonoBehaviour
     
     public void GetBomb()
     {
-        _headSpriteRenderer.sprite = _headFear;
         HasBomb = true;
         _bomb.SetActive(true);
+        _headSpriteRenderer.sprite = _headFear;
         
         _shakeSequence = DOTween.Sequence();
         _shakeSequence.Append(_head.transform.DOShakePosition(0.5f, 0.2f, 5, 50, false, true))
@@ -72,7 +84,7 @@ public class PetControler : MonoBehaviour
     
     private IEnumerator AutoPassBomb()
     {
-        float delay = Random.Range(0f, 4f);
+        float delay = Random.Range(0f, _customTime);
         yield return new WaitForSeconds(delay);
 
         if (HasBomb)

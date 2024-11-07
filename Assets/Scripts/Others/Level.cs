@@ -18,6 +18,8 @@ public class Level : MonoBehaviour
         FruitCutting = 10,
         PerfectSlices = 11,
         BalanceEgg = 12,
+        PassBomb = 13,
+        
     }
     
     public LevelType Type;

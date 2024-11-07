@@ -107,7 +107,7 @@ public class GameUIManager : Singleton<GameUIManager>
 
     public void NextGame()
     {
-        if (MainUIMananger.Instance.LevelTypeToLoad == 10)
+        if (MainUIMananger.Instance.LevelTypeToLoad == 12)
         {
             MainUIMananger.Instance.LevelTypeToLoad = 1;
         }

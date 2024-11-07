@@ -137,7 +137,7 @@ MonoBehaviour:
   _headExplode: {fileID: 21300000, guid: 7c954863a505d7c4b9aedc6ac27c3f0b, type: 3}
   _headNor: {fileID: 21300000, guid: eb9de308e8853be4eaf2a08b3ca06a39, type: 3}
   _headFear: {fileID: 21300000, guid: 88c8cc8358e6c4a409628df98991a8e9, type: 3}
-  _customTime: 6
+  _customTime: 4
   HasBomb: 0
   ID: 0
   IsBot: 0
@@ -449,7 +449,7 @@ MonoBehaviour:
   _headExplode: {fileID: 21300000, guid: dd16c22be5034c347943ceff031021e7, type: 3}
   _headNor: {fileID: 21300000, guid: 82a442ef941e4ec4384a4da51e897582, type: 3}
   _headFear: {fileID: 21300000, guid: 535fdd09280dc1b4695e7dd08a1be3c0, type: 3}
-  _customTime: 6
+  _customTime: 4
   HasBomb: 0
   ID: 3
   IsBot: 1
@@ -1135,7 +1135,7 @@ GameObject:
   - component: {fileID: 1299851827815516271}
   - component: {fileID: 4946443859149687396}
   m_Layer: 0
-  m_Name: Level 1
+  m_Name: Level 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1172,7 +1172,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Type: 13
-  _levelNo: 1
+  _levelNo: 3
 --- !u!114 &4946443859149687396
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1192,7 +1192,7 @@ MonoBehaviour:
   - {fileID: 990832611367504658}
   _time: {fileID: 3802021019310557059}
   _explode: {fileID: 8664628954848050449}
-  _countdownTime: 30
+  _countdownTime: 15
 --- !u!1 &6828689350043701805
 GameObject:
   m_ObjectHideFlags: 0
@@ -1433,7 +1433,7 @@ MonoBehaviour:
   _headExplode: {fileID: 21300000, guid: 321f3c2830088ab44a46387fdaf4d24f, type: 3}
   _headNor: {fileID: 21300000, guid: 445aed4db21492a448a100240c5b09de, type: 3}
   _headFear: {fileID: 21300000, guid: ff89975dd7a59cd40bfd74d9a63a3b16, type: 3}
-  _customTime: 6
+  _customTime: 4
   HasBomb: 0
   ID: 1
   IsBot: 1
@@ -1743,7 +1743,7 @@ MonoBehaviour:
   _headExplode: {fileID: 21300000, guid: 2b3e409b2420d3744b59a22c2ba99094, type: 3}
   _headNor: {fileID: 21300000, guid: b5dbc201d9355de459d82eb4623f3a9b, type: 3}
   _headFear: {fileID: 21300000, guid: c7c6d34850330664f8b2ea5548c99d69, type: 3}
-  _customTime: 6
+  _customTime: 4
   HasBomb: 0
   ID: 2
   IsBot: 1

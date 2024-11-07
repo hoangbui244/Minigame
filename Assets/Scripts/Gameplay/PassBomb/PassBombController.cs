@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
@@ -10,7 +11,7 @@ public class PassBombController : MonoBehaviour
     [SerializeField] private List<PetControler> _pets;
     [SerializeField] private TextMeshProUGUI _time;
     [SerializeField] private GameObject _explode;
-    private int _countdownTime = 15; 
+    [SerializeField] private int _countdownTime = 15; 
     private readonly Vector3 _radius = new Vector3(5f, 5f, 5f);
     private readonly WaitForSeconds _wait = new (1);
     private readonly WaitForSeconds _delay = new (0.2f);
@@ -19,10 +20,14 @@ public class PassBombController : MonoBehaviour
     {
         GameEventManager.NextBomb += NextBomb;
         GameEventManager.PassBomb += Check;
+    }
+
+    private void Start()
+    {
         RandomBomb();
         SetupTime();
     }
-    
+
     private void OnDisable()
     {
         GameEventManager.NextBomb -= NextBomb;
