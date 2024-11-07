@@ -19,7 +19,7 @@ public class Level : MonoBehaviour
         PerfectSlices = 11,
         BalanceEgg = 12,
         PassBomb = 13,
-        
+        OneLine = 14,
     }
     
     public LevelType Type;
