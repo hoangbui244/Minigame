@@ -25,4 +25,5 @@ public static class GameEventManager
     public static Action<int> PerfectSlices;
     public static Action PerfectSlicesReset;
     public static Action<int> NextBomb;
+    public static Action PassBomb;
 }

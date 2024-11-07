@@ -6,9 +6,46 @@
   <component name="ChangeListManager">
     <list default="true" id="cc1e008d-39a7-4d81-b082-3c7e1c260ee0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Minigame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Minigame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/BalanceEgg/Level 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/BalanceEgg/Level 1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PassBomb/Level 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PassBomb/Level 1.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/GamePlay.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GamePlay.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/PassBomb/PassBombController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/PassBomb/PassBombController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/PassBomb/PetControler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/PassBomb/PetControler.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/GameEventManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/GameEventManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/PassBomb/Frame 1686.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/PassBomb/Frame 1686.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/PassBomb/Frame 1690.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/PassBomb/Frame 1690.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/PassBomb/Frame 1692.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/PassBomb/Frame 1692.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/PassBomb/Frame 1693.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/PassBomb/Frame 1693.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/PassBomb/Frame 1694.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/PassBomb/Frame 1694.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/PassBomb/Frame 1695.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/PassBomb/Frame 1695.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/PassBomb/Frame 1696.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/PassBomb/Frame 1696.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/PassBomb/Frame 1697.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/PassBomb/Frame 1697.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/PassBomb/Frame 1698.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/PassBomb/Frame 1698.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/PassBomb/Frame 1699.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/PassBomb/Frame 1699.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/PassBomb/Frame 1700.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/PassBomb/Frame 1700.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/PassBomb/Frame 1701.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/PassBomb/Frame 1701.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/PassBomb/Frame 1702.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/PassBomb/Frame 1702.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/PassBomb/Frame 1703.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/PassBomb/Frame 1703.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/PassBomb/Frame 1704.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/PassBomb/Frame 1704.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/PassBomb/Frame 1705.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/PassBomb/Frame 1705.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/PassBomb/Frame 1706.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/PassBomb/Frame 1706.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/PassBomb/Frame 1708.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/PassBomb/Frame 1708.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/PassBomb/Frame 1709.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/PassBomb/Frame 1709.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/PassBomb/Frame 1710.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/PassBomb/Frame 1710.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/PassBomb/Frame 1711.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/PassBomb/Frame 1711.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/PassBomb/Frame 1712.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/PassBomb/Frame 1712.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/PassBomb/Frame 1713.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/PassBomb/Frame 1713.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/PassBomb/Frame 1714.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/PassBomb/Frame 1714.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/PassBomb/Frame 1715.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/PassBomb/Frame 1715.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/PassBomb/Frame 1716.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/PassBomb/Frame 1716.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/PassBomb/Frame 1717.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/PassBomb/Frame 1717.png.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,6 +187,7 @@
       <workItem from="1730874786923" duration="5076000" />
       <workItem from="1730946719943" duration="861000" />
       <workItem from="1730947655092" duration="4341000" />
+      <workItem from="1730961233817" duration="4821000" />
     </task>
     <servers />
   </component>
