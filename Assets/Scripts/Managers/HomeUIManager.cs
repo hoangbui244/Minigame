@@ -61,7 +61,7 @@ public class HomeUIManager : Singleton<HomeUIManager>
 
     public void OnClickRandom()
     {
-        int random = Random.Range(1, 13);
+        int random = Random.Range(1, 15);
         LoadLevel(random);
     }
 }

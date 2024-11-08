@@ -3877,6 +3877,19 @@ MonoBehaviour:
   - {fileID: 21300000, guid: e17113bbe6dd9084492f2b43b25c2bc4, type: 3}
   - {fileID: 21300000, guid: 829ad7bfaddc7c7468889f19a5b35c26, type: 3}
   - {fileID: 21300000, guid: 66973ca5d051e3b44bb9fcd537ff30ec, type: 3}
+  _defaultSprite:
+  - {fileID: 21300000, guid: 891a03d6ef4d7b240a8c9f11a82e780f, type: 3}
+  - {fileID: 21300000, guid: a1bb299d36bf65245be95fd2ba2225ac, type: 3}
+  - {fileID: 21300000, guid: 852b213c352f4514b8edfc2206a73aa0, type: 3}
+  - {fileID: 21300000, guid: 66446e29887a53b4ea0702c02a41adf6, type: 3}
+  - {fileID: 21300000, guid: 05b3b70908e8b64479e215332ba80794, type: 3}
+  - {fileID: 21300000, guid: d0c881a23f37ad644908e6bb0937db29, type: 3}
+  - {fileID: 21300000, guid: ee282dfd1693ea34c8cddaf1689d29b7, type: 3}
+  - {fileID: 21300000, guid: a1a91368062f3b04da5308b79d788b46, type: 3}
+  - {fileID: 21300000, guid: 82cee34bf23008143ba901131c8ca581, type: 3}
+  - {fileID: 21300000, guid: 21c924bdd60a61d4b99c75bdff171722, type: 3}
+  - {fileID: 21300000, guid: 1e0aa0d5237f9cb42b76a288f9d546ca, type: 3}
+  - {fileID: 21300000, guid: 1db8d8c0711ce3c42b9613dfb70500dc, type: 3}
   _point: {fileID: 7057924103396805492}
 --- !u!1 &8503077058195473366
 GameObject:

@@ -9,6 +9,7 @@ public class Swaper : MonoBehaviour
 {
     [SerializeField] private List<Differ> _list;
     [SerializeField] private List<Sprite> _trappedSprite;
+    [SerializeField] private List<Sprite> _defaultSprite;
     [SerializeField] private TextMeshProUGUI _point;
     private WaitForSeconds _wait = new WaitForSeconds(0.3f);
 
@@ -35,10 +36,7 @@ public class Swaper : MonoBehaviour
         _list[count].IsTrapped = true;
         foreach (var item in _list)
         {
-            if (item.IsTrapped)
-            {
-                item.GetComponent<SpriteRenderer>().sprite = _trappedSprite[num];
-            }
+            item.GetComponent<SpriteRenderer>().sprite = item.IsTrapped ? _trappedSprite[num] : _defaultSprite[num];
         }
     }
 

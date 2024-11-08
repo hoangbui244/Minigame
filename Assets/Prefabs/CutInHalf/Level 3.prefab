@@ -1381,7 +1381,6 @@ GameObject:
   - component: {fileID: 3936965702644692314}
   - component: {fileID: 1299851827815516271}
   - component: {fileID: 2585170020918248907}
-  - component: {fileID: 3302880892088115343}
   m_Layer: 0
   m_Name: Level 3
   m_TagString: Untagged
@@ -1445,56 +1444,6 @@ MonoBehaviour:
   - {fileID: 7263988351594837133}
   - {fileID: 3714018490091289036}
   - {fileID: 9007543250502665457}
---- !u!60 &3302880892088115343
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4181574671497260362}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0, y: 1}
-      - {x: -0.95105654, y: 0.30901697}
-      - {x: -0.5877852, y: -0.80901706}
-      - {x: 0.58778536, y: -0.80901694}
-      - {x: 0.9510565, y: 0.30901712}
-  m_UseDelaunayMesh: 0
 --- !u!1 &4841720049191481159
 GameObject:
   m_ObjectHideFlags: 0
@@ -1581,7 +1530,7 @@ GameObject:
   - component: {fileID: 8151157480770210815}
   - component: {fileID: 4442779619179718185}
   - component: {fileID: 511130778740487257}
-  - component: {fileID: 6995437479762193671}
+  - component: {fileID: 1056969528716025167}
   m_Layer: 0
   m_Name: apple
   m_TagString: SlicedObj
@@ -1674,7 +1623,7 @@ MonoBehaviour:
   _obj2Pos: {x: -6, y: -8}
   _text1: {fileID: 3148696019579018783}
   _text2: {fileID: 2564336768912113965}
---- !u!60 &6995437479762193671
+--- !u!60 &1056969528716025167
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1703,7 +1652,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}

@@ -93,6 +93,16 @@ public class LevelSpawner : Singleton<LevelSpawner>
                 var level12 = ResourceManager.GetLevel(Level.LevelType.PassBomb ,num12);
                 _level = Instantiate(level12, transform);
                 break;
+            case 13:
+                var num13 = ResourceManager.OneLine;
+                var level13 = ResourceManager.GetLevel(Level.LevelType.OneLine ,num13);
+                _level = Instantiate(level13, transform);
+                break;
+            case 14:
+                var num14 = ResourceManager.CatchEgg;
+                var level14 = ResourceManager.GetLevel(Level.LevelType.CatchEgg ,num14);
+                _level = Instantiate(level14, transform);
+                break;
         }
     }
     

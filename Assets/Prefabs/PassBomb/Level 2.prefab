@@ -137,6 +137,7 @@ MonoBehaviour:
   _headExplode: {fileID: 21300000, guid: bb68895e8fb94454d8c8b88cca976e91, type: 3}
   _headNor: {fileID: 21300000, guid: ca615375acf6de741a885e6ac1955031, type: 3}
   _headFear: {fileID: 21300000, guid: 01ee5b64dd129d8408d5117acf2b7e23, type: 3}
+  _customTime: 5
   HasBomb: 0
   ID: 0
   IsBot: 0
@@ -448,6 +449,7 @@ MonoBehaviour:
   _headExplode: {fileID: 21300000, guid: 94245074a9aa0b34b97f004b2418c26f, type: 3}
   _headNor: {fileID: 21300000, guid: 67aeb3a82a1d2fc4298dc3be9d79fbe0, type: 3}
   _headFear: {fileID: 21300000, guid: 31fab1655cc9d644eb7049491b4854d9, type: 3}
+  _customTime: 5
   HasBomb: 0
   ID: 3
   IsBot: 1
@@ -1169,7 +1171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74e2e35911f88524bb9329ee01b3a655, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Type: 13
+  Type: 12
   _levelNo: 2
 --- !u!114 &4946443859149687396
 MonoBehaviour:
@@ -1431,6 +1433,7 @@ MonoBehaviour:
   _headExplode: {fileID: 21300000, guid: 806ef19c6b2731f4aaafe15b0d153c58, type: 3}
   _headNor: {fileID: 21300000, guid: 17b26154f90864144b2178e91076a40d, type: 3}
   _headFear: {fileID: 21300000, guid: 5c74589a3d45e9146b73a2a8af37bf0b, type: 3}
+  _customTime: 5
   HasBomb: 0
   ID: 1
   IsBot: 1
@@ -1740,6 +1743,7 @@ MonoBehaviour:
   _headExplode: {fileID: 21300000, guid: 49458c6382a7e61478cb5df31a9cb833, type: 3}
   _headNor: {fileID: 21300000, guid: 057741aaa06cfec47a0fc6b4f7adfbc1, type: 3}
   _headFear: {fileID: 21300000, guid: 7dbafeb4e37101e49a3ed24896daa884, type: 3}
+  _customTime: 5
   HasBomb: 0
   ID: 2
   IsBot: 1

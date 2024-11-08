@@ -94,6 +94,18 @@ public class ResourceManager : Singleton<ResourceManager>
         set => PlayerPrefs.SetInt("PassBomb", value);
     }
     
+    public static int OneLine
+    {
+        get => PlayerPrefs.GetInt("OneLine", 1);
+        set => PlayerPrefs.SetInt("OneLine", value);
+    }
+    
+    public static int CatchEgg
+    {
+        get => PlayerPrefs.GetInt("CatchEgg", 1);
+        set => PlayerPrefs.SetInt("CatchEgg", value);
+    }
+    
     public static int HighScore
     {
         get => PlayerPrefs.GetInt("HighScore", 0);
