@@ -15,6 +15,7 @@ public class PassBombController : MonoBehaviour
     private readonly Vector3 _radius = new Vector3(5f, 5f, 5f);
     private readonly WaitForSeconds _wait = new (1);
     private readonly WaitForSeconds _delay = new (0.2f);
+    public float PassTime = 2f;
     
     private void OnEnable()
     {
@@ -86,14 +87,10 @@ public class PassBombController : MonoBehaviour
     
     private void NextBomb(int id)
     {
-        if (id == _pets.Count - 1)
-        {
-            _pets[0].GetBomb();
-        }
-        else
-        {
-            _pets[id + 1].GetBomb();
-        }
+        int nextId = id == _pets.Count - 1 ? 0 : id + 1;
+
+        _pets[nextId].ReceiveBomb(); 
+        _pets[nextId].GetBomb(); 
     }
     
     private IEnumerator Countdown()
@@ -103,6 +100,13 @@ public class PassBombController : MonoBehaviour
             _time.text = "00:" + _countdownTime.ToString("D2");
             yield return _wait;
             _countdownTime--;
+            PassTime = _countdownTime switch
+            {
+                15 => 1.5f,
+                10 => 1f,
+                5 => 0.5f,
+                _ => PassTime
+            };
         }
         _time.text = "00:00";
         yield return _delay;

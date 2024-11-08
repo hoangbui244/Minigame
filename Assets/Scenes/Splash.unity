@@ -1573,6 +1573,9 @@ MonoBehaviour:
   - Tag: Point
     Prefab: {fileID: 3966467644745722494, guid: e78dd89102e333c45bea6235745e4d95, type: 3}
     Size: 200
+  - Tag: Egg
+    Prefab: {fileID: 4231011474234825636, guid: a36b4ea0f0f763c44bf2710125c3f086, type: 3}
+    Size: 5
 --- !u!4 &1469313537
 Transform:
   m_ObjectHideFlags: 0

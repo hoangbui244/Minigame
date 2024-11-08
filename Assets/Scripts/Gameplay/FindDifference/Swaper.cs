@@ -45,6 +45,8 @@ public class Swaper : MonoBehaviour
         _point.text = (int.Parse(_point.text) + 1).ToString();
         foreach (var item in _list)
         {
+            item.IsTrapped = false;
+            item.GetComponent<SpriteRenderer>().sprite = _defaultSprite[ResourceManager.FindDifference];
             item.gameObject.SetActive(false);
         }
 

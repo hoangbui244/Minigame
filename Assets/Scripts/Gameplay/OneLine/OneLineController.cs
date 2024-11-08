@@ -23,7 +23,6 @@ public class OneLineController : MonoBehaviour
         {
             if (Input.GetMouseButton(0) && !_isWin)
             {
-                _lineRenderer.enabled = true;
                 var ray = GetRayOnMousePosition();
                 RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction, 100f);
                 if (hit.collider != null)
@@ -34,15 +33,17 @@ public class OneLineController : MonoBehaviour
                         return;
                     }
 
+                    _lineRenderer.enabled = true;
                     int cellIndex = _cells.IndexOf(cell);
 
                     if (cellIndex >= 0)
                     {
-                        for (int i = _cells.Count - 1; i > cellIndex; i--)
+                        if (_cells.Count > 1 && cell == _cells[_cells.Count - 2])
                         {
-                            _cells[i].ResetCell();
-                            _cells.RemoveAt(i);
-                            _pathPoints.RemoveAt(i);
+                            _cells[_cells.Count - 1].ResetCell();
+                            _cells.RemoveAt(_cells.Count - 1);
+                            _pathPoints.RemoveAt(_pathPoints.Count - 1);
+                            UpdateLineRenderer();
                         }
                     }
                     else if (IsValidNextCell(cell))
@@ -110,5 +111,10 @@ public class OneLineController : MonoBehaviour
         }
 
         return false;
+    }
+    
+    public void ResetLevel()
+    {
+        GameUIManager.Instance.Reload();
     }
 }

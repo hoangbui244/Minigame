@@ -11,6 +11,7 @@ public class GameController : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _scoreText;
     [SerializeField] private TextMeshProUGUI _highScoreText;
     [SerializeField] private List<GameObject> _borders;
+    private readonly WaitForSeconds _wait = new WaitForSeconds(0.3f);
     private int _currentScore;
     private bool _locked;
 
@@ -116,7 +117,7 @@ public class GameController : MonoBehaviour
 
     private IEnumerator NewLevel()
     {
-        yield return new WaitForSeconds(0.3f);
+        yield return _wait;
         GameUIManager.Instance.CompletedLevel(true);
     }
 }

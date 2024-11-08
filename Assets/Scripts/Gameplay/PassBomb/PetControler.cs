@@ -16,11 +16,12 @@ public class PetControler : MonoBehaviour
     [SerializeField] private Sprite _headNor;
     [SerializeField] private Sprite _headFear;
     [SerializeField] private float _customTime = 5f;
+    [SerializeField] private PassBombController _passBombController;
     private SpriteRenderer _headSpriteRenderer;
     private SpriteRenderer _handSpriteRenderer;
     private Sequence _shakeSequence;
     private readonly Vector3 _rotation = new Vector3(0, 0, 45);
-    private readonly float _time = 0.5f;
+    private readonly float _time = 0.3f;
     public bool HasBomb;
     public int ID;
     public bool IsBot;
@@ -84,7 +85,7 @@ public class PetControler : MonoBehaviour
     
     private IEnumerator AutoPassBomb()
     {
-        float delay = Random.Range(0f, _customTime);
+        float delay = _passBombController.PassTime;
         yield return new WaitForSeconds(delay);
 
         if (HasBomb)
@@ -98,14 +99,28 @@ public class PetControler : MonoBehaviour
         _shakeSequence?.Kill();
 
         _headSpriteRenderer.sprite = _headNor;
+        _head.transform.localPosition = Vector3.zero;
+        _hand.transform.localPosition = Vector3.zero;
+        _hand.transform.localRotation = Quaternion.identity;
         HasBomb = false;
 
+        GameEventManager.NextBomb?.Invoke(this.ID);
+        _bomb.SetActive(false);
+        _hand.transform.DOKill();
         _hand.transform.DOLocalRotate(_rotation, _time, RotateMode.LocalAxisAdd)
             .SetEase(Ease.OutBack).OnComplete(() =>
             {
-                _bomb.SetActive(false);
-                GameEventManager.NextBomb?.Invoke(this.ID);
                 _hand.transform.DOLocalRotate(-_rotation, _time, RotateMode.LocalAxisAdd)
+                    .SetEase(Ease.OutBack);
+            });
+    }
+    public void ReceiveBomb()
+    {
+        _hand.transform.DOKill();
+        _hand.transform.DOLocalRotate(-_rotation, _time, RotateMode.LocalAxisAdd)
+            .SetEase(Ease.OutBack).OnComplete(() =>
+            {
+                _hand.transform.DOLocalRotate(_rotation, _time, RotateMode.LocalAxisAdd)
                     .SetEase(Ease.OutBack);
             });
     }
