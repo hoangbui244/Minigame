@@ -20,6 +20,7 @@ public class Level : MonoBehaviour
         PassBomb = 12,
         OneLine = 13,
         CatchEgg = 14,
+        Default = 0,
     }
     
     public LevelType Type;

@@ -1195,7 +1195,7 @@ MonoBehaviour:
   - {fileID: 990832611367504658}
   _time: {fileID: 3802021019310557059}
   _explode: {fileID: 8664628954848050449}
-  _countdownTime: 30
+  _countdownTime: 20
   PassTime: 2
 --- !u!1 &5386655628997755895
 GameObject:

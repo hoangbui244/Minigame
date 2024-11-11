@@ -16,7 +16,7 @@ public class PerfectSliceController : MonoBehaviour
 
     private void OnEnable()
     {
-        // SetupLevel();
+        SetupLevel();
         GameEventManager.PerfectSlices += Check;
         GameEventManager.PerfectSlicesReset += ResetLevel;
     }

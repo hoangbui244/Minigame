@@ -8,6 +8,7 @@ public class OneLineController : MonoBehaviour
     [SerializeField] private List<Cell> _cells = new List<Cell>();
     [SerializeField] private List<Vector3> _pathPoints = new List<Vector3>();
     [SerializeField] private int _cellCount;
+    [SerializeField] private float _offset;
     private Camera _camera;
     private bool _isDrawing;
     private bool _isWin;
@@ -69,7 +70,7 @@ public class OneLineController : MonoBehaviour
             lastCell.End();
             _isWin = true;
             GameUIManager.Instance.CompletedLevel1(true);
-            if (ResourceManager.OneLine < 6)
+            if (ResourceManager.OneLine < 12)
             {
                 ResourceManager.OneLine++;
             }
@@ -105,7 +106,7 @@ public class OneLineController : MonoBehaviour
 
         float distance = Vector3.Distance(newPosition, lastPosition);
 
-        if ((isSameRow || isSameColumn) && distance <= 3.5f)
+        if ((isSameRow || isSameColumn) && distance <= _offset)
         {
             return true;
         }
