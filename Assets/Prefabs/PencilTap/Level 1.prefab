@@ -549,6 +549,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _pens:
   - {fileID: 21300000, guid: c148a1150f922094a887f68accd61739, type: 3}
+  - {fileID: 21300000, guid: 853a2623422836848a4123c9b36ceadb, type: 3}
+  - {fileID: 21300000, guid: 21f367b285ad1524a9fa4c34ca87a678, type: 3}
+  - {fileID: 21300000, guid: c1c6e7999b04f8a468a8bc15a2ae6a21, type: 3}
+  - {fileID: 21300000, guid: c7913efcde3d7b0429ec4755f84d1f51, type: 3}
+  - {fileID: 21300000, guid: 720bc4c14ef130249b52cca5e3df3fe4, type: 3}
+  - {fileID: 21300000, guid: 827bc840b6c7c094f872daec2917d38e, type: 3}
+  - {fileID: 21300000, guid: bc4db1d9598183643b6fdd38c8991bfa, type: 3}
+  - {fileID: 21300000, guid: 07b128ae8b6f81d41a3993efcfadcea6, type: 3}
+  - {fileID: 21300000, guid: 252eedcab3290e643a1508bf0a86e87f, type: 3}
   _currentScoreText: {fileID: 1864040026373827406}
   _highScoreText: {fileID: 8724001947704389224}
   _pen: {fileID: 4733588645237030255}
