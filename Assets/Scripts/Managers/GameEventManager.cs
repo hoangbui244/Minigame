@@ -27,4 +27,5 @@ public static class GameEventManager
     public static Action<int> NextBomb;
     public static Action PassBomb;
     public static Action<int> CatchEgg;
+    public static Action<int> PencilTap;
 }

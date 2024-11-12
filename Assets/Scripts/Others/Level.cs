@@ -20,6 +20,9 @@ public class Level : MonoBehaviour
         PassBomb = 12,
         OneLine = 13,
         CatchEgg = 14,
+        PencilTap = 15,
+        DropCandy = 16,
+        BalanceEgg = 17,
         Default = 0,
     }
     

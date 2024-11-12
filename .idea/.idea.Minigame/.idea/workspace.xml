@@ -6,89 +6,17 @@
   <component name="ChangeListManager">
     <list default="true" id="cc1e008d-39a7-4d81-b082-3c7e1c260ee0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Minigame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Minigame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/OneLine/Level 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/OneLine/Level 1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/OneLine/Level 2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/OneLine/Level 2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/OneLine/Level 3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/OneLine/Level 3.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/OneLine/Level 4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/OneLine/Level 4.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/OneLine/Level 5.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/OneLine/Level 5.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/OneLine/Level 5.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/OneLine/Level 5.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/OneLine/Level 6.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/OneLine/Level 6.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/OneLine/Level 6.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/OneLine/Level 6.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PerfectSlices/Level 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PerfectSlices/Level 1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PerfectSlices/Level 2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PerfectSlices/Level 2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PerfectSlices/Level 3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PerfectSlices/Level 3.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Setup Defaut.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Setup Defaut.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/OneLine/OneLineController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/OneLine/OneLineController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/PerfectSlices/PerfectSliceController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/PerfectSlices/PerfectSliceController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GamePlay.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GamePlay.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/HomeScreen.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/HomeScreen.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Splash.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Splash.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/GameEventManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/GameEventManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Others/Level.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Others/Level.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/PerfectSlices/1-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/PerfectSlices/1-1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/PerfectSlices/1-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/PerfectSlices/1-2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/PerfectSlices/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/PerfectSlices/1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/PerfectSlices/10-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/PerfectSlices/10-1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/PerfectSlices/10-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/PerfectSlices/10-2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/PerfectSlices/10.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/PerfectSlices/10.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/PerfectSlices/11-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/PerfectSlices/11-1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/PerfectSlices/11-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/PerfectSlices/11-2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/PerfectSlices/11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/PerfectSlices/11.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/PerfectSlices/12.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/PerfectSlices/12.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/PerfectSlices/2-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/PerfectSlices/2-1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/PerfectSlices/2-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/PerfectSlices/2-2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/PerfectSlices/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/PerfectSlices/2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/PerfectSlices/3-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/PerfectSlices/3-1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/PerfectSlices/3-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/PerfectSlices/3-2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/PerfectSlices/3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/PerfectSlices/3.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/PerfectSlices/4-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/PerfectSlices/4-1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/PerfectSlices/4-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/PerfectSlices/4-2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/PerfectSlices/4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/PerfectSlices/4.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/PerfectSlices/5-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/PerfectSlices/5-1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/PerfectSlices/5-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/PerfectSlices/5-2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/PerfectSlices/5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/PerfectSlices/5.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/PerfectSlices/6-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/PerfectSlices/6-1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/PerfectSlices/6-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/PerfectSlices/6-2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/PerfectSlices/6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/PerfectSlices/6.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/PerfectSlices/7-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/PerfectSlices/7-1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/PerfectSlices/7-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/PerfectSlices/7-2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/PerfectSlices/7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/PerfectSlices/7.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/PerfectSlices/8-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/PerfectSlices/8-1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/PerfectSlices/8-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/PerfectSlices/8-2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/PerfectSlices/8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/PerfectSlices/8.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/PerfectSlices/9-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/PerfectSlices/9-1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/PerfectSlices/9-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/PerfectSlices/9-2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/PerfectSlices/9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/PerfectSlices/9.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/UI/Frame 1000009800.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/UI/Frame 1000009800.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/UI/Loading screen (1).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/UI/Loading screen (1).png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/UI/Teabreak screen.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/UI/Teabreak screen.png.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -236,7 +164,8 @@
       <workItem from="1730968844194" duration="6296000" />
       <workItem from="1731030448318" duration="2415000" />
       <workItem from="1731051502468" duration="8709000" />
-      <workItem from="1731307663723" duration="2229000" />
+      <workItem from="1731307663723" duration="4061000" />
+      <workItem from="1731381404408" duration="5684000" />
     </task>
     <servers />
   </component>
