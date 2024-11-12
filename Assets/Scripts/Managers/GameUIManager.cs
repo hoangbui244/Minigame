@@ -12,6 +12,7 @@ public class GameUIManager : Singleton<GameUIManager>
     [SerializeField] private GameObject _completedPanel1;
     [SerializeField] private GameObject _replayPanel;
     [SerializeField] private GameObject _settingPanel;
+    [SerializeField] private TeaBreakPanel _teaBreakPanel;
     [SerializeField] private RawImage _screenShot;
     [SerializeField] private List<Sprite> _lvSprites;
     [SerializeField] private GameObject _nextLv;
@@ -66,6 +67,11 @@ public class GameUIManager : Singleton<GameUIManager>
         _screenShot.texture = _screenshot;
     }
     
+    public void TeaBreak(bool active)
+    {
+        _teaBreakPanel.gameObject.SetActive(active);
+    }
+    
     public Texture2D GetScreenshot()
     {
         return _screenshot;
@@ -107,7 +113,7 @@ public class GameUIManager : Singleton<GameUIManager>
 
     public void NextGame()
     {
-        if (MainUIMananger.Instance.LevelTypeToLoad == 12)
+        if (MainUIMananger.Instance.LevelTypeToLoad == 17)
         {
             MainUIMananger.Instance.LevelTypeToLoad = 1;
         }

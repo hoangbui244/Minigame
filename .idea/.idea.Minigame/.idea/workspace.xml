@@ -6,17 +6,17 @@
   <component name="ChangeListManager">
     <list default="true" id="cc1e008d-39a7-4d81-b082-3c7e1c260ee0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Minigame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Minigame/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PencilTap/Level 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PencilTap/Level 1.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/GamePlay.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GamePlay.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/HomeScreen.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/HomeScreen.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Splash.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Splash.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/PencilTap/Hand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/PencilTap/Hand.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/PencilTap/PencilTapController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/PencilTap/PencilTapController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/GameEventManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/GameEventManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Others/Level.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Others/Level.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/UI/Frame 1000009800.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/UI/Frame 1000009800.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/UI/Loading screen (1).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/UI/Loading screen (1).png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/UI/Teabreak screen.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/UI/Teabreak screen.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/GameUIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/GameUIManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/HomeUIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/HomeUIManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/LevelSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/LevelSpawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/ResourceManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/ResourceManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,6 +166,9 @@
       <workItem from="1731051502468" duration="8709000" />
       <workItem from="1731307663723" duration="4061000" />
       <workItem from="1731381404408" duration="5684000" />
+      <workItem from="1731396912275" duration="3860000" />
+      <workItem from="1731401984093" duration="1140000" />
+      <workItem from="1731403204928" duration="387000" />
     </task>
     <servers />
   </component>

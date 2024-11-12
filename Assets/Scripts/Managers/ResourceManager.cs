@@ -106,6 +106,36 @@ public class ResourceManager : Singleton<ResourceManager>
         set => PlayerPrefs.SetInt("CatchEgg", value);
     }
     
+    public static int PencilTap
+    {
+        get => PlayerPrefs.GetInt("PencilTap", 1);
+        set => PlayerPrefs.SetInt("PencilTap", value);
+    }
+    
+    public static int DropCandy
+    {
+        get => PlayerPrefs.GetInt("DropCandy", 1);
+        set => PlayerPrefs.SetInt("DropCandy", value);
+    }
+    
+    public static int BalanceEgg
+    {
+        get => PlayerPrefs.GetInt("BalanceEgg", 1);
+        set => PlayerPrefs.SetInt("BalanceEgg", value);
+    }
+    
+    public static int BalanceEggHighScore
+    {
+        get => PlayerPrefs.GetInt("BalanceEggHighScore", 0);
+        set => PlayerPrefs.SetInt("BalanceEggHighScore", value);
+    }
+    
+    public static int PencilTapHighScore
+    {
+        get => PlayerPrefs.GetInt("PencilTapHighScore", 0);
+        set => PlayerPrefs.SetInt("PencilTapHighScore", value);
+    }
+    
     public static int HighScore
     {
         get => PlayerPrefs.GetInt("HighScore", 0);

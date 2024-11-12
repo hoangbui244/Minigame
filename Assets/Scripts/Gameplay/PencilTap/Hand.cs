@@ -11,7 +11,7 @@ public class Hand : MonoBehaviour
     private Vector2 _startPosY;
     private Vector2 _endPosY;
     private Vector2 _plusY = new Vector2(0, 15f);
-    private Vector2 _end = new Vector2(0, 3.5f);
+    private Vector2 _end = new Vector2(0, 2.25f);
 
     private bool _isHorizontal = true;
     private bool _done;
@@ -20,7 +20,7 @@ public class Hand : MonoBehaviour
 
     private void Start()
     {
-        _horizontalTween = transform.DOMoveX(_endPosX.x, _moveTime * 2.5f)
+        _horizontalTween = transform.DOMoveX(_endPosX.x, _moveTime * 2.2f)
             .SetEase(Ease.Linear)
             .SetLoops(-1, LoopType.Yoyo)
             .Pause();
@@ -70,7 +70,7 @@ public class Hand : MonoBehaviour
     private void AnimDone()
     {
         var position = transform.position;
-        position.x = 0.72f;
+        position.x = 0.65f;
         transform.position = position;
         
         transform.DOMoveY(transform.position.y + _end.y, _moveTime)
