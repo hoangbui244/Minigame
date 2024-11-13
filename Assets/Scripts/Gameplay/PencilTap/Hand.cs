@@ -11,7 +11,7 @@ public class Hand : MonoBehaviour
     private Vector2 _startPosY;
     private Vector2 _endPosY;
     private Vector2 _plusY = new Vector2(0, 15f);
-    private Vector2 _end = new Vector2(0, 2.25f);
+    private Vector2 _end = new Vector2(0, 2.1f);
 
     private bool _isHorizontal = true;
     private bool _done;

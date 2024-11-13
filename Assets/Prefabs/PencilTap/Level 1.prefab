@@ -34,7 +34,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -200}
+  m_AnchoredPosition: {x: 0, y: -220}
   m_SizeDelta: {x: -100, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6020582809041326225
@@ -252,7 +252,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -300}
+  m_AnchoredPosition: {x: 0, y: -330}
   m_SizeDelta: {x: -100, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7352010565924810534
@@ -364,7 +364,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1358040807966434994}
   - component: {fileID: 4733588645237030255}
-  - component: {fileID: 5184789288451644249}
+  - component: {fileID: 2070176162816626189}
   m_Layer: 0
   m_Name: Pen
   m_TagString: Untagged
@@ -381,8 +381,8 @@ Transform:
   m_GameObject: {fileID: 3296672182304365758}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 10, z: 0}
-  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
+  m_LocalPosition: {x: 0, y: 9, z: 0}
+  m_LocalScale: {x: 2.9999998, y: 2.9999998, z: 2.9999998}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 3936965702644692314}
@@ -428,7 +428,7 @@ SpriteRenderer:
   m_SortingLayerID: 1801520871
   m_SortingLayer: 1
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: c148a1150f922094a887f68accd61739, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5217c0ce343c67f4998bb77e866c0f08, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -439,7 +439,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &5184789288451644249
+--- !u!61 &2070176162816626189
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -468,21 +468,21 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -18}
+  m_Offset: {x: 0, y: -2.35}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5.12832, y: 37.51}
+    oldSize: {x: 5.12, y: 5.12}
     newSize: {x: 5.12832, y: 37.51}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2, y: 1.5}
+  m_Size: {x: 0.3, y: 0.2}
   m_EdgeRadius: 0
 --- !u!1 &4181574671497260362
 GameObject:
@@ -548,16 +548,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _pens:
-  - {fileID: 21300000, guid: c148a1150f922094a887f68accd61739, type: 3}
-  - {fileID: 21300000, guid: 853a2623422836848a4123c9b36ceadb, type: 3}
-  - {fileID: 21300000, guid: 21f367b285ad1524a9fa4c34ca87a678, type: 3}
-  - {fileID: 21300000, guid: c1c6e7999b04f8a468a8bc15a2ae6a21, type: 3}
-  - {fileID: 21300000, guid: c7913efcde3d7b0429ec4755f84d1f51, type: 3}
-  - {fileID: 21300000, guid: 720bc4c14ef130249b52cca5e3df3fe4, type: 3}
-  - {fileID: 21300000, guid: 827bc840b6c7c094f872daec2917d38e, type: 3}
-  - {fileID: 21300000, guid: bc4db1d9598183643b6fdd38c8991bfa, type: 3}
-  - {fileID: 21300000, guid: 07b128ae8b6f81d41a3993efcfadcea6, type: 3}
-  - {fileID: 21300000, guid: 252eedcab3290e643a1508bf0a86e87f, type: 3}
+  - {fileID: 21300000, guid: 5217c0ce343c67f4998bb77e866c0f08, type: 3}
+  - {fileID: 21300000, guid: 9c833f378a6802f48a37e270aec9bbd2, type: 3}
+  - {fileID: 21300000, guid: fe046eb7915c16c428c9208c5637f056, type: 3}
+  - {fileID: 21300000, guid: 4c6487cc9ea931a41b5781284d7152cc, type: 3}
+  - {fileID: 21300000, guid: a94b2fb1d6b17284784225d2d9cb8707, type: 3}
+  - {fileID: 21300000, guid: 231e492e7c054db4d9d196026bb1f5f4, type: 3}
+  - {fileID: 21300000, guid: 6e09e377e0eac7640b959b279bfd356f, type: 3}
+  - {fileID: 21300000, guid: 4a81f47fb1f69aa42a0c4d97d5a87924, type: 3}
+  - {fileID: 21300000, guid: 328568fcdcc407e4ca7bbb556e9d7d03, type: 3}
+  - {fileID: 21300000, guid: 5fe32b4b97123a1438bdae44799a5826, type: 3}
   _currentScoreText: {fileID: 1864040026373827406}
   _highScoreText: {fileID: 8724001947704389224}
   _pen: {fileID: 4733588645237030255}

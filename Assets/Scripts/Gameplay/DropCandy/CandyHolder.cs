@@ -1,10 +1,8 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
 
-public class EggHolder : MonoBehaviour
+public class CandyHolder : MonoBehaviour
 {
     private Camera _camera;
     private Vector2 _diff;
@@ -17,7 +15,7 @@ public class EggHolder : MonoBehaviour
 
     private void Update()
     {
-        if (!MainUIMananger.Instance.PopupOpened && !IsPointerOverUI())
+        if (!MainUIMananger.Instance.PopupOpened)
         {
             if (Input.GetMouseButtonDown(0))
             {
@@ -41,18 +39,13 @@ public class EggHolder : MonoBehaviour
         }
     }
 
-    private bool IsPointerOverUI()
-    {
-        return EventSystem.current.IsPointerOverGameObject();
-    }
-
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.TryGetComponent<Egg>(out var egg))
+        if (other.TryGetComponent<Candy>(out var candy))
         {
-            if (egg.Can)
+            if (candy.Can)
             {
-                GameEventManager.CatchEgg?.Invoke(1);
+                GameEventManager.DropCandy?.Invoke(1);
             }
             else
             {

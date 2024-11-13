@@ -12,13 +12,13 @@ public class PencilTapController : MonoBehaviour
     [SerializeField] private SpriteRenderer _pen;
     private int _currentScore;
     private int _highScore;
-    
+
     private void OnEnable()
     {
         GameEventManager.PencilTap += Check;
         Init();
     }
-    
+
     private void OnDisable()
     {
         GameEventManager.PencilTap -= Check;
@@ -26,21 +26,37 @@ public class PencilTapController : MonoBehaviour
 
     private void Init()
     {
-        var num = ResourceManager.PencilTap - 1;
-        _pen.sprite = _pens[num];
+        InitPen();
         _highScore = ResourceManager.PencilTapHighScore;
         _currentScore = 0;
         _highScoreText.text = "Highscore: " + _highScore.ToString();
     }
-    
+
+    private void InitPen()
+    {
+        var num = ResourceManager.PencilTap - 1;
+        _pen.sprite = _pens[num];
+    }
+
     private void Check(int value)
     {
         _currentScore += value;
         _currentScoreText.text = _currentScore.ToString();
+        if (ResourceManager.PencilTap < 10)
+        {
+            ResourceManager.PencilTap++;
+        }
+        else
+        {
+            ResourceManager.PencilTap = 1;
+        }
+
+        Invoke(nameof(InitPen), 0.6f);
         if (_currentScore % 3 == 0)
         {
             GameUIManager.Instance.TeaBreak(true);
         }
+
         if (_currentScore > _highScore)
         {
             _highScore = _currentScore;
