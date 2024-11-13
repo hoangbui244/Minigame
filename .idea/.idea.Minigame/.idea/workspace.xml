@@ -6,6 +6,78 @@
   <component name="ChangeListManager">
     <list default="true" id="cc1e008d-39a7-4d81-b082-3c7e1c260ee0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Minigame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Minigame/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/BalanceEgg/Level 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/BalanceEgg/Level 1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/BalanceEgg/Level 10.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/BalanceEgg/Level 10.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/BalanceEgg/Level 2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/BalanceEgg/Level 2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/BalanceEgg/Level 3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/BalanceEgg/Level 3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/BalanceEgg/Level 4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/BalanceEgg/Level 4.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/BalanceEgg/Level 5.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/BalanceEgg/Level 5.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/BalanceEgg/Level 6.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/BalanceEgg/Level 6.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/BalanceEgg/Level 7.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/BalanceEgg/Level 7.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/BalanceEgg/Level 8.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/BalanceEgg/Level 8.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/BalanceEgg/Level 9.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/BalanceEgg/Level 9.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/DropCandy/Level 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/DropCandy/Level 1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GamePlay.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GamePlay.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/HomeScreen.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/HomeScreen.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Splash.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Splash.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/BalanceEgg/BalanceEgg.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/BalanceEgg/BalanceEgg.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/BalanceEgg/BalanceEggController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/BalanceEgg/BalanceEggController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/DropCandy/Candy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/DropCandy/Candy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/DropCandy/CandyHolder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/DropCandy/CandyHolder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/DropCandy/DropCandyController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/DropCandy/DropCandyController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/PencilTap/Hand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/PencilTap/Hand.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/GameEventManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/GameEventManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/GameUIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/GameUIManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/ResourceManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/ResourceManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/DropCandy/Candy _ Icon _ 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/DropCandy/Candy _ Icon _ 1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/DropCandy/Candy _ Icon _ 10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/DropCandy/Candy _ Icon _ 10.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/DropCandy/Candy _ Icon _ 11.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/DropCandy/Candy _ Icon _ 11.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/DropCandy/Candy _ Icon _ 12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/DropCandy/Candy _ Icon _ 12.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/DropCandy/Candy _ Icon _ 13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/DropCandy/Candy _ Icon _ 13.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/DropCandy/Candy _ Icon _ 14.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/DropCandy/Candy _ Icon _ 14.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/DropCandy/Candy _ Icon _ 15.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/DropCandy/Candy _ Icon _ 15.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/DropCandy/Candy _ Icon _ 16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/DropCandy/Candy _ Icon _ 16.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/DropCandy/Candy _ Icon _ 17.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/DropCandy/Candy _ Icon _ 17.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/DropCandy/Candy _ Icon _ 18.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/DropCandy/Candy _ Icon _ 18.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/DropCandy/Candy _ Icon _ 19.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/DropCandy/Candy _ Icon _ 19.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/DropCandy/Candy _ Icon _ 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/DropCandy/Candy _ Icon _ 2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/DropCandy/Candy _ Icon _ 20.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/DropCandy/Candy _ Icon _ 20.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/DropCandy/Candy _ Icon _ 21.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/DropCandy/Candy _ Icon _ 21.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/DropCandy/Candy _ Icon _ 22.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/DropCandy/Candy _ Icon _ 22.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/DropCandy/Candy _ Icon _ 23.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/DropCandy/Candy _ Icon _ 23.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/DropCandy/Candy _ Icon _ 24.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/DropCandy/Candy _ Icon _ 24.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/DropCandy/Candy _ Icon _ 3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/DropCandy/Candy _ Icon _ 3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/DropCandy/Candy _ Icon _ 4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/DropCandy/Candy _ Icon _ 4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/DropCandy/Candy _ Icon _ 5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/DropCandy/Candy _ Icon _ 5.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/DropCandy/Candy _ Icon _ 6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/DropCandy/Candy _ Icon _ 6.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/DropCandy/Candy _ Icon _ 7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/DropCandy/Candy _ Icon _ 7.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/DropCandy/Candy _ Icon _ 8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/DropCandy/Candy _ Icon _ 8.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/DropCandy/Candy _ Icon _ 9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/DropCandy/Candy _ Icon _ 9.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/DropCandy/OBJECTS (8).png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/DropCandy/OBJECTS (8).png.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,6 +230,10 @@
       <workItem from="1731396912275" duration="3860000" />
       <workItem from="1731401984093" duration="1140000" />
       <workItem from="1731403204928" duration="2799000" />
+      <workItem from="1731469418247" duration="23000" />
+      <workItem from="1731469468392" duration="34000" />
+      <workItem from="1731469597421" duration="1171000" />
+      <workItem from="1731479776614" duration="7307000" />
     </task>
     <servers />
   </component>

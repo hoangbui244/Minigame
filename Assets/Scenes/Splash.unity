@@ -1576,6 +1576,9 @@ MonoBehaviour:
   - Tag: Egg
     Prefab: {fileID: 4231011474234825636, guid: a36b4ea0f0f763c44bf2710125c3f086, type: 3}
     Size: 5
+  - Tag: Candy
+    Prefab: {fileID: 8740851341358175562, guid: e4119edf7ce80b4498f72f3ebbe1d96b, type: 3}
+    Size: 4
 --- !u!4 &1469313537
 Transform:
   m_ObjectHideFlags: 0

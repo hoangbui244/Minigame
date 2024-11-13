@@ -136,6 +136,12 @@ public class ResourceManager : Singleton<ResourceManager>
         set => PlayerPrefs.SetInt("PencilTapHighScore", value);
     }
     
+    public static int DropCandyHighScore
+    {
+        get => PlayerPrefs.GetInt("DropCandyHighScore", 0);
+        set => PlayerPrefs.SetInt("DropCandyHighScore", value);
+    }
+    
     public static int HighScore
     {
         get => PlayerPrefs.GetInt("HighScore", 0);

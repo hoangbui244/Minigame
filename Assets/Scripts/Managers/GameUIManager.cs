@@ -13,6 +13,7 @@ public class GameUIManager : Singleton<GameUIManager>
     [SerializeField] private GameObject _replayPanel;
     [SerializeField] private GameObject _settingPanel;
     [SerializeField] private TeaBreakPanel _teaBreakPanel;
+    [SerializeField] private ReplayBalanceEggPanel _replayBalanceEggPanel;
     [SerializeField] private RawImage _screenShot;
     [SerializeField] private List<Sprite> _lvSprites;
     [SerializeField] private GameObject _nextLv;
@@ -133,6 +134,18 @@ public class GameUIManager : Singleton<GameUIManager>
     {
         _completedPanel1.SetActive(active);
         Invoke(nameof(Reload), 2f);
+    }
+
+    public void ReplayWin()
+    {
+        _replayBalanceEggPanel.gameObject.SetActive(true);
+        _replayBalanceEggPanel.Win();
+    }
+    
+    public void ReplayLose(int value)
+    {
+        _replayBalanceEggPanel.gameObject.SetActive(true);
+        _replayBalanceEggPanel.Lose(value);
     }
     
     public void Retry(bool active)

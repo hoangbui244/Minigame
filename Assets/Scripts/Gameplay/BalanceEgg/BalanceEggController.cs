@@ -18,6 +18,24 @@ public class BalanceEggController : MonoBehaviour
         SetupLevel();
         _highScore = ResourceManager.BalanceEggHighScore;
         _highScoreText.text = "Highscore: " + _highScore.ToString();
+        GameEventManager.BalanceEgg += Check;
+    }
+    
+    private void OnDisable()
+    {
+        GameEventManager.BalanceEgg -= Check;
+    }
+    
+    private void Check()
+    {
+        if (_currentScore < _highScore)
+        {
+            GameUIManager.Instance.ReplayLose(Mathf.FloorToInt(_currentScore));
+        }
+        else
+        {
+            GameUIManager.Instance.ReplayWin();
+        }
     }
 
     private void Update()
@@ -32,8 +50,7 @@ public class BalanceEggController : MonoBehaviour
 
             if (_currentScore > _highScore)
             {
-                _highScore = Mathf.FloorToInt(_currentScore);
-                _highScoreText.text = "Highscore: " + _highScore.ToString();
+                _highScore = (int)_currentScore;
                 ResourceManager.BalanceEggHighScore = _highScore;
             }
         }

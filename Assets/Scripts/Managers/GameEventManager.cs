@@ -29,4 +29,5 @@ public static class GameEventManager
     public static Action<int> CatchEgg;
     public static Action<int> PencilTap;
     public static Action<int> DropCandy;
+    public static Action BalanceEgg;
 }

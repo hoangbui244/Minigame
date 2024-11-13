@@ -26,26 +26,35 @@ public class BalanceEgg : MonoBehaviour
     
     private void GameOver()
     {
-        GameUIManager.Instance.Retry(true);
+        GameEventManager.BalanceEgg?.Invoke();
     }
     
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.CompareTag("ground"))
+        if (other.gameObject.CompareTag("spoon"))
+        {
+            IsHolded = true;
+        }
+        else
         {
             gameObject.SetActive(false);
             Invoke(nameof(GameOver), 0.5f);
         }
-        IsHolded = true;
     }
 
     private void OnCollisionStay2D(Collision2D other)
     {
-        IsHolded = true;
+        if (other.gameObject.CompareTag("spoon"))
+        {
+            IsHolded = true;
+        }
     }
     
     private void OnCollisionExit2D(Collision2D other)
     {
-        IsHolded = false;
+        if (other.gameObject.CompareTag("spoon"))
+        {
+            IsHolded = false;
+        }
     }
 }

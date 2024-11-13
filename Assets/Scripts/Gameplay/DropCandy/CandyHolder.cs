@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CandyHolder : MonoBehaviour
 {
+    public int CandyType;
     private Camera _camera;
     private Vector2 _diff;
     private Vector2 _initialPosition;
@@ -43,9 +44,9 @@ public class CandyHolder : MonoBehaviour
     {
         if (other.TryGetComponent<Candy>(out var candy))
         {
-            if (candy.Can)
+            if ((int)candy.Type == CandyType)
             {
-                GameEventManager.DropCandy?.Invoke(1);
+                GameEventManager.DropCandy?.Invoke(-1);
             }
             else
             {

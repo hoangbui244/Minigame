@@ -10,10 +10,11 @@ public class Hand : MonoBehaviour
     [SerializeField] private Vector2 _endPosX;
     private Vector2 _startPosY;
     private Vector2 _endPosY;
-    private Vector2 _plusY = new Vector2(0, 15f);
-    private Vector2 _end = new Vector2(0, 2.1f);
+    private readonly Vector2 _plusY = new Vector2(0, 15f);
+    private readonly Vector2 _end = new Vector2(0, 2.1f);
 
     private bool _isHorizontal = true;
+    private bool _canMove = true;
     private bool _done;
     private Tween _horizontalTween;
     private Tween _verticalTween;
@@ -31,8 +32,9 @@ public class Hand : MonoBehaviour
     private void Update()
     {
         if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject() &&
-            !MainUIMananger.Instance.PopupOpened)
+            !MainUIMananger.Instance.PopupOpened && _canMove)
         {
+            _canMove = false;
             ToggleMovement();
         }
     }
@@ -89,6 +91,7 @@ public class Hand : MonoBehaviour
             .OnComplete(() =>
             {
                 _isHorizontal = true;
+                _canMove = true;
                 Move();
             });
     }
@@ -120,6 +123,7 @@ public class Hand : MonoBehaviour
         _done = false;
         _isHorizontal = true;
         transform.position = _startPosX;
+        _canMove = true;
 
         _horizontalTween?.Restart();
         _verticalTween?.Kill();
