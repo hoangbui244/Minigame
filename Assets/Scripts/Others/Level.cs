@@ -23,6 +23,7 @@ public class Level : MonoBehaviour
         PencilTap = 15,
         DropCandy = 16,
         BalanceEgg = 17,
+        PetalCount = 18,
         Default = 0,
     }
     

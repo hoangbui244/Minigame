@@ -124,6 +124,12 @@ public class ResourceManager : Singleton<ResourceManager>
         set => PlayerPrefs.SetInt("BalanceEgg", value);
     }
     
+    public static int PetalCount
+    {
+        get => PlayerPrefs.GetInt("PetalCount", 1);
+        set => PlayerPrefs.SetInt("PetalCount", value);
+    }
+    
     public static int BalanceEggHighScore
     {
         get => PlayerPrefs.GetInt("BalanceEggHighScore", 0);
