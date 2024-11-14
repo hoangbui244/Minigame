@@ -8,6 +8,7 @@ public class CatchEggController : MonoBehaviour
     [SerializeField] private List<Transform> _spawnPos;
     [SerializeField] private TextMeshProUGUI _point;
     [SerializeField] private Color _color;
+    private readonly WaitForSeconds _time = new WaitForSeconds(1.1f);
     private readonly WaitForSeconds _wait = new WaitForSeconds(0.5f);
     private int _currentPoint = 0;
     private bool _start = true;
@@ -35,8 +36,7 @@ public class CatchEggController : MonoBehaviour
     {
         while (_start)
         {
-            float time = Random.Range(1f, 2.5f);
-            yield return new WaitForSeconds(time);
+            yield return _time;
             int random = Random.Range(0, _spawnPos.Count);
             GameObject egg = ObjectPooler.Instance.SpawnFromPool("Egg", _spawnPos[random].position);
             egg.SetActive(true);

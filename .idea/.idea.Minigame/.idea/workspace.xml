@@ -6,13 +6,77 @@
   <component name="ChangeListManager">
     <list default="true" id="cc1e008d-39a7-4d81-b082-3c7e1c260ee0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Minigame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Minigame/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/BalanceEgg/Level 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/BalanceEgg/Level 1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/BalanceEgg/Level 10.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/BalanceEgg/Level 10.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/BalanceEgg/Level 10.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/BalanceEgg/Level 10.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/BalanceEgg/Level 2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/BalanceEgg/Level 2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/BalanceEgg/Level 2.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/BalanceEgg/Level 2.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/BalanceEgg/Level 3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/BalanceEgg/Level 3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/BalanceEgg/Level 3.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/BalanceEgg/Level 3.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/BalanceEgg/Level 4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/BalanceEgg/Level 4.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/BalanceEgg/Level 4.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/BalanceEgg/Level 4.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/BalanceEgg/Level 5.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/BalanceEgg/Level 5.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/BalanceEgg/Level 5.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/BalanceEgg/Level 5.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/BalanceEgg/Level 6.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/BalanceEgg/Level 6.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/BalanceEgg/Level 6.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/BalanceEgg/Level 6.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/BalanceEgg/Level 7.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/BalanceEgg/Level 7.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/BalanceEgg/Level 7.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/BalanceEgg/Level 7.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/BalanceEgg/Level 8.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/BalanceEgg/Level 8.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/BalanceEgg/Level 8.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/BalanceEgg/Level 8.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/BalanceEgg/Level 9.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/BalanceEgg/Level 9.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/BalanceEgg/Level 9.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/BalanceEgg/Level 9.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/CatchEgg/Level 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/CatchEgg/Level 1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PetalCount/Level 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PetalCount/Level 1.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/GamePlay.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GamePlay.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/HomeScreen.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/HomeScreen.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/GameEventManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/GameEventManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/ResourceManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/ResourceManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Others/Level.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Others/Level.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/UI/11 (1).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/UI/11 (1).png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/CatchEgg/CatchEggController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/CatchEgg/CatchEggController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/PerfectSlices/SliceKnife.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/PerfectSlices/SliceKnife.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/HomeUIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/HomeUIManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/LevelSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/LevelSpawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PetalCount/Petal.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PetalCount/Petal.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/BalanceEgg/Frame (16).png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/BalanceEgg/Frame (16).png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/BalanceEgg/Frame (17).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/BalanceEgg/Frame (17).png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/BalanceEgg/Frame-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/BalanceEgg/Frame-1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/BalanceEgg/Frame-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/BalanceEgg/Frame-2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/BalanceEgg/Frame-3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/BalanceEgg/Frame-3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/BalanceEgg/Frame.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/BalanceEgg/Frame.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/BalanceEgg/Group 1000010683.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/BalanceEgg/Group 1000010683.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/BalanceEgg/Group 1000010692.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/BalanceEgg/Group 1000010692.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/BalanceEgg/Group 1000010693.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/BalanceEgg/Group 1000010693.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/BalanceEgg/Group.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/BalanceEgg/Group.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/BalanceEgg/Object.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/BalanceEgg/Object.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/PetalCount/Level 1/0 (2).png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/PetalCount/Level 1/0 (2).png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/PetalCount/Level 1/1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/PetalCount/Level 1/1.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/PetalCount/Level 1/10.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/PetalCount/Level 1/10.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/PetalCount/Level 1/11.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/PetalCount/Level 1/11.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/PetalCount/Level 1/12.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/PetalCount/Level 1/12.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/PetalCount/Level 1/13.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/PetalCount/Level 1/13.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/PetalCount/Level 1/14.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/PetalCount/Level 1/14.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/PetalCount/Level 1/15.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/PetalCount/Level 1/15.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/PetalCount/Level 1/16.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/PetalCount/Level 1/16.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/PetalCount/Level 1/17.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/PetalCount/Level 1/17.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/PetalCount/Level 1/18.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/PetalCount/Level 1/18.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/PetalCount/Level 1/19.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/PetalCount/Level 1/19.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/PetalCount/Level 1/2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/PetalCount/Level 1/2.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/PetalCount/Level 1/20.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/PetalCount/Level 1/20.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/PetalCount/Level 1/21.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/PetalCount/Level 1/21.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/PetalCount/Level 1/3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/PetalCount/Level 1/3.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/PetalCount/Level 1/4.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/PetalCount/Level 1/4.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/PetalCount/Level 1/5.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/PetalCount/Level 1/5.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/PetalCount/Level 1/6.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/PetalCount/Level 1/6.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/PetalCount/Level 1/7.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/PetalCount/Level 1/7.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/PetalCount/Level 1/8.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/PetalCount/Level 1/8.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/PetalCount/Level 1/9.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/PetalCount/Level 1/9.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/PetalCount/Level 1/lv1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/PetalCount/Level 1/lv1.png.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -170,6 +234,7 @@
       <workItem from="1731469597421" duration="1171000" />
       <workItem from="1731479776614" duration="9584000" />
       <workItem from="1731553564478" duration="3090000" />
+      <workItem from="1731566577699" duration="6049000" />
     </task>
     <servers />
   </component>

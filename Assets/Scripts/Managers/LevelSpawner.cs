@@ -118,6 +118,11 @@ public class LevelSpawner : Singleton<LevelSpawner>
                 var level17 = ResourceManager.GetLevel(Level.LevelType.BalanceEgg ,num17);
                 _level = Instantiate(level17, transform);
                 break;
+            case 18:
+                var num18 = ResourceManager.PetalCount;
+                var level18 = ResourceManager.GetLevel(Level.LevelType.PetalCount ,num18);
+                _level = Instantiate(level18, transform);
+                break;
         }
     }
     

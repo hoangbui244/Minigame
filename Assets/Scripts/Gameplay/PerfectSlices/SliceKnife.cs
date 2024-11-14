@@ -67,11 +67,11 @@ public class SliceKnife : MonoBehaviour
     private void Chop()
     {
         _isChopping = true;
-        transform.DOMoveY(_points[_pointsCount].y, 0.1f).OnComplete(() =>
+        transform.DOMoveY(_points[_pointsCount].y, 0.05f).OnComplete(() =>
         {
             _pointsCount++;
             GameEventManager.PerfectSlices?.Invoke(_pointsCount);
-            transform.DOMoveY(_points[_pointsCount].y, 0.1f).OnComplete(() =>
+            transform.DOMoveY(_points[_pointsCount].y, 0.05f).OnComplete(() =>
             {
                 _pointsCount++;
                 UpdateOrder();

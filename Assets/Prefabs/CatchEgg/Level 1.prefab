@@ -876,6 +876,7 @@ MonoBehaviour:
   - {fileID: 5060656815889467667}
   _point: {fileID: 3331483508751642009}
   _color: {r: 1, g: 0.6156863, b: 0.043137256, a: 1}
+  _time: 1.1
 --- !u!1 &4479738730120222603
 GameObject:
   m_ObjectHideFlags: 0
