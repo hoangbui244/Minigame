@@ -1264,6 +1264,16 @@ MonoBehaviour:
     Volume: 0.8
     Loop: 0
     AudioSource: {fileID: 0}
+  - Name: CandyBreakOne
+    AudioClip: {fileID: 8300000, guid: 08b4e82a6d59ba345a44eae0863049c4, type: 3}
+    Volume: 0.8
+    Loop: 0
+    AudioSource: {fileID: 0}
+  - Name: CandyBreakAll
+    AudioClip: {fileID: 8300000, guid: 31b4b056acca839428864596f30e15f9, type: 3}
+    Volume: 0.8
+    Loop: 0
+    AudioSource: {fileID: 0}
 --- !u!1 &1190092656
 GameObject:
   m_ObjectHideFlags: 0

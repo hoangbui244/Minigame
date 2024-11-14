@@ -44,6 +44,7 @@ public class Pieces : MonoBehaviour
 
     private void Anim()
     {
+        AudioManager.PlaySound("CandyBreakOne");
         Sequence sequence = DOTween.Sequence();
         sequence.Join(_piece.transform.DOMove(_endPos, _time))
             .Join(_piece.GetComponent<SpriteRenderer>().DOFade(0, _time))

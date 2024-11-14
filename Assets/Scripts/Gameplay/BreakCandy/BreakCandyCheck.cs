@@ -59,6 +59,7 @@ public class BreakCandyCheck : MonoBehaviour
     private IEnumerator Retry()
     {
         yield return _wait1;
+        AudioManager.PlaySound("CandyBreakAll");
         _anim.SetActive(true);
         yield return _wait;
         GameUIManager.Instance.Retry(true);
