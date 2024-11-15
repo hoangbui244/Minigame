@@ -34,6 +34,7 @@ public class Knife : MonoBehaviour
     {
         transform.DOMoveY(_endPosition.y, 0.1f).OnComplete(() =>
         {
+            AudioManager.PlaySound("FruitCutting");
             SliceObject();
             transform.DOMoveY(_startPosition.y, 0.1f);
         });

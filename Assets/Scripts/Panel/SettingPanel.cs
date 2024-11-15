@@ -76,6 +76,7 @@ public class SettingPanel : MonoBehaviour
     
     public void Close()
     {
+        AudioManager.PlaySound("Click");
         gameObject.SetActive(false);
         MainUIMananger.Instance.PopupOpened = true;
     }

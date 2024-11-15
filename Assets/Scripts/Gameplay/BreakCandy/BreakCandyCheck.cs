@@ -46,7 +46,7 @@ public class BreakCandyCheck : MonoBehaviour
                 OffPen();
                 _text.SetActive(false);
                 ObjectPooler.Instance.MoveToPool();
-                GameUIManager.Instance.CompletedLevel1(true);
+                GameUIManager.Instance.Confetti(true);
             }
         }
     }

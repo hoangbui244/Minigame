@@ -33,7 +33,7 @@ public class TapAwayLevel : MonoBehaviour
             {
                 ResourceManager.TapAway = 1;
             }
-            GameUIManager.Instance.CompletedLevel1(true);
+            GameUIManager.Instance.Confetti(true);
         }
     }
 }

@@ -33,7 +33,7 @@ public class PieceTogetherLevel : MonoBehaviour
             {
                 ResourceManager.PieceTogether = 1;
             }
-            GameUIManager.Instance.CompletedLevel1(true);
+            GameUIManager.Instance.Confetti(true);
         }
     }
 }

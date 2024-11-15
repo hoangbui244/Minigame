@@ -35,7 +35,7 @@ public class FlipCardLevel : MonoBehaviour
             {
                 ResourceManager.FlipCard = 1;
             }
-            GameUIManager.Instance.CompletedLevel1(true);
+            GameUIManager.Instance.Confetti(true);
         }
     }
 }

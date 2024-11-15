@@ -50,6 +50,6 @@ public class BallCheck : MonoBehaviour
         {
             ResourceManager.BallBreaker = 1;
         }
-        GameUIManager.Instance.CompletedLevel1(true);
+        GameUIManager.Instance.Confetti(true);
     }
 }

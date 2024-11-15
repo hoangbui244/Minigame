@@ -11,6 +11,8 @@ public class MainUIMananger : Singleton<MainUIMananger>
     private static SceneTransition Scene => Instance?.GetComponent<SceneTransition>();
     public bool PopupOpened;
     public int LevelTypeToLoad;
+    [HideInInspector] public int LevelUnlocked;
+    [HideInInspector] public int LevelUnlockedIndex;
     [SerializeField] private GameObject _mask;
     [SerializeField] private GameObject _dog;
     [SerializeField] private float _time;

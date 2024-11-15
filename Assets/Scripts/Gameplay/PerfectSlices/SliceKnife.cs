@@ -69,6 +69,8 @@ public class SliceKnife : MonoBehaviour
         _isChopping = true;
         transform.DOMoveY(_points[_pointsCount].y, 0.05f).OnComplete(() =>
         {
+            AudioManager.PlaySound("FruitCutting");
+            AudioManager.LightFeedback();
             _pointsCount++;
             GameEventManager.PerfectSlices?.Invoke(_pointsCount);
             transform.DOMoveY(_points[_pointsCount].y, 0.05f).OnComplete(() =>

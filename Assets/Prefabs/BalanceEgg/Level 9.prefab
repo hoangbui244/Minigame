@@ -2176,6 +2176,10 @@ MonoBehaviour:
   _currentScoreText: {fileID: 2450063838888642456}
   _highScoreText: {fileID: 1864040026373827406}
   _balanceEgg: {fileID: 8374533141859159545}
+  _ads:
+  - {fileID: 3604507276530786296}
+  - {fileID: 6745278306008979181}
+  - {fileID: 6156323571863297708}
 --- !u!1 &4850002292259818957
 GameObject:
   m_ObjectHideFlags: 0

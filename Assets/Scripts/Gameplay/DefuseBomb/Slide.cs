@@ -37,10 +37,12 @@ public class Slide : MonoBehaviour
                 IsFinished = true;
                 _mask.SetActive(false);
                 gameObject.SetActive(false);
+                AudioManager.PlaySound("PassBombTick");
                 GameEventManager.DefuseBomb?.Invoke(true);
             }
             else
             {
+                AudioManager.PlaySound("PassBombExplosion");
                 GameEventManager.DefuseBomb?.Invoke(false);
             }
         }

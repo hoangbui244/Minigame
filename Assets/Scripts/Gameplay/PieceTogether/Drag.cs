@@ -27,8 +27,7 @@ public class Drag : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0) && !MainUIMananger.Instance.PopupOpened && !_isFinish)
         {
-            // AudioManager.PlaySound("PickUp");
-            // AudioManager.PlayVibration(true);
+            AudioManager.LightFeedback();
             Vector3 mousePos;
             mousePos = Input.mousePosition;
             mousePos = Camera.main.ScreenToWorldPoint(mousePos);
@@ -60,8 +59,7 @@ public class Drag : MonoBehaviour
                 transform.position = new Vector3(_correctForm.transform.position.x, _correctForm.transform.position.y, _correctForm.transform.position.z);
                 transform.rotation = _correctForm.transform.rotation;
                 _isFinish = true;
-                // AudioManager.PlayVibration(true);
-                // AudioManager.PlaySound("PickDown");
+                AudioManager.PlaySound("FlipCard");
                 GameEventManager.Check?.Invoke(_isFinish);
                 _spriteRenderer.sortingOrder = !_isSorting ? 1 : _sortingOrder;
                 _collider2D.enabled = false;

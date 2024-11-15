@@ -2,7 +2,6 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 public class Tooth : MonoBehaviour
 {
@@ -12,8 +11,8 @@ public class Tooth : MonoBehaviour
     {
         if (!MainUIMananger.Instance.PopupOpened)
         {
-            // AudioManager.PlaySound("Tooth");
-            // AudioManager.PlayVibration(true);
+            AudioManager.PlaySound("CrocodileTouch");
+            AudioManager.LightFeedback();
             GameEventManager.CheckTeeth?.Invoke(!IsTrapped);
             gameObject.SetActive(false);
         }

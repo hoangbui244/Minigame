@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using CandyCoded.HapticFeedback;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -26,7 +25,8 @@ public class Petal : MonoBehaviour
         {
             Rota();
         }
-        HapticFeedback.LightFeedback();
+        AudioManager.PlaySound("Click");
+        AudioManager.LightFeedback();
         _rb.gravityScale = 1.5f;
     }
 

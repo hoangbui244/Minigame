@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using CandyCoded.HapticFeedback;
 using UnityEngine;
 
 public class AudioManager : Singleton<AudioManager>
@@ -123,6 +124,14 @@ public class AudioManager : Singleton<AudioManager>
         if (IsVibrationEnable)
         {
             Handheld.Vibrate();
+        }
+    }
+    
+    public static void LightFeedback()
+    {
+        if (IsVibrationEnable)
+        {
+            HapticFeedback.LightFeedback();
         }
     }
 

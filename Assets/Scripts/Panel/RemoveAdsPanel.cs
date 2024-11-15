@@ -6,6 +6,7 @@ public class RemoveAdsPanel : MonoBehaviour
 {
     public void Close()
     {
+        AudioManager.PlaySound("Click");
         gameObject.SetActive(false);
     }
 }

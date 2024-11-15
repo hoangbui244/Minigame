@@ -30,7 +30,7 @@ public class Card : MonoBehaviour
         if (!MainUIMananger.Instance.PopupOpened && !Finished && !Flipped)
         {
             PairCount++;
-            //AudioManager.PlaySound("PickDown");
+            AudioManager.PlaySound("FlipCard");
             FlipUp();
         }
     }

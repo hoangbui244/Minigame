@@ -50,7 +50,7 @@ public class CrocodileDentistCheck : MonoBehaviour
                 {
                     ResourceManager.CrocodileDentist = 1;
                 }
-                GameUIManager.Instance.CompletedLevel1(true);
+                GameUIManager.Instance.Confetti(true);
             }
         }
         else
@@ -61,6 +61,7 @@ public class CrocodileDentistCheck : MonoBehaviour
     
     private IEnumerator PlayAnim()
     {
+        AudioManager.PlaySound("CrocodileCrack");
         _vfx.SetActive(true);
         _petSprite.sprite = _petBited;
         _petSprite.sortingOrder = 6;

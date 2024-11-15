@@ -32,7 +32,7 @@ public class TapAwayPhysic : MonoBehaviour
     {
         if (LevelSpawner.Instance.CanTap && !MainUIMananger.Instance.PopupOpened)
         {
-            // AudioManager.PlaySound("PickDown");
+            AudioManager.PlaySound("Click");
             LevelSpawner.Instance.ResetTap();
             Move();
         }

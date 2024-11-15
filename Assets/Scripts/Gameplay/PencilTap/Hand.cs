@@ -35,6 +35,7 @@ public class Hand : MonoBehaviour
             !MainUIMananger.Instance.PopupOpened && _canMove)
         {
             _canMove = false;
+            AudioManager.PlaySound("Click");
             ToggleMovement();
         }
     }
@@ -60,6 +61,7 @@ public class Hand : MonoBehaviour
             {
                 if (_done)
                 {
+                    AudioManager.PlaySound("PencilDone");
                     AnimDone();
                 }
                 else

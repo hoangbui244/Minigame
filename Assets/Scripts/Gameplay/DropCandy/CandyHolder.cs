@@ -46,10 +46,12 @@ public class CandyHolder : MonoBehaviour
         {
             if ((int)candy.Type == CandyType)
             {
+                AudioManager.PlaySound("CandyTrue");
                 GameEventManager.DropCandy?.Invoke(-1);
             }
             else
             {
+                AudioManager.PlaySound("CandyFalse");
                 GameUIManager.Instance.Retry(true);
             }
         }

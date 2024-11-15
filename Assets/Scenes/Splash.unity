@@ -1274,6 +1274,76 @@ MonoBehaviour:
     Volume: 0.8
     Loop: 0
     AudioSource: {fileID: 0}
+  - Name: FruitCutting
+    AudioClip: {fileID: 8300000, guid: cd3b0b51608f4b944961743366073300, type: 3}
+    Volume: 0.8
+    Loop: 0
+    AudioSource: {fileID: 0}
+  - Name: CrocodileTouch
+    AudioClip: {fileID: 8300000, guid: 7261d4a3dcf12d947951d56d31e32f1a, type: 3}
+    Volume: 0.8
+    Loop: 0
+    AudioSource: {fileID: 0}
+  - Name: CrocodileCrack
+    AudioClip: {fileID: 8300000, guid: 2f9aae66a57a13748bcd2821695d2a5d, type: 3}
+    Volume: 0.8
+    Loop: 0
+    AudioSource: {fileID: 0}
+  - Name: CutInHalf
+    AudioClip: {fileID: 8300000, guid: b95cc22f6c3c7b848bff38d1113c1b16, type: 3}
+    Volume: 0.8
+    Loop: 0
+    AudioSource: {fileID: 0}
+  - Name: PassBombTick
+    AudioClip: {fileID: 8300000, guid: 87fcb58248130bc47a4c4c33ca0e9b1a, type: 3}
+    Volume: 0.8
+    Loop: 0
+    AudioSource: {fileID: 0}
+  - Name: PassBombExplosion
+    AudioClip: {fileID: 8300000, guid: 022d96fc34b151c4eb662b0d23a655b0, type: 3}
+    Volume: 0.8
+    Loop: 0
+    AudioSource: {fileID: 0}
+  - Name: FlipCard
+    AudioClip: {fileID: 8300000, guid: 52848902166cfae40b28f9d2a1ba7b92, type: 3}
+    Volume: 0.8
+    Loop: 0
+    AudioSource: {fileID: 0}
+  - Name: PencilDone
+    AudioClip: {fileID: 8300000, guid: ebc056cf8f84d2440baacbdc530996d5, type: 3}
+    Volume: 0.8
+    Loop: 0
+    AudioSource: {fileID: 0}
+  - Name: CandyTrue
+    AudioClip: {fileID: 8300000, guid: a6ed76a4c5083ac4586991aea9167049, type: 3}
+    Volume: 0.8
+    Loop: 0
+    AudioSource: {fileID: 0}
+  - Name: CandyFalse
+    AudioClip: {fileID: 8300000, guid: d7d0879eac8a76344833d09f8bc6fcb1, type: 3}
+    Volume: 0.8
+    Loop: 0
+    AudioSource: {fileID: 0}
+  - Name: Excellent
+    AudioClip: {fileID: 8300000, guid: ef429543344792446b425afd67aa2f64, type: 3}
+    Volume: 0.8
+    Loop: 0
+    AudioSource: {fileID: 0}
+  - Name: LevelComplete
+    AudioClip: {fileID: 8300000, guid: 8a8fc52872004854e972688d33907f24, type: 3}
+    Volume: 0.8
+    Loop: 0
+    AudioSource: {fileID: 0}
+  - Name: Firework
+    AudioClip: {fileID: 8300000, guid: c1cba9e7c971da540a2f2ee1e68e831a, type: 3}
+    Volume: 0.8
+    Loop: 0
+    AudioSource: {fileID: 0}
+  - Name: LevelFail
+    AudioClip: {fileID: 8300000, guid: b59a9b47ce4711c478d3ff755c79a9d8, type: 3}
+    Volume: 0.8
+    Loop: 0
+    AudioSource: {fileID: 0}
 --- !u!1 &1190092656
 GameObject:
   m_ObjectHideFlags: 0

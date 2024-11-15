@@ -98,6 +98,10 @@ public class PassBombController : MonoBehaviour
         while (_countdownTime > 0)
         {
             _time.text = "00:" + _countdownTime.ToString("D2");
+            if (_countdownTime <= 7)
+            {
+                AudioManager.PlaySound("PassBombTick");
+            }
             yield return _wait;
             _countdownTime--;
             PassTime = _countdownTime switch
@@ -115,6 +119,7 @@ public class PassBombController : MonoBehaviour
     
     private void AnimExplode()
     {
+        AudioManager.PlaySound("PassBombExplosion");
         _explode.SetActive(true);
         _explode.transform.DOScale(_radius, 0.5f).onComplete += () =>
         {

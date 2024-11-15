@@ -30,8 +30,8 @@ public class Differ : MonoBehaviour
     {
         if (!MainUIMananger.Instance.PopupOpened)
         {
-            // AudioManager.PlaySound("Tooth");
-            // AudioManager.PlayVibration(true);
+            AudioManager.PlaySound("Click");
+            AudioManager.LightFeedback();
             if (!IsTrapped)
             {
                 GameUIManager.Instance.Retry(true);

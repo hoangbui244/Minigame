@@ -36,6 +36,7 @@ public class Cell : MonoBehaviour
     {
         if (!IsVisited)
         {
+            AudioManager.LightFeedback();
             _spriteRenderer.sprite = _color;
             IsVisited = true;
         }

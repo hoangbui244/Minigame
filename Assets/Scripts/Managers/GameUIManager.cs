@@ -4,16 +4,18 @@ using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class GameUIManager : Singleton<GameUIManager>
 {
     [SerializeField] private GameObject _completedPanel;
-    [SerializeField] private GameObject _completedPanel1;
+    [SerializeField] private GameObject _confettiPanel;
     [SerializeField] private GameObject _replayPanel;
     [SerializeField] private GameObject _settingPanel;
     [SerializeField] private TeaBreakPanel _teaBreakPanel;
     [SerializeField] private ReplayBalanceEggPanel _replayBalanceEggPanel;
+    [SerializeField] private WatchAdsPanel _watchAdsPanel;
     [SerializeField] private RawImage _screenShot;
     [SerializeField] private List<Sprite> _lvSprites;
     [SerializeField] private GameObject _nextLv;
@@ -31,8 +33,9 @@ public class GameUIManager : Singleton<GameUIManager>
 
     private void Init()
     {
+        _watchAdsPanel.gameObject.SetActive(false);
         _completedPanel.SetActive(false);
-        _completedPanel1.SetActive(false);
+        _confettiPanel.SetActive(false);
         _replayPanel.SetActive(false);
         _settingPanel.SetActive(false);
         _nextLv.SetActive(false);
@@ -85,6 +88,7 @@ public class GameUIManager : Singleton<GameUIManager>
 
     public void Setting()
     {
+        AudioManager.PlaySound("Click");
         _settingPanel.SetActive(true);
     }
 
@@ -94,9 +98,21 @@ public class GameUIManager : Singleton<GameUIManager>
         MainUIMananger.Instance.SceneEnd();
         StartCoroutine(LoadScene(2));
     }
+    
+    public void WatchAds()
+    {
+        _watchAdsPanel.gameObject.SetActive(true);
+    }
 
+    public void CloseWatchAds()
+    {
+        AudioManager.PlaySound("Click");
+        _watchAdsPanel.gameObject.SetActive(false);
+    }
+    
     public void Back()
     {
+        AudioManager.PlaySound("Click");
         SceneManager.sceneLoaded += OnSceneLoaded;
         MainUIMananger.Instance.SceneEnd();
         ObjectPooler.Instance.MoveToPool();
@@ -114,6 +130,7 @@ public class GameUIManager : Singleton<GameUIManager>
 
     public void NextGame()
     {
+        AudioManager.PlaySound("Click");
         if (MainUIMananger.Instance.LevelTypeToLoad == 17)
         {
             MainUIMananger.Instance.LevelTypeToLoad = 1;
@@ -127,29 +144,36 @@ public class GameUIManager : Singleton<GameUIManager>
     
     public void CompletedLevel(bool active)
     {
+        AudioManager.PlaySound("LevelComplete");
+        AudioManager.PlaySound("Firework");
         _completedPanel.SetActive(active);
     }
 
-    public void CompletedLevel1(bool active)
+    public void Confetti(bool active)
     {
-        _completedPanel1.SetActive(active);
+        AudioManager.PlaySound("Excellent");
+        AudioManager.LightFeedback();
+        _confettiPanel.SetActive(active);
         Invoke(nameof(Reload), 2f);
     }
 
     public void ReplayWin()
     {
+        AudioManager.PlaySound("LevelComplete");
         _replayBalanceEggPanel.gameObject.SetActive(true);
         _replayBalanceEggPanel.Win();
     }
     
     public void ReplayLose(int value)
     {
+        AudioManager.PlaySound("LevelFail");
         _replayBalanceEggPanel.gameObject.SetActive(true);
         _replayBalanceEggPanel.Lose(value);
     }
     
     public void Retry(bool active)
     {
+        AudioManager.PlaySound("LevelFail");
         _replayPanel.SetActive(active);
     }
 

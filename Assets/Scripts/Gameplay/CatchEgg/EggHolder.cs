@@ -52,10 +52,12 @@ public class EggHolder : MonoBehaviour
         {
             if (egg.Can)
             {
+                AudioManager.PlaySound("CandyTrue");
                 GameEventManager.CatchEgg?.Invoke(1);
             }
             else
             {
+                AudioManager.PlaySound("CandyFalse");
                 GameUIManager.Instance.Retry(true);
             }
         }

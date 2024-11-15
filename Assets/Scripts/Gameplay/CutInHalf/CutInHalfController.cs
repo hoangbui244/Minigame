@@ -37,7 +37,7 @@ public class CutInHalfController : MonoBehaviour
             {
                 ResourceManager.CutInHalf = 1;
             }
-            GameUIManager.Instance.CompletedLevel1(true);
+            GameUIManager.Instance.Confetti(true);
         }
         else
         {

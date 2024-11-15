@@ -9,6 +9,7 @@ public class BalanceEggController : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _currentScoreText;
     [SerializeField] private TextMeshProUGUI _highScoreText;
     [SerializeField] private BalanceEgg _balanceEgg;
+    [SerializeField] private List<GameObject> _ads;
     private float _currentScore;
     private int _highScore;
     private bool _locked;
@@ -58,27 +59,40 @@ public class BalanceEggController : MonoBehaviour
     
     public void NextLevel(int index)
     {
-        if (index == 11)
+        int levelKey = 0;
+
+        if (index == 3) levelKey = 1;
+        else if (index == 6) levelKey = 2;
+        else if (index == 10) levelKey = 3;
+
+        if (levelKey != 0)
         {
-            _locked = true;
+            if (PlayerPrefs.GetInt(levelKey.ToString(), 0) == 0)
+            {
+                GameUIManager.Instance.WatchAds();
+                MainUIMananger.Instance.LevelUnlocked = levelKey;
+                MainUIMananger.Instance.LevelUnlockedIndex = index;
+            }
+            else
+            {
+                ResourceManager.BalanceEgg = index;
+                GameUIManager.Instance.Reload();
+            }
         }
         else
-        {
-            _locked = false;
-        }
-        if (!_locked)
         {
             ResourceManager.BalanceEgg = index;
             GameUIManager.Instance.Reload();
         }
-        else
-        {
-            Debug.LogError("Watch Ads");
-        }
     }
+
     
     private void SetupLevel()
     {
+        _ads[0].SetActive(!PlayerPrefs.HasKey("1"));
+        _ads[1].SetActive(!PlayerPrefs.HasKey("2"));
+        _ads[2].SetActive(!PlayerPrefs.HasKey("3"));
+
         _currentScore = 0;
         _currentScoreText.text = "00:00";
         int num = ResourceManager.BalanceEgg - 1;

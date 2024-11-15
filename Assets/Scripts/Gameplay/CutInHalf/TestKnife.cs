@@ -44,8 +44,10 @@ public class TestKnife : MonoBehaviour
                         .OnComplete(() => GameEventManager.Test?.Invoke(contactPoint.x));
                 }
                 
-                transform.DOMoveY(transform.position.y - 100f, _time)
-                    .SetEase(Ease.InQuad)
+                DOTween.Sequence()
+                    .Append(transform.DOMoveY(transform.position.y - 100f, _time)
+                        .SetEase(Ease.InQuad))
+                    .Insert(0.2f, DOTween.To(() => 0, x => {}, 0, 0).OnComplete(() => AudioManager.PlaySound("CutInHalf")))
                     .OnComplete(() => gameObject.SetActive(false));
             }
         }
