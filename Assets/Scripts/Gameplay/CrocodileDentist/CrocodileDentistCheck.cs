@@ -11,14 +11,17 @@ public class CrocodileDentistCheck : MonoBehaviour
     [SerializeField] private GameObject _pet;
     [SerializeField] private Sprite _petBited;
     [SerializeField] private GameObject _vfx;
+    [SerializeField] private List<GameObject> _ads;
     private SpriteRenderer _petSprite;
     private int _currentWinCount = 0;
     private WaitForSeconds _wait = new WaitForSeconds(1.2f);
     private WaitForSeconds _vfxTime = new WaitForSeconds(0.4f);
-    private bool _locked;
     
     private void OnEnable()
     {
+        _ads[0].SetActive(!PlayerPrefs.HasKey("7"));
+        _ads[1].SetActive(!PlayerPrefs.HasKey("8"));
+        
         RandomTeeth();
         _petSprite = _pet.GetComponent<SpriteRenderer>();
         GameEventManager.CheckTeeth += CheckTeeth;
@@ -73,23 +76,29 @@ public class CrocodileDentistCheck : MonoBehaviour
     
     public void NextLevel(int index)
     {
-        if (index == 8)
+        int levelKey = 0;
+
+        if (index == 3) levelKey = 7;
+        else if (index == 6) levelKey = 8;
+        
+        if (levelKey != 0)
         {
-            _locked = true;
+            if (PlayerPrefs.GetInt(levelKey.ToString(), 0) == 0)
+            {
+                GameUIManager.Instance.WatchAds();
+                MainUIMananger.Instance.LevelUnlocked = levelKey;
+                MainUIMananger.Instance.LevelUnlockedIndex = index;
+            }
+            else
+            {
+                ResourceManager.CrocodileDentist = index;
+                GameUIManager.Instance.Reload();
+            }
         }
         else
-        {
-            _locked = false;
-        }
-        if (!_locked)
         {
             ResourceManager.CrocodileDentist = index;
             GameUIManager.Instance.Reload();
-        }
-        else
-        {
-            Debug.LogError("Watch Ads");
-            //GameUIManager.Instance.WatchAds();
         }
     }
 }

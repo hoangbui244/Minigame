@@ -46,6 +46,28 @@ public class Spoon : MonoBehaviour
 
     private bool IsPointerOverUI()
     {
-        return EventSystem.current.IsPointerOverGameObject();
+        if (Input.touchCount > 0)
+        {
+            Touch touch = Input.GetTouch(0);
+            if (EventSystem.current.IsPointerOverGameObject(touch.fingerId))
+            {
+                return true;
+            }
+        }
+
+        if (EventSystem.current.IsPointerOverGameObject())
+        {
+            PointerEventData pointerData = new PointerEventData(EventSystem.current)
+            {
+                position = Input.mousePosition
+            };
+
+            List<RaycastResult> results = new List<RaycastResult>();
+            EventSystem.current.RaycastAll(pointerData, results);
+
+            return results.Count > 0;
+        }
+
+        return false;
     }
 }

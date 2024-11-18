@@ -11,7 +11,7 @@ public class PerfectSliceController : MonoBehaviour
     [SerializeField] private List<Vector2> _pos;
     [SerializeField] private List<Vector3> _resetPos;
     [SerializeField] private float _time;
-    private bool _locked;
+    [SerializeField] private List<GameObject> _ads;
     private readonly WaitForSeconds _wait = new WaitForSeconds(0.2f);
 
     private void OnEnable()
@@ -58,28 +58,35 @@ public class PerfectSliceController : MonoBehaviour
 
     public void NextLevel(int index)
     {
-        if (index == 11)
+        int levelKey = 0;
+
+        if (index == 3) levelKey = 14;
+
+        if (levelKey != 0)
         {
-            _locked = true;
+            if (PlayerPrefs.GetInt(levelKey.ToString(), 0) == 0)
+            {
+                GameUIManager.Instance.WatchAds();
+                MainUIMananger.Instance.LevelUnlocked = levelKey;
+                MainUIMananger.Instance.LevelUnlockedIndex = index;
+            }
+            else
+            {
+                ResourceManager.PerfectSlices = index;
+                GameUIManager.Instance.Reload();
+            }
         }
         else
-        {
-            _locked = false;
-        }
-        if (!_locked)
         {
             ResourceManager.PerfectSlices = index;
             GameUIManager.Instance.Reload();
-        }
-        else
-        {
-            Debug.LogError("Watch Ads");
-            //GameUIManager.Instance.WatchAds();
         }
     }
     
     private void SetupLevel()
     {
+        _ads[0].SetActive(!PlayerPrefs.HasKey("14"));
+        
         int num = ResourceManager.PerfectSlices - 1;
         foreach (var border in _borders)
         {

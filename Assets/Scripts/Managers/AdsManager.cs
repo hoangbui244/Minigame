@@ -10,11 +10,16 @@ public class AdsManager : Singleton<AdsManager>
     #region =========================== PROPERTIES ===========================
 
     [Header("Admob")]
+    [SerializeField] private string _rewardedAdmobID = "";
+    [SerializeField] private string _interstitialAdmobID = "";
+    [SerializeField] private string _bannerAdmobID = "";
+    [SerializeField] private string _openAdsAdmobID = "";
+    [SerializeField] private string _nativeAdsAdmobID = "";
+
+    [Header("Applovin")]
     [SerializeField] private string _bannerID = "";
     [SerializeField] private string _openAdsID = "";
     [SerializeField] private string _nativeAdsID = "";
-
-    [Header("Applovin")]
     [SerializeField] private string _rewardedID = "";
     [SerializeField] private string _interstitialID = "";
 

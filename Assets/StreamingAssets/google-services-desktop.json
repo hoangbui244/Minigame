@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "175369644971",
+    "project_id": "brain-relax-challenge",
+    "storage_bucket": "brain-relax-challenge.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:175369644971:android:da6708318f706871a740ee",
+        "android_client_info": {
+          "package_name": "com.minigame.brain.relax.challenge"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDXqE3A0ahtkbRVcOUyorlt6SsYm2-7ISc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

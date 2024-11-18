@@ -1103,6 +1103,8 @@ MonoBehaviour:
   - {x: -0.052, y: 1.4010003, z: 0}
   - {x: 0, y: 2.67, z: 0}
   _time: 0.2
+  _ads:
+  - {fileID: 3604507276530786296}
 --- !u!1 &4493305178634245677
 GameObject:
   m_ObjectHideFlags: 0

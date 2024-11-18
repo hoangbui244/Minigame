@@ -11,9 +11,9 @@ public class GameController : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _scoreText;
     [SerializeField] private TextMeshProUGUI _highScoreText;
     [SerializeField] private List<GameObject> _borders;
+    [SerializeField] private List<GameObject> _ads;
     private readonly WaitForSeconds _wait = new WaitForSeconds(0.3f);
     private int _currentScore;
-    private bool _locked;
 
     private void OnEnable()
     {
@@ -35,29 +35,37 @@ public class GameController : MonoBehaviour
 
     public void NextLevel(int index)
     {
-        if (index == 8)
+        int levelKey = 0;
+
+        if (index == 3) levelKey = 12;
+        else if (index == 6) levelKey = 13;
+
+        if (levelKey != 0)
         {
-            _locked = true;
+            if (PlayerPrefs.GetInt(levelKey.ToString(), 0) == 0)
+            {
+                GameUIManager.Instance.WatchAds();
+                MainUIMananger.Instance.LevelUnlocked = levelKey;
+                MainUIMananger.Instance.LevelUnlockedIndex = index;
+            }
+            else
+            {
+                ResourceManager.FruitCutting = index;
+                GameUIManager.Instance.Reload();
+            }
         }
         else
-        {
-            _locked = false;
-        }
-
-        if (!_locked)
         {
             ResourceManager.FruitCutting = index;
             GameUIManager.Instance.Reload();
-        }
-        else
-        {
-            Debug.LogError("Watch Ads");
-            //GameUIManager.Instance.WatchAds();
         }
     }
 
     private void SetupLevel()
     {
+        _ads[0].SetActive(!PlayerPrefs.HasKey("12"));
+        _ads[1].SetActive(!PlayerPrefs.HasKey("13"));
+        
         int num = ResourceManager.FruitCutting - 1;
         foreach (var border in _borders)
         {

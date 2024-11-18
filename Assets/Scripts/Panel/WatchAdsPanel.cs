@@ -28,6 +28,21 @@ public class WatchAdsPanel : MonoBehaviour
                 gameObject.SetActive(false);
                 switch (MainUIMananger.Instance.LevelTypeToLoad)
                 {
+                    case 5:
+                        ResourceManager.BreakCandy = MainUIMananger.Instance.LevelUnlockedIndex;
+                        break;
+                    case 7:
+                        ResourceManager.CrocodileDentist = MainUIMananger.Instance.LevelUnlockedIndex;
+                        break;
+                    case 8:
+                        ResourceManager.CutInHalf = MainUIMananger.Instance.LevelUnlockedIndex;
+                        break;
+                    case 10:
+                        ResourceManager.FruitCutting = MainUIMananger.Instance.LevelUnlockedIndex;
+                        break;
+                    case 11:
+                        ResourceManager.PerfectSlices = MainUIMananger.Instance.LevelUnlockedIndex;
+                        break;
                     case 17:
                         ResourceManager.BalanceEgg = MainUIMananger.Instance.LevelUnlockedIndex;
                         break;

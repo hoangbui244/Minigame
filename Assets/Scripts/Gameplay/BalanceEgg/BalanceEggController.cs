@@ -12,7 +12,6 @@ public class BalanceEggController : MonoBehaviour
     [SerializeField] private List<GameObject> _ads;
     private float _currentScore;
     private int _highScore;
-    private bool _locked;
 
     private void OnEnable()
     {
@@ -41,6 +40,11 @@ public class BalanceEggController : MonoBehaviour
 
     private void Update()
     {
+        if (!_balanceEgg.IsStart && Input.GetMouseButtonDown(0))
+        {
+            _balanceEgg.IsStart = true;
+        }
+        
         if (_balanceEgg.IsHolded)
         {
             _currentScore += Time.deltaTime;
@@ -95,6 +99,7 @@ public class BalanceEggController : MonoBehaviour
 
         _currentScore = 0;
         _currentScoreText.text = "00:00";
+        _balanceEgg.IsStart = false;
         int num = ResourceManager.BalanceEgg - 1;
         foreach (var border in _borders)
         {

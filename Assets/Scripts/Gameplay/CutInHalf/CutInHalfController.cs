@@ -5,7 +5,7 @@ using UnityEngine;
 public class CutInHalfController : MonoBehaviour
 {
     [SerializeField] private List<GameObject> _borders;
-    private bool _locked;
+    [SerializeField] private List<GameObject> _ads;
     private readonly WaitForSeconds _wait = new WaitForSeconds(2f);
     
     private void OnEnable()
@@ -47,28 +47,39 @@ public class CutInHalfController : MonoBehaviour
     
     public void NextLevel(int index)
     {
-        if (index == 11)
+        int levelKey = 0;
+
+        if (index == 3) levelKey = 9;
+        else if (index == 6) levelKey = 10;
+        else if (index == 10) levelKey = 11;
+
+        if (levelKey != 0)
         {
-            _locked = true;
+            if (PlayerPrefs.GetInt(levelKey.ToString(), 0) == 0)
+            {
+                GameUIManager.Instance.WatchAds();
+                MainUIMananger.Instance.LevelUnlocked = levelKey;
+                MainUIMananger.Instance.LevelUnlockedIndex = index;
+            }
+            else
+            {
+                ResourceManager.CutInHalf = index;
+                GameUIManager.Instance.Reload();
+            }
         }
         else
-        {
-            _locked = false;
-        }
-        if (!_locked)
         {
             ResourceManager.CutInHalf = index;
             GameUIManager.Instance.Reload();
-        }
-        else
-        {
-            Debug.LogError("Watch Ads");
-            //GameUIManager.Instance.WatchAds();
         }
     }
     
     private void SetupLevel()
     {
+        _ads[0].SetActive(!PlayerPrefs.HasKey("9"));
+        _ads[1].SetActive(!PlayerPrefs.HasKey("10"));
+        _ads[2].SetActive(!PlayerPrefs.HasKey("11"));
+        
         int num = ResourceManager.CutInHalf - 1;
         foreach (var border in _borders)
         {

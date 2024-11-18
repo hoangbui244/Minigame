@@ -5,7 +5,7 @@ using UnityEngine;
 public class BreakCandyController : MonoBehaviour
 {
     [SerializeField] private List<GameObject> _borders;
-    private bool _locked;
+    [SerializeField] private List<GameObject> _ads;
     
     private void OnEnable()
     {
@@ -14,28 +14,39 @@ public class BreakCandyController : MonoBehaviour
     
     public void NextLevel(int index)
     {
-        if (index == 11)
+        int levelKey = 0;
+
+        if (index == 3) levelKey = 4;
+        else if (index == 6) levelKey = 5;
+        else if (index == 10) levelKey = 6;
+        
+        if (levelKey != 0)
         {
-            _locked = true;
+            if (PlayerPrefs.GetInt(levelKey.ToString(), 0) == 0)
+            {
+                GameUIManager.Instance.WatchAds();
+                MainUIMananger.Instance.LevelUnlocked = levelKey;
+                MainUIMananger.Instance.LevelUnlockedIndex = index;
+            }
+            else
+            {
+                ResourceManager.BreakCandy = index;
+                GameUIManager.Instance.Reload();
+            }
         }
         else
-        {
-            _locked = false;
-        }
-        if (!_locked)
         {
             ResourceManager.BreakCandy = index;
             GameUIManager.Instance.Reload();
-        }
-        else
-        {
-            Debug.LogError("Watch Ads");
-            //GameUIManager.Instance.WatchAds();
         }
     }
     
     private void SetupLevel()
     {
+        _ads[0].SetActive(!PlayerPrefs.HasKey("4"));
+        _ads[1].SetActive(!PlayerPrefs.HasKey("5"));
+        _ads[2].SetActive(!PlayerPrefs.HasKey("6"));
+        
         int num = ResourceManager.BreakCandy - 1;
         foreach (var border in _borders)
         {

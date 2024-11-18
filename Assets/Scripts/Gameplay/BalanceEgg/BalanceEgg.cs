@@ -7,6 +7,7 @@ using Random = UnityEngine.Random;
 public class BalanceEgg : MonoBehaviour
 {
     public bool IsHolded;
+    public bool IsStart;
     [SerializeField] private float _instabilityForce = 1f;
     [SerializeField] private float _instabilityIncreaseRate = 0.1f;
     private Rigidbody2D _rb;
@@ -20,16 +21,19 @@ public class BalanceEgg : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (MainUIMananger.Instance.PopupOpened)
+        if (MainUIMananger.Instance.PopupOpened || !IsStart)
         {
             _rb.gravityScale = 0f;
             return;
         }
         
         _rb.gravityScale = _gravityScale;
-        Vector2 randomForce = new Vector2(Random.Range(-1f, 1f), 0) * _instabilityForce;
-        _rb.AddForce(randomForce);
-        _instabilityForce += _instabilityIncreaseRate * Time.fixedDeltaTime;
+        if (IsStart)
+        {
+            Vector2 randomForce = new Vector2(Random.Range(-1f, 1f), 0) * _instabilityForce;
+            _rb.AddForce(randomForce);
+            _instabilityForce += _instabilityIncreaseRate * Time.fixedDeltaTime;
+        }
     }
     
     private void GameOver()
