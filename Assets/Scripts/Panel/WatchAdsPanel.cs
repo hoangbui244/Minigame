@@ -30,21 +30,27 @@ public class WatchAdsPanel : MonoBehaviour
                 {
                     case 5:
                         ResourceManager.BreakCandy = MainUIMananger.Instance.LevelUnlockedIndex;
+                        FirebaseManager.Instance.LogEventNameWithParam("BreakCandy", "level" ,MainUIMananger.Instance.LevelUnlockedIndex.ToString());
                         break;
                     case 7:
                         ResourceManager.CrocodileDentist = MainUIMananger.Instance.LevelUnlockedIndex;
+                        FirebaseManager.Instance.LogEventNameWithParam("CrocodileDentist", "level" ,MainUIMananger.Instance.LevelUnlockedIndex.ToString());
                         break;
                     case 8:
                         ResourceManager.CutInHalf = MainUIMananger.Instance.LevelUnlockedIndex;
+                        FirebaseManager.Instance.LogEventNameWithParam("CutInHalf", "level" ,MainUIMananger.Instance.LevelUnlockedIndex.ToString());
                         break;
                     case 10:
                         ResourceManager.FruitCutting = MainUIMananger.Instance.LevelUnlockedIndex;
+                        FirebaseManager.Instance.LogEventNameWithParam("FruitCutting", "level" ,MainUIMananger.Instance.LevelUnlockedIndex.ToString());
                         break;
                     case 11:
                         ResourceManager.PerfectSlices = MainUIMananger.Instance.LevelUnlockedIndex;
+                        FirebaseManager.Instance.LogEventNameWithParam("PerfectSlices", "level" ,MainUIMananger.Instance.LevelUnlockedIndex.ToString());
                         break;
                     case 17:
                         ResourceManager.BalanceEgg = MainUIMananger.Instance.LevelUnlockedIndex;
+                        FirebaseManager.Instance.LogEventNameWithParam("BalanceEgg", "level" ,MainUIMananger.Instance.LevelUnlockedIndex.ToString());
                         break;
                 }
                 GameUIManager.Instance.Reload();

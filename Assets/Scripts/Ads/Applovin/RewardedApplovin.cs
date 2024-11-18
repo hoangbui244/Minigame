@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Rewarded : MonoBehaviour
+public class RewardedApplovin : MonoBehaviour
 {
 #if UNITY_IOS
     private string _adUnitId = "";
@@ -78,7 +78,7 @@ public class Rewarded : MonoBehaviour
         _retryAttempt++;
         double retryDelay = Math.Pow(2, Math.Min(6, _retryAttempt));
 
-        Invoke("LoadRewardedAd", (float)retryDelay);
+        Invoke(nameof(LoadRewardedAd), (float)retryDelay);
     }
 
     private void OnRewardedAdDisplayedEvent(string adUnitId, MaxSdkBase.AdInfo adInfo)

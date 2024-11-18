@@ -30,10 +30,24 @@ public class AdsManager : Singleton<AdsManager>
     private readonly string _testNativeID = "ca-app-pub-3940256099942544/2247696110";
     private bool _initialized;
     private bool _openAds;
-    private RemoteConfigManager _remote => RemoteConfigManager.Instance;
-    private float _intersCapping => _remote.IntersCapping;
+    private RemoteConfigManager Remote => RemoteConfigManager.Instance;
+    private float IntersCapping => Remote.IntersCapping;
+    private float BreakCapping => Remote.BreakCapping;
+    private bool _canShowBreak = false;
     private bool _canShowInters = false;
-    public static int IntersCount = 0;
+
+    public bool CanShowBreak
+    {
+        get => _canShowBreak;
+        set
+        {
+            if (!value)
+            {
+                Invoke(nameof(BreakTimeCapping), BreakCapping);
+            }
+            _canShowBreak = value;
+        }
+    }
     
     public bool CanShowInters
     {
@@ -42,16 +56,16 @@ public class AdsManager : Singleton<AdsManager>
         {
             if (!value)
             {
-                Invoke(nameof(TimeCapping), _intersCapping);
+                Invoke(nameof(TimeCapping), IntersCapping);
             }
             _canShowInters = value;
         }
     }
     
-    [SerializeField] private Banner _banner;
-    [SerializeField] private OpenAds _appOpenAd;
-    [SerializeField] private Interstitial _interstitial;
-    [SerializeField] private Rewarded _rewarded;
+    [SerializeField] private BannerApplovin _banner;
+    [SerializeField] private OpenAdsApplovin _appOpenAd;
+    [SerializeField] private InterstitialApplovin _interstitial;
+    [SerializeField] private RewardedApplovin _rewarded;
     public NativeAd LoadedNativeAd { get; private set; }
     public event Action OnNativeAdLoaded;
 
@@ -80,6 +94,7 @@ public class AdsManager : Singleton<AdsManager>
         //     MaxSdk.ShowMediationDebugger();
         // };
         _interstitial.Init();
+        _banner.Init();
         _rewarded.Init();
         _appOpenAd.Init();
         _initialized = true;
@@ -107,10 +122,6 @@ public class AdsManager : Singleton<AdsManager>
     private void HandleAdFailedToLoad(object sender, AdFailedToLoadEventArgs args)
     {
         Debug.LogError("Native ad failed to load: " + args.LoadAdError.GetMessage());
-        // if (SceneManager.GetActiveScene().name == "GamePlay")
-        // {
-        //     GameUIManager.Instance.EnableNative(false);
-        // }
     }
 
     private void HandleNativeAdLoaded(object sender, NativeAdEventArgs args)
@@ -122,7 +133,7 @@ public class AdsManager : Singleton<AdsManager>
     public void ShowBanner()
     {
         if (ResourceManager.RemoveAds) return;
-        _banner.LoadAd();
+        _banner.ShowBanner();
     }
     
     public void ShowOpen(Action<bool> completed = null)
@@ -145,7 +156,6 @@ public class AdsManager : Singleton<AdsManager>
         _interstitial.ShowInterstitial(success =>
         {
             completed?.Invoke(success);
-            IntersCount++;
             CanShowInters = false;
         });
     }
@@ -153,6 +163,11 @@ public class AdsManager : Singleton<AdsManager>
     public void ShowRewarded(Action<bool> completed = null)
     {
         _rewarded.ShowReward(completed);
+    }
+    
+    private void BreakTimeCapping()
+    {
+        CanShowBreak = true;
     }
     
     private void TimeCapping()

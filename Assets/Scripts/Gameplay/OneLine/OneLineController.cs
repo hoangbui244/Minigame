@@ -69,7 +69,6 @@ public class OneLineController : MonoBehaviour
             Cell lastCell = _cells[_cells.Count - 1];
             lastCell.End();
             _isWin = true;
-            GameUIManager.Instance.Confetti(true);
             if (ResourceManager.OneLine < 12)
             {
                 ResourceManager.OneLine++;
@@ -78,6 +77,7 @@ public class OneLineController : MonoBehaviour
             {
                 ResourceManager.OneLine = 1;
             }
+            GameUIManager.Instance.Confetti(true);
         }
     }
     
@@ -117,6 +117,10 @@ public class OneLineController : MonoBehaviour
     public void ResetLevel()
     {
         AudioManager.PlaySound("Click");
+        if (AdsManager.Instance.CanShowBreak)
+        {
+            GameUIManager.Instance.ShowTeaBreak();
+        }
         GameUIManager.Instance.Reload();
     }
 }

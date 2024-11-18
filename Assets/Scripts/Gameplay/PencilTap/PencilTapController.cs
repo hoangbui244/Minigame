@@ -54,7 +54,10 @@ public class PencilTapController : MonoBehaviour
         Invoke(nameof(InitPen), 0.6f);
         if (_currentScore % 3 == 0)
         {
-            GameUIManager.Instance.TeaBreak(true);
+            if (AdsManager.Instance.CanShowBreak)
+            {
+                GameUIManager.Instance.ShowTeaBreak();
+            }
         }
 
         if (_currentScore > _highScore)

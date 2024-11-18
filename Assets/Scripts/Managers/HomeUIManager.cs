@@ -17,7 +17,7 @@ public class HomeUIManager : Singleton<HomeUIManager>
     private void OnEnable()
     {
         Init();
-        // AdsManager.Instance.ShowBanner();
+        AdsManager.Instance.ShowBanner();
     }
 
     private void Init()
@@ -44,12 +44,40 @@ public class HomeUIManager : Singleton<HomeUIManager>
         AudioManager.PlaySound("Click");
         if (IsInternetAvailable())
         {
-            _levelTypeToLoad = type;
-            MainUIMananger.Instance.LevelTypeToLoad = type;
+            if (AdsManager.Instance.CanShowInters)
+            {
+                AdsManager.Instance.ShowInters(success =>
+                {
+                    if (success)
+                    {
+                        FirebaseManager.Instance.LogEventName("show_inters");
+                        _levelTypeToLoad = type;
+                        MainUIMananger.Instance.LevelTypeToLoad = type;
 
-            SceneManager.sceneLoaded += OnSceneLoaded;
-            MainUIMananger.Instance.SceneEnd();
-            StartCoroutine(LoadScene());
+                        SceneManager.sceneLoaded += OnSceneLoaded;
+                        MainUIMananger.Instance.SceneEnd();
+                        StartCoroutine(LoadScene());
+                    }
+                    else
+                    {
+                        _levelTypeToLoad = type;
+                        MainUIMananger.Instance.LevelTypeToLoad = type;
+
+                        SceneManager.sceneLoaded += OnSceneLoaded;
+                        MainUIMananger.Instance.SceneEnd();
+                        StartCoroutine(LoadScene());
+                    }
+                });
+            }
+            else
+            {
+                _levelTypeToLoad = type;
+                MainUIMananger.Instance.LevelTypeToLoad = type;
+
+                SceneManager.sceneLoaded += OnSceneLoaded;
+                MainUIMananger.Instance.SceneEnd();
+                StartCoroutine(LoadScene());
+            }
         }
         else
         {

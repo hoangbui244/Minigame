@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Interstitial : MonoBehaviour
+public class InterstitialApplovin : MonoBehaviour
 {
 #if UNITY_IOS
     private string _adUnitId = "";

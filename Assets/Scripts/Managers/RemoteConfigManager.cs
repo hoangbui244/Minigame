@@ -10,6 +10,7 @@ using UnityEngine.Serialization;
 public class RemoteConfigManager : Singleton<RemoteConfigManager>
 {
     public float IntersCapping = 40f;
+    public float BreakCapping = 40f;
     private bool _initFirebase;
     DependencyStatus _dependencyStatus = DependencyStatus.UnavailableOther;
     
@@ -106,7 +107,10 @@ public class RemoteConfigManager : Singleton<RemoteConfigManager>
         private void LoadRemoteConfigData()
         {
             IntersCapping = (float)FirebaseRemoteConfig.DefaultInstance
-                .GetValue("CappingTime")
+                .GetValue("inter_capping")
+                .DoubleValue;
+            BreakCapping = (float)FirebaseRemoteConfig.DefaultInstance
+                .GetValue("ad_break_capping")
                 .DoubleValue;
         }
 }

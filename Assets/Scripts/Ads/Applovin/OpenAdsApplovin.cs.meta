@@ -1,8 +1,5 @@
 fileFormatVersion: 2
-guid: bc0c5693335e0408a95293c0d7b61137
-labels:
-- al_max
-- al_max_export_path-MaxSdk/Scripts/Editor/MaxInitialization.cs
+guid: 5473dbcde838e2045bf6f04bfa3c4989
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2

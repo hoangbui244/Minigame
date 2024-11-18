@@ -29,6 +29,7 @@ public class GameUIManager : Singleton<GameUIManager>
     private void OnEnable()
     {
         Init();
+        AdsManager.Instance.ShowBanner();
     }
 
     private void Init()
@@ -48,7 +49,7 @@ public class GameUIManager : Singleton<GameUIManager>
         yield return _wait1;
         _nextLv.SetActive(true);
         int num = MainUIMananger.Instance.LevelTypeToLoad;
-        _nextLvImage.sprite = num < 10 ? _lvSprites[num] : _lvSprites[0];
+        _nextLvImage.sprite = num < 19 ? _lvSprites[num] : _lvSprites[0];
         _nextLv.transform.DOScale(_scaleEnd, 0.5f);
     }
 
@@ -94,9 +95,31 @@ public class GameUIManager : Singleton<GameUIManager>
 
     public void Reload()
     {
-        SceneManager.sceneLoaded += OnSceneLoaded;
-        MainUIMananger.Instance.SceneEnd();
-        StartCoroutine(LoadScene(2));
+        if (AdsManager.Instance.CanShowInters)
+        {
+            AdsManager.Instance.ShowInters(success =>
+            {
+                if (success)
+                {
+                    FirebaseManager.Instance.LogEventName("show_inters");
+                    SceneManager.sceneLoaded += OnSceneLoaded;
+                    MainUIMananger.Instance.SceneEnd();
+                    StartCoroutine(LoadScene(2));
+                }
+                else
+                {
+                    SceneManager.sceneLoaded += OnSceneLoaded;
+                    MainUIMananger.Instance.SceneEnd();
+                    StartCoroutine(LoadScene(2));
+                }
+            });
+        }
+        else
+        {
+            SceneManager.sceneLoaded += OnSceneLoaded;
+            MainUIMananger.Instance.SceneEnd();
+            StartCoroutine(LoadScene(2));
+        }
     }
     
     public void WatchAds()
@@ -112,11 +135,37 @@ public class GameUIManager : Singleton<GameUIManager>
     
     public void Back()
     {
-        AudioManager.PlaySound("Click");
-        SceneManager.sceneLoaded += OnSceneLoaded;
-        MainUIMananger.Instance.SceneEnd();
-        ObjectPooler.Instance.MoveToPool();
-        StartCoroutine(LoadScene(1));
+        if (AdsManager.Instance.CanShowInters)
+        {
+            AdsManager.Instance.ShowInters(success =>
+            {
+                if (success)
+                {
+                    FirebaseManager.Instance.LogEventName("show_inters");
+                    AudioManager.PlaySound("Click");
+                    SceneManager.sceneLoaded += OnSceneLoaded;
+                    MainUIMananger.Instance.SceneEnd();
+                    ObjectPooler.Instance.MoveToPool();
+                    StartCoroutine(LoadScene(1));
+                }
+                else
+                {
+                    AudioManager.PlaySound("Click");
+                    SceneManager.sceneLoaded += OnSceneLoaded;
+                    MainUIMananger.Instance.SceneEnd();
+                    ObjectPooler.Instance.MoveToPool();
+                    StartCoroutine(LoadScene(1));
+                }
+            });
+        }
+        else
+        {
+            AudioManager.PlaySound("Click");
+            SceneManager.sceneLoaded += OnSceneLoaded;
+            MainUIMananger.Instance.SceneEnd();
+            ObjectPooler.Instance.MoveToPool();
+            StartCoroutine(LoadScene(1));
+        }
     }
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
@@ -131,7 +180,7 @@ public class GameUIManager : Singleton<GameUIManager>
     public void NextGame()
     {
         AudioManager.PlaySound("Click");
-        if (MainUIMananger.Instance.LevelTypeToLoad == 17)
+        if (MainUIMananger.Instance.LevelTypeToLoad == 18)
         {
             MainUIMananger.Instance.LevelTypeToLoad = 1;
         }
@@ -154,7 +203,25 @@ public class GameUIManager : Singleton<GameUIManager>
         AudioManager.PlaySound("Excellent");
         AudioManager.LightFeedback();
         _confettiPanel.SetActive(active);
-        Invoke(nameof(Reload), 2f);
+        if (AdsManager.Instance.CanShowBreak)
+        {
+            StartCoroutine(TeaBreakCountdown());
+        }
+        else
+        {
+            Invoke(nameof(Reload), 2f);
+        }
+    }
+    
+    public void ShowTeaBreak()
+    {
+        StartCoroutine(TeaBreakCountdown());
+    }
+    
+    private IEnumerator TeaBreakCountdown()
+    {
+        yield return _wait;
+        TeaBreak(true);
     }
 
     public void ReplayWin()
