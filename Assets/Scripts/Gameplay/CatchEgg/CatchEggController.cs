@@ -8,6 +8,8 @@ public class CatchEggController : MonoBehaviour
     [SerializeField] private List<Transform> _spawnPos;
     [SerializeField] private TextMeshProUGUI _point;
     [SerializeField] private Color _color;
+    [SerializeField] private List<Sprite> _eggHolder;
+    [SerializeField] private SpriteRenderer _eggHolderSprite;
     private readonly WaitForSeconds _time = new WaitForSeconds(1.1f);
     private readonly WaitForSeconds _wait = new WaitForSeconds(0.5f);
     private int _currentPoint = 0;
@@ -19,6 +21,7 @@ public class CatchEggController : MonoBehaviour
         GameEventManager.CatchEgg += Check;
         _point.text = "0";
         _currentPoint = 0;
+        _eggHolderSprite.sprite = _eggHolder[0];
         _start = true;
         _spawnCoroutine = StartCoroutine(Spawn());
     }
@@ -48,6 +51,7 @@ public class CatchEggController : MonoBehaviour
     {
         _currentPoint += value;
         _point.text = _currentPoint.ToString();
+        _eggHolderSprite.sprite = _currentPoint >= 6 ? _eggHolder[5] : _eggHolder[_currentPoint];
         if (_currentPoint > 0)
         {
             _point.color = _color; 

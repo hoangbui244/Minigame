@@ -21,6 +21,7 @@ public class PetControler : MonoBehaviour
     private SpriteRenderer _handSpriteRenderer;
     private Sequence _shakeSequence;
     private readonly Vector3 _rotation = new Vector3(0, 0, 45);
+    private readonly Vector3 _shake = new Vector3(0.1f, 0.02f, 0);
     private readonly float _time = 0.3f;
     public bool HasBomb;
     public int ID;
@@ -74,8 +75,15 @@ public class PetControler : MonoBehaviour
         _headSpriteRenderer.sprite = _headFear;
         
         _shakeSequence = DOTween.Sequence();
-        _shakeSequence.Append(_head.transform.DOShakePosition(0.5f, 0.2f, 5, 50, false, true))
+        _shakeSequence.Append(_head.transform.DOShakePosition(
+                duration: 0.3f,                     
+                strength: _shake, 
+                vibrato: 10,                        
+                randomness: 90,                    
+                snapping: false,                    
+                fadeOut: true))                    
             .SetLoops(-1, LoopType.Yoyo);
+
         
         if (IsBot)
         {
