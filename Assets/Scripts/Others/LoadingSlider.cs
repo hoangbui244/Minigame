@@ -94,8 +94,7 @@ public class LoadingSlider : MonoBehaviour
             {
                 MainUIMananger.LoadScene("HomeScreen");
                 AudioManager.PlayLoopSound("MainTheme");
-                AdsManager.Instance.CanShowInters = false;
-                AdsManager.Instance.CanShowBreak = false;
+                AdsManager.Instance.StartCappingAds = false;
                 ResourceManager.FirstOpen = false;
             });
 

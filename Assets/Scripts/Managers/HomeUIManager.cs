@@ -45,7 +45,7 @@ public class HomeUIManager : Singleton<HomeUIManager>
         AudioManager.PlaySound("Click");
         if (IsInternetAvailable())
         {
-            if (AdsManager.Instance.CanShowInters)
+            if (AdsManager.Instance.CanShowInters || AdsManager.Instance.StartCappingAds)
             {
                 AdsManager.Instance.ShowInters(success =>
                 {

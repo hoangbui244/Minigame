@@ -91,7 +91,7 @@ public class GameUIManager : Singleton<GameUIManager>
 
     public void Reload()
     {
-        if (AdsManager.Instance.CanShowInters)
+        if (AdsManager.Instance.CanShowInters || AdsManager.Instance.StartCappingAds)
         {
             AdsManager.Instance.ShowInters(success =>
             {
@@ -138,7 +138,7 @@ public class GameUIManager : Singleton<GameUIManager>
     
     public void Back()
     {
-        if (AdsManager.Instance.CanShowInters)
+        if (AdsManager.Instance.CanShowInters || AdsManager.Instance.StartCappingAds)
         {
             AdsManager.Instance.ShowInters(success =>
             {
@@ -206,7 +206,7 @@ public class GameUIManager : Singleton<GameUIManager>
         AudioManager.PlaySound("Excellent");
         AudioManager.LightFeedback();
         _confettiPanel.SetActive(active);
-        if (AdsManager.Instance.CanShowBreak)
+        if (AdsManager.Instance.CanShowInters || AdsManager.Instance.StartCappingAds)
         {
             ShowTeaBreak();
         }

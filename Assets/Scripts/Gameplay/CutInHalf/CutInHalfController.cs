@@ -27,7 +27,7 @@ public class CutInHalfController : MonoBehaviour
     private IEnumerator Wait(int value)
     {
         yield return _wait;
-        if (value >= 48 && value <= 52)
+        if (value >= 47 && value <= 53)
         {
             if (ResourceManager.CutInHalf < 10)
             {

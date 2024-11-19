@@ -117,10 +117,6 @@ public class OneLineController : MonoBehaviour
     public void ResetLevel()
     {
         AudioManager.PlaySound("Click");
-        if (AdsManager.Instance.CanShowBreak)
-        {
-            GameUIManager.Instance.ShowTeaBreak();
-        }
         GameUIManager.Instance.Reload();
     }
 }

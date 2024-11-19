@@ -32,20 +32,21 @@ public class AdsManager : Singleton<AdsManager>
     private bool _openAds;
     private RemoteConfigManager Remote => RemoteConfigManager.Instance;
     private float IntersCapping => Remote.IntersCapping;
-    private float BreakCapping => Remote.BreakCapping;
-    private bool _canShowBreak = false;
+    private float StartCapping => Remote.StartCapping;
     private bool _canShowInters = false;
+    private bool _canShowStart = false;
+    private bool _switchAds = false;
 
-    public bool CanShowBreak
+    public bool StartCappingAds
     {
-        get => _canShowBreak;
+        get => _canShowStart;
         set
         {
             if (!value)
             {
-                Invoke(nameof(BreakTimeCapping), BreakCapping);
+                Invoke(nameof(StartCount), StartCapping);
             }
-            _canShowBreak = value;
+            _canShowStart = value;
         }
     }
     
@@ -80,7 +81,7 @@ public class AdsManager : Singleton<AdsManager>
 
     private void Update()
     {
-        Debug.LogError("CanShowBreak: " + CanShowBreak);
+        Debug.LogError("StartCappingAds: " + StartCappingAds);
     }
 
     #endregion
@@ -162,20 +163,7 @@ public class AdsManager : Singleton<AdsManager>
         {
             completed?.Invoke(success);
             CanShowInters = false;
-        });
-    }
-    
-    public void ShowAdBreak(Action<bool> completed = null)
-    {
-        if (ResourceManager.RemoveAds)
-        {
-            completed?.Invoke(false);
-            return;
-        }
-        _interstitial.ShowInterstitial(success =>
-        {
-            completed?.Invoke(success);
-            CanShowBreak = false;
+            StartCappingAds = false;
         });
     }
     
@@ -184,9 +172,13 @@ public class AdsManager : Singleton<AdsManager>
         _rewarded.ShowReward(completed);
     }
     
-    private void BreakTimeCapping()
+    private void StartCount()
     {
-        CanShowBreak = true;
+        if (!_switchAds)
+        {
+            _switchAds = true;
+            CanShowInters = true;
+        }
     }
     
     private void TimeCapping()

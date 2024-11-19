@@ -49,10 +49,6 @@ public class BombCheck : MonoBehaviour
                 ResourceManager.DefuseBomb = 1;
             }
             GameUIManager.Instance.ScreenShot();
-            if (AdsManager.Instance.CanShowBreak)
-            {
-                GameUIManager.Instance.ShowTeaBreak();
-            }
             StartCoroutine(NewLevel());
         }
         else
@@ -61,10 +57,6 @@ public class BombCheck : MonoBehaviour
             _explosion.SetActive(true);
             _explosion.transform.DOScale(_scale, 0.6f).OnComplete(() =>
             {
-                if (AdsManager.Instance.CanShowBreak)
-                {
-                    GameUIManager.Instance.ShowTeaBreak();
-                }
                 StartCoroutine(Retry());
             });
         }
