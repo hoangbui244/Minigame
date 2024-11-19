@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using CandyCoded.HapticFeedback;
+using UnityEngine.Serialization;
 
 public class Stick : MonoBehaviour
 {
@@ -10,7 +11,8 @@ public class Stick : MonoBehaviour
     private Vector2 _lastPointPrefabPos;
     [SerializeField] private Transform _startPos;
     [SerializeField] private float _pointOffset = 0.5f;
-    [SerializeField] private float dragResistance = 0.1f;
+    [SerializeField] private float _dragResistance = 0.1f;
+    [SerializeField] private LayerMask _penLayerMask;
     private Vector2 targetPosition;
 
     private void Start()
@@ -18,27 +20,32 @@ public class Stick : MonoBehaviour
         _camera = Camera.main;
         _lastPointPrefabPos = _startPos.position;
     }
-
+    
     private void OnMouseDown()
     {
-        if (Input.GetMouseButtonDown(0) && !MainUIMananger.Instance.PopupOpened)
+        if (!MainUIMananger.Instance.PopupOpened)
         {
             Vector2 mousePosition = _camera.ScreenToWorldPoint(Input.mousePosition);
-            RaycastHit2D hit = Physics2D.Raycast(mousePosition, Vector2.zero);
+            RaycastHit2D[] hits = Physics2D.RaycastAll(mousePosition, Vector2.zero, 1000f, _penLayerMask);
 
-            if (hit.collider != null && hit.collider.gameObject == gameObject && CompareTag("Pen"))
+            foreach (RaycastHit2D hit in hits)
             {
-                _diff = (Vector2)_camera.ScreenToWorldPoint(Input.mousePosition) - (Vector2)transform.position;
+                if (hit.collider != null && hit.collider.gameObject == gameObject && CompareTag("Pen"))
+                {
+                    _diff = (Vector2)_camera.ScreenToWorldPoint(Input.mousePosition) - (Vector2)transform.position;
+                    break;
+                }
             }
         }
     }
 
+
     private void OnMouseDrag()
     {
-        if (!MainUIMananger.Instance.PopupOpened && GameManager.Instance.GameState == GameManager.EnumGameState.Play)
+        if (!MainUIMananger.Instance.PopupOpened)
         {
             targetPosition = (Vector2)_camera.ScreenToWorldPoint(Input.mousePosition) - _diff;
-            transform.position = Vector2.Lerp(transform.position, targetPosition, 1 - dragResistance);
+            transform.position = Vector2.Lerp(transform.position, targetPosition, 1 - _dragResistance);
 
             if (Vector2.Distance(_lastPointPrefabPos, _startPos.position) >= _pointOffset)
             {

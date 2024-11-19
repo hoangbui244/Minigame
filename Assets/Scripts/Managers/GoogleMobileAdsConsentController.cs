@@ -12,7 +12,7 @@ public class GoogleMobileAdsConsentController : MonoBehaviour
         {
             ConsentDebugSettings = new ConsentDebugSettings
             {
-                //DebugGeography = DebugGeography.EEA,
+                // DebugGeography = DebugGeography.EEA,
             }
         };
 

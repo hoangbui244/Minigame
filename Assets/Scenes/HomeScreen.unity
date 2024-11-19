@@ -3387,7 +3387,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1a3333969bbe2e468824bc94791d841, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _btn: {fileID: 2012028682}
+  _btn: {fileID: 0}
   _purchase: {fileID: 21300000, guid: b1048fd47e79d4e459ae311a0e5f1d00, type: 3}
 --- !u!114 &1007369735
 MonoBehaviour:

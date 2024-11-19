@@ -16,10 +16,10 @@ public class CandyPiece : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Point")) 
+        if (other.CompareTag("Point") && !IsBroken) 
         {
-            _collider.enabled = false;
             IsBroken = true;
+            _collider.enabled = false;
             GameEventManager.BreakCandyPiece?.Invoke();
         }
     }

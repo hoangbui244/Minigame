@@ -9,57 +9,71 @@ public class BreakCandyCheck : MonoBehaviour
     [SerializeField] private GameObject _pen;
     [SerializeField] private GameObject _text;
     [SerializeField] private GameObject _anim;
-    private int _currentCount = 0;
+    [SerializeField] private List<Pieces> _pieces;
     private WaitForSeconds _wait = new WaitForSeconds(0.8f);
     private WaitForSeconds _wait1 = new WaitForSeconds(0.15f);
-    
+    private int _currentCount = 0;
+    private bool Done;
+
     private void OnEnable()
     {
+        Done = false;
         GameEventManager.BreakCandy += UpdateResult;
     }
-    
+
     private void OnDisable()
     {
         GameEventManager.BreakCandy -= UpdateResult;
     }
-    
+
     private void UpdateResult(bool result)
     {
-        if (!result)
+        if (!result && !Done)
         {
+            Done = true;
+            AudioManager.PlaySound("CandyBreakAll");
             StartCoroutine(Retry());
+            return;
         }
-        else
+        
+        _currentCount = 0;
+        foreach (var item in _pieces)
         {
-            _currentCount++;
-            if (_currentCount >= _winCount)
+            if (item.Done)
             {
-                if (ResourceManager.BreakCandy < 10)
-                {
-                    ResourceManager.BreakCandy++;
-                }
-                else
-                {
-                    ResourceManager.BreakCandy = 1;
-                }
-                GameManager.Instance.GamePause(true);
-                OffPen();
-                _text.SetActive(false);
-                ObjectPooler.Instance.MoveToPool();
-                GameUIManager.Instance.Confetti(true);
+                _currentCount++;
             }
         }
-    }
     
+        if (_currentCount >= _winCount && !Done)
+        {
+            Done = true; 
+            if (ResourceManager.BreakCandy < 10)
+            {
+                ResourceManager.BreakCandy++;
+            }
+            else
+            {
+                ResourceManager.BreakCandy = 1;
+            }
+    
+            GameManager.Instance.GamePause(true);
+            OffPen();
+            _text.SetActive(false);
+            ObjectPooler.Instance.MoveToPool();
+            GameUIManager.Instance.Confetti(true);
+        }
+    }
+
+
     private void OffPen()
     {
         _pen.SetActive(false);
     }
-    
+
     private IEnumerator Retry()
     {
         yield return _wait1;
-        AudioManager.PlaySound("CandyBreakAll");
         _anim.SetActive(true);
         yield return _wait;
         GameUIManager.Instance.Retry(true);

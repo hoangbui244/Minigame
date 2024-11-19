@@ -78,6 +78,11 @@ public class AdsManager : Singleton<AdsManager>
         Init();
     }
 
+    private void Update()
+    {
+        Debug.LogError("CanShowBreak: " + CanShowBreak);
+    }
+
     #endregion
 
     #region =========================== MAIN ===========================
@@ -87,7 +92,7 @@ public class AdsManager : Singleton<AdsManager>
         if (_initialized) return;
         
         InitAdsID();
-        MaxSdk.SetSdkKey("dQ15CD6nC7CfuD2IKhScGfRyQOoJpENkqUqftd_Xg0z83xvbcqZKQG3JTTbzUAaR8bGxPGTBufsv3sqxsXzrcV");
+        MaxSdk.SetTestDeviceAdvertisingIdentifiers(new string[] { "5948dbcb-daf2-4012-9b25-d8110a3f32c6", "a098332a-53f2-4d83-a556-1b60e54561c1", "d13d9e78-313b-4c35-a08c-e4d1fc10306e"});
         MaxSdk.InitializeSdk();
         // MaxSdkCallbacks.OnSdkInitializedEvent += sdkConfiguration =>
         // {
@@ -157,6 +162,20 @@ public class AdsManager : Singleton<AdsManager>
         {
             completed?.Invoke(success);
             CanShowInters = false;
+        });
+    }
+    
+    public void ShowAdBreak(Action<bool> completed = null)
+    {
+        if (ResourceManager.RemoveAds)
+        {
+            completed?.Invoke(false);
+            return;
+        }
+        _interstitial.ShowInterstitial(success =>
+        {
+            completed?.Invoke(success);
+            CanShowBreak = false;
         });
     }
     

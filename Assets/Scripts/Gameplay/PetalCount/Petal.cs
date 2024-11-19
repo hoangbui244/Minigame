@@ -8,18 +8,19 @@ public class Petal : MonoBehaviour
 {
     [SerializeField] private float _torque;
     private Rigidbody2D _rb;
-    private Collider2D _collider2D;
+    private bool _isClicked;
     
     private void Start()
     {
-        _collider2D = GetComponent<Collider2D>();
         _rb = GetComponent<Rigidbody2D>();
         _rb.gravityScale = 0f;
     }
 
     private void OnMouseDown()
     {
-        _collider2D.enabled = false;
+        if (_isClicked) return;
+        ObjectPooler.Instance.SpawnFromPool("Effect", transform.position);
+        _isClicked = true;
         int num = Random.Range(0, 100);
         if (num <= 35)
         {

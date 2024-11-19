@@ -10,6 +10,7 @@ public class Pieces : MonoBehaviour
     [SerializeField] private GameObject _piece;
     [SerializeField] private Vector3 _endPos;
     [SerializeField] private float _time;
+    public bool Done;
     
     private void OnEnable()
     {
@@ -44,14 +45,17 @@ public class Pieces : MonoBehaviour
 
     private void Anim()
     {
-        AudioManager.PlaySound("CandyBreakOne");
+        if (Done) return;
+        Done = true;
         Sequence sequence = DOTween.Sequence();
-        sequence.Join(_piece.transform.DOMove(_endPos, _time))
-            .Join(_piece.GetComponent<SpriteRenderer>().DOFade(0, _time))
+        sequence.Join(gameObject.transform.DOMove(_endPos, _time))
+            .Join(gameObject.GetComponent<SpriteRenderer>().DOFade(0, _time))
             .OnComplete(() => 
             {
+                AudioManager.PlaySound("CandyBreakOne");
                 GameEventManager.BreakCandy?.Invoke(true);
-                _piece.SetActive(false);
+                sequence.Kill();
             });
     }
+
 }

@@ -95,6 +95,7 @@ public class Obstacle : MonoBehaviour
     
     private void OnCollisionEnter2D(Collision2D other)
     {
+        AudioManager.PlaySound("BallHit");
         switch (_type)
         {
             case ObjType.Once:

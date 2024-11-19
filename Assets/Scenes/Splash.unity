@@ -1305,7 +1305,7 @@ MonoBehaviour:
     AudioSource: {fileID: 0}
   - Name: FlipCard
     AudioClip: {fileID: 8300000, guid: 52848902166cfae40b28f9d2a1ba7b92, type: 3}
-    Volume: 0.8
+    Volume: 1
     Loop: 0
     AudioSource: {fileID: 0}
   - Name: PencilDone
@@ -1341,6 +1341,11 @@ MonoBehaviour:
   - Name: LevelFail
     AudioClip: {fileID: 8300000, guid: b59a9b47ce4711c478d3ff755c79a9d8, type: 3}
     Volume: 0.8
+    Loop: 0
+    AudioSource: {fileID: 0}
+  - Name: BallHit
+    AudioClip: {fileID: 8300000, guid: 18d137e7768eff24597ef9e3b1376228, type: 3}
+    Volume: 1
     Loop: 0
     AudioSource: {fileID: 0}
 --- !u!1 &1190092656
@@ -1665,6 +1670,9 @@ MonoBehaviour:
   - Tag: Candy
     Prefab: {fileID: 8740851341358175562, guid: e4119edf7ce80b4498f72f3ebbe1d96b, type: 3}
     Size: 4
+  - Tag: Effect
+    Prefab: {fileID: 1354202852101526, guid: 645ce759aea8744f0a9452d8e670c93e, type: 3}
+    Size: 10
 --- !u!4 &1469313537
 Transform:
   m_ObjectHideFlags: 0
@@ -2266,7 +2274,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _slider: {fileID: 761802458}
   _consentController: {fileID: 2031419263}
-  _value: {x: 0, y: 0}
+  _value: {x: -115, y: 0}
+  _value1: {x: 0, y: 0}
   _time: 3
   _ease: 1
   _hasConsent: 0

@@ -34,6 +34,7 @@ public class GameUIManager : Singleton<GameUIManager>
 
     private void Init()
     {
+        AudioManager.StopMusic();
         _watchAdsPanel.gameObject.SetActive(false);
         _completedPanel.SetActive(false);
         _confettiPanel.SetActive(false);
@@ -49,7 +50,7 @@ public class GameUIManager : Singleton<GameUIManager>
         yield return _wait1;
         _nextLv.SetActive(true);
         int num = MainUIMananger.Instance.LevelTypeToLoad;
-        _nextLvImage.sprite = num < 19 ? _lvSprites[num] : _lvSprites[0];
+        _nextLvImage.sprite = num < 18 ? _lvSprites[num] : _lvSprites[0];
         _nextLv.transform.DOScale(_scaleEnd, 0.5f);
     }
 
@@ -70,11 +71,6 @@ public class GameUIManager : Singleton<GameUIManager>
         _screenshot.Apply();
 
         _screenShot.texture = _screenshot;
-    }
-    
-    public void TeaBreak(bool active)
-    {
-        _teaBreakPanel.gameObject.SetActive(active);
     }
     
     public Texture2D GetScreenshot()
@@ -120,6 +116,13 @@ public class GameUIManager : Singleton<GameUIManager>
             MainUIMananger.Instance.SceneEnd();
             StartCoroutine(LoadScene(2));
         }
+    }
+    
+    public void ReloadAfterTeaBreak()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+        MainUIMananger.Instance.SceneEnd();
+        StartCoroutine(LoadScene(2));
     }
     
     public void WatchAds()
@@ -205,7 +208,7 @@ public class GameUIManager : Singleton<GameUIManager>
         _confettiPanel.SetActive(active);
         if (AdsManager.Instance.CanShowBreak)
         {
-            StartCoroutine(TeaBreakCountdown());
+            ShowTeaBreak();
         }
         else
         {
@@ -221,7 +224,8 @@ public class GameUIManager : Singleton<GameUIManager>
     private IEnumerator TeaBreakCountdown()
     {
         yield return _wait;
-        TeaBreak(true);
+        _teaBreakPanel.gameObject.SetActive(true);
+        MainUIMananger.Instance.PopupOpened = true;
     }
 
     public void ReplayWin()

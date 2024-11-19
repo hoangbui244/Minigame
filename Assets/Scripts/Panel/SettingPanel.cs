@@ -83,6 +83,6 @@ public class SettingPanel : MonoBehaviour
 
     public void Rate()
     {
-        
+        Application.OpenURL("https://play.google.com/store/apps/details?id=com.minigame.brain.relax.challenge");
     }
 }

@@ -40,19 +40,19 @@ public class TeaBreakPanel : MonoBehaviour
                 _timeSlider.value = _currentRoundTime;
                 if (_currentRound <= 0)
                 {
-                    AdsManager.Instance.ShowInters((completd) =>
+                    if (AdsManager.Instance.CanShowBreak)
                     {
-                        if (completd)
+                        AdsManager.Instance.ShowAdBreak((completed) =>
                         {
-                            FirebaseManager.Instance.LogEventName("show_inters");
+                            if (completed)
+                            {
+                                FirebaseManager.Instance.LogEventName("show_inters");
+                            }
+
                             gameObject.SetActive(false);
-                            GameUIManager.Instance.Reload();
-                        }
-                        else
-                        {
-                            gameObject.SetActive(false);
-                        }
-                    });
+                            GameUIManager.Instance.ReloadAfterTeaBreak();
+                        });
+                    }
                 }
             }
         }

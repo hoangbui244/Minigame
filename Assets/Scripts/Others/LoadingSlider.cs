@@ -9,6 +9,7 @@ public class LoadingSlider : MonoBehaviour
     [SerializeField] private RectTransform _slider;
     [SerializeField] private GoogleMobileAdsConsentController _consentController;
     [SerializeField] private Vector2 _value;
+    [SerializeField] private Vector2 _value1;
     [SerializeField] private float _time;
     [SerializeField] private Ease _ease;
     [SerializeField] private bool _hasConsent;
@@ -49,41 +50,55 @@ public class LoadingSlider : MonoBehaviour
         }
     }
     
-    protected virtual void LoadProgress()
+    private void LoadProgress()
     {
-        _slider.DOAnchorPosX(_value.x, _time)
+        _slider.DOAnchorPosX(_value.x, _time * 0.8f)
             .SetEase(_ease)
             .OnComplete(() =>
             {
-                AdsManager.Instance.ShowOpen((completed) =>
-                {
-                    if (!completed && _count < 1)
-                    {
-                        StartCoroutine(CallOpen());
-                    }
-                    else if (completed)
-                    {
-                        MainUIMananger.LoadScene("HomeScreen");
-                        AudioManager.PlayLoopSound("MainTheme");
-                        AdsManager.Instance.CanShowInters = false;
-                        ResourceManager.FirstOpen = false;
-                    }
-                });
-
-                FirebaseManager.Instance.LogEventName("open_app");
+                StartCoroutine(WaitForOpenAds());
             });
     }
 
-    private IEnumerator CallOpen()
+    private IEnumerator WaitForOpenAds()
     {
-        yield return new WaitForSeconds(2.5f);
-        _count++;
+        bool adCompleted = false;
+
         AdsManager.Instance.ShowOpen((completed) =>
         {
-            MainUIMananger.LoadScene("HomeScreen");
-            AudioManager.PlayLoopSound("MainTheme");
-            AdsManager.Instance.CanShowInters = false;
-            ResourceManager.FirstOpen = false;
+            adCompleted = completed;
         });
+
+        float elapsedTime = 0f;
+        while (!adCompleted && elapsedTime < 3f)
+        {
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+
+        if (adCompleted)
+        {
+            ContinueLoad();
+        }
+        else
+        {
+            ContinueLoad();
+        }
+    }
+
+    private void ContinueLoad()
+    {
+        _slider.DOAnchorPosX(_value1.x, _time * 0.2f)
+            .SetEase(_ease)
+            .OnComplete(() =>
+            {
+                MainUIMananger.LoadScene("HomeScreen");
+                AudioManager.PlayLoopSound("MainTheme");
+                AdsManager.Instance.CanShowInters = false;
+                AdsManager.Instance.CanShowBreak = false;
+                ResourceManager.FirstOpen = false;
+            });
+
+        FirebaseManager.Instance.LogEventName("open_ads");
     }
 }

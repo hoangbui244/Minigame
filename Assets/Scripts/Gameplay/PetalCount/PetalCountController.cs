@@ -59,25 +59,8 @@ public class PetalCountController : MonoBehaviour
 
     public void NextLevel(int index)
     {
-        if (index == 11)
-        {
-            _locked = true;
-        }
-        else
-        {
-            _locked = false;
-        }
-
-        if (!_locked)
-        {
-            ResourceManager.PetalCount = index;
-            GameUIManager.Instance.Reload();
-        }
-        else
-        {
-            Debug.LogError("Watch Ads");
-            //GameUIManager.Instance.WatchAds();
-        }
+        ResourceManager.PetalCount = index;
+        GameUIManager.Instance.Reload();
     }
 
     private void SetupLevel()
@@ -109,18 +92,12 @@ public class PetalCountController : MonoBehaviour
     private void Show()
     {
         _open = true;
-        _navbar.DOAnchorPos(_openPos, _time).OnComplete(() =>
-        {
-            _navbarBtn.image.sprite = _hide;
-        });
+        _navbar.DOAnchorPos(_openPos, _time).OnComplete(() => { _navbarBtn.image.sprite = _hide; });
     }
 
     private void Hide()
     {
         _open = false;
-        _navbar.DOAnchorPos(_closePos, _time).OnComplete(() =>
-        {
-            _navbarBtn.image.sprite = _show;
-        });
+        _navbar.DOAnchorPos(_closePos, _time).OnComplete(() => { _navbarBtn.image.sprite = _show; });
     }
 }

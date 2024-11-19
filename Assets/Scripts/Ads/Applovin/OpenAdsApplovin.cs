@@ -30,6 +30,8 @@ public class OpenAdsApplovin : MonoBehaviour
     private void OnAppOpenDismissedEvent(string adUnitId, MaxSdkBase.AdInfo adInfo)
     {
         MaxSdk.LoadAppOpenAd(_adUnitId);
+        ShowOpen?.Invoke(true);
+        ShowOpen = null;
     }
 
     private void OnApplicationPause(bool pauseStatus)
@@ -47,21 +49,11 @@ public class OpenAdsApplovin : MonoBehaviour
         {
             ShowOpen = completed;
             MaxSdk.ShowAppOpenAd(_adUnitId);
-            ShowOpen?.Invoke(true);
-            ShowOpen = null;
-            MaxSdk.LoadAppOpenAd(_adUnitId);
-#if UNITY_EDITOR
-            Debug.Log("Showing App Open Ad");
-#endif
         }
         else
         {
-            ShowOpen?.Invoke(false);
-            ShowOpen = null;
+            completed?.Invoke(false);
             MaxSdk.LoadAppOpenAd(_adUnitId);
-#if UNITY_EDITOR
-            Debug.LogError("App open ad is not ready yet.");
-#endif
         }
     }
 }

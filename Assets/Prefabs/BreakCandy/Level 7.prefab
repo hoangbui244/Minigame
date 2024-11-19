@@ -783,6 +783,7 @@ MonoBehaviour:
   _piece: {fileID: 507005555896434101}
   _endPos: {x: -8, y: 7.4, z: 0}
   _time: 0.5
+  Done: 0
 --- !u!1 &650250261001191743
 GameObject:
   m_ObjectHideFlags: 0
@@ -1563,6 +1564,7 @@ MonoBehaviour:
   _piece: {fileID: 1143118975547159333}
   _endPos: {x: 8.6, y: 7, z: 0}
   _time: 0.5
+  Done: 0
 --- !u!1 &1926443977331253164
 GameObject:
   m_ObjectHideFlags: 0
@@ -2882,6 +2884,7 @@ MonoBehaviour:
   _piece: {fileID: 3606496283973085475}
   _endPos: {x: -7.7, y: -6.1, z: 0}
   _time: 0.5
+  Done: 0
 --- !u!1 &3857673145106334799
 GameObject:
   m_ObjectHideFlags: 0
@@ -4266,6 +4269,7 @@ MonoBehaviour:
   _piece: {fileID: 5694364179457737979}
   _endPos: {x: 4.75, y: -8, z: 0}
   _time: 0.5
+  Done: 0
 --- !u!1 &5729864611854281010
 GameObject:
   m_ObjectHideFlags: 0
@@ -5804,6 +5808,12 @@ MonoBehaviour:
   _pen: {fileID: 4841971677535710762}
   _text: {fileID: 1062281230905708467}
   _anim: {fileID: 47179802380825134}
+  _pieces:
+  - {fileID: 7098084417566929817}
+  - {fileID: 3962386102422147551}
+  - {fileID: 5190429221872368195}
+  - {fileID: 5686134488692660955}
+  - {fileID: 8016489608656348442}
 --- !u!114 &1570481282100399003
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6992,6 +7002,7 @@ MonoBehaviour:
   _piece: {fileID: 7997006324282158982}
   _endPos: {x: 2, y: 8.9, z: 0}
   _time: 0.5
+  Done: 0
 --- !u!1 &7998529323513761271
 GameObject:
   m_ObjectHideFlags: 0

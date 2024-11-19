@@ -38,6 +38,7 @@ public class PairCheck : MonoBehaviour
                         item.Finished = true;
                         item.End();
                         GameEventManager.Check?.Invoke(true);
+                        AudioManager.PlaySound("PencilDone");
                         Card.PairCount = 0;
                     }
                 }

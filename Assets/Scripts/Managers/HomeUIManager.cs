@@ -22,6 +22,7 @@ public class HomeUIManager : Singleton<HomeUIManager>
 
     private void Init()
     {
+        AudioManager.PlayLoopSound("MainTheme");
         _checkInternetPanel.gameObject.SetActive(false);
         _removeAdsPanel.gameObject.SetActive(false);
         _settingPanel.gameObject.SetActive(false);
