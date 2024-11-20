@@ -79,11 +79,6 @@ public class AdsManager : Singleton<AdsManager>
         Init();
     }
 
-    private void Update()
-    {
-        Debug.LogError("StartCappingAds: " + StartCappingAds);
-    }
-
     #endregion
 
     #region =========================== MAIN ===========================

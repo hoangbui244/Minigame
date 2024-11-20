@@ -118,6 +118,7 @@ public class PetControler : MonoBehaviour
         _hand.transform.DOLocalRotate(_rotation, _time, RotateMode.LocalAxisAdd)
             .SetEase(Ease.OutBack).OnComplete(() =>
             {
+                AudioManager.PlaySound("PassBombMove");
                 _hand.transform.DOLocalRotate(-_rotation, _time, RotateMode.LocalAxisAdd)
                     .SetEase(Ease.OutBack);
             });

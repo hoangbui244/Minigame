@@ -29,6 +29,6 @@ public class Tutorial : MonoBehaviour
 
     private void Move()
     {
-        _finger.transform.DOMove(_endPos, _time).SetLoops(-1, LoopType.Yoyo);
+        _finger.transform.DOLocalMove(_endPos, _time).SetLoops(-1, LoopType.Yoyo);
     }
 }

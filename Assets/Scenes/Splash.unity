@@ -1348,6 +1348,11 @@ MonoBehaviour:
     Volume: 1
     Loop: 0
     AudioSource: {fileID: 0}
+  - Name: PassBombMove
+    AudioClip: {fileID: 8300000, guid: 0ae7b0ee7d2b36f45b24ee7ee8559a74, type: 3}
+    Volume: 1
+    Loop: 0
+    AudioSource: {fileID: 0}
 --- !u!1 &1190092656
 GameObject:
   m_ObjectHideFlags: 0
@@ -2111,7 +2116,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IntersCapping: 40
-  BreakCapping: 40
+  StartCapping: 40
 --- !u!1 &1991013329
 GameObject:
   m_ObjectHideFlags: 0

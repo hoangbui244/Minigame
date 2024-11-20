@@ -10,6 +10,7 @@ public class TestKnife : MonoBehaviour
     [SerializeField] private float _time;
     [SerializeField] private float _raycastDistance = 10f;
     private bool _isFinished;
+    private bool _isCut;
 
     private void Start()
     {
@@ -23,6 +24,7 @@ public class TestKnife : MonoBehaviour
             if (Input.GetMouseButtonDown(0))
             {
                 _diff = (Vector2)_camera.ScreenToWorldPoint(Input.mousePosition) - (Vector2)transform.position;
+                GameEventManager.ResetLevel?.Invoke();
             }
 
             if (Input.GetMouseButton(0))
@@ -38,9 +40,10 @@ public class TestKnife : MonoBehaviour
 
                 if (hit.collider != null && hit.collider.CompareTag("SlicedObj"))
                 {
+                    _isCut = true;
                     Vector2 contactPoint = hit.point;
                     DOTween.Sequence()
-                        .AppendInterval(0.8f)
+                        .AppendInterval(0.3f)
                         .OnComplete(() => GameEventManager.Test?.Invoke(contactPoint.x));
                 }
                 
@@ -48,13 +51,27 @@ public class TestKnife : MonoBehaviour
                     .Append(transform.DOMoveY(transform.position.y - 100f, _time)
                         .SetEase(Ease.InQuad))
                     .Insert(0.2f, DOTween.To(() => 0, x => {}, 0, 0).OnComplete(() => AudioManager.PlaySound("CutInHalf")))
-                    .OnComplete(() => gameObject.SetActive(false));
+                    .OnComplete(() =>
+                    {
+                        if (!_isCut)
+                        {
+                            GameUIManager.Instance.Retry(true);
+                        }
+                        gameObject.SetActive(false);
+                    });
             }
         }
     }
 
     private bool IsPointerOverUI()
     {
-        return EventSystem.current.IsPointerOverGameObject();
+        if (EventSystem.current.IsPointerOverGameObject())
+            return true;
+
+        if (Input.touchCount > 0 && EventSystem.current.IsPointerOverGameObject(Input.GetTouch(0).fingerId))
+            return true;
+
+        return false;
     }
+
 }
