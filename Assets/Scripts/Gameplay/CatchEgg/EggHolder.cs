@@ -9,10 +9,12 @@ public class EggHolder : MonoBehaviour
     private Camera _camera;
     private Vector2 _diff;
     private Vector2 _initialPosition;
+    private Collider2D _collider;
 
     private void Start()
     {
         _camera = Camera.main;
+        _collider = GetComponent<Collider2D>();
     }
 
     private void Update()
@@ -48,10 +50,11 @@ public class EggHolder : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.TryGetComponent<Egg>(out var egg))
+        if (other.TryGetComponent<Egg>(out var egg) && !MainUIMananger.Instance.PopupOpened)
         {
             if (egg.Can)
             {
+                AudioManager.LightFeedback();
                 AudioManager.PlaySound("CandyTrue");
                 GameEventManager.CatchEgg?.Invoke(1);
             }
@@ -59,6 +62,7 @@ public class EggHolder : MonoBehaviour
             {
                 AudioManager.PlaySound("CandyFalse");
                 GameUIManager.Instance.Retry(true);
+                _collider.enabled = false;
             }
         }
     }

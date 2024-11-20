@@ -6,21 +6,37 @@
   <component name="ChangeListManager">
     <list default="true" id="cc1e008d-39a7-4d81-b082-3c7e1c260ee0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Minigame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Minigame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/CutInHalf/Level 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/CutInHalf/Level 1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/DefuseBomb/Level 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/DefuseBomb/Level 1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/DefuseBomb/Level 10.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/DefuseBomb/Level 10.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/DefuseBomb/Level 2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/DefuseBomb/Level 2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/DefuseBomb/Level 3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/DefuseBomb/Level 3.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/DefuseBomb/Level 4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/DefuseBomb/Level 4.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/DefuseBomb/Level 5.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/DefuseBomb/Level 5.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/DefuseBomb/Level 6.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/DefuseBomb/Level 6.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/DefuseBomb/Level 7.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/DefuseBomb/Level 7.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/DefuseBomb/Level 8.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/DefuseBomb/Level 8.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/DefuseBomb/Level 9.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/DefuseBomb/Level 9.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Splash.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Splash.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/BallBreaker/Tutorial.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/BallBreaker/Tutorial.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/CutInHalf/TestKnife.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/CutInHalf/TestKnife.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/CatchEgg/Level 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/CatchEgg/Level 1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/DropCandy/Level 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/DropCandy/Level 1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/DropCandy/Level 2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/DropCandy/Level 2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/DropCandy/Level 3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/DropCandy/Level 3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/DropCandy/Level 4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/DropCandy/Level 4.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/DropCandy/Level 5.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/DropCandy/Level 5.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/DropCandy/Level 6.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/DropCandy/Level 6.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/DropCandy/Level 7.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/DropCandy/Level 7.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/DropCandy/Level 8.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/DropCandy/Level 8.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Objects/Candy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Objects/Candy.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PencilTap/Level 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PencilTap/Level 1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GamePlay.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GamePlay.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/HomeScreen.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/HomeScreen.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ads/Applovin/BannerApplovin.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ads/Applovin/BannerApplovin.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ads/Applovin/OpenAdsApplovin.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ads/Applovin/OpenAdsApplovin.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/BalanceEgg/BalanceEggController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/BalanceEgg/BalanceEggController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/CatchEgg/CatchEggController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/CatchEgg/CatchEggController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/CatchEgg/EggHolder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/CatchEgg/EggHolder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/DropCandy/Candy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/DropCandy/Candy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/DropCandy/CandyHolder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/DropCandy/CandyHolder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/DropCandy/DropCandyController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/DropCandy/DropCandyController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/PencilTap/Hand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/PencilTap/Hand.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/AdsManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/AdsManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/GameEventManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/GameEventManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/GameUIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/GameUIManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/HomeUIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/HomeUIManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/LevelSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/LevelSpawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/MainUIMananger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/MainUIMananger.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/ResourceManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/ResourceManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Others/IAPProduct.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Others/IAPProduct.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Others/LoadingSlider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Others/LoadingSlider.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -112,10 +128,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="16072">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="16072" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -192,7 +208,10 @@
       <workItem from="1731895586068" duration="7809000" />
       <workItem from="1731911832574" duration="13135000" />
       <workItem from="1731981419249" duration="22029000" />
-      <workItem from="1732069798311" duration="5402000" />
+      <workItem from="1732069798311" duration="8900000" />
+      <workItem from="1732084457566" duration="1659000" />
+      <workItem from="1732087164636" duration="3422000" />
+      <workItem from="1732090667635" duration="1669000" />
     </task>
     <servers />
   </component>
@@ -208,5 +227,24 @@
   <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Ads/Applovin/BannerApplovin.cs</url>
+          <line>61</line>
+          <properties documentPath="C:\Users\admin\Documents\Minigame\Assets\Scripts\Ads\Applovin\BannerApplovin.cs" containingFunctionPresentation="Method 'DestroyBanner'">
+            <startOffsets>
+              <option value="1892" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1924" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

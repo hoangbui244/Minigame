@@ -38,7 +38,7 @@ public class Candy : MonoBehaviour
     {
         int chance = Random.Range(0, 100);
     
-        if (chance < 45)
+        if (chance < 50)
         {
             Type = (CandyType)type;
         }

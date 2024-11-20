@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BannerApplovin : MonoBehaviour
 {
@@ -50,6 +51,16 @@ public class BannerApplovin : MonoBehaviour
     {
         MaxSdk.ShowBanner(_adUnitId);
     }
+    
+    public void HideBanner()
+    {
+        MaxSdk.HideBanner(_adUnitId);
+    }
+    
+    public void DestroyBanner()
+    {
+        MaxSdk.DestroyBanner(_adUnitId);
+    }
 
     private void OnBannerAdLoadedEvent(string adUnitId, MaxSdkBase.AdInfo adInfo)
     {
@@ -57,6 +68,8 @@ public class BannerApplovin : MonoBehaviour
 
     private void OnBannerAdLoadFailedEvent(string adUnitId, MaxSdkBase.ErrorInfo errorInfo)
     {
+        Debug.LogError("Banner view failed to load an ad with error : "
+                       + errorInfo);
     }
 
     private void OnBannerAdClickedEvent(string adUnitId, MaxSdkBase.AdInfo adInfo)

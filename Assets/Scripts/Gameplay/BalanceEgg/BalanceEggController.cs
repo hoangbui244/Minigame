@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class BalanceEggController : MonoBehaviour
 {
@@ -20,12 +21,12 @@ public class BalanceEggController : MonoBehaviour
         _highScoreText.text = "Highscore: " + _highScore.ToString();
         GameEventManager.BalanceEgg += Check;
     }
-    
+
     private void OnDisable()
     {
         GameEventManager.BalanceEgg -= Check;
     }
-    
+
     private void Check()
     {
         if (_currentScore < _highScore)
@@ -40,27 +41,57 @@ public class BalanceEggController : MonoBehaviour
 
     private void Update()
     {
-        if (!_balanceEgg.IsStart && Input.GetMouseButtonDown(0))
+        if (!MainUIMananger.Instance.PopupOpened && IsPointerOverUI())
         {
-            _balanceEgg.IsStart = true;
-        }
-        
-        if (_balanceEgg.IsHolded)
-        {
-            _currentScore += Time.deltaTime;
-            TimeSpan timeSpan = TimeSpan.FromSeconds(_currentScore);
-            string formattedTime = timeSpan.ToString(@"mm\:ss");
-
-            _currentScoreText.text = formattedTime;
-
-            if (_currentScore > _highScore)
+            if (!_balanceEgg.IsStart && Input.GetMouseButtonDown(0))
             {
-                _highScore = (int)_currentScore;
-                ResourceManager.BalanceEggHighScore = _highScore;
+                _balanceEgg.IsStart = true;
+            }
+
+            if (_balanceEgg.IsHolded)
+            {
+                _currentScore += Time.deltaTime;
+                TimeSpan timeSpan = TimeSpan.FromSeconds(_currentScore);
+                string formattedTime = timeSpan.ToString(@"mm\:ss");
+
+                _currentScoreText.text = formattedTime;
+
+                if (_currentScore > _highScore)
+                {
+                    _highScore = (int)_currentScore;
+                    ResourceManager.BalanceEggHighScore = _highScore;
+                }
             }
         }
     }
-    
+
+    private bool IsPointerOverUI()
+    {
+        if (Input.touchCount > 0)
+        {
+            Touch touch = Input.GetTouch(0);
+            if (EventSystem.current.IsPointerOverGameObject(touch.fingerId))
+            {
+                return true;
+            }
+        }
+
+        if (EventSystem.current.IsPointerOverGameObject())
+        {
+            PointerEventData pointerData = new PointerEventData(EventSystem.current)
+            {
+                position = Input.mousePosition
+            };
+
+            List<RaycastResult> results = new List<RaycastResult>();
+            EventSystem.current.RaycastAll(pointerData, results);
+
+            return results.Count > 0;
+        }
+
+        return false;
+    }
+
     public void NextLevel(int index)
     {
         int levelKey = 0;
@@ -90,7 +121,7 @@ public class BalanceEggController : MonoBehaviour
         }
     }
 
-    
+
     private void SetupLevel()
     {
         _ads[0].SetActive(!PlayerPrefs.HasKey("1"));

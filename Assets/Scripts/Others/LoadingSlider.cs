@@ -56,7 +56,14 @@ public class LoadingSlider : MonoBehaviour
             .SetEase(_ease)
             .OnComplete(() =>
             {
-                StartCoroutine(WaitForOpenAds());
+                if (ResourceManager.RemoveAds)
+                {
+                    ContinueLoad();
+                }
+                else
+                {
+                    StartCoroutine(WaitForOpenAds());
+                }
             });
     }
 

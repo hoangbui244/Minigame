@@ -8,10 +8,12 @@ public class CandyHolder : MonoBehaviour
     private Camera _camera;
     private Vector2 _diff;
     private Vector2 _initialPosition;
+    private Collider2D _collider;
 
     private void Start()
     {
         _camera = Camera.main;
+        _collider = GetComponent<Collider2D>();
     }
 
     private void Update()
@@ -42,10 +44,11 @@ public class CandyHolder : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.TryGetComponent<Candy>(out var candy))
+        if (other.TryGetComponent<Candy>(out var candy) && !MainUIMananger.Instance.PopupOpened)
         {
             if ((int)candy.Type == CandyType)
             {
+                AudioManager.LightFeedback();
                 AudioManager.PlaySound("CandyTrue");
                 GameEventManager.DropCandy?.Invoke(-1);
             }
@@ -53,6 +56,7 @@ public class CandyHolder : MonoBehaviour
             {
                 AudioManager.PlaySound("CandyFalse");
                 GameUIManager.Instance.Retry(true);
+                _collider.enabled = false;
             }
         }
     }

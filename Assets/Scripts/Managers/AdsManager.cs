@@ -3,7 +3,6 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class AdsManager : Singleton<AdsManager>
 {
@@ -33,9 +32,9 @@ public class AdsManager : Singleton<AdsManager>
     private RemoteConfigManager Remote => RemoteConfigManager.Instance;
     private float IntersCapping => Remote.IntersCapping;
     private float StartCapping => Remote.StartCapping;
-    private bool _canShowInters = false;
-    private bool _canShowStart = false;
-    private bool _switchAds = false;
+    private bool _canShowInters;
+    private bool _canShowStart;
+    private bool _switchAds;
 
     public bool StartCappingAds
     {
@@ -135,6 +134,13 @@ public class AdsManager : Singleton<AdsManager>
     {
         if (ResourceManager.RemoveAds) return;
         _banner.ShowBanner();
+    }
+    
+    public void HideBanner()
+    {
+        Debug.LogError("Hide Banner");
+        _banner.HideBanner();
+        _banner.DestroyBanner();
     }
     
     public void ShowOpen(Action<bool> completed = null)

@@ -10,7 +10,7 @@ public class Hand : MonoBehaviour
     [SerializeField] private Vector2 _endPosX;
     private Vector2 _startPosY;
     private Vector2 _endPosY;
-    private readonly Vector2 _plusY = new Vector2(0, 15f);
+    private readonly Vector2 _plusY = new Vector2(0, 13f);
     private readonly Vector2 _end = new Vector2(0, 2.1f);
 
     private bool _isHorizontal = true;
@@ -21,7 +21,7 @@ public class Hand : MonoBehaviour
 
     private void Start()
     {
-        _horizontalTween = transform.DOMoveX(_endPosX.x, _moveTime * 2.2f)
+        _horizontalTween = transform.DOMoveX(_endPosX.x, _moveTime * 4f)
             .SetEase(Ease.Linear)
             .SetLoops(-1, LoopType.Yoyo)
             .Pause();

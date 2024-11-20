@@ -89,6 +89,7 @@ public class IAPProduct : MonoBehaviour
         {
             _purchaseButton.gameObject.GetComponent<Image>().sprite = _icon;
             _purchaseButton.GetComponentInChildren<TextMeshProUGUI>().enabled = false;
+            _purchaseButton.interactable = false;
         }
 
         AudioManager.PlaySound("Reward");
@@ -97,5 +98,6 @@ public class IAPProduct : MonoBehaviour
     private void RemoveAdsPack()
     {
         ResourceManager.RemoveAds = true;
+        GameEventManager.PurchaseAds?.Invoke();
     }
 }

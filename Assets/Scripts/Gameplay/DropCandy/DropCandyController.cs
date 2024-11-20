@@ -12,7 +12,6 @@ public class DropCandyController : MonoBehaviour
     [SerializeField] private int _currentPoint;
     [SerializeField] private TextMeshProUGUI _point;
     [SerializeField] private TextMeshProUGUI _timer;
-    [SerializeField] private TextMeshProUGUI _highScore;
     private readonly WaitForSeconds _wait = new WaitForSeconds(1.5f);
     private readonly WaitForSeconds _waitTime = new WaitForSeconds(0.5f);
     private readonly WaitForSeconds _countdown = new WaitForSeconds(1f);
@@ -27,7 +26,6 @@ public class DropCandyController : MonoBehaviour
         _canvas.worldCamera = Camera.main;
         GameEventManager.DropCandy += Check;
         _start = true;
-        _highScore.text = "High Score: " + ResourceManager.DropCandyHighScore.ToString() + "s";
         _candyHolder.CandyType = _candyType;
         _spawnCoroutine = StartCoroutine(SpawnCandy());
         _timerCoroutine = StartCoroutine(CountdownTimer(30));
@@ -52,6 +50,7 @@ public class DropCandyController : MonoBehaviour
         
         if (_currentPoint <= 0)
         {
+            _candyHolder.gameObject.GetComponent<Collider2D>().enabled = false;
             _start = false;
 
             if (_spawnCoroutine != null)
@@ -68,7 +67,7 @@ public class DropCandyController : MonoBehaviour
             {
                 ResourceManager.DropCandy = 1;
             }
-
+            GameUIManager.Instance.Effect(true);
             StartCoroutine(NewLevel());
         }
     }
@@ -77,15 +76,8 @@ public class DropCandyController : MonoBehaviour
     {
         yield return _waitTime;
         GameUIManager.Instance.ScreenShot();
-        
-        int score = 30 - _elapsedTime;
-        
-        if (score > ResourceManager.DropCandyHighScore)
-        {
-            ResourceManager.DropCandyHighScore = score;
-        }
-        
         yield return _waitTime;
+        GameUIManager.Instance.Effect(false);  
         GameUIManager.Instance.CompletedLevel(true);
     }
     

@@ -16,7 +16,7 @@ public class OpenAdsApplovin : MonoBehaviour
         private get => _adUnitId;
         set => _adUnitId = value;
     }
-    
+
     private event Action<bool> ShowOpen;
 
     public void Init()
@@ -36,7 +36,7 @@ public class OpenAdsApplovin : MonoBehaviour
 
     private void OnApplicationPause(bool pauseStatus)
     {
-        if (!pauseStatus)
+        if (!pauseStatus && !ResourceManager.RemoveAds)
         {
             ShowAppOpenAd();
         }
@@ -45,15 +45,18 @@ public class OpenAdsApplovin : MonoBehaviour
     // ReSharper disable Unity.PerformanceAnalysis
     public void ShowAppOpenAd(Action<bool> completed = null)
     {
-        if (MaxSdk.IsAppOpenAdReady(_adUnitId))
+        if (!ResourceManager.RemoveAds)
         {
-            ShowOpen = completed;
-            MaxSdk.ShowAppOpenAd(_adUnitId);
-        }
-        else
-        {
-            completed?.Invoke(false);
-            MaxSdk.LoadAppOpenAd(_adUnitId);
+            if (MaxSdk.IsAppOpenAdReady(_adUnitId))
+            {
+                ShowOpen = completed;
+                MaxSdk.ShowAppOpenAd(_adUnitId);
+            }
+            else
+            {
+                completed?.Invoke(false);
+                MaxSdk.LoadAppOpenAd(_adUnitId);
+            }
         }
     }
 }

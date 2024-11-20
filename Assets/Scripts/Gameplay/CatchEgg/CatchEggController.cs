@@ -10,6 +10,7 @@ public class CatchEggController : MonoBehaviour
     [SerializeField] private Color _color;
     [SerializeField] private List<Sprite> _eggHolder;
     [SerializeField] private SpriteRenderer _eggHolderSprite;
+    [SerializeField] private EggHolder _eggHolderScript;
     private readonly WaitForSeconds _time = new WaitForSeconds(1.1f);
     private readonly WaitForSeconds _wait = new WaitForSeconds(0.5f);
     private int _currentPoint = 0;
@@ -58,6 +59,7 @@ public class CatchEggController : MonoBehaviour
         }
         if (_currentPoint >= 6)
         {
+            _eggHolderScript.gameObject.GetComponent<Collider2D>().enabled = false;
             _start = false;
 
             if (_spawnCoroutine != null)
@@ -65,7 +67,7 @@ public class CatchEggController : MonoBehaviour
                 StopCoroutine(_spawnCoroutine);
                 _spawnCoroutine = null;
             }
-
+            GameUIManager.Instance.Effect(true);
             StartCoroutine(NewLevel());
         }
     }
@@ -75,6 +77,7 @@ public class CatchEggController : MonoBehaviour
         yield return _wait;
         GameUIManager.Instance.ScreenShot();
         yield return _wait;
+        GameUIManager.Instance.Effect(false);
         GameUIManager.Instance.CompletedLevel(true);
     }
 }

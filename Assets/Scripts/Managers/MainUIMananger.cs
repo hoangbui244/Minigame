@@ -39,6 +39,7 @@ public class MainUIMananger : Singleton<MainUIMananger>
 
     public void SceneEnd()
     {
+        PopupOpened = true;
         _mask.transform.DOScale(0, _time).SetEase(Ease.Linear);
         _dog.transform.DOScale(_dogScaleEnd, _time * 0.6f).SetEase(Ease.Linear);
     }
@@ -49,6 +50,7 @@ public class MainUIMananger : Singleton<MainUIMananger>
         _mask.transform.DOScale(_maskScaleEnd, _time).SetEase(Ease.Linear).OnComplete(() =>
         {
             GameManager.Instance.GamePause(false);
+            PopupOpened = false;
         });
     }
 

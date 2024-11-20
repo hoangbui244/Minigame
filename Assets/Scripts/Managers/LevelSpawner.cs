@@ -118,8 +118,7 @@ public class LevelSpawner : Singleton<LevelSpawner>
                 FirebaseManager.Instance.LogEventNameWithParam("play_game_type", "Game Type", "CatchEgg");
                 break;
             case 15:
-                var num15 = ResourceManager.PencilTap;
-                var level15 = ResourceManager.GetLevel(Level.LevelType.PencilTap ,num15);
+                var level15 = ResourceManager.GetLevel(Level.LevelType.PencilTap ,1);
                 _level = Instantiate(level15, transform);
                 FirebaseManager.Instance.LogEventNameWithParam("play_game_type", "Game Type", "PencilTap");
                 break;
