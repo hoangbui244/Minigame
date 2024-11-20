@@ -35,6 +35,7 @@ public class CrocodileDentistCheck : MonoBehaviour
     {
         _ads[0].SetActive(!PlayerPrefs.HasKey("7"));
         _ads[1].SetActive(!PlayerPrefs.HasKey("8"));
+        _ads[2].SetActive(!PlayerPrefs.HasKey("16"));
         
         int num = ResourceManager.CrocodileDentist - 1;
         foreach (var border in _borders)
@@ -92,7 +93,8 @@ public class CrocodileDentistCheck : MonoBehaviour
         int levelKey = 0;
 
         if (index == 3) levelKey = 7;
-        else if (index == 6) levelKey = 8;
+        else if (index == 5) levelKey = 16;
+        else if (index == 7) levelKey = 8;
         
         if (levelKey != 0)
         {

@@ -61,6 +61,7 @@ public class PerfectSliceController : MonoBehaviour
         int levelKey = 0;
 
         if (index == 3) levelKey = 14;
+        else if (index == 5) levelKey = 17;
 
         if (levelKey != 0)
         {
@@ -86,6 +87,7 @@ public class PerfectSliceController : MonoBehaviour
     private void SetupLevel()
     {
         _ads[0].SetActive(!PlayerPrefs.HasKey("14"));
+        _ads[1].SetActive(!PlayerPrefs.HasKey("17"));
         
         int num = ResourceManager.PerfectSlices - 1;
         foreach (var border in _borders)

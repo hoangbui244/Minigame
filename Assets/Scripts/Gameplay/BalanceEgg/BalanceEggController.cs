@@ -41,7 +41,7 @@ public class BalanceEggController : MonoBehaviour
 
     private void Update()
     {
-        if (!MainUIMananger.Instance.PopupOpened && IsPointerOverUI())
+        if (!MainUIMananger.Instance.PopupOpened && !IsPointerOverUI())
         {
             if (!_balanceEgg.IsStart && Input.GetMouseButtonDown(0))
             {
@@ -97,7 +97,9 @@ public class BalanceEggController : MonoBehaviour
         int levelKey = 0;
 
         if (index == 3) levelKey = 1;
+        else if (index == 5) levelKey = 18;
         else if (index == 6) levelKey = 2;
+        else if (index == 8) levelKey = 19;
         else if (index == 10) levelKey = 3;
 
         if (levelKey != 0)
@@ -127,6 +129,8 @@ public class BalanceEggController : MonoBehaviour
         _ads[0].SetActive(!PlayerPrefs.HasKey("1"));
         _ads[1].SetActive(!PlayerPrefs.HasKey("2"));
         _ads[2].SetActive(!PlayerPrefs.HasKey("3"));
+        _ads[3].SetActive(!PlayerPrefs.HasKey("18"));
+        _ads[4].SetActive(!PlayerPrefs.HasKey("19"));
 
         _currentScore = 0;
         _currentScoreText.text = "00:00";

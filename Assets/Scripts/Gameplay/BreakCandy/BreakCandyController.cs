@@ -18,6 +18,7 @@ public class BreakCandyController : MonoBehaviour
 
         if (index == 3) levelKey = 4;
         else if (index == 6) levelKey = 5;
+        else if (index == 8) levelKey = 15;
         else if (index == 10) levelKey = 6;
         
         if (levelKey != 0)
@@ -46,6 +47,7 @@ public class BreakCandyController : MonoBehaviour
         _ads[0].SetActive(!PlayerPrefs.HasKey("4"));
         _ads[1].SetActive(!PlayerPrefs.HasKey("5"));
         _ads[2].SetActive(!PlayerPrefs.HasKey("6"));
+        _ads[3].SetActive(!PlayerPrefs.HasKey("15"));
         
         int num = ResourceManager.BreakCandy - 1;
         foreach (var border in _borders)
