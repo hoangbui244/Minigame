@@ -5,53 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cc1e008d-39a7-4d81-b082-3c7e1c260ee0" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Minigame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Minigame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/link.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/link.xml.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/AdsManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/AdsManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/BallBreaker/Group 1000010570.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/BallBreaker/Group 1000010570.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Level 1/Frame 1023.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Level 1/Frame 1023.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Level 1/Frame 1024.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Level 1/Frame 1024.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Level 1/Frame 1025.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Level 1/Frame 1025.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Level 1/Frame 1026.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Level 1/Frame 1026.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Level 1/Frame 1027.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Level 1/Frame 1027.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Level 1/Frame 1097.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Level 1/Frame 1097.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Level 1/Group 1000010726.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Level 1/Group 1000010726.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Level 1/Mask group (4).png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Level 1/Mask group (4).png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Level 2/Frame 1124.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Level 2/Frame 1124.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Level 2/Frame 1125.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Level 2/Frame 1125.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Level 2/Frame 1126.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Level 2/Frame 1126.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Level 2/Frame 1127.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Level 2/Frame 1127.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Level 2/Frame 1128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Level 2/Frame 1128.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Level 2/Frame 1129.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Level 2/Frame 1129.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Level 2/Frame 1130.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Level 2/Frame 1130.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Level 2/Group 1000010722.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Level 2/Group 1000010722.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Level 3/Frame 1131.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Level 3/Frame 1131.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Level 3/Frame 1132.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Level 3/Frame 1132.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Level 3/Frame 1133.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Level 3/Frame 1133.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Level 3/Frame 1134.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Level 3/Frame 1134.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Level 3/Frame 1135.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Level 3/Frame 1135.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Level 3/Frame 1136.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Level 3/Frame 1136.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Level 3/Frame 1137.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Level 3/Frame 1137.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Level 3/Group 1000010724.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Level 3/Group 1000010724.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Level 4/Frame 1138.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Level 4/Frame 1138.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Level 4/Frame 1139.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Level 4/Frame 1139.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Level 4/Frame 1140.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Level 4/Frame 1140.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Level 4/Frame 1141.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Level 4/Frame 1141.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Level 4/Frame 1142.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Level 4/Frame 1142.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Level 4/Frame 1143.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Level 4/Frame 1143.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Level 4/Frame 1144.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Level 4/Frame 1144.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Level 4/Group 1000010728.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Level 4/Group 1000010728.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Level 5/Frame 1145.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Level 5/Frame 1145.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Level 5/Frame 1146.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Level 5/Frame 1146.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Level 5/Frame 1147.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Level 5/Frame 1147.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Level 5/Frame 1148.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Level 5/Frame 1148.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Level 5/Frame 1149.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Level 5/Frame 1149.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Level 5/Frame 1150.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Level 5/Frame 1150.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Level 5/Frame 1151.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Level 5/Frame 1151.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Level 5/Frame 1152.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Level 5/Frame 1152.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Level 5/Frame 1153.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Level 5/Frame 1153.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Level 5/Group 1000010727.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/BreakCandy/Level 5/Group 1000010727.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/BallBreaker/Group 1000008488.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/BallBreaker/Group 1000008488.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/BallBreaker/Group 1000010294.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/BallBreaker/Group 1000010294.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/BallBreaker/Group 1000010572.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/BallBreaker/Group 1000010572.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/BallBreaker/Group 1000010632.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/BallBreaker/Group 1000010632.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/BallBreaker/Polygon 2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/BallBreaker/Polygon 2.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/BallBreaker/Rectangle 15.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/BallBreaker/Rectangle 15.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/BallBreaker/Rectangle 16.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/BallBreaker/Rectangle 16.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ScriptableBuildPipeline.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ScriptableBuildPipeline.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -226,7 +187,7 @@
       <workItem from="1732084457566" duration="1659000" />
       <workItem from="1732087164636" duration="3422000" />
       <workItem from="1732090667635" duration="5989000" />
-      <workItem from="1732153517791" duration="701000" />
+      <workItem from="1732153517791" duration="1075000" />
     </task>
     <servers />
   </component>
