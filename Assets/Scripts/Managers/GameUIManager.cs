@@ -105,7 +105,7 @@ public class GameUIManager : Singleton<GameUIManager>
 
     public void Reload()
     {
-        if (AdsManager.Instance.CanShowInters || AdsManager.Instance.StartCappingAds)
+        if (AdsManager.Instance.CanShowInters)
         {
             AdsManager.Instance.ShowInters(success =>
             {
@@ -152,7 +152,7 @@ public class GameUIManager : Singleton<GameUIManager>
     
     public void Back()
     {
-        if (AdsManager.Instance.CanShowInters || AdsManager.Instance.StartCappingAds)
+        if (AdsManager.Instance.CanShowInters)
         {
             AdsManager.Instance.ShowInters(success =>
             {

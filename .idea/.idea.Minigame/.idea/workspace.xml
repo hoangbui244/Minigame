@@ -5,14 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cc1e008d-39a7-4d81-b082-3c7e1c260ee0" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/BallBreaker/Group 1000008488.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/BallBreaker/Group 1000008488.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/BallBreaker/Group 1000010294.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/BallBreaker/Group 1000010294.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/BallBreaker/Group 1000010572.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/BallBreaker/Group 1000010572.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/BallBreaker/Group 1000010632.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/BallBreaker/Group 1000010632.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/BallBreaker/Polygon 2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/BallBreaker/Polygon 2.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/BallBreaker/Rectangle 15.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/BallBreaker/Rectangle 15.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/BallBreaker/Rectangle 16.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/BallBreaker/Rectangle 16.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ScriptableBuildPipeline.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ScriptableBuildPipeline.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Minigame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Minigame/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/PencilTap/PencilTapController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/PencilTap/PencilTapController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/AdsManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/AdsManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/GameUIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/GameUIManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/HomeUIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/HomeUIManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Others/CutoutMask.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Others/CutoutMask.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UnityPurchasing/generated/GooglePlayTangle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UnityPurchasing/generated/GooglePlayTangle.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -187,7 +187,8 @@
       <workItem from="1732084457566" duration="1659000" />
       <workItem from="1732087164636" duration="3422000" />
       <workItem from="1732090667635" duration="5989000" />
-      <workItem from="1732153517791" duration="1075000" />
+      <workItem from="1732153517791" duration="5945000" />
+      <workItem from="1732170965066" duration="5125000" />
     </task>
     <servers />
   </component>
@@ -203,24 +204,5 @@
   <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Ads/Applovin/BannerApplovin.cs</url>
-          <line>61</line>
-          <properties documentPath="C:\Users\admin\Documents\Minigame\Assets\Scripts\Ads\Applovin\BannerApplovin.cs" containingFunctionPresentation="Method 'DestroyBanner'">
-            <startOffsets>
-              <option value="1892" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1924" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

@@ -59,7 +59,7 @@ public class HomeUIManager : Singleton<HomeUIManager>
         AudioManager.PlaySound("Click");
         if (IsInternetAvailable())
         {
-            if (AdsManager.Instance.CanShowInters || AdsManager.Instance.StartCappingAds)
+            if (AdsManager.Instance.CanShowInters)
             {
                 AdsManager.Instance.ShowInters(success =>
                 {

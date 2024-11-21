@@ -2,6 +2,7 @@ using GoogleMobileAds.Api;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using CandyCoded.HapticFeedback;
 using UnityEngine;
 
 public class AdsManager : Singleton<AdsManager>
@@ -43,7 +44,7 @@ public class AdsManager : Singleton<AdsManager>
         {
             if (!value)
             {
-                Invoke(nameof(StartCount), StartCapping);
+                StartCoroutine(StartCappingCoroutine());
             }
             _canShowStart = value;
         }
@@ -52,11 +53,11 @@ public class AdsManager : Singleton<AdsManager>
     public bool CanShowInters
     {
         get => _canShowInters;
-        set
+        private set
         {
             if (!value)
             {
-                Invoke(nameof(TimeCapping), IntersCapping);
+                StartCoroutine(TimeCappingCoroutine());
             }
             _canShowInters = value;
         }
@@ -163,7 +164,6 @@ public class AdsManager : Singleton<AdsManager>
         {
             completed?.Invoke(success);
             CanShowInters = false;
-            StartCappingAds = false;
         });
     }
     
@@ -184,6 +184,22 @@ public class AdsManager : Singleton<AdsManager>
     private void TimeCapping()
     {
         CanShowInters = true;
+    }
+
+    #endregion
+
+    #region =========================== COROUTINES ===========================
+
+    private IEnumerator StartCappingCoroutine()
+    {
+        yield return new WaitForSeconds(StartCapping);
+        StartCount();
+    }
+
+    private IEnumerator TimeCappingCoroutine()
+    {
+        yield return new WaitForSeconds(IntersCapping);
+        TimeCapping();
     }
 
     #endregion
