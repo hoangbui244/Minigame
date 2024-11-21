@@ -138,7 +138,6 @@ public class AdsManager : Singleton<AdsManager>
     
     public void HideBanner()
     {
-        Debug.LogError("Hide Banner");
         _banner.HideBanner();
         _banner.DestroyBanner();
     }
