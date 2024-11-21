@@ -9,12 +9,17 @@ public class CompletedPanel : MonoBehaviour
 {
     [SerializeField] private GameObject _notiText;
     [SerializeField] private Animator _anim;
+    [SerializeField] private GameObject _nativeAds;
     
     private void OnEnable()
     {
         MainUIMananger.Instance.PopupOpened = true;
         _anim.Play("Completed");
         _notiText.SetActive(false);
+        if (ResourceManager.RemoveAds)
+        {
+            _nativeAds.SetActive(false);
+        }
     }
     
     private void OnDisable()

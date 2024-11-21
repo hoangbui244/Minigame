@@ -99,13 +99,14 @@ public class AdsManager : Singleton<AdsManager>
         _rewarded.Init();
         _appOpenAd.Init();
         _initialized = true;
+        RequestNativeAd();
     }
 
     private void InitAdsID()
     {
-        _banner.AdUnitId = _testMode ? _testBannerID : _bannerID;
-        _appOpenAd.AdUnitId = _testMode ? _testOpenID : _openAdsID;
         _nativeAdsID = _testMode ? _testNativeID : _nativeAdsID;
+        _banner.AdUnitId = _bannerID;
+        _appOpenAd.AdUnitId = _openAdsID;
         _interstitial.AdUnitId = _interstitialID;
         _rewarded.AdUnitId = _rewardedID;
     }

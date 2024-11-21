@@ -34,6 +34,7 @@ public class GameUIManager : Singleton<GameUIManager>
         {
             AdsManager.Instance.ShowBanner();
         }
+        
     }
 
     private void OnDisable()

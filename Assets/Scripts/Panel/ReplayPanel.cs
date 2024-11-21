@@ -4,9 +4,15 @@ using UnityEngine;
 
 public class ReplayPanel : MonoBehaviour
 {
+    [SerializeField] private GameObject _nativeAds;
+    
     private void OnEnable()
     {
         MainUIMananger.Instance.PopupOpened = true;
+        if (ResourceManager.RemoveAds)
+        {
+            _nativeAds.SetActive(false);
+        }
     }
     
     private void OnDisable()

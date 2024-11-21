@@ -82,7 +82,6 @@ public class NativeAds : MonoBehaviour
             _price.text = nativeAd.GetPrice();
         }
         
-        
         if (!nativeAd.RegisterHeadlineTextGameObject(_adsHeadline.gameObject))
         {
             Debug.Log("error registering headline");
@@ -103,5 +102,7 @@ public class NativeAds : MonoBehaviour
         {
             Debug.Log("error registering price");
         }
+        
+        AdsManager.Instance.RequestNativeAd();
     }
 }

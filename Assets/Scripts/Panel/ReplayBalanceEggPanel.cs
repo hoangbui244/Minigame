@@ -15,10 +15,15 @@ public class ReplayBalanceEggPanel : MonoBehaviour
     [SerializeField] private Color _winColor;
     [SerializeField] private Color _loseColor;
     [SerializeField] private TextMeshProUGUI _text;
+    [SerializeField] private GameObject _nativeAds;
     
     private void OnEnable()
     {
         MainUIMananger.Instance.PopupOpened = true;
+        if (ResourceManager.RemoveAds)
+        {
+            _nativeAds.SetActive(false);
+        }
     }
     
     private void OnDisable()
