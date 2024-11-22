@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -30,5 +31,23 @@ public class Level : MonoBehaviour
     public LevelType Type;
     
     [SerializeField] private int _levelNo;
+    [SerializeField] private Canvas _canvas;
     public int LevelNo => _levelNo;
+
+    private void Start()
+    {
+        if (_canvas == null) return;
+        _canvas.worldCamera = Camera.main;
+        _canvas.sortingLayerName = "Object";
+        _canvas.sortingOrder = 15;
+    }
+
+    private void OnValidate()
+    {
+        _canvas = GetComponentInChildren<Canvas>();
+        if (_canvas != null)
+        {
+            _canvas.renderMode = RenderMode.ScreenSpaceCamera;
+        }
+    }
 }

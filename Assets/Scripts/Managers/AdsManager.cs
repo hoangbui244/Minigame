@@ -3,28 +3,26 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using CandyCoded.HapticFeedback;
+using UnityEditor;
 using UnityEngine;
 
 public class AdsManager : Singleton<AdsManager>
 {
     #region =========================== PROPERTIES ===========================
 
-    [Header("Admob")]
-    [SerializeField] private string _rewardedAdmobID = "";
+    [Header("Admob")] [SerializeField] private string _rewardedAdmobID = "";
     [SerializeField] private string _interstitialAdmobID = "";
     [SerializeField] private string _bannerAdmobID = "";
     [SerializeField] private string _openAdsAdmobID = "";
     [SerializeField] private string _nativeAdsAdmobID = "";
 
-    [Header("Applovin")]
-    [SerializeField] private string _bannerID = "";
+    [Header("Applovin")] [SerializeField] private string _bannerID = "";
     [SerializeField] private string _openAdsID = "";
     [SerializeField] private string _nativeAdsID = "";
     [SerializeField] private string _rewardedID = "";
     [SerializeField] private string _interstitialID = "";
 
-    [Header("Other")]
-    [SerializeField] private bool _testMode;
+    [Header("Other")] [SerializeField] private bool _testMode;
     private readonly string _testBannerID = "ca-app-pub-3940256099942544/2014213617";
     private readonly string _testOpenID = "ca-app-pub-3940256099942544/9257395921";
     private readonly string _testNativeID = "ca-app-pub-3940256099942544/2247696110";
@@ -33,9 +31,11 @@ public class AdsManager : Singleton<AdsManager>
     private RemoteConfigManager Remote => RemoteConfigManager.Instance;
     private float IntersCapping => Remote.IntersCapping;
     private float StartCapping => Remote.StartCapping;
+    private float BundleVersion => Remote.BundleVersion;
     private bool _canShowInters;
     private bool _canShowStart;
     private bool _switchAds;
+    private int _versionCode;
 
     public bool StartCappingAds
     {
@@ -46,10 +46,11 @@ public class AdsManager : Singleton<AdsManager>
             {
                 StartCoroutine(StartCappingCoroutine());
             }
+
             _canShowStart = value;
         }
     }
-    
+
     public bool CanShowInters
     {
         get => _canShowInters;
@@ -59,10 +60,11 @@ public class AdsManager : Singleton<AdsManager>
             {
                 StartCoroutine(TimeCappingCoroutine());
             }
+
             _canShowInters = value;
         }
     }
-    
+
     [SerializeField] private BannerApplovin _banner;
     [SerializeField] private OpenAdsApplovin _appOpenAd;
     [SerializeField] private InterstitialApplovin _interstitial;
@@ -86,20 +88,61 @@ public class AdsManager : Singleton<AdsManager>
     private void Init()
     {
         if (_initialized) return;
-        
+
         InitAdsID();
-        MaxSdk.SetTestDeviceAdvertisingIdentifiers(new string[] { "5948dbcb-daf2-4012-9b25-d8110a3f32c6", "a098332a-53f2-4d83-a556-1b60e54561c1", "d13d9e78-313b-4c35-a08c-e4d1fc10306e"});
+        MaxSdk.SetTestDeviceAdvertisingIdentifiers(new string[]
+        {
+            "5948dbcb-daf2-4012-9b25-d8110a3f32c6", "a098332a-53f2-4d83-a556-1b60e54561c1",
+            "d13d9e78-313b-4c35-a08c-e4d1fc10306e"
+        });
         MaxSdk.InitializeSdk();
         // MaxSdkCallbacks.OnSdkInitializedEvent += sdkConfiguration =>
         // {
         //     MaxSdk.ShowMediationDebugger();
         // };
+
         _interstitial.Init();
         _banner.Init();
         _rewarded.Init();
         _appOpenAd.Init();
         _initialized = true;
+        if (!GetVersionCode())
+        {
+            ResourceManager.RemoveAds = true;
+        }
+
         RequestNativeAd();
+    }
+
+    public bool GetVersionCode()
+    {
+#if UNITY_EDITOR
+        _versionCode = PlayerSettings.Android.bundleVersionCode;
+#endif
+
+#if UNITY_ANDROID
+        using (var unityPlayer = new AndroidJavaClass("com.unity3d.player.UnityPlayer"))
+        {
+            using (var currentActivity = unityPlayer.GetStatic<AndroidJavaObject>("currentActivity"))
+            {
+                using (var packageManager = currentActivity.Call<AndroidJavaObject>("getPackageManager"))
+                {
+                    string packageName = currentActivity.Call<string>("getPackageName");
+                    using (var packageInfo = packageManager.Call<AndroidJavaObject>("getPackageInfo", packageName, 0))
+                    {
+                        _versionCode = packageInfo.Get<int>("versionCode");
+                    }
+                }
+            }
+        }
+#endif
+
+        if (_versionCode > BundleVersion)
+        {
+            return false;
+        }
+
+        return true;
     }
 
     private void InitAdsID()
@@ -131,19 +174,19 @@ public class AdsManager : Singleton<AdsManager>
         LoadedNativeAd = args.nativeAd;
         OnNativeAdLoaded?.Invoke();
     }
-    
+
     public void ShowBanner()
     {
         if (ResourceManager.RemoveAds) return;
         _banner.ShowBanner();
     }
-    
+
     public void HideBanner()
     {
         _banner.HideBanner();
         _banner.DestroyBanner();
     }
-    
+
     public void ShowOpen(Action<bool> completed = null)
     {
         if (ResourceManager.RemoveAds)
@@ -151,6 +194,7 @@ public class AdsManager : Singleton<AdsManager>
             completed?.Invoke(false);
             return;
         }
+
         _appOpenAd.ShowAppOpenAd(completed);
     }
 
@@ -161,18 +205,19 @@ public class AdsManager : Singleton<AdsManager>
             completed?.Invoke(false);
             return;
         }
+
         _interstitial.ShowInterstitial(success =>
         {
             completed?.Invoke(success);
             CanShowInters = false;
         });
     }
-    
+
     public void ShowRewarded(Action<bool> completed = null)
     {
         _rewarded.ShowReward(completed);
     }
-    
+
     private void StartCount()
     {
         if (!_switchAds)
@@ -181,7 +226,7 @@ public class AdsManager : Singleton<AdsManager>
             CanShowInters = true;
         }
     }
-    
+
     private void TimeCapping()
     {
         CanShowInters = true;

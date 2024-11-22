@@ -11,6 +11,7 @@ public class RemoteConfigManager : Singleton<RemoteConfigManager>
 {
     public float IntersCapping = 40f;
     public float StartCapping = 40f;
+    public float BundleVersion = 1;
     private bool _initFirebase;
     DependencyStatus _dependencyStatus = DependencyStatus.UnavailableOther;
 
@@ -110,6 +111,9 @@ public class RemoteConfigManager : Singleton<RemoteConfigManager>
             .DoubleValue;
         StartCapping = (float)FirebaseRemoteConfig.DefaultInstance
             .GetValue("start_inter_capping")
+            .DoubleValue;
+        BundleVersion = (float)FirebaseRemoteConfig.DefaultInstance
+            .GetValue("enable_ad")
             .DoubleValue;
     }
 }

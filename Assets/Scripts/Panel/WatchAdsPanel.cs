@@ -19,42 +19,93 @@ public class WatchAdsPanel : MonoBehaviour
     public void WatchAds()
     {
         AudioManager.PlaySound("Click");
-        AdsManager.Instance.ShowRewarded(done =>
+        if (AdsManager.Instance.GetVersionCode())
         {
-            if (done)
+            AdsManager.Instance.ShowRewarded(done =>
             {
-                var num = MainUIMananger.Instance.LevelUnlocked.ToString();
-                PlayerPrefs.SetInt(num, 1);
-                gameObject.SetActive(false);
-                switch (MainUIMananger.Instance.LevelTypeToLoad)
+                if (done)
                 {
-                    case 5:
-                        ResourceManager.BreakCandy = MainUIMananger.Instance.LevelUnlockedIndex;
-                        FirebaseManager.Instance.LogEventNameWithParam("BreakCandy", "level" ,MainUIMananger.Instance.LevelUnlockedIndex.ToString());
-                        break;
-                    case 7:
-                        ResourceManager.CrocodileDentist = MainUIMananger.Instance.LevelUnlockedIndex;
-                        FirebaseManager.Instance.LogEventNameWithParam("CrocodileDentist", "level" ,MainUIMananger.Instance.LevelUnlockedIndex.ToString());
-                        break;
-                    case 8:
-                        ResourceManager.CutInHalf = MainUIMananger.Instance.LevelUnlockedIndex;
-                        FirebaseManager.Instance.LogEventNameWithParam("CutInHalf", "level" ,MainUIMananger.Instance.LevelUnlockedIndex.ToString());
-                        break;
-                    case 10:
-                        ResourceManager.FruitCutting = MainUIMananger.Instance.LevelUnlockedIndex;
-                        FirebaseManager.Instance.LogEventNameWithParam("FruitCutting", "level" ,MainUIMananger.Instance.LevelUnlockedIndex.ToString());
-                        break;
-                    case 11:
-                        ResourceManager.PerfectSlices = MainUIMananger.Instance.LevelUnlockedIndex;
-                        FirebaseManager.Instance.LogEventNameWithParam("PerfectSlices", "level" ,MainUIMananger.Instance.LevelUnlockedIndex.ToString());
-                        break;
-                    case 17:
-                        ResourceManager.BalanceEgg = MainUIMananger.Instance.LevelUnlockedIndex;
-                        FirebaseManager.Instance.LogEventNameWithParam("BalanceEgg", "level" ,MainUIMananger.Instance.LevelUnlockedIndex.ToString());
-                        break;
+                    var num = MainUIMananger.Instance.LevelUnlocked.ToString();
+                    PlayerPrefs.SetInt(num, 1);
+                    gameObject.SetActive(false);
+                    switch (MainUIMananger.Instance.LevelTypeToLoad)
+                    {
+                        case 5:
+                            ResourceManager.BreakCandy = MainUIMananger.Instance.LevelUnlockedIndex;
+                            FirebaseManager.Instance.LogEventNameWithParam("BreakCandy", "level",
+                                MainUIMananger.Instance.LevelUnlockedIndex.ToString());
+                            break;
+                        case 7:
+                            ResourceManager.CrocodileDentist = MainUIMananger.Instance.LevelUnlockedIndex;
+                            FirebaseManager.Instance.LogEventNameWithParam("CrocodileDentist", "level",
+                                MainUIMananger.Instance.LevelUnlockedIndex.ToString());
+                            break;
+                        case 8:
+                            ResourceManager.CutInHalf = MainUIMananger.Instance.LevelUnlockedIndex;
+                            FirebaseManager.Instance.LogEventNameWithParam("CutInHalf", "level",
+                                MainUIMananger.Instance.LevelUnlockedIndex.ToString());
+                            break;
+                        case 10:
+                            ResourceManager.FruitCutting = MainUIMananger.Instance.LevelUnlockedIndex;
+                            FirebaseManager.Instance.LogEventNameWithParam("FruitCutting", "level",
+                                MainUIMananger.Instance.LevelUnlockedIndex.ToString());
+                            break;
+                        case 11:
+                            ResourceManager.PerfectSlices = MainUIMananger.Instance.LevelUnlockedIndex;
+                            FirebaseManager.Instance.LogEventNameWithParam("PerfectSlices", "level",
+                                MainUIMananger.Instance.LevelUnlockedIndex.ToString());
+                            break;
+                        case 17:
+                            ResourceManager.BalanceEgg = MainUIMananger.Instance.LevelUnlockedIndex;
+                            FirebaseManager.Instance.LogEventNameWithParam("BalanceEgg", "level",
+                                MainUIMananger.Instance.LevelUnlockedIndex.ToString());
+                            break;
+                    }
+
+                    GameUIManager.Instance.Reload();
                 }
-                GameUIManager.Instance.Reload();
+            });
+        }
+        else
+        {
+            var num = MainUIMananger.Instance.LevelUnlocked.ToString();
+            PlayerPrefs.SetInt(num, 1);
+            gameObject.SetActive(false);
+            switch (MainUIMananger.Instance.LevelTypeToLoad)
+            {
+                case 5:
+                    ResourceManager.BreakCandy = MainUIMananger.Instance.LevelUnlockedIndex;
+                    FirebaseManager.Instance.LogEventNameWithParam("BreakCandy", "level",
+                        MainUIMananger.Instance.LevelUnlockedIndex.ToString());
+                    break;
+                case 7:
+                    ResourceManager.CrocodileDentist = MainUIMananger.Instance.LevelUnlockedIndex;
+                    FirebaseManager.Instance.LogEventNameWithParam("CrocodileDentist", "level",
+                        MainUIMananger.Instance.LevelUnlockedIndex.ToString());
+                    break;
+                case 8:
+                    ResourceManager.CutInHalf = MainUIMananger.Instance.LevelUnlockedIndex;
+                    FirebaseManager.Instance.LogEventNameWithParam("CutInHalf", "level",
+                        MainUIMananger.Instance.LevelUnlockedIndex.ToString());
+                    break;
+                case 10:
+                    ResourceManager.FruitCutting = MainUIMananger.Instance.LevelUnlockedIndex;
+                    FirebaseManager.Instance.LogEventNameWithParam("FruitCutting", "level",
+                        MainUIMananger.Instance.LevelUnlockedIndex.ToString());
+                    break;
+                case 11:
+                    ResourceManager.PerfectSlices = MainUIMananger.Instance.LevelUnlockedIndex;
+                    FirebaseManager.Instance.LogEventNameWithParam("PerfectSlices", "level",
+                        MainUIMananger.Instance.LevelUnlockedIndex.ToString());
+                    break;
+                case 17:
+                    ResourceManager.BalanceEgg = MainUIMananger.Instance.LevelUnlockedIndex;
+                    FirebaseManager.Instance.LogEventNameWithParam("BalanceEgg", "level",
+                        MainUIMananger.Instance.LevelUnlockedIndex.ToString());
+                    break;
             }
-        });
+            
+            GameUIManager.Instance.Reload();
+        }
     }
 }

@@ -2302,6 +2302,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Type: 17
   _levelNo: 5
+  _canvas: {fileID: 1299733811686782229}
 --- !u!114 &3162938351853207371
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3516,7 +3517,7 @@ Canvas:
   m_GameObject: {fileID: 6828689350043701805}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
