@@ -16,7 +16,7 @@ public class CompletedPanel : MonoBehaviour
         MainUIMananger.Instance.PopupOpened = true;
         _anim.Play("Completed");
         _notiText.SetActive(false);
-        if (ResourceManager.RemoveAds)
+        if (ResourceManager.RemoveAds || !AdsManager.Instance.VersionTrue)
         {
             _nativeAds.SetActive(false);
         }

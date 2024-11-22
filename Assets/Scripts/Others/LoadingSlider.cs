@@ -52,11 +52,11 @@ public class LoadingSlider : MonoBehaviour
     
     private void LoadProgress()
     {
-        _slider.DOAnchorPosX(_value.x, _time * 0.8f)
+        _slider.DOAnchorPosX(_value.x, _time * 0.9f)
             .SetEase(_ease)
             .OnComplete(() =>
             {
-                if (ResourceManager.RemoveAds)
+                if (ResourceManager.RemoveAds || !AdsManager.Instance.VersionTrue)
                 {
                     ContinueLoad();
                 }
@@ -70,32 +70,34 @@ public class LoadingSlider : MonoBehaviour
     private IEnumerator WaitForOpenAds()
     {
         bool adCompleted = false;
-
-        AdsManager.Instance.ShowOpen((completed) =>
-        {
-            adCompleted = completed;
-        });
-
+        int attemptCount = 0;
         float elapsedTime = 0f;
-        while (!adCompleted && elapsedTime < 3f)
+
+        while (attemptCount < 2 && elapsedTime < 3f && !adCompleted)
         {
-            elapsedTime += Time.deltaTime;
-            yield return null;
+            AdsManager.Instance.ShowOpen((completed) =>
+            {
+                adCompleted = completed;
+            });
+
+            attemptCount++;
+
+            float waitTime = 0f;
+            while (!adCompleted && waitTime < 1.5f)
+            {
+                waitTime += Time.deltaTime;
+                elapsedTime += Time.deltaTime;
+                yield return null;
+            }
         }
 
-        if (adCompleted)
-        {
-            ContinueLoad();
-        }
-        else
-        {
-            ContinueLoad();
-        }
+        ContinueLoad();
     }
+
 
     private void ContinueLoad()
     {
-        _slider.DOAnchorPosX(_value1.x, _time * 0.2f)
+        _slider.DOAnchorPosX(_value1.x, _time * 0.1f)
             .SetEase(_ease)
             .OnComplete(() =>
             {

@@ -19,7 +19,7 @@ public class WatchAdsPanel : MonoBehaviour
     public void WatchAds()
     {
         AudioManager.PlaySound("Click");
-        if (AdsManager.Instance.GetVersionCode())
+        if (AdsManager.Instance.VersionTrue)
         {
             AdsManager.Instance.ShowRewarded(done =>
             {

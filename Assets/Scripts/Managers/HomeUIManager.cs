@@ -18,7 +18,7 @@ public class HomeUIManager : Singleton<HomeUIManager>
     {
         Init();
         GameEventManager.PurchaseAds += PurchaseAds;
-        if (!ResourceManager.RemoveAds)
+        if (!ResourceManager.RemoveAds && AdsManager.Instance.VersionTrue)
         {
             AdsManager.Instance.ShowBanner();
         }

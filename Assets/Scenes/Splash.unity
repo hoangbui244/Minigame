@@ -837,7 +837,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b525f23b72f64894cb97a1b39423342f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UseFakeStore: 1
+  UseFakeStore: 0
 --- !u!1 &725401961
 GameObject:
   m_ObjectHideFlags: 0
@@ -1424,7 +1424,8 @@ MonoBehaviour:
   _nativeAdsID: 
   _rewardedID: c981ca405d53fe6e
   _interstitialID: 5a75782ace42925c
-  _testMode: 1
+  VersionTrue: 0
+  _testMode: 0
   _banner: {fileID: 1190092665}
   _appOpenAd: {fileID: 1190092666}
   _interstitial: {fileID: 1190092662}
@@ -2117,6 +2118,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IntersCapping: 40
   StartCapping: 40
+  BundleVersion: 1
 --- !u!1 &1991013329
 GameObject:
   m_ObjectHideFlags: 0
@@ -2279,9 +2281,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _slider: {fileID: 761802458}
   _consentController: {fileID: 2031419263}
-  _value: {x: -115, y: 0}
+  _value: {x: -55, y: 0}
   _value1: {x: 0, y: 0}
-  _time: 3
+  _time: 4
   _ease: 1
   _hasConsent: 0
 --- !u!114 &2031419263

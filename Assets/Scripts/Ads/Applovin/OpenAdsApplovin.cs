@@ -36,7 +36,7 @@ public class OpenAdsApplovin : MonoBehaviour
 
     private void OnApplicationPause(bool pauseStatus)
     {
-        if (!pauseStatus && !ResourceManager.RemoveAds)
+        if (!pauseStatus && !ResourceManager.RemoveAds && AdsManager.Instance.VersionTrue)
         {
             ShowAppOpenAd();
         }
@@ -45,7 +45,7 @@ public class OpenAdsApplovin : MonoBehaviour
     // ReSharper disable Unity.PerformanceAnalysis
     public void ShowAppOpenAd(Action<bool> completed = null)
     {
-        if (!ResourceManager.RemoveAds)
+        if (!ResourceManager.RemoveAds && AdsManager.Instance.VersionTrue)
         {
             if (MaxSdk.IsAppOpenAdReady(_adUnitId))
             {

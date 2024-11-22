@@ -20,7 +20,7 @@ public class ReplayBalanceEggPanel : MonoBehaviour
     private void OnEnable()
     {
         MainUIMananger.Instance.PopupOpened = true;
-        if (ResourceManager.RemoveAds)
+        if (ResourceManager.RemoveAds || !AdsManager.Instance.VersionTrue)
         {
             _nativeAds.SetActive(false);
         }

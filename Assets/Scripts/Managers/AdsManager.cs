@@ -10,19 +10,23 @@ public class AdsManager : Singleton<AdsManager>
 {
     #region =========================== PROPERTIES ===========================
 
-    [Header("Admob")] [SerializeField] private string _rewardedAdmobID = "";
+    [Header("Admob")] 
+    [SerializeField] private string _rewardedAdmobID = "";
     [SerializeField] private string _interstitialAdmobID = "";
     [SerializeField] private string _bannerAdmobID = "";
     [SerializeField] private string _openAdsAdmobID = "";
     [SerializeField] private string _nativeAdsAdmobID = "";
 
-    [Header("Applovin")] [SerializeField] private string _bannerID = "";
+    [Header("Applovin")] 
+    [SerializeField] private string _bannerID = "";
     [SerializeField] private string _openAdsID = "";
     [SerializeField] private string _nativeAdsID = "";
     [SerializeField] private string _rewardedID = "";
     [SerializeField] private string _interstitialID = "";
 
-    [Header("Other")] [SerializeField] private bool _testMode;
+    [Header("Other")] 
+    public bool VersionTrue;
+    [SerializeField] private bool _testMode;
     private readonly string _testBannerID = "ca-app-pub-3940256099942544/2014213617";
     private readonly string _testOpenID = "ca-app-pub-3940256099942544/9257395921";
     private readonly string _testNativeID = "ca-app-pub-3940256099942544/2247696110";
@@ -89,6 +93,7 @@ public class AdsManager : Singleton<AdsManager>
     {
         if (_initialized) return;
 
+        Remote.OnRemoteConfigFetched += OnRemoteConfigFetched;
         InitAdsID();
         MaxSdk.SetTestDeviceAdvertisingIdentifiers(new string[]
         {
@@ -106,15 +111,17 @@ public class AdsManager : Singleton<AdsManager>
         _rewarded.Init();
         _appOpenAd.Init();
         _initialized = true;
-        if (!GetVersionCode())
-        {
-            ResourceManager.RemoveAds = true;
-        }
 
         RequestNativeAd();
     }
+    
+    private void OnRemoteConfigFetched()
+    {
+        Remote.OnRemoteConfigFetched -= OnRemoteConfigFetched;
+        VersionTrue = GetVersionCode();
+    }
 
-    public bool GetVersionCode()
+    private bool GetVersionCode()
     {
 #if UNITY_EDITOR
         _versionCode = PlayerSettings.Android.bundleVersionCode;
@@ -177,7 +184,7 @@ public class AdsManager : Singleton<AdsManager>
 
     public void ShowBanner()
     {
-        if (ResourceManager.RemoveAds) return;
+        if (ResourceManager.RemoveAds || !VersionTrue) return;
         _banner.ShowBanner();
     }
 
@@ -189,7 +196,7 @@ public class AdsManager : Singleton<AdsManager>
 
     public void ShowOpen(Action<bool> completed = null)
     {
-        if (ResourceManager.RemoveAds)
+        if (ResourceManager.RemoveAds || !VersionTrue)
         {
             completed?.Invoke(false);
             return;
@@ -200,7 +207,7 @@ public class AdsManager : Singleton<AdsManager>
 
     public void ShowInters(Action<bool> completed = null)
     {
-        if (ResourceManager.RemoveAds)
+        if (ResourceManager.RemoveAds || !VersionTrue)
         {
             completed?.Invoke(false);
             return;

@@ -30,7 +30,7 @@ public class GameUIManager : Singleton<GameUIManager>
     {
         Init();
         GameEventManager.PurchaseAds += PurchaseAds;
-        if (!ResourceManager.RemoveAds)
+        if (!ResourceManager.RemoveAds && AdsManager.Instance.VersionTrue)
         {
             AdsManager.Instance.ShowBanner();
         }
@@ -221,7 +221,7 @@ public class GameUIManager : Singleton<GameUIManager>
         AudioManager.PlaySound("Excellent");
         AudioManager.LightFeedback();
         _confettiPanel.SetActive(active);
-        if (AdsManager.Instance.CanShowInters && !ResourceManager.RemoveAds)
+        if (AdsManager.Instance.CanShowInters && !ResourceManager.RemoveAds && AdsManager.Instance.VersionTrue)
         {
             ShowTeaBreak();
         }

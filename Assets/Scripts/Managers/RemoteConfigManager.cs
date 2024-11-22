@@ -14,8 +14,7 @@ public class RemoteConfigManager : Singleton<RemoteConfigManager>
     public float BundleVersion = 1;
     private bool _initFirebase;
     DependencyStatus _dependencyStatus = DependencyStatus.UnavailableOther;
-
-    public bool InitFirebase => _initFirebase;
+    public event Action OnRemoteConfigFetched;
 
     private void Awake()
     {
@@ -115,5 +114,6 @@ public class RemoteConfigManager : Singleton<RemoteConfigManager>
         BundleVersion = (float)FirebaseRemoteConfig.DefaultInstance
             .GetValue("enable_ad")
             .DoubleValue;
+        OnRemoteConfigFetched?.Invoke();
     }
 }
