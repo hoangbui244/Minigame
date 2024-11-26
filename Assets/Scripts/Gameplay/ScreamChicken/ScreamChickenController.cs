@@ -7,6 +7,9 @@ public class ScreamChickenController : MonoBehaviour
 {
     [SerializeField] private ChickenController _chickenController;
     [SerializeField] private GameObject _choicePanel;
+    [SerializeField] private int _sample = 64;
+    [SerializeField] private float _threshold = 0.1f;
+    private AudioClip _microphoneClip;
     private readonly WaitForSeconds _wait = new(0.3f);
     
     private void OnEnable()
@@ -30,7 +33,16 @@ public class ScreamChickenController : MonoBehaviour
             }
         }
     }
-    
+
+    private void Start()
+    {
+        MicrophoneToAudio();
+        AudioHighPassFilter highPass = gameObject.AddComponent<AudioHighPassFilter>();
+        highPass.cutoffFrequency = 200f;
+        AudioLowPassFilter lowPass = gameObject.AddComponent<AudioLowPassFilter>();
+        lowPass.cutoffFrequency = 5000f;
+    }
+
     public void ChooseType(int type)
     {
         _chickenController.ChooseType(type);
@@ -42,5 +54,38 @@ public class ScreamChickenController : MonoBehaviour
         yield return _wait;
         _choicePanel.SetActive(false);
         _chickenController.StartGame = true;
+    }
+
+    private void MicrophoneToAudio()
+    {
+        string microphone = Microphone.devices[0];
+        _microphoneClip = Microphone.Start(microphone, true, 20, 44100);
+    }
+    
+    public float GetLoudnessFromMicrophone()
+    {
+        return GetLoudnessFromAudioClip(Microphone.GetPosition(Microphone.devices[0]),_microphoneClip);
+    }
+    
+    private float GetLoudnessFromAudioClip(int position, AudioClip audioClip)
+    {
+        int startPosition = position - _sample;
+        if (startPosition < 0) return 0;
+
+        float[] waveData = new float[_sample];
+        audioClip.GetData(waveData, startPosition);
+
+        float totalLoudness = 0;
+        for (int i = 0; i < _sample; i++)
+        {
+            waveData[i] = Mathf.Clamp(waveData[i], -1f, 1f);
+
+            if (Mathf.Abs(waveData[i]) > _threshold)
+            {
+                totalLoudness += Mathf.Abs(waveData[i]);
+            }
+        }
+
+        return totalLoudness / _sample;
     }
 }

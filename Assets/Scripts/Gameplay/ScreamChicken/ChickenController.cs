@@ -1,6 +1,8 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class ChickenController : MonoBehaviour
 {
@@ -11,12 +13,14 @@ public class ChickenController : MonoBehaviour
     [SerializeField] private float _forwardSpeed = 2f;
     [SerializeField] private int _maxJumps = 5;
 
-    [Header("Voice Control")]
-    [SerializeField] private float sensitivity = 100f;
+    [Header("Voice")]
+    [SerializeField] private float _sensitivity = 100f;
+    [SerializeField] private float _threshold = 0.1f;
+    [SerializeField] private ScreamChickenController _scr;
     private AudioSource _audioSource;
-    private float[] _samples = new float[256];
-    private bool _isMicrophoneInitialized = false;
-
+    private Queue<float> _loudnessBuffer = new Queue<float>();
+    private const int _bufferSize = 5;
+    
     public bool StartGame;
     private Rigidbody2D _rb;
     private bool _isHolding = false;
@@ -27,10 +31,6 @@ public class ChickenController : MonoBehaviour
     {
         _rb = GetComponent<Rigidbody2D>();
         _isGrounded = true;
-        if (IsVoice)
-        {
-            InitializeMicrophone();
-        }
     }
 
     private void Update()
@@ -38,9 +38,14 @@ public class ChickenController : MonoBehaviour
         if (!StartGame) return;
         if (IsVoice)
         {
-            if (_isMicrophoneInitialized)
+            float loudness = GetSmoothedLoudness(_scr.GetLoudnessFromMicrophone()) * _sensitivity;
+            if (loudness > _threshold && _isGrounded)
             {
-                AnalyzeSound();
+                _isHolding = true;
+            }
+            else if (loudness < _threshold && _isHolding)
+            {
+                _isHolding = false;
             }
         }
         else
@@ -48,7 +53,7 @@ public class ChickenController : MonoBehaviour
             HandleTouchInput();
         }
     }
-
+    
     private void FixedUpdate()
     {
         if (_isHolding)
@@ -61,10 +66,19 @@ public class ChickenController : MonoBehaviour
             MaintainForwardSpeed();
         }
     }
-    
-    public void ChooseType(int type)
+
+    private float GetSmoothedLoudness(float currentLoudness)
     {
-        IsVoice = type == 1;
+        if (_loudnessBuffer.Count >= _bufferSize)
+            _loudnessBuffer.Dequeue();
+    
+        _loudnessBuffer.Enqueue(currentLoudness);
+
+        float sum = 0;
+        foreach (float loudness in _loudnessBuffer)
+            sum += loudness;
+    
+        return sum / _loudnessBuffer.Count;
     }
 
     private void HandleTouchInput()
@@ -94,6 +108,11 @@ public class ChickenController : MonoBehaviour
         {
             _isHolding = false;
         }
+        
+        if (IsVoice)
+        {
+            _isGrounded = false;
+        }
     }
 
     private void MaintainForwardSpeed()
@@ -101,48 +120,6 @@ public class ChickenController : MonoBehaviour
         Vector2 velocity = _rb.velocity;
         velocity.x = _forwardSpeed;
         _rb.velocity = velocity;
-    }
-
-    private void InitializeMicrophone()
-    {
-        if (Microphone.devices.Length > 0)
-        {
-            _audioSource = gameObject.AddComponent<AudioSource>();
-            _audioSource.clip = Microphone.Start(null, true, 10, 44100);
-            _audioSource.loop = true;
-
-            StartCoroutine(WaitForMicrophoneStart());
-        }
-        else
-        {
-            Debug.LogError("No microphone detected!");
-        }
-    }
-
-    private IEnumerator WaitForMicrophoneStart()
-    {
-        while (!(Microphone.GetPosition(null) > 0))
-        {
-            yield return null;
-        }
-
-        _audioSource.Play();
-        _isMicrophoneInitialized = true;
-    }
-
-    private void AnalyzeSound()
-    {
-        _audioSource.GetOutputData(_samples, 0);
-        float soundLevel = 0f;
-
-        foreach (var sample in _samples)
-        {
-            soundLevel += Mathf.Abs(sample);
-        }
-
-        soundLevel = soundLevel / _samples.Length * sensitivity;
-
-        _isHolding = soundLevel > 1f;
     }
 
     private void OnCollisionEnter2D(Collision2D other)
@@ -160,6 +137,11 @@ public class ChickenController : MonoBehaviour
         {
             _isGrounded = false;
         }
+    }
+    
+    public void ChooseType(int type)
+    {
+        IsVoice = type == 1;
     }
 }
 

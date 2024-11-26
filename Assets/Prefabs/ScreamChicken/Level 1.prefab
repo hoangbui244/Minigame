@@ -660,6 +660,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _chickenController: {fileID: 518380832449409463}
   _choicePanel: {fileID: 892424936428369322}
+  _sample: 64
 --- !u!1 &4897636779068256612
 GameObject:
   m_ObjectHideFlags: 0
@@ -968,7 +969,9 @@ MonoBehaviour:
   _jumpForce: 7
   _forwardSpeed: 5
   _maxJumps: 70
-  sensitivity: 100
+  _sensitivity: 100
+  _threshold: 2
+  _scr: {fileID: 6287104624995885366}
   StartGame: 0
 --- !u!1 &6828689350043701805
 GameObject:
