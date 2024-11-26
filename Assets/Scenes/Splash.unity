@@ -837,7 +837,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b525f23b72f64894cb97a1b39423342f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UseFakeStore: 0
+  UseFakeStore: 1
 --- !u!1 &725401961
 GameObject:
   m_ObjectHideFlags: 0
@@ -1425,7 +1425,7 @@ MonoBehaviour:
   _rewardedID: c981ca405d53fe6e
   _interstitialID: 5a75782ace42925c
   VersionTrue: 0
-  _testMode: 0
+  _testMode: 1
   _banner: {fileID: 1190092665}
   _appOpenAd: {fileID: 1190092666}
   _interstitial: {fileID: 1190092662}

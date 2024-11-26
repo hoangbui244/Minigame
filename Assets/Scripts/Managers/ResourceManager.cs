@@ -130,6 +130,12 @@ public class ResourceManager : Singleton<ResourceManager>
         set => PlayerPrefs.SetInt("PetalCount", value);
     }
     
+    public static int ScreamChicken
+    {
+        get => PlayerPrefs.GetInt("ScreamChicken", 1);
+        set => PlayerPrefs.SetInt("ScreamChicken", value);
+    }
+    
     public static int BalanceEggHighScore
     {
         get => PlayerPrefs.GetInt("BalanceEggHighScore", 0);

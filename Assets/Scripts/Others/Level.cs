@@ -25,6 +25,7 @@ public class Level : MonoBehaviour
         DropCandy = 16,
         BalanceEgg = 17,
         PetalCount = 18,
+        ScreamChicken = 19,
         Default = 0,
     }
     

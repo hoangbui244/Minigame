@@ -88,10 +88,10 @@ public class RemoteConfigManager : Singleton<RemoteConfigManager>
             case LastFetchStatus.Failure:
                 switch (info.LastFetchFailureReason)
                 {
-                    case Firebase.RemoteConfig.FetchFailureReason.Error:
+                    case FetchFailureReason.Error:
                         Debug.LogError("Fetch failed for unknown reason");
                         break;
-                    case Firebase.RemoteConfig.FetchFailureReason.Throttled:
+                    case FetchFailureReason.Throttled:
                         Debug.LogError("Fetch throttled until " + info.ThrottledEndTime);
                         break;
                 }
