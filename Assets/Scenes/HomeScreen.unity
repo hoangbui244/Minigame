@@ -485,7 +485,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 60200a0a3d6847b47b390707ae2adfb8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e9a0178a65b2711458aebcd3fc29a41d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1346,7 +1346,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a6dfa8c21dbf92c4daf84b0f1f64c71a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e447a7ac8be22ef48ad33f2812c0dc2b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3966,7 +3966,7 @@ RectTransform:
   m_GameObject: {fileID: 1289731524}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.85, y: 0.85, z: 0.85}
+  m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 173120850}
@@ -3974,7 +3974,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 512, y: 86}
+  m_SizeDelta: {x: 512, y: 108}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1289731526
 MonoBehaviour:
@@ -3996,7 +3996,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a29c593e1f247b6469e11b311030bf04, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 114989a4065e38b4fadd88e95c200e6b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6304,6 +6304,10 @@ PrefabInstance:
     - target: {fileID: 3664439591097870620, guid: ddd151a8a0c2d214d8890bb9c45f1161, type: 3}
       propertyPath: m_Name
       value: SettingPanel
+      objectReference: {fileID: 0}
+    - target: {fileID: 3664439591097870620, guid: ddd151a8a0c2d214d8890bb9c45f1161, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9090135149212460153, guid: ddd151a8a0c2d214d8890bb9c45f1161, type: 3}
       propertyPath: m_Pivot.x
