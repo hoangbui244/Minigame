@@ -15,7 +15,6 @@ public class PetControler : MonoBehaviour
     [SerializeField] private Sprite _headExplode;
     [SerializeField] private Sprite _headNor;
     [SerializeField] private Sprite _headFear;
-    [SerializeField] private float _customTime = 5f;
     [SerializeField] private PassBombController _passBombController;
     private SpriteRenderer _headSpriteRenderer;
     private SpriteRenderer _handSpriteRenderer;

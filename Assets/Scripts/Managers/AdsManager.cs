@@ -11,16 +11,16 @@ public class AdsManager : Singleton<AdsManager>
     #region =========================== PROPERTIES ===========================
 
     [Header("Admob")] 
-    [SerializeField] private string _rewardedAdmobID = "";
-    [SerializeField] private string _interstitialAdmobID = "";
-    [SerializeField] private string _bannerAdmobID = "";
-    [SerializeField] private string _openAdsAdmobID = "";
+    // [SerializeField] private string _rewardedAdmobID = "";
+    // [SerializeField] private string _interstitialAdmobID = "";
+    // [SerializeField] private string _bannerAdmobID = "";
+    // [SerializeField] private string _openAdsAdmobID = "";
     [SerializeField] private string _nativeAdsAdmobID = "";
 
     [Header("Applovin")] 
     [SerializeField] private string _bannerID = "";
     [SerializeField] private string _openAdsID = "";
-    [SerializeField] private string _nativeAdsID = "";
+    // [SerializeField] private string _nativeAdsID = "";
     [SerializeField] private string _rewardedID = "";
     [SerializeField] private string _interstitialID = "";
 
@@ -154,7 +154,7 @@ public class AdsManager : Singleton<AdsManager>
 
     private void InitAdsID()
     {
-        _nativeAdsID = _testMode ? _testNativeID : _nativeAdsID;
+        _nativeAdsAdmobID = _testMode ? _testNativeID : _nativeAdsAdmobID;
         _banner.AdUnitId = _bannerID;
         _appOpenAd.AdUnitId = _openAdsID;
         _interstitial.AdUnitId = _interstitialID;
@@ -163,7 +163,7 @@ public class AdsManager : Singleton<AdsManager>
 
     public void RequestNativeAd()
     {
-        AdLoader adLoader = new AdLoader.Builder(_nativeAdsID)
+        AdLoader adLoader = new AdLoader.Builder(_nativeAdsAdmobID)
             .ForNativeAd()
             .Build();
         adLoader.OnNativeAdLoaded += HandleNativeAdLoaded;

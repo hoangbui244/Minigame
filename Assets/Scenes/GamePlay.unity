@@ -4518,7 +4518,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1432573165
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5067,24 +5067,24 @@ MonoBehaviour:
   _watchAdsPanel: {fileID: 1287950435}
   _screenShot: {fileID: 2039051969}
   _lvSprites:
-  - {fileID: 21300000, guid: 64435845f0ba74a42b9ec275e68a5f5b, type: 3}
-  - {fileID: 21300000, guid: b895630d2dbb3ac4897f3ed91b9239a5, type: 3}
-  - {fileID: 21300000, guid: eecdd1ae29857a94a923b0fec687c348, type: 3}
-  - {fileID: 21300000, guid: f66aa07f1de869344b4c71a72babb9b8, type: 3}
-  - {fileID: 21300000, guid: b00eae8f13a8b7b4f85b058f719b30d8, type: 3}
-  - {fileID: 21300000, guid: 208ae137f7c15b4489580af8fee305a2, type: 3}
-  - {fileID: 21300000, guid: d786a5932ec560744a73361f53481efb, type: 3}
-  - {fileID: 21300000, guid: 5986363f36b47724e9385da069d3d571, type: 3}
-  - {fileID: 21300000, guid: 243aa041f0e89ec4085cc8951e73f2ad, type: 3}
-  - {fileID: 21300000, guid: b2e1fbdc932fdd1488826f7729df71ca, type: 3}
-  - {fileID: 21300000, guid: 0ed77a540f3b5c54aa6de0cb0cb35df1, type: 3}
-  - {fileID: 21300000, guid: 325efecf9204e50448cde812fce87295, type: 3}
-  - {fileID: 21300000, guid: 1f98a26c858641c42bd58f346385d7f7, type: 3}
-  - {fileID: 21300000, guid: df952efb442b6944890714699f119898, type: 3}
-  - {fileID: 21300000, guid: 21532e92bf38aef4383a7662ab88f95a, type: 3}
-  - {fileID: 21300000, guid: f412d178bc05f7f4484bb2880d95d82f, type: 3}
-  - {fileID: 21300000, guid: ac8e2f622afdca345983968b8d8c3e0e, type: 3}
-  - {fileID: 21300000, guid: 931e3db880ef027489dfe538093dc51b, type: 3}
+  - {fileID: 21300000, guid: 3d6f3e2213b100342be55580c8dca606, type: 3}
+  - {fileID: 21300000, guid: 77e59769346584841bb91cfbb35ae7fe, type: 3}
+  - {fileID: 21300000, guid: 0530e7e2cd3f33342bdb2dd4303d569b, type: 3}
+  - {fileID: 21300000, guid: cfc426e20e5bee34db624d2058efe309, type: 3}
+  - {fileID: 21300000, guid: c9e122ad42671204c970357f621b4f38, type: 3}
+  - {fileID: 21300000, guid: 50a1001c93e306d47bec44f2f823342a, type: 3}
+  - {fileID: 21300000, guid: 228ffde1aeb6d9a4a99f712f3183b9f3, type: 3}
+  - {fileID: 21300000, guid: 8e61774a2f9efef459dbe282e8bd81b7, type: 3}
+  - {fileID: 21300000, guid: 70081e325955f7f48bfb4ea04cb5bedd, type: 3}
+  - {fileID: 21300000, guid: 348b51e3c1f71324d9503095c8305443, type: 3}
+  - {fileID: 21300000, guid: 57d4863cafd272d45a1e5b5b36b9eea6, type: 3}
+  - {fileID: 21300000, guid: 3491fbd74c8c4ea4eaa86ef768abd274, type: 3}
+  - {fileID: 21300000, guid: 0d6e0937326f66746969a362f970f7e9, type: 3}
+  - {fileID: 21300000, guid: 3a58384852323d24f85f40dd9e0c63aa, type: 3}
+  - {fileID: 21300000, guid: c9225b962bc3d0c4284488f188b6640c, type: 3}
+  - {fileID: 21300000, guid: 5acc1c5a27dacb7429c6c2541abd271f, type: 3}
+  - {fileID: 21300000, guid: b8a48af63142d944a8dd017ce020ed7b, type: 3}
+  - {fileID: 21300000, guid: 7bd380ec6d9a2e3448b7e880705f82e8, type: 3}
   _nextLv: {fileID: 1432573164}
   _nextLvImage: {fileID: 2006988910}
 --- !u!1 &1640977752
@@ -5735,7 +5735,7 @@ RectTransform:
   m_GameObject: {fileID: 2006988908}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
+  m_LocalScale: {x: 0.77, y: 0.77, z: 0.77}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1432573165}

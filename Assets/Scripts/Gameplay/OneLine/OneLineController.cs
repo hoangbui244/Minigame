@@ -10,7 +10,6 @@ public class OneLineController : MonoBehaviour
     [SerializeField] private int _cellCount;
     [SerializeField] private float _offset;
     private Camera _camera;
-    private bool _isDrawing;
     private bool _isWin;
 
     private void Start()
@@ -50,7 +49,6 @@ public class OneLineController : MonoBehaviour
                     else if (IsValidNextCell(cell))
                     {
                         cell.Picked();
-                        _isDrawing = true;
                         _cells.Add(cell);
                         _pathPoints.Add(cell.transform.position);
                     }

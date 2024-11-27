@@ -12,7 +12,6 @@ public class RemoteConfigManager : Singleton<RemoteConfigManager>
     public float IntersCapping = 40f;
     public float StartCapping = 40f;
     public float BundleVersion = 1;
-    private bool _initFirebase;
     DependencyStatus _dependencyStatus = DependencyStatus.UnavailableOther;
     public event Action OnRemoteConfigFetched;
 
@@ -31,7 +30,6 @@ public class RemoteConfigManager : Singleton<RemoteConfigManager>
                 if (_dependencyStatus == DependencyStatus.Available)
                 {
                     InitializeFirebase();
-                    _initFirebase = true;
                 }
                 else
                 {

@@ -13,7 +13,6 @@ public class LoadingSlider : MonoBehaviour
     [SerializeField] private float _time;
     [SerializeField] private Ease _ease;
     [SerializeField] private bool _hasConsent;
-    private int _count = 0;
     
     private void Awake()
     {
