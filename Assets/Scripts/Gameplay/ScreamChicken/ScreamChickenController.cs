@@ -36,11 +36,7 @@ public class ScreamChickenController : MonoBehaviour
 
     private void Start()
     {
-        MicrophoneToAudio();
-        AudioHighPassFilter highPass = gameObject.AddComponent<AudioHighPassFilter>();
-        highPass.cutoffFrequency = 200f;
-        AudioLowPassFilter lowPass = gameObject.AddComponent<AudioLowPassFilter>();
-        lowPass.cutoffFrequency = 5000f;
+        //MicrophoneToAudio();
     }
 
     public void ChooseType(int type)
@@ -58,8 +54,15 @@ public class ScreamChickenController : MonoBehaviour
 
     private void MicrophoneToAudio()
     {
-        string microphone = Microphone.devices[0];
-        _microphoneClip = Microphone.Start(microphone, true, 20, 44100);
+        if (Microphone.devices.Length > 0)
+        {
+            string microphone = Microphone.devices[0];
+            _microphoneClip = Microphone.Start(microphone, true, 20, 44100);
+        }
+        else
+        {
+            Debug.LogError("No microphone detected! Please connect a microphone.");
+        }
     }
     
     public float GetLoudnessFromMicrophone()

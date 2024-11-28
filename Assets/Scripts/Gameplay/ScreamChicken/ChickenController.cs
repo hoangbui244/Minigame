@@ -12,6 +12,8 @@ public class ChickenController : MonoBehaviour
     [SerializeField] private float _jumpForce = 5f;
     [SerializeField] private float _forwardSpeed = 2f;
     [SerializeField] private int _maxJumps = 5;
+    [SerializeField] private float _jumpAcceleration = 1.5f;
+    private float _currentJumpForce;
 
     [Header("Voice")]
     [SerializeField] private float _sensitivity = 100f;
@@ -26,11 +28,13 @@ public class ChickenController : MonoBehaviour
     private bool _isHolding = false;
     private bool _isGrounded = false;
     private int _numberOfJumps = 0;
+    private readonly WaitForSeconds _wait = new WaitForSeconds(0.5f);
 
     private void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
         _isGrounded = true;
+        _currentJumpForce = _jumpForce;
     }
 
     private void Update()
@@ -56,6 +60,7 @@ public class ChickenController : MonoBehaviour
     
     private void FixedUpdate()
     {
+        if (!StartGame || !_isHolding) return;
         if (_isHolding)
         {
             ApplyJump();
@@ -98,8 +103,10 @@ public class ChickenController : MonoBehaviour
     {
         if (_numberOfJumps < _maxJumps)
         {
+            _currentJumpForce += _jumpAcceleration * Time.fixedDeltaTime;
+            
             Vector2 velocity = _rb.velocity;
-            velocity.y = _jumpForce;
+            velocity.y = _currentJumpForce;
             _rb.velocity = velocity;
 
             _numberOfJumps++;
@@ -128,7 +135,28 @@ public class ChickenController : MonoBehaviour
         {
             _isGrounded = true;
             _numberOfJumps = 0;
+            _currentJumpForce = _jumpForce;
         }
+        else if (other.gameObject.CompareTag("ExplosionFX"))
+        {
+            StartGame = false;
+            GameUIManager.Instance.Retry(true);
+        }
+        else if (other.gameObject.CompareTag("Point"))
+        {
+            StartGame = false;
+            GameUIManager.Instance.Effect(true);
+            StartCoroutine(NewLevel());
+        }
+    }
+    
+    private IEnumerator NewLevel()
+    {
+        yield return _wait;
+        GameUIManager.Instance.ScreenShot();
+        yield return _wait;
+        GameUIManager.Instance.Effect(false);
+        GameUIManager.Instance.CompletedLevel(true);
     }
 
     private void OnCollisionExit2D(Collision2D other)

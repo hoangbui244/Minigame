@@ -6,7 +6,7 @@ using UnityEngine.Serialization;
 public class CameraFollow : MonoBehaviour
 {
     public Transform Obj;
-    public float Smoothing = 5f;
+    public float Smoothing = 11f;
 
     void LateUpdate()
     {
