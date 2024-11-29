@@ -36,11 +36,12 @@ public class ScreamChickenController : MonoBehaviour
 
     private void Start()
     {
-        //MicrophoneToAudio();
+        MicrophoneToAudio();
     }
 
     public void ChooseType(int type)
     {
+        AudioManager.PlaySound("Click");
         _chickenController.ChooseType(type);
         StartCoroutine(TurnPanelOff());
     }

@@ -123,7 +123,7 @@ public class HomeUIManager : Singleton<HomeUIManager>
     public void OnClickRandom()
     {
         AudioManager.PlaySound("Click");
-        int random = Random.Range(1, 19);
+        int random = Random.Range(1, 20);
         LoadLevel(random);
     }
 }

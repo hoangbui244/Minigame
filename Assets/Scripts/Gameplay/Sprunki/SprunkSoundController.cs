@@ -6,12 +6,10 @@ using UnityEngine;
 public class SprunkSoundController : MonoBehaviour
 {
     [SerializeField] private SprunkSound[] _sprunkSounds;
-    private Dictionary<int, SprunkSound> _sprunkSoundDict;
+    private Dictionary<int, SprunkSound> _sprunkSoundDict = new Dictionary<int, SprunkSound>();
 
     private void Start()
     {
-        _sprunkSoundDict = new Dictionary<int, SprunkSound>();
-
         foreach (var s in _sprunkSounds)
         {
             s.AudioSource = gameObject.AddComponent<AudioSource>();

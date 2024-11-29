@@ -197,7 +197,7 @@ public class GameUIManager : Singleton<GameUIManager>
     public void NextGame()
     {
         AudioManager.PlaySound("Click");
-        if (MainUIMananger.Instance.LevelTypeToLoad == 18)
+        if (MainUIMananger.Instance.LevelTypeToLoad == 19)
         {
             MainUIMananger.Instance.LevelTypeToLoad = 1;
         }

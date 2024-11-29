@@ -6,35 +6,40 @@ using UnityEngine.Serialization;
 
 public class ChickenController : MonoBehaviour
 {
-    public bool IsVoice;
+    [Header("Sprite")]
+    private SpriteRenderer _spriteRenderer;
+    [SerializeField] private List<Sprite> _sprites;
 
-    [Header("Touch & Hold")]
+    [Header("Touch & Hold")] 
     [SerializeField] private float _jumpForce = 5f;
     [SerializeField] private float _forwardSpeed = 2f;
     [SerializeField] private int _maxJumps = 5;
     [SerializeField] private float _jumpAcceleration = 1.5f;
     private float _currentJumpForce;
 
-    [Header("Voice")]
+    [Header("Voice")] 
+    public bool IsVoice;
     [SerializeField] private float _sensitivity = 100f;
     [SerializeField] private float _threshold = 0.1f;
     [SerializeField] private ScreamChickenController _scr;
     private AudioSource _audioSource;
     private Queue<float> _loudnessBuffer = new Queue<float>();
     private const int _bufferSize = 5;
-    
+
     public bool StartGame;
     private Rigidbody2D _rb;
     private bool _isHolding = false;
     private bool _isGrounded = false;
     private int _numberOfJumps = 0;
     private readonly WaitForSeconds _wait = new WaitForSeconds(0.5f);
+    private bool _isFinish;
 
     private void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
         _isGrounded = true;
         _currentJumpForce = _jumpForce;
+        _spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     private void Update()
@@ -57,7 +62,7 @@ public class ChickenController : MonoBehaviour
             HandleTouchInput();
         }
     }
-    
+
     private void FixedUpdate()
     {
         if (!StartGame || !_isHolding) return;
@@ -76,13 +81,13 @@ public class ChickenController : MonoBehaviour
     {
         if (_loudnessBuffer.Count >= _bufferSize)
             _loudnessBuffer.Dequeue();
-    
+
         _loudnessBuffer.Enqueue(currentLoudness);
 
         float sum = 0;
         foreach (float loudness in _loudnessBuffer)
             sum += loudness;
-    
+
         return sum / _loudnessBuffer.Count;
     }
 
@@ -104,7 +109,7 @@ public class ChickenController : MonoBehaviour
         if (_numberOfJumps < _maxJumps)
         {
             _currentJumpForce += _jumpAcceleration * Time.fixedDeltaTime;
-            
+
             Vector2 velocity = _rb.velocity;
             velocity.y = _currentJumpForce;
             _rb.velocity = velocity;
@@ -115,7 +120,7 @@ public class ChickenController : MonoBehaviour
         {
             _isHolding = false;
         }
-        
+
         if (IsVoice)
         {
             _isGrounded = false;
@@ -127,6 +132,15 @@ public class ChickenController : MonoBehaviour
         Vector2 velocity = _rb.velocity;
         velocity.x = _forwardSpeed;
         _rb.velocity = velocity;
+    }
+    
+    private IEnumerator NewLevel()
+    {
+        yield return _wait;
+        GameUIManager.Instance.ScreenShot();
+        yield return _wait;
+        GameUIManager.Instance.Effect(false);
+        GameUIManager.Instance.CompletedLevel(true);
     }
 
     private void OnCollisionEnter2D(Collision2D other)
@@ -140,23 +154,31 @@ public class ChickenController : MonoBehaviour
         else if (other.gameObject.CompareTag("ExplosionFX"))
         {
             StartGame = false;
-            GameUIManager.Instance.Retry(true);
+            if (!_isFinish)
+            {
+                _isFinish = true;
+                GameUIManager.Instance.Retry(true);
+            }
         }
         else if (other.gameObject.CompareTag("Point"))
         {
             StartGame = false;
-            GameUIManager.Instance.Effect(true);
-            StartCoroutine(NewLevel());
+            if (!_isFinish)
+            {
+                _isFinish = true;
+                GameUIManager.Instance.Effect(true);
+                if (ResourceManager.ScreamChicken < 5)
+                {
+                    ResourceManager.ScreamChicken++;
+                }
+                else
+                {
+                    ResourceManager.ScreamChicken = 1;
+                }
+
+                StartCoroutine(NewLevel());
+            }
         }
-    }
-    
-    private IEnumerator NewLevel()
-    {
-        yield return _wait;
-        GameUIManager.Instance.ScreenShot();
-        yield return _wait;
-        GameUIManager.Instance.Effect(false);
-        GameUIManager.Instance.CompletedLevel(true);
     }
 
     private void OnCollisionExit2D(Collision2D other)
@@ -166,10 +188,14 @@ public class ChickenController : MonoBehaviour
             _isGrounded = false;
         }
     }
-    
+
     public void ChooseType(int type)
     {
         IsVoice = type == 1;
     }
-}
 
+    public void UpdateSprite(int index)
+    {
+        _spriteRenderer.sprite = _sprites[index];
+    }
+}
