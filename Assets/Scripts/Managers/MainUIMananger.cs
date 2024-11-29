@@ -13,6 +13,9 @@ public class MainUIMananger : Singleton<MainUIMananger>
     public int LevelTypeToLoad;
     [HideInInspector] public int LevelUnlocked;
     [HideInInspector] public int LevelUnlockedIndex;
+    [HideInInspector] public int ScreamChickenTime = 0;
+    [HideInInspector] public int ScreamChickenType = -1;
+    [HideInInspector] public int ScreamChickenChar = -1;
     [SerializeField] private GameObject _mask;
     [SerializeField] private GameObject _dog;
     [SerializeField] private float _time;

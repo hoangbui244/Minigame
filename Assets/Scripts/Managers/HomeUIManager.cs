@@ -40,6 +40,7 @@ public class HomeUIManager : Singleton<HomeUIManager>
         _checkInternetPanel.gameObject.SetActive(false);
         _removeAdsPanel.gameObject.SetActive(false);
         _settingPanel.gameObject.SetActive(false);
+        MainUIMananger.Instance.ScreamChickenTime = 0;
     }
 
     public void Setting()

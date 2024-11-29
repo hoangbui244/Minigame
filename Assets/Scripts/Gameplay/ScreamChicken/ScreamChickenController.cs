@@ -7,6 +7,7 @@ public class ScreamChickenController : MonoBehaviour
 {
     [SerializeField] private ChickenController _chickenController;
     [SerializeField] private GameObject _choicePanel;
+    [SerializeField] private GameObject _choosePanel;
     [SerializeField] private int _sample = 64;
     [SerializeField] private float _threshold = 0.1f;
     private AudioClip _microphoneClip;
@@ -14,7 +15,21 @@ public class ScreamChickenController : MonoBehaviour
     
     private void OnEnable()
     {
-        _choicePanel.SetActive(true);
+        if (MainUIMananger.Instance.ScreamChickenTime == 0)
+        {
+            _choicePanel.SetActive(true);
+            _choosePanel.SetActive(false);
+        }
+        else
+        {
+            if (PlayerPrefs.GetInt("Pet0") == 1 && PlayerPrefs.GetInt("Pet1") == 1 && PlayerPrefs.GetInt("Pet2") == 1)
+            {
+                _choicePanel.SetActive(true);
+                return;
+            }
+            _choicePanel.SetActive(false);
+            _choosePanel.SetActive(true);
+        }
         if (Camera.main != null)
         {
             Camera.main.gameObject.AddComponent<CameraFollow>();
@@ -38,10 +53,18 @@ public class ScreamChickenController : MonoBehaviour
     {
         MicrophoneToAudio();
     }
+    
+    public void NoThanks()
+    {
+        AudioManager.PlaySound("Click");
+        _choosePanel.SetActive(false);
+        _chickenController.StartGame = true;
+    }
 
     public void ChooseType(int type)
     {
         AudioManager.PlaySound("Click");
+        MainUIMananger.Instance.ScreamChickenType = type;
         _chickenController.ChooseType(type);
         StartCoroutine(TurnPanelOff());
     }
