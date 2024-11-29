@@ -40,7 +40,10 @@ public class ChickenController : MonoBehaviour
         _isGrounded = true;
         _currentJumpForce = _jumpForce;
         _spriteRenderer = GetComponent<SpriteRenderer>();
-        _spriteRenderer.sprite = _sprites[MainUIMananger.Instance.ScreamChickenChar];
+        if (MainUIMananger.Instance.ScreamChickenChar != -1)
+        {
+            _spriteRenderer.sprite = _sprites[MainUIMananger.Instance.ScreamChickenChar];
+        }
         if (MainUIMananger.Instance.ScreamChickenType != -1)
         {
             IsVoice = MainUIMananger.Instance.ScreamChickenType == 1;
