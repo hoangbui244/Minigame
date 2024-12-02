@@ -4907,7 +4907,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 825408f19f849e0439a03251bb3fcc9c, type: 3}
   _jumpForce: 5.5
   _forwardSpeed: 6.6
-  _maxJumps: 46
+  _maxJumps: 45
   _jumpAcceleration: 22
   IsVoice: 0
   _sensitivity: 100

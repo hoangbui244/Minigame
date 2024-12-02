@@ -94,8 +94,8 @@ public class ScreamChickenUI : MonoBehaviour
     
     private void UpdateButton(int value)
     {
-        var name = "Pet" + value;
-        _button.image.sprite = !PlayerPrefs.HasKey(name) ? _buttons[2] : _buttons[0];
+        var petName = "Pet" + value;
+        _button.image.sprite = !PlayerPrefs.HasKey(petName) ? _buttons[2] : _buttons[0];
         if (_buttonIndex == value)
         {
             _button.image.sprite = _buttons[1];

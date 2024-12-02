@@ -114,9 +114,10 @@ public class ChickenController : MonoBehaviour
 
     private void ApplyJump()
     {
+        float smoothFactor = 4f;
         if (_numberOfJumps < _maxJumps)
         {
-            _currentJumpForce += _jumpAcceleration * Time.fixedDeltaTime;
+            _currentJumpForce = Mathf.Lerp(_currentJumpForce, _jumpForce + _jumpAcceleration, Time.fixedDeltaTime * smoothFactor);
 
             Vector2 velocity = _rb.velocity;
             velocity.y = _currentJumpForce;
