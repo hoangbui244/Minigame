@@ -6,17 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="cc1e008d-39a7-4d81-b082-3c7e1c260ee0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Minigame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Minigame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ScreamChicken/Level 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ScreamChicken/Level 1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ScreamChicken/Level 2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ScreamChicken/Level 2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ScreamChicken/Level 4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ScreamChicken/Level 4.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/ScreamChicken/ScreamChickenController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/ScreamChicken/ScreamChickenController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/ScreamChicken/ScreamChickenUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/ScreamChicken/ScreamChickenUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/LevelSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/LevelSpawner.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/ScreamChicken/Frame 11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/ScreamChicken/Frame 11.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/ScreamChicken/Group 33.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/ScreamChicken/Group 33.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/ScreamChicken/Group 42.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/ScreamChicken/Group 42.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -210,6 +203,7 @@
       <workItem from="1732865637716" duration="1330000" />
       <workItem from="1732867481434" duration="7830000" />
       <workItem from="1733103011161" duration="7295000" />
+      <workItem from="1733121688522" duration="4613000" />
     </task>
     <servers />
   </component>

@@ -175,7 +175,7 @@ public class ChickenController : MonoBehaviour
             {
                 _isFinish = true;
                 GameUIManager.Instance.Effect(true);
-                if (ResourceManager.ScreamChicken < 5)
+                if (ResourceManager.ScreamChicken < 4)
                 {
                     ResourceManager.ScreamChicken++;
                 }

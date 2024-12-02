@@ -15,6 +15,7 @@ public class ScreamChickenController : MonoBehaviour
     
     private void OnEnable()
     {
+        Init();
         if (MainUIMananger.Instance.ScreamChickenTime == 0)
         {
             MainUIMananger.Instance.ScreamChickenTime = 1;
@@ -30,11 +31,6 @@ public class ScreamChickenController : MonoBehaviour
             }
             _choicePanel.SetActive(false);
             _choosePanel.SetActive(true);
-        }
-        if (Camera.main != null)
-        {
-            Camera.main.gameObject.AddComponent<CameraFollow>();
-            Camera.main.gameObject.GetComponent<CameraFollow>().Obj = _chickenController.transform;
         }
     }
 
@@ -53,6 +49,17 @@ public class ScreamChickenController : MonoBehaviour
     private void Start()
     {
         MicrophoneToAudio();
+    }
+
+    private void Init()
+    {
+        _choicePanel.SetActive(false);
+        _choosePanel.SetActive(false);
+        if (Camera.main != null)
+        {
+            Camera.main.gameObject.AddComponent<CameraFollow>();
+            Camera.main.gameObject.GetComponent<CameraFollow>().Obj = _chickenController.transform;
+        }
     }
     
     public void NoThanks()

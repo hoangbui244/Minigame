@@ -42,14 +42,15 @@ public class ScreamChickenUI : MonoBehaviour
 
     public void ChoosePet()
     {
-        var name = "Pet" + _petIndex;
-        if (!PlayerPrefs.HasKey(name))
+        AudioManager.PlaySound("Click");
+        var petName = "Pet" + _petIndex;
+        if (!PlayerPrefs.HasKey(petName))
         {
             AdsManager.Instance.ShowRewarded(completed =>
             {
                 if (completed)
                 {
-                    PlayerPrefs.SetInt(name, 1);
+                    PlayerPrefs.SetInt(petName, 1);
                     _button.image.sprite = _buttons[1];
                     _buttonIndex = _petIndex;
                     MainUIMananger.Instance.ScreamChickenChar = _petIndex;
@@ -69,6 +70,27 @@ public class ScreamChickenUI : MonoBehaviour
             _chickenController.UpdateSprite(_petIndex);
         }
     }
+
+    public void Next()
+    {
+        AudioManager.PlaySound("Click");
+        _petIndex = (_petIndex + 1) % _petSprites.Count;
+        UpdateButton(_petIndex);
+        UpdatePet();
+    }
+    
+    public void Previous()
+    {
+        AudioManager.PlaySound("Click");
+        _petIndex = (_petIndex - 1 + _petSprites.Count) % _petSprites.Count;
+        UpdateButton(_petIndex);
+        UpdatePet();
+    }
+    
+    private void UpdatePet()
+    {
+        _pet.sprite = _petSprites[_petIndex];
+    }
     
     private void UpdateButton(int value)
     {
@@ -78,24 +100,5 @@ public class ScreamChickenUI : MonoBehaviour
         {
             _button.image.sprite = _buttons[1];
         }
-    }
-
-    public void Next()
-    {
-        _petIndex = (_petIndex + 1) % _petSprites.Count;
-        UpdateButton(_petIndex);
-        UpdatePet();
-    }
-    
-    public void Previous()
-    {
-        _petIndex = (_petIndex - 1 + _petSprites.Count) % _petSprites.Count;
-        UpdateButton(_petIndex);
-        UpdatePet();
-    }
-    
-    private void UpdatePet()
-    {
-        _pet.sprite = _petSprites[_petIndex];
     }
 }
