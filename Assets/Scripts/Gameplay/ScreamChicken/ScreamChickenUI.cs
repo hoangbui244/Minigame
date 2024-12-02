@@ -25,7 +25,7 @@ public class ScreamChickenUI : MonoBehaviour
     {
         _buttonIndex = MainUIMananger.Instance.ScreamChickenChar;
         _petIndex = 0;
-        if (MainUIMananger.Instance.ScreamChickenTime == 1)
+        if (MainUIMananger.Instance.ScreamChickenTime == 1 && MainUIMananger.Instance.ScreamChickenChar != -1)
         {
             _pet1.sprite = _petSprites[_buttonIndex];
             _pet2.sprite = _petSprites[_buttonIndex];
@@ -52,6 +52,7 @@ public class ScreamChickenUI : MonoBehaviour
                     PlayerPrefs.SetInt(name, 1);
                     _button.image.sprite = _buttons[1];
                     _buttonIndex = _petIndex;
+                    MainUIMananger.Instance.ScreamChickenChar = _petIndex;
                     _chickenController.UpdateSprite(_petIndex);
                 }
                 else

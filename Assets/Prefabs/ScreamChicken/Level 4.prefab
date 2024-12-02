@@ -102,7 +102,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4466766763674118908
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3583,7 +3583,7 @@ GameObject:
   - component: {fileID: 6287104624995885366}
   - component: {fileID: 1596747545015224979}
   m_Layer: 0
-  m_Name: Level 2
+  m_Name: Level 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3621,8 +3621,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Type: 19
-  _levelNo: 2
-  _canvas: {fileID: 8480045458117073442}
+  _levelNo: 4
+  _canvas: {fileID: 0}
 --- !u!114 &6287104624995885366
 MonoBehaviour:
   m_ObjectHideFlags: 0

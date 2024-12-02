@@ -17,6 +17,7 @@ public class ScreamChickenController : MonoBehaviour
     {
         if (MainUIMananger.Instance.ScreamChickenTime == 0)
         {
+            MainUIMananger.Instance.ScreamChickenTime = 1;
             _choicePanel.SetActive(true);
             _choosePanel.SetActive(false);
         }
@@ -67,6 +68,27 @@ public class ScreamChickenController : MonoBehaviour
         MainUIMananger.Instance.ScreamChickenType = type;
         _chickenController.ChooseType(type);
         StartCoroutine(TurnPanelOff());
+    }
+    
+    public void ChoosePet()
+    {
+        AudioManager.PlaySound("Click");
+        AdsManager.Instance.ShowRewarded(completed =>
+        {
+            if (completed)
+            {
+                PlayerPrefs.SetInt("Pet2", 1);
+                MainUIMananger.Instance.ScreamChickenChar = 2;
+                _chickenController.UpdateSprite(2);
+                _choosePanel.SetActive(false);
+                _chickenController.StartGame = true;
+            }
+            else
+            {
+                _choosePanel.SetActive(false);
+                _chickenController.StartGame = true;
+            }
+        });
     }
     
     private IEnumerator TurnPanelOff()
