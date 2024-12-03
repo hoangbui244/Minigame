@@ -169,7 +169,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89e6180cfd63d464cb53701e15ad3b6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _sprunkSounds: []
+  _sprunkSounds:
+  - ID: 1
+    AudioClip: {fileID: 8300000, guid: c1cba9e7c971da540a2f2ee1e68e831a, type: 3}
+    Volume: 1
+    Loop: 1
+    AudioSource: {fileID: 0}
+  - ID: 2
+    AudioClip: {fileID: 8300000, guid: 6408cfe29e7d8e442be9c456487205ac, type: 3}
+    Volume: 1
+    Loop: 1
+    AudioSource: {fileID: 0}
+  - ID: 3
+    AudioClip: {fileID: 8300000, guid: 08b4e82a6d59ba345a44eae0863049c4, type: 3}
+    Volume: 1
+    Loop: 1
+    AudioSource: {fileID: 0}
 --- !u!114 &2264883644156818109
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -182,6 +197,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44a585c138db6ad4e81ad11c879ea9ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _parent: {fileID: 3727178853332187661}
+  _characters:
+  - {fileID: 7672188731756214099}
+  - {fileID: 7672188731756214099}
+  - {fileID: 7672188731756214099}
+  - {fileID: 7672188731756214099}
+  _beatParent: {fileID: 8093527247901659680}
+  _beats: []
 --- !u!1 &6828689350043701805
 GameObject:
   m_ObjectHideFlags: 0
@@ -658,23 +681,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Char
       objectReference: {fileID: 0}
-    - target: {fileID: 2271173596820745078, guid: f986e60863d5cf646a2c4a251210758f, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2271173596820745078, guid: f986e60863d5cf646a2c4a251210758f, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2271173596820745078, guid: f986e60863d5cf646a2c4a251210758f, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f986e60863d5cf646a2c4a251210758f, type: 3}
+--- !u!114 &7672188731756214099 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1577620379385163495, guid: f986e60863d5cf646a2c4a251210758f, type: 3}
+  m_PrefabInstance: {fileID: 9195719735923055028}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a343de2c55ccc949b435053165beef5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &7787302759905086211 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1409570578531209911, guid: f986e60863d5cf646a2c4a251210758f, type: 3}

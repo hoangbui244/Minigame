@@ -74,11 +74,16 @@ public class BeatController : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
         }
         else
         {
-            _image.color = _defaultColor;
+            ResetBeat();
         }
         
         _currentHover?.SetHover(false);
         _currentHover = null;
         transform.SetParent(_parentAfterDrag);
+    }
+    
+    public void ResetBeat()
+    {
+        _image.color = _defaultColor;
     }
 }

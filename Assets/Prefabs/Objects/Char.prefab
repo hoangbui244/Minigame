@@ -92,9 +92,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Type: 0
   _hoverColor: {r: 1, g: 1, b: 1, a: 1}
-  ID: 0
   _board: {fileID: 7566827252195457957}
-  BeatController: {fileID: 0}
+  _muteImage: {fileID: 8500649378808811378}
+  _muteOtherImage: {fileID: 2056609787467212589}
+  _sprites: []
 --- !u!61 &5581888107488571408
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -259,7 +260,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2056609787467212589}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1577620379385163495}
+        m_TargetAssemblyTypeName: CharacterController, Assembly-CSharp
+        m_MethodName: MuteOther
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &5844182556282964589
 GameObject:
   m_ObjectHideFlags: 0
