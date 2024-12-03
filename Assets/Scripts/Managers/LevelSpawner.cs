@@ -146,6 +146,11 @@ public class LevelSpawner : Singleton<LevelSpawner>
                 _level = Instantiate(level19, transform);
                 FirebaseManager.Instance.LogEventNameWithParam("play_game_type", "Game Type", "ScreamChicken");
                 break;
+            case 20:
+                var level20 = ResourceManager.GetLevel(Level.LevelType.Sprunki ,1);
+                _level = Instantiate(level20, transform);
+                FirebaseManager.Instance.LogEventNameWithParam("play_game_type", "Game Type", "Sprunki");
+                break;
         }
     }
     

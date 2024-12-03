@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SprunkSoundController : MonoBehaviour
+public class SprunkSoundController : Singleton<SprunkSoundController>
 {
     [SerializeField] private SprunkSound[] _sprunkSounds;
     private Dictionary<int, SprunkSound> _sprunkSoundDict = new Dictionary<int, SprunkSound>();
@@ -61,6 +61,14 @@ public class SprunkSoundController : MonoBehaviour
             {
                 sound.AudioSource.Stop();
             }
+        }
+    }
+    
+    public void PlayAllSounds()
+    {
+        foreach (var sound in _sprunkSoundDict.Values)
+        {
+            sound.AudioSource.Play();
         }
     }
 }
