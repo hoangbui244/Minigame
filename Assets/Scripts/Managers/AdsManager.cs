@@ -98,6 +98,7 @@ public class AdsManager : Singleton<AdsManager>
         MaxSdk.SetTestDeviceAdvertisingIdentifiers(new string[]
         {
             "5948dbcb-daf2-4012-9b25-d8110a3f32c6", "a098332a-53f2-4d83-a556-1b60e54561c1",
+            "d13d9e78-313b-4c35-a08c-e4d1fc10306e"
         });
         MaxSdk.InitializeSdk();
         // MaxSdkCallbacks.OnSdkInitializedEvent += sdkConfiguration =>

@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cc1e008d-39a7-4d81-b082-3c7e1c260ee0" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ads/Applovin/OpenAdsApplovin.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ads/Applovin/OpenAdsApplovin.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/ResourceManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/ResourceManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Minigame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Minigame/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Splash.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Splash.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ads/Admob/NativeAds.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ads/Admob/NativeAds.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/AdsManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/AdsManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -203,7 +206,9 @@
       <workItem from="1733121688522" duration="9121000" />
       <workItem from="1733191599710" duration="9744000" />
       <workItem from="1733207867192" duration="9590000" />
-      <workItem from="1733280191793" duration="6168000" />
+      <workItem from="1733280191793" duration="7520000" />
+      <workItem from="1733293973074" duration="1515000" />
+      <workItem from="1733296397072" duration="2302000" />
     </task>
     <servers />
   </component>

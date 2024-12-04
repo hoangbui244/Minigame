@@ -34,13 +34,30 @@ public class NativeAds : MonoBehaviour
     {
         AdsManager.Instance.OnNativeAdLoaded -= HandleNativeAdLoaded;
     }
-    
+
     private void HandleNativeAdLoaded()
     {
         ShowAds(AdsManager.Instance.LoadedNativeAd);
     }
-    
-    private void ShowAds(NativeAd nativeAd) {
+
+    private void ShowAds(NativeAd nativeAd)
+    {
+        // Check if any critical data is missing
+        if (nativeAd.GetImageTextures() == null || nativeAd.GetImageTextures().Count == 0 ||
+            string.IsNullOrEmpty(nativeAd.GetHeadlineText()) ||
+            string.IsNullOrEmpty(nativeAd.GetBodyText()) ||
+            string.IsNullOrEmpty(nativeAd.GetCallToActionText()))
+        {
+            Debug.LogWarning("Native ad is missing critical data, hiding ads UI.");
+            gameObject.SetActive(false); // Hide the whole Native Ads UI
+            AdsManager.Instance.RequestNativeAd();
+            return;
+        }
+
+        // Show ads UI
+        gameObject.SetActive(true);
+
+        // Set Icon Image
         if (nativeAd.GetIconTexture() != null)
         {
             _adsImage.gameObject.SetActive(true);
@@ -50,16 +67,26 @@ public class NativeAds : MonoBehaviour
         {
             _adsImage.gameObject.SetActive(false);
         }
+
+        // Set Main Image
         _adsContent.texture = nativeAd.GetImageTextures()[0];
+
+        // Set Headline
         _adsHeadline.text = nativeAd.GetHeadlineText();
+
+        // Set Body Text
         _adsBody.text = nativeAd.GetBodyText();
+
+        // Set Call to Action
         _adsCallToAction.text = nativeAd.GetCallToActionText();
-        
+
+        // Set AdChoices Logo
         if (nativeAd.GetAdChoicesLogoTexture() != null)
         {
             _adsChoiceIcon.texture = nativeAd.GetAdChoicesLogoTexture();
         }
-        
+
+        // Set Star Rating
         if (nativeAd.GetStarRating() > 0)
         {
             _starRating.gameObject.SetActive(true);
@@ -71,7 +98,8 @@ public class NativeAds : MonoBehaviour
             _star.SetActive(false);
             _starRating.gameObject.SetActive(false);
         }
-        
+
+        // Set Price
         if (nativeAd.GetPrice() == null)
         {
             _price.gameObject.SetActive(false);
@@ -81,28 +109,15 @@ public class NativeAds : MonoBehaviour
             _price.gameObject.SetActive(true);
             _price.text = nativeAd.GetPrice();
         }
-        
-        if (!nativeAd.RegisterHeadlineTextGameObject(_adsHeadline.gameObject))
-        {
-            Debug.Log("error registering headline");
-        }
-        if (!nativeAd.RegisterBodyTextGameObject(_adsBody.gameObject))
-        {
-            Debug.Log("error registering body");
-        }
-        if (!nativeAd.RegisterCallToActionGameObject(_adsCallToAction.gameObject))
-        {
-            Debug.Log("error registering cta");
-        }
-        if (!nativeAd.RegisterIconImageGameObject(_adsImage.gameObject))
-        {
-            Debug.Log("error registering image");
-        }
-        if (!nativeAd.RegisterPriceGameObject(_price.gameObject))
-        {
-            Debug.Log("error registering price");
-        }
-        
+
+        // Register Ad components for click tracking
+        nativeAd.RegisterHeadlineTextGameObject(_adsHeadline.gameObject);
+        nativeAd.RegisterBodyTextGameObject(_adsBody.gameObject);
+        nativeAd.RegisterCallToActionGameObject(_adsCallToAction.gameObject);
+        nativeAd.RegisterIconImageGameObject(_adsImage.gameObject);
+        nativeAd.RegisterPriceGameObject(_price.gameObject);
+
+        // Request next ad
         AdsManager.Instance.RequestNativeAd();
     }
 }
