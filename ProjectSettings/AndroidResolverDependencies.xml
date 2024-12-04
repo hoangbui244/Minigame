@@ -1,7 +1,11 @@
 <dependencies>
   <packages>
     <package>androidx.constraintlayout:constraintlayout:2.1.4</package>
-    <package>com.applovin.mediation:google-ad-manager-adapter:[23.5.0.0]</package>
+    <package>androidx.recyclerview:recyclerview:1.2.1</package>
+    <package>com.applovin.mediation:bytedance-adapter:6.3.0.4.0</package>
+    <package>com.applovin.mediation:google-adapter:[23.6.0.0]</package>
+    <package>com.applovin.mediation:google-ad-manager-adapter:[23.6.0.0]</package>
+    <package>com.applovin.mediation:mintegral-adapter:16.8.91.0</package>
     <package>com.applovin:applovin-sdk:13.0.1</package>
     <package>com.google.android.gms:play-services-ads:23.2.0</package>
     <package>com.google.android.gms:play-services-base:18.5.0</package>

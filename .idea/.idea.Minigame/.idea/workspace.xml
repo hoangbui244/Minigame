@@ -6,13 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="cc1e008d-39a7-4d81-b082-3c7e1c260ee0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Minigame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Minigame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Objects/Box.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Objects/Box.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Objects/Char.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Objects/Char.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Sprunki/Level 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Sprunki/Level 1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Sprunki/BeatController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Sprunki/BeatController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Sprunki/CharacterController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Sprunki/CharacterController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Sprunki/SprunkController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Sprunki/SprunkController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/GameEventManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/GameEventManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Mediation/GoogleAdManager/Editor/Dependencies.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MaxSdk/Mediation/GoogleAdManager/Editor/Dependencies.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/mainTemplate.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/mainTemplate.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/settingsTemplate.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/settingsTemplate.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/HomeScreen.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/HomeScreen.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/AndroidResolverDependencies.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/AndroidResolverDependencies.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -208,7 +206,8 @@
       <workItem from="1733103011161" duration="7295000" />
       <workItem from="1733121688522" duration="9121000" />
       <workItem from="1733191599710" duration="9744000" />
-      <workItem from="1733207867192" duration="9202000" />
+      <workItem from="1733207867192" duration="9590000" />
+      <workItem from="1733280191793" duration="671000" />
     </task>
     <servers />
   </component>
