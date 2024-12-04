@@ -47,14 +47,13 @@ public class OpenAdsApplovin : MonoBehaviour
     
     private void OnApplicationPause(bool pauseStatus)
     {
-        if (!pauseStatus && CheckPermissions())
+        if (!pauseStatus && CheckPermissions() && !ResourceManager.IsRequestingPermission)
         {
-            Debug.LogError("1");
+            ResourceManager.IsRequestingPermission = true;
             return;
         }
         if (!pauseStatus && !ResourceManager.RemoveAds && AdsManager.Instance.VersionTrue)
         {
-            Debug.LogError("2");
             ShowAppOpenAd();
         }
     }

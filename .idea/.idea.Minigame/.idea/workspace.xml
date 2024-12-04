@@ -5,15 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cc1e008d-39a7-4d81-b082-3c7e1c260ee0" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Minigame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Minigame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ScreamChicken/Level 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ScreamChicken/Level 1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ScreamChicken/Level 2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ScreamChicken/Level 2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ScreamChicken/Level 3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ScreamChicken/Level 3.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ScreamChicken/Level 4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ScreamChicken/Level 4.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ads/Applovin/OpenAdsApplovin.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ads/Applovin/OpenAdsApplovin.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/AdsManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/AdsManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/ScreamChicken/Group 1000012343.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/ScreamChicken/Group 1000012343.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/ResourceManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/ResourceManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -210,7 +203,7 @@
       <workItem from="1733121688522" duration="9121000" />
       <workItem from="1733191599710" duration="9744000" />
       <workItem from="1733207867192" duration="9590000" />
-      <workItem from="1733280191793" duration="5418000" />
+      <workItem from="1733280191793" duration="6168000" />
     </task>
     <servers />
   </component>

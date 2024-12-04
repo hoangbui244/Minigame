@@ -21,6 +21,12 @@ public class ResourceManager : Singleton<ResourceManager>
         get => PlayerPrefs.GetInt("RemoveAds", 0) == 1;
         set => PlayerPrefs.SetInt("RemoveAds", value ? 1 : 0);
     }
+    
+    public static bool IsRequestingPermission
+    {
+        get => PlayerPrefs.GetInt("IsRequestingPermission", 0) == 1;
+        set => PlayerPrefs.SetInt("IsRequestingPermission", value ? 1 : 0);
+    }
 
     public static int FlipCard
     {
