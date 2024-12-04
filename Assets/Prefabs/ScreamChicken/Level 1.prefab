@@ -3151,7 +3151,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 825408f19f849e0439a03251bb3fcc9c, type: 3}
   _button: {fileID: 6354280494427909846}
   _buttons:
-  - {fileID: 21300000, guid: c1172542da05a7c46b3c3e2ad4fbd895, type: 3}
+  - {fileID: 21300000, guid: cc1cb1df63a198e45ad0f541b1ccae33, type: 3}
   - {fileID: 21300000, guid: 44c92474c6e97624089f1af920e15b2c, type: 3}
   - {fileID: 21300000, guid: 9da4f820232760649a05bdaef5c7ad2d, type: 3}
   _pet: {fileID: 58340323016235707}
@@ -4180,7 +4180,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c1172542da05a7c46b3c3e2ad4fbd895, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cc1cb1df63a198e45ad0f541b1ccae33, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

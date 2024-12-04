@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Android;
 
 public class OpenAdsApplovin : MonoBehaviour
 {
@@ -18,6 +19,7 @@ public class OpenAdsApplovin : MonoBehaviour
     }
 
     private event Action<bool> ShowOpen;
+    
 
     public void Init()
     {
@@ -34,10 +36,25 @@ public class OpenAdsApplovin : MonoBehaviour
         ShowOpen = null;
     }
 
+    private bool CheckPermissions()
+    {
+        if (!Permission.HasUserAuthorizedPermission(Permission.Microphone))
+        {
+            return false;
+        }
+        return true;
+    }
+    
     private void OnApplicationPause(bool pauseStatus)
     {
+        if (!pauseStatus && CheckPermissions())
+        {
+            Debug.LogError("1");
+            return;
+        }
         if (!pauseStatus && !ResourceManager.RemoveAds && AdsManager.Instance.VersionTrue)
         {
+            Debug.LogError("2");
             ShowAppOpenAd();
         }
     }
