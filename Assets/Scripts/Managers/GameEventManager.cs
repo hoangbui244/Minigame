@@ -30,6 +30,7 @@ public static class GameEventManager
     public static Action<int> DropCandy;
     public static Action BalanceEgg;
     public static Action<int> PetalCount;
-    public static Action<int> MuteOther;
+    public static Action<bool, int> MuteOther;
     public static Action<int> UnselectCharacter;
+    public static Action Play;
 }

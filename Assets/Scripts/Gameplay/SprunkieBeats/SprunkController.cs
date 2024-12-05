@@ -3,26 +3,30 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SprunkController : MonoBehaviour
+public class SprunkController : Singleton<SprunkController>
 {
-    [Header("======= Character =======")]
-    [SerializeField] private Transform _parent;
+    [Header("======= Character =======")] [SerializeField]
+    private Transform _parent;
+
     [SerializeField] private List<CharacterController> _characters;
-    
-    [Header("======= Beat =======")]
-    [SerializeField] private Transform _beatParent;
+
+    [Header("======= Beat =======")] [SerializeField]
+    private Transform _beatParent;
+
     [SerializeField] private List<BeatController> _beats;
 
     private void OnEnable()
     {
         GameEventManager.MuteOther += MuteOther;
         GameEventManager.UnselectCharacter += ResetBeat;
+        GameEventManager.Play += Play;
     }
-    
+
     private void OnDisable()
     {
         GameEventManager.MuteOther -= MuteOther;
         GameEventManager.UnselectCharacter -= ResetBeat;
+        GameEventManager.Play -= Play;
     }
 
     private void OnValidate()
@@ -59,26 +63,51 @@ public class SprunkController : MonoBehaviour
             if ((int)item.Type == id)
             {
                 item.ResetBeat();
+                SprunkSoundController.Instance.StopSound(id);
             }
         }
     }
 
-    private void MuteOther(int id)
+    public void ResetGame()
+    {
+        foreach (var item in _beats)
+        {
+            item.ResetBeat();
+        }
+
+        foreach (var item in _characters)
+        {
+            item.ResetCharacter();
+        }
+    }
+
+    private void MuteOther(bool state, int id)
     {
         foreach (var item in _characters)
         {
             if ((int)item.Type != id && item.Type != CharacterController.CharType.Default)
             {
-                item.Mute();
+                if (state)
+                {
+                    item.IsMuted = true;
+                    item.IsMutedOther = false;
+                    item.SetSprite(1);
+                }
+                else
+                {
+                    item.IsMuted = false;
+                    item.IsMutedOther = false;
+                    item.SetSprite(2);
+                }
             }
         }
     }
-    
-    private void Play()
+
+    public void Play()
     {
         foreach (var item in _characters)
         {
-            if (item.Type != CharacterController.CharType.Default)
+            if (item.Type != CharacterController.CharType.Default && !item.IsMuted)
             {
                 SprunkSoundController.Instance.PlayLoopSound((int)item.Type);
             }

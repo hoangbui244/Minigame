@@ -64,7 +64,7 @@ public class GameUIManager : Singleton<GameUIManager>
         yield return _wait1;
         _nextLv.SetActive(true);
         int num = MainUIMananger.Instance.LevelTypeToLoad;
-        _nextLvImage.sprite = num < 18 ? _lvSprites[num] : _lvSprites[0];
+        _nextLvImage.sprite = num < 20 ? _lvSprites[num] : _lvSprites[0];
         _nextLv.transform.DOScale(_scaleEnd, 0.5f);
     }
 
@@ -197,7 +197,7 @@ public class GameUIManager : Singleton<GameUIManager>
     public void NextGame()
     {
         AudioManager.PlaySound("Click");
-        if (MainUIMananger.Instance.LevelTypeToLoad == 19)
+        if (MainUIMananger.Instance.LevelTypeToLoad == 20)
         {
             MainUIMananger.Instance.LevelTypeToLoad = 1;
         }

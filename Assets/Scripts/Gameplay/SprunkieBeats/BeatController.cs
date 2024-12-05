@@ -10,6 +10,23 @@ public class BeatController : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
         Beat1 = 1,
         Beat2 = 2,
         Beat3 = 3,
+        Beat4 = 4,
+        Beat5 = 5,
+        Beat6 = 6,
+        Beat7 = 7,
+        Beat8 = 8,
+        Beat9 = 9,
+        Beat10 = 10,
+        Beat11 = 11,
+        Beat12 = 12,
+        Beat13 = 13,
+        Beat14 = 14,
+        Beat15 = 15,
+        Beat16 = 16,
+        Beat17 = 17,
+        Beat18 = 18,
+        Beat19 = 19,
+        Beat20 = 20,
     }
     [Header("======== Beat Type ========")]
     public BeatType Type;
@@ -23,15 +40,18 @@ public class BeatController : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
     private Color _defaultColor;
     private Image _image;
     private CharacterController _currentHover;
+    private bool _isAssigned;
 
     private void Start()
     {
         _image = GetComponent<Image>();
         _defaultColor = _image.color;
+        _isAssigned = false;
     }
     
     public void OnBeginDrag(PointerEventData eventData)
     {
+        if (_isAssigned) return;
         _parentAfterDrag = transform.parent;
         transform.SetParent(_setParent);
         transform.SetAsLastSibling();
@@ -39,6 +59,7 @@ public class BeatController : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
 
     public void OnDrag(PointerEventData eventData)
     {
+        if (_isAssigned) return;
         RectTransformUtility.ScreenPointToWorldPointInRectangle(
             transform.parent as RectTransform,
             eventData.position,
@@ -66,11 +87,18 @@ public class BeatController : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
 
     public void OnEndDrag(PointerEventData eventData)
     {
+        if (_isAssigned) return;
         if (_currentHover != null)
         {
+            if (_currentHover.Type != CharacterController.CharType.Default)
+            {
+                GameEventManager.UnselectCharacter?.Invoke((int)_currentHover.Type);
+            }
             _currentHover.Type = (CharacterController.CharType)Type;
             _currentHover.CharacterSelected(true);
+            _isAssigned = true;
             _image.color = _color;
+            GameEventManager.Play?.Invoke();
         }
         else
         {
@@ -85,5 +113,6 @@ public class BeatController : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
     public void ResetBeat()
     {
         _image.color = _defaultColor;
+        _isAssigned = false;    
     }
 }
