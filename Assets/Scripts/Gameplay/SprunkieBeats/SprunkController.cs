@@ -19,6 +19,7 @@ public class SprunkController : Singleton<SprunkController>
     {
         GameEventManager.MuteOther += MuteOther;
         GameEventManager.UnselectCharacter += ResetBeat;
+        GameEventManager.CheckMuteOther += CheckMuteOther;
         GameEventManager.Play += Play;
     }
 
@@ -26,6 +27,7 @@ public class SprunkController : Singleton<SprunkController>
     {
         GameEventManager.MuteOther -= MuteOther;
         GameEventManager.UnselectCharacter -= ResetBeat;
+        GameEventManager.CheckMuteOther -= CheckMuteOther;
         GameEventManager.Play -= Play;
     }
 
@@ -70,15 +72,8 @@ public class SprunkController : Singleton<SprunkController>
 
     public void ResetGame()
     {
-        foreach (var item in _beats)
-        {
-            item.ResetBeat();
-        }
-
-        foreach (var item in _characters)
-        {
-            item.ResetCharacter();
-        }
+        foreach (var item in _beats) item.ResetBeat();
+        foreach (var item in _characters) item.ResetCharacter();
     }
 
     private void MuteOther(bool state, int id)
@@ -87,18 +82,70 @@ public class SprunkController : Singleton<SprunkController>
         {
             if ((int)item.Type != id && item.Type != CharacterController.CharType.Default)
             {
-                if (state)
+                item.IsMuted = state;
+                item.IsMutedOther = false;
+                item.SetSprite(state ? 1 : 2);
+            }
+        }
+    }
+
+    private void CheckMuteOther(bool state, int id)
+    {
+        foreach (var item in _characters)
+        {
+            if ((int)item.Type == id && item.Type != CharacterController.CharType.Default)
+            {
+                if (!state && Check() == 1)
                 {
-                    item.IsMuted = true;
-                    item.IsMutedOther = false;
-                    item.SetSprite(1);
+                    item.IsMutedOther = true;
+                    item.SetSprite(4);
+                    UpdateOtherCharacters(id, 3);
+                }
+                else if (state && Check() == 1)
+                {
+                    UpdateAllUnmutedCharacters(4);
                 }
                 else
                 {
-                    item.IsMuted = false;
                     item.IsMutedOther = false;
-                    item.SetSprite(2);
+                    item.SetSprite(3);
+                    UpdateOtherCharacters(id, 3);
                 }
+            }
+        }
+    }
+
+    private int Check()
+    {
+        int count = 0;
+        foreach (var item in _characters)
+        {
+            if (item.Type != CharacterController.CharType.Default && !item.IsMuted) count++;
+        }
+
+        return count;
+    }
+
+    private void UpdateOtherCharacters(int id, int spriteId)
+    {
+        foreach (var character in _characters)
+        {
+            if ((int)character.Type != id && character.Type != CharacterController.CharType.Default)
+            {
+                character.IsMutedOther = false;
+                character.SetSprite(spriteId);
+            }
+        }
+    }
+
+    private void UpdateAllUnmutedCharacters(int spriteId)
+    {
+        foreach (var character in _characters)
+        {
+            if (!character.IsMuted && character.Type != CharacterController.CharType.Default)
+            {
+                character.IsMutedOther = true;
+                character.SetSprite(spriteId);
             }
         }
     }

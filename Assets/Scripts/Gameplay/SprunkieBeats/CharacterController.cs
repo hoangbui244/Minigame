@@ -68,9 +68,7 @@ public class CharacterController : MonoBehaviour
             }
             else
             {
-                var color = _image.color;
-                color.a = 0.5f;
-                _image.color = color;
+                SetAlpha(0.5f);
             }
         }
     }
@@ -88,36 +86,33 @@ public class CharacterController : MonoBehaviour
     public void Mute()
     {
         IsMuted = !IsMuted;
-        if (IsMuted)
+        // 0 là muted và 1 là unmuted
+        _muteImage.sprite = _sprites[IsMuted ? 0 : 1];
+        SetAlpha(IsMuted ? 0.5f : 1f);
+
+        if (IsMutedOther && IsMuted)
         {
-            // 0 là muted
-            _muteImage.sprite = _sprites[0];
-            var color = _image.color;
-            color.a = 0.5f;
-            _image.color = color;
-            SprunkSoundController.Instance.StopSound((int)Type);
+            IsMutedOther = false;
+            SetSprite(3);
         }
-        else
-        {
-            // 1 là unmuted
-            _muteImage.sprite = _sprites[1];
-            var color = _image.color;
-            color.a = 1f;
-            _image.color = color;
-            SprunkSoundController.Instance.PlayLoopSound((int)Type);
-        }
+
+        if (IsMuted) SprunkSoundController.Instance.StopSound((int)Type);
+        else SprunkSoundController.Instance.PlayLoopSound((int)Type);
+
+        GameEventManager.CheckMuteOther?.Invoke(IsMuted, (int)Type);
     }
     
     public void MuteOther()
     {
         IsMutedOther = !IsMutedOther;
         // 2 là muted other và 3 là unmuted other
-        _muteOtherImage.sprite = IsMutedOther ? _sprites[2] : _sprites[3];
+        _muteOtherImage.sprite = _sprites[IsMutedOther ? 2 : 3];
         GameEventManager.MuteOther?.Invoke(IsMutedOther,(int)Type);
         if (IsMutedOther)
         {
             IsMuted = false;
             _muteImage.sprite = _sprites[1];
+            SetAlpha(1f);
             SprunkSoundController.Instance.StopAllAnotherSounds((int)Type);
         }
         else
@@ -132,24 +127,37 @@ public class CharacterController : MonoBehaviour
         {
             case 1:
                 _muteImage.sprite = _sprites[0];
+                SetAlpha(0.5f);
                 _muteOtherImage.sprite = _sprites[3];
                 break;
             case 2:
                 _muteImage.sprite = _sprites[1];
+                SetAlpha(1f);
+                break;
+            case 3:
+                _muteOtherImage.sprite = _sprites[3];
+                break;
+            case 4:
+                _muteOtherImage.sprite = _sprites[2];
                 break;
         }
+    }
+    
+    private void SetAlpha(float alpha)
+    {
+        var color = _image.color;
+        color.a = alpha;
+        _image.color = color;
     }
     
     public void ResetCharacter()
     {
         _image.color = _defaultColor;
-        var color = _image.color;
-        color.a = 1f;
-        _image.color = color;
         IsMuted = false;
         IsMutedOther = false;
         _muteImage.sprite = _sprites[1];
         _muteOtherImage.sprite = _sprites[3];
+        SetAlpha(1f);
         SprunkSoundController.Instance.StopSound((int)Type);
         Type = CharType.Default;
         _board.SetActive(false);

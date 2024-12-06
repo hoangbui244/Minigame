@@ -31,6 +31,7 @@ public static class GameEventManager
     public static Action BalanceEgg;
     public static Action<int> PetalCount;
     public static Action<bool, int> MuteOther;
+    public static Action<bool, int> CheckMuteOther;
     public static Action<int> UnselectCharacter;
     public static Action Play;
 }
