@@ -21,14 +21,6 @@ public class SprunkSoundController : Singleton<SprunkSoundController>
         }
     }
 
-    public void PlaySound(int id)
-    {
-        if (_sprunkSoundDict.TryGetValue(id, out var sound))
-        {
-            sound.AudioSource.PlayOneShot(sound.AudioClip);
-        }
-    }
-
     public void StopSound(int id)
     {
         if (_sprunkSoundDict.TryGetValue(id, out var sound))
@@ -42,14 +34,6 @@ public class SprunkSoundController : Singleton<SprunkSoundController>
         if (_sprunkSoundDict.TryGetValue(id, out var sound))
         {
             sound.AudioSource.Play();
-        }
-    }
-
-    public void StopAllSounds()
-    {
-        foreach (var sound in _sprunkSoundDict.Values)
-        {
-            sound.AudioSource.Stop();
         }
     }
     

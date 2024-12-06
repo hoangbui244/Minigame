@@ -2,17 +2,16 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class SprunkController : Singleton<SprunkController>
 {
-    [Header("======= Character =======")] [SerializeField]
-    private Transform _parent;
-
+    [Header("======= Character =======")] 
+    [SerializeField] private Transform _parent;
     [SerializeField] private List<CharacterController> _characters;
 
-    [Header("======= Beat =======")] [SerializeField]
-    private Transform _beatParent;
-
+    [Header("======= Beat =======")] 
+    [SerializeField] private Transform _beatParent;
     [SerializeField] private List<BeatController> _beats;
 
     private void OnEnable()
@@ -95,13 +94,13 @@ public class SprunkController : Singleton<SprunkController>
         {
             if ((int)item.Type == id && item.Type != CharacterController.CharType.Default)
             {
-                if (!state && Check() == 1)
+                if (!state && CheckMute() == 1)
                 {
                     item.IsMutedOther = true;
                     item.SetSprite(4);
                     UpdateOtherCharacters(id, 3);
                 }
-                else if (state && Check() == 1)
+                else if (state && CheckMute() == 1)
                 {
                     UpdateAllUnmutedCharacters(4);
                 }
@@ -115,15 +114,9 @@ public class SprunkController : Singleton<SprunkController>
         }
     }
 
-    private int Check()
+    private int CheckMute()
     {
-        int count = 0;
-        foreach (var item in _characters)
-        {
-            if (item.Type != CharacterController.CharType.Default && !item.IsMuted) count++;
-        }
-
-        return count;
+        return _characters.Count(c => c.Type != CharacterController.CharType.Default && !c.IsMuted);
     }
 
     private void UpdateOtherCharacters(int id, int spriteId)

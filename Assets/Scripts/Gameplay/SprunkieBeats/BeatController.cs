@@ -113,6 +113,6 @@ public class BeatController : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
     public void ResetBeat()
     {
         _image.color = _defaultColor;
-        _isAssigned = false;    
+        _isAssigned = false;
     }
 }
