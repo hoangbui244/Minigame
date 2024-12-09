@@ -6,14 +6,113 @@
   <component name="ChangeListManager">
     <list default="true" id="cc1e008d-39a7-4d81-b082-3c7e1c260ee0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Minigame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Minigame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/link.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/link.xml.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Objects/Box.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Objects/Box.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Objects/Char.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Objects/Char.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ScreamChicken/Level 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ScreamChicken/Level 1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ScreamChicken/Level 2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ScreamChicken/Level 2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ScreamChicken/Level 3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ScreamChicken/Level 3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ScreamChicken/Level 4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ScreamChicken/Level 4.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/SprunkieBeats/Level 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/SprunkieBeats/Level 1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/HomeScreen.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/HomeScreen.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/SprunkieBeats/CharacterController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/SprunkieBeats/CharacterController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/SprunkieBeats/Frame 1000009970.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/SprunkieBeats/Frame 1000009970.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/SprunkieBeats/Char 1/Frame 1000009970.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/SprunkieBeats/Char 1/Frame 1000009970.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/SprunkieBeats/Char 1/Nomal _ full.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/SprunkieBeats/Char 1/Nomal _ full.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/SprunkieBeats/Group 1000010299.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/SprunkieBeats/Group 1000010299.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/SprunkieBeats/Group 1000010300.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/SprunkieBeats/Group 1000010300.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/SprunkieBeats/Group 1000010301.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/SprunkieBeats/Group 1000010301.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/SprunkieBeats/Group 1000010302.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/SprunkieBeats/Group 1000010302.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/SprunkieBeats/Group 1000010303.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/SprunkieBeats/Group 1000010303.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/UI_ver2/1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/UI_ver2/1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/UI_ver2/10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/UI_ver2/10.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/UI_ver2/14.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/UI_ver2/14.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/UI_ver2/15.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/UI_ver2/15.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/UI_ver2/16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/UI_ver2/16.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/UI_ver2/17.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/UI_ver2/17.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/UI_ver2/18.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/UI_ver2/18.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/UI_ver2/2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/UI_ver2/2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/UI_ver2/26.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/UI_ver2/26.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/UI_ver2/28.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/UI_ver2/28.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/UI_ver2/29.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/UI_ver2/29.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/UI_ver2/3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/UI_ver2/3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/UI_ver2/30.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/UI_ver2/30.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/UI_ver2/31.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/UI_ver2/31.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/UI_ver2/32.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/UI_ver2/32.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/UI_ver2/5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/UI_ver2/5.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/UI_ver2/8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/UI_ver2/8.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/UI_ver2/9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/UI_ver2/9.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/UI_ver2/Frame 1000010132.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/UI_ver2/Frame 1000010132.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/UI_ver2/Frame 1000010140 (1).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/UI_ver2/Frame 1000010140 (1).png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/UI_ver2/Frame 1000010140 (10).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/UI_ver2/Frame 1000010140 (10).png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/UI_ver2/Frame 1000010140 (11).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/UI_ver2/Frame 1000010140 (11).png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/UI_ver2/Frame 1000010140 (12).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/UI_ver2/Frame 1000010140 (12).png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/UI_ver2/Frame 1000010140 (13).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/UI_ver2/Frame 1000010140 (13).png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/UI_ver2/Frame 1000010140 (14).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/UI_ver2/Frame 1000010140 (14).png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/UI_ver2/Frame 1000010140 (15).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/UI_ver2/Frame 1000010140 (15).png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/UI_ver2/Frame 1000010140 (16).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/UI_ver2/Frame 1000010140 (16).png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/UI_ver2/Frame 1000010140 (17).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/UI_ver2/Frame 1000010140 (17).png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/UI_ver2/Frame 1000010140 (18).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/UI_ver2/Frame 1000010140 (18).png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/UI_ver2/Frame 1000010140 (19).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/UI_ver2/Frame 1000010140 (19).png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/UI_ver2/Frame 1000010140 (2).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/UI_ver2/Frame 1000010140 (2).png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/UI_ver2/Frame 1000010140 (3).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/UI_ver2/Frame 1000010140 (3).png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/UI_ver2/Frame 1000010140 (4).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/UI_ver2/Frame 1000010140 (4).png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/UI_ver2/Frame 1000010140 (5).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/UI_ver2/Frame 1000010140 (5).png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/UI_ver2/Frame 1000010140 (6).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/UI_ver2/Frame 1000010140 (6).png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/UI_ver2/Frame 1000010140 (7).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/UI_ver2/Frame 1000010140 (7).png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/UI_ver2/Frame 1000010140 (8).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/UI_ver2/Frame 1000010140 (8).png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/UI_ver2/Frame 1000010140 (9).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/UI_ver2/Frame 1000010140 (9).png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/UI_ver2/Frame 1000010140.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/UI_ver2/Frame 1000010140.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/UI_ver2/Sprunkie Beats thumbnail.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/UI_ver2/Sprunkie Beats thumbnail.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/UI_ver2/Thumbnail.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/UI_ver2/Thumbnail.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,11 +139,11 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gameplay/FindDifference/Swaper.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gameplay/PetalCount/Petal.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gameplay/PieceTogether/PieceTogetherLevel.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gameplay/SprunkieBeats/CharacterAnim.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gameplay/TapAway/TapAwayLevel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Managers/LevelSpawner.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Managers/ScreenshotHandler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Others/Level.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Others/SpriteFromAtlas.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Panel/SettingPanel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Satisfeel/Assets/Scripts/Gameplay/DragRotaPuzzle.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -219,7 +318,7 @@
       <workItem from="1733361581629" duration="19768000" />
       <workItem from="1733448863881" duration="9780000" />
       <workItem from="1733467347775" duration="9605000" />
-      <workItem from="1733707867470" duration="2921000" />
+      <workItem from="1733707867470" duration="6377000" />
     </task>
     <servers />
   </component>

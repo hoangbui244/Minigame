@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1921540399868712450}
   - component: {fileID: 3061200616204273034}
   - component: {fileID: 7090651308992285257}
+  - component: {fileID: 2538857517114522424}
   m_Layer: 5
   m_Name: Beat
   m_TagString: Untagged
@@ -91,6 +92,20 @@ MonoBehaviour:
   Type: 1
   _setParent: {fileID: 0}
   _color: {r: 0.49056602, g: 0.49056602, b: 0.49056602, a: 1}
+--- !u!114 &2538857517114522424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1136360590795416232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3082d551acf879e4d9eb20e9ad5f6594, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _atlas: {fileID: 100100200, guid: 6b520d41d299cc142a0a6da59aeb3661, type: 3}
+  _spriteName: 
 --- !u!1 &6922640233005642067
 GameObject:
   m_ObjectHideFlags: 0

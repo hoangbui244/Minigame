@@ -43,6 +43,7 @@ public class CharacterController : MonoBehaviour
     [SerializeField] private Image _muteImage;
     [SerializeField] private Image _muteOtherImage;
     [SerializeField] private List<Sprite> _sprites;
+    [SerializeField] private SpriteFromAtlas _spriteFromAtlas;
     public bool IsMuted;
     public bool IsMutedOther;
     
@@ -80,6 +81,7 @@ public class CharacterController : MonoBehaviour
             ResetCharacter();
         }
         _board.SetActive(isOn);
+        UpdateAnim();
     }
 
     public void Mute()
@@ -160,5 +162,11 @@ public class CharacterController : MonoBehaviour
         SprunkSoundController.Instance.StopSound((int)Type);
         Type = CharType.Default;
         _board.SetActive(false);
+        UpdateAnim();
+    }
+    
+    private void UpdateAnim()
+    {
+        _spriteFromAtlas.SetSprite((int)Type);
     }
 }
