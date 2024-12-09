@@ -35,8 +35,8 @@ public class CharacterController : MonoBehaviour
     
     [Header("======== Char Color ========")]
     [SerializeField] private Color _hoverColor;
+    [SerializeField] private Image _bodyImage;
     private Color _defaultColor;
-    private Image _image;
 
     [Header("======== Other ========")] 
     [SerializeField] private GameObject _board;
@@ -48,8 +48,7 @@ public class CharacterController : MonoBehaviour
     
     private void Start()
     {
-        _image = GetComponent<Image>();
-        _defaultColor = _image.color;
+        _defaultColor = _bodyImage.color;
         _muteImage.sprite = _sprites[1];
         _muteOtherImage.sprite = _sprites[3];
     }
@@ -58,13 +57,13 @@ public class CharacterController : MonoBehaviour
     {
         if (!IsMuted)
         {
-            _image.color = isHovering ? _hoverColor : _defaultColor;
+            _bodyImage.color = isHovering ? _hoverColor : _defaultColor;
         }
         else
         {
             if (isHovering)
             {
-                _image.color = _hoverColor;
+                _bodyImage.color = _hoverColor;
             }
             else
             {
@@ -145,14 +144,14 @@ public class CharacterController : MonoBehaviour
     
     private void SetAlpha(float alpha)
     {
-        var color = _image.color;
+        var color = _bodyImage.color;
         color.a = alpha;
-        _image.color = color;
+        _bodyImage.color = color;
     }
     
     public void ResetCharacter()
     {
-        _image.color = _defaultColor;
+        _bodyImage.color = _defaultColor;
         IsMuted = false;
         IsMutedOther = false;
         _muteImage.sprite = _sprites[1];
