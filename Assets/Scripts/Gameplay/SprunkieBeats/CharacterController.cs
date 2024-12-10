@@ -36,6 +36,8 @@ public class CharacterController : MonoBehaviour
     [Header("======== Char Color ========")]
     [SerializeField] private Color _hoverColor;
     [SerializeField] private Image _bodyImage;
+    [SerializeField] private Image _eyeImage;
+    [SerializeField] private Image _mouthImage;
     private Color _defaultColor;
 
     [Header("======== Other ========")] 
@@ -43,15 +45,27 @@ public class CharacterController : MonoBehaviour
     [SerializeField] private Image _muteImage;
     [SerializeField] private Image _muteOtherImage;
     [SerializeField] private List<Sprite> _sprites;
-    [SerializeField] private SpriteFromAtlas _spriteFromAtlas;
     public bool IsMuted;
     public bool IsMutedOther;
+    private Animator _animator;
+    private readonly WaitForSeconds _wait = new WaitForSeconds(8f);
     
     private void Start()
     {
         _defaultColor = _bodyImage.color;
         _muteImage.sprite = _sprites[1];
         _muteOtherImage.sprite = _sprites[3];
+        _animator = GetComponent<Animator>();
+        StartCoroutine(PlayAnim());
+    }
+    
+    private IEnumerator PlayAnim()
+    {
+        while (true)
+        {
+            yield return _wait;
+            UpdateAnim();
+        }
     }
 
     public void SetHover(bool isHovering)
@@ -149,6 +163,8 @@ public class CharacterController : MonoBehaviour
         var color = _bodyImage.color;
         color.a = alpha;
         _bodyImage.color = color;
+        _eyeImage.color = color;
+        _mouthImage.color = color;
     }
     
     public void ResetCharacter()
@@ -167,6 +183,6 @@ public class CharacterController : MonoBehaviour
     
     private void UpdateAnim()
     {
-        _spriteFromAtlas.SetSprite((int)Type);
+        _animator.Play("Char" + (int)Type);
     }
 }
