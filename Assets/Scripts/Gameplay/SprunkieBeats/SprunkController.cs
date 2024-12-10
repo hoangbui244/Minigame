@@ -90,6 +90,8 @@ public class SprunkController : Singleton<SprunkController>
 
     private void CheckMuteOther(bool state, int id)
     {
+        int count = _characters.Count(c => c.Type == CharacterController.CharType.Default);
+        if (count == _characters.Count - 1) return;
         foreach (var item in _characters)
         {
             if ((int)item.Type == id && item.Type != CharacterController.CharType.Default)

@@ -73,12 +73,14 @@ public class CharacterController : MonoBehaviour
         if (!IsMuted)
         {
             _bodyImage.color = isHovering ? _hoverColor : _defaultColor;
+            _eyeImage.color = isHovering ? _hoverColor : _defaultColor;
         }
         else
         {
             if (isHovering)
             {
                 _bodyImage.color = _hoverColor;
+                _eyeImage.color = _hoverColor;
             }
             else
             {
@@ -183,6 +185,6 @@ public class CharacterController : MonoBehaviour
     
     private void UpdateAnim()
     {
-        _animator.Play("Char" + (int)Type);
+        _animator.Play("Char" + (int)Type, 0, 0);
     }
 }
