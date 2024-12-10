@@ -8,7 +8,7 @@ public class SprunkController : Singleton<SprunkController>
 {
     [Header("======= Character =======")] 
     [SerializeField] private Transform _parent;
-    [SerializeField] private List<CharacterController> _characters;
+    [SerializeField] private List<CharController> _characters;
 
     [Header("======= Beat =======")] 
     [SerializeField] private Transform _beatParent;
@@ -36,7 +36,7 @@ public class SprunkController : Singleton<SprunkController>
         _beats.Clear();
         for (int i = 0; i < _parent.childCount; i++)
         {
-            var character = _parent.GetChild(i).GetComponent<CharacterController>();
+            var character = _parent.GetChild(i).GetComponent<CharController>();
             if (character != null)
             {
                 _characters.Add(character);
@@ -79,7 +79,7 @@ public class SprunkController : Singleton<SprunkController>
     {
         foreach (var item in _characters)
         {
-            if ((int)item.Type != id && item.Type != CharacterController.CharType.Default)
+            if ((int)item.Type != id && item.Type != CharController.CharType.Default)
             {
                 item.IsMuted = state;
                 item.IsMutedOther = false;
@@ -92,9 +92,9 @@ public class SprunkController : Singleton<SprunkController>
     {
         foreach (var item in _characters)
         {
-            int count = _characters.Count(c => c.Type == CharacterController.CharType.Default);
+            int count = _characters.Count(c => c.Type == CharController.CharType.Default);
             if (count == _characters.Count - 1) return;
-            if ((int)item.Type == id && item.Type != CharacterController.CharType.Default)
+            if ((int)item.Type == id && item.Type != CharController.CharType.Default)
             {
                 if (!state && CheckMute() == 1)
                 {
@@ -118,14 +118,14 @@ public class SprunkController : Singleton<SprunkController>
 
     private int CheckMute()
     {
-        return _characters.Count(c => c.Type != CharacterController.CharType.Default && !c.IsMuted);
+        return _characters.Count(c => c.Type != CharController.CharType.Default && !c.IsMuted);
     }
 
     private void UpdateOtherCharacters(int id, int spriteId)
     {
         foreach (var character in _characters)
         {
-            if ((int)character.Type != id && character.Type != CharacterController.CharType.Default)
+            if ((int)character.Type != id && character.Type != CharController.CharType.Default)
             {
                 character.IsMutedOther = false;
                 character.SetSprite(spriteId);
@@ -137,7 +137,7 @@ public class SprunkController : Singleton<SprunkController>
     {
         foreach (var character in _characters)
         {
-            if (!character.IsMuted && character.Type != CharacterController.CharType.Default)
+            if (!character.IsMuted && character.Type != CharController.CharType.Default)
             {
                 character.IsMutedOther = true;
                 character.SetSprite(spriteId);
@@ -149,7 +149,7 @@ public class SprunkController : Singleton<SprunkController>
     {
         foreach (var item in _characters)
         {
-            if (item.Type != CharacterController.CharType.Default && !item.IsMuted)
+            if (item.Type != CharController.CharType.Default && !item.IsMuted)
             {
                 SprunkSoundController.Instance.PlayLoopSound((int)item.Type);
             }

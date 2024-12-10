@@ -1617,7 +1617,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2538857517114522424, guid: cb6355b61143df444a7fe4920232465a, type: 3}
       propertyPath: _spriteName
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 2966983861833211368, guid: cb6355b61143df444a7fe4920232465a, type: 3}
       propertyPath: m_AnchorMax.y

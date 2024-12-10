@@ -39,7 +39,7 @@ public class BeatController : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
     [SerializeField] private Color _color;
     private Color _defaultColor;
     private Image _image;
-    private CharacterController _currentHover;
+    private CharController _currentHover;
     private bool _isAssigned;
 
     private void Start()
@@ -70,7 +70,7 @@ public class BeatController : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
         RaycastHit2D hit = Physics2D.Raycast(globalMousePos, Vector2.zero);
         if (hit.collider != null)
         {
-            var character = hit.collider.GetComponent<CharacterController>();
+            var character = hit.collider.GetComponent<CharController>();
             if (character != null && character != _currentHover)
             {
                 _currentHover?.SetHover(false);
@@ -90,11 +90,11 @@ public class BeatController : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
         if (_isAssigned) return;
         if (_currentHover != null)
         {
-            if (_currentHover.Type != CharacterController.CharType.Default)
+            if (_currentHover.Type != CharController.CharType.Default)
             {
                 GameEventManager.UnselectCharacter?.Invoke((int)_currentHover.Type);
             }
-            _currentHover.Type = (CharacterController.CharType)Type;
+            _currentHover.Type = (CharController.CharType)Type;
             _currentHover.CharacterSelected(true);
             _isAssigned = true;
             _image.color = _color;

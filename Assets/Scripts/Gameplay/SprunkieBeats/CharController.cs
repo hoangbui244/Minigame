@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
 
-public class CharacterController : MonoBehaviour
+public class CharController : MonoBehaviour
 {
     public enum CharType
     {
